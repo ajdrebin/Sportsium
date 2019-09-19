@@ -1,8 +1,8 @@
 version: "Apple Swift version 4.0.3 (swiftlang-900.0.74.1 clang-900.0.39.2)"
 options: "cf9b18acfdae14d081490f80e3648e93"
-build_time: [1568562243, 53229000]
+build_time: [1568562307, 458752000]
 inputs:
-  "/Users/Alina/Desktop/Sportsium/ios-project-sample-f17-master/Chatter/ViewController.swift": [1568385550, 0]
+  "/Users/Alina/Desktop/Sportsium/ios-project-sample-f17-master/Chatter/ViewController.swift": [1568562305, 0]
   "/Users/Alina/Desktop/Sportsium/ios-project-sample-f17-master/Chatter/AppDelegate.swift": [1568385550, 0]
   "/Users/Alina/Desktop/Sportsium/ios-project-sample-f17-master/Chatter/Chatt.swift": [1568385550, 0]
   "/Users/Alina/Desktop/Sportsium/ios-project-sample-f17-master/Chatter/ChattTableCell.swift": [1568385550, 0]
