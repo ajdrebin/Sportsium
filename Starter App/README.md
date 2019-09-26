@@ -2,7 +2,8 @@
 
 *A journey of a thousand miles begins with a single step.*
 
-This application is that single step. This application is a sample IOS application emulating Twitter. 
+This application is that single step. This repository consists of two entities. An IOS application emulating Twitter and a local back end server running a PostgreSQL database. Both are meant to be run locally on a macOS. 
+
 
 ## Getting Started
 
@@ -10,24 +11,112 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
+#### Backend Server
+The simplest way to install Django is by first installing pip. In order to install pip, one needs to have python installed.
+
+In order to check whether python is installed, enter the following code into the command line.
+
+```
+python --version
+```
+
+If a python version shows up then python is installed. If it is not installed, then please install python on your machine. 
+
+We next need to download pip and install it using python. Run the following code in the command line.
+
+```
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python get-pip.py
+```
+
+Once pip is installed, we can then download and install Django using the following code in the command line.
+
+```
+pip install Django
+```
+
+We now need to download postgreSQL. We first need to install Homebrew for mac.
+
+In the command line terminal, run /usr/bin/ruby -e 
+```
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
+Once that is installed, run the following command to install psql. Note if psql is already installed, then skip ahead
+```
+brew install postgresql
+```
+
+Then follow the steps provided here for a first time user.
+- https://gist.github.com/ibraheem4/ce5ccd3e4d7a65589ce84f2a3b7c23a3
+
+
+#### IOS application
+
 Use a macOS to install Xcode from the Mac App Store. 
 
-install the command line developer tools for Xcode by running the following code on the command line terminal. 
+Install the command line developer tools for Xcode by running the following code on the command line terminal. 
+
 ```
 xcode-select --install
 ```
 
-### Build
+### Build and Run
 
+#### Backend
+
+We must begin by creating the databases for our application.
+We hence run the following code in the command line to grant privileges to the user django.
+```
+sudo -u postgres psql
+CREATE ROLE django WITH LOGIN PASSWORD 'password';
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO django;
+GRANT ALL PRIVILEGES ON DATABASE django_db TO django;
+ALTER ROLE django CREATEDB;
+\q
+```
+
+We now log into django and create some tables
+```
+psql postgres -U django
+CREATE DATABASE django_db;
+\connect django_db;
+CREATE TABLE users (username varchar(255), name varchar(255), email varchar(255)); CREATE TABLE chatts (username varchar(255), message varchar(255), time timestamp DEFAULT CURRENT_TIMESTAMP);
+INSERT INTO chatts values('testuser1', 'Hello world'); SELECT * from chatts;
+
+```
+
+We can now navigate to the "Starter\ App/mysite/" folder. This will contain the following items.
+* chatter  
+* db.sqlite3  
+* manage.py  
+* mysite
+
+We now run the following line of code to get our server running
+```
+python manage.py runserver localhost:9000
+```
+
+Once successful, our backend server is up and ready for debugging. 
+
+In the next section we will go over how to run the ios application
+
+
+#### IOS application
+
+Navigate to "Starter\ App/ios-project-sample-f17-master/". This folder consists of 3 items.
+* Chatter
+* Chatter.xcodeproj
+* DerivedData
+
+We next run the following code to begin to build the application.
 ```
 xcodebuild -scheme Chatter build
 ```
 
-
-### Run 
-
-
-
+When finished, open Xcode and run the Xcode simulator by pressing the play button on the top left. This will run a simulation of a specified IOS using the configurations of the project. 
+ 
+Let the debugging begin!
 
 ## Folder Structure
 ```
@@ -105,17 +194,19 @@ xcodebuild -scheme Chatter build
 
 * [Django](https://docs.djangoproject.com/en/2.2/) - The web framework used
 
+* [PostgreSQL](https://www.postgresql.org/docs/) - An open-source relational database management system 
+
 * [Xcode](https://developer.apple.com/library/archive/documentation/ToolsLanguages/Conceptual/Xcode_Overview/LearningfromDetailedUserGuides.html) - Integrated Development Environment for macOS
 
 
 ## Authors
 Sportsium Development Team
 
-Alfonzo Acosta,         aaram
-Chia Chen,              chiahche
-Jessica Cheng,          jesca
-Alina Drebin,           ajdrebin
-Claire Drebin,          cdrebin
-Mashfy Rahman,          rmashfy
-Gustavo Ramirez,        grami
+* Alfonzo Acosta,         aaram
+* Chia Chen,              chiahche
+* Jessica Cheng,          jesca
+* Alina Drebin,           ajdrebin
+* Claire Drebin,          cdrebin
+* Mashfy Rahman,          rmashfy
+* Gustavo Ramirez,        grami
 
