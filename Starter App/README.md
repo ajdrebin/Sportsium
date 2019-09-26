@@ -30,8 +30,76 @@ xcodebuild -scheme Chatter build
 
 
 ## Folder Structure
-TODO 
-
+```
+    .
+    ├── ios-project-sample-f17-master
+    │   ├── Chatter.xcodeproj
+    │   ├── Chatter
+    │   │   ├── Assets.xcassets/AppIcon.appiconset
+    │   │   │   ├── Contents.json
+    │   │   ├── Base.lproj
+    │   │   │   ├── LaunchScreen.storyboard
+    │   │   │   ├── Main.storyboard
+    │   │   ├── AppDelegate.swift
+    │   │   ├── Chatt.swift
+    │   │   ├── ChattTableCell.swift
+    │   │   ├── info.plist
+    │   │   ├── ViewController.swift
+    │   ├── Derived Data
+    │   │   ├── Chatter
+    |   │   │   ├── Build
+    |   │   │   ├── Index
+    |   │   │   ├── Logs 
+    |   │   │   ├── TextIndex
+    |   │   │   ├── OpenQuickly-ReferencedFrameworks.index-v1
+    |   │   │   ├── info.plist
+    |   │   │   ├── scm.plist
+    │   │   ├── ModuleCache
+    |   │   │   ├── 174W5FVGBZHJM
+    |   │   │   ├── N9IL6CP46OIG
+    |   │   │   ├── APINotes.timestamp
+    |   │   │   ├── CoreGraphics-29MFLTMZYAR07.apinotesc
+    |   │   │   ├── CoreImage-33QR13KUZQWP8.apinotesc
+    |   │   │   ├── CoreText-2LVPZZDMD8ITG.apinotesc
+    |   │   │   ├── Darwin-3SHCHLH7INYEM.apinotesc
+    |   │   │   ├── Foundation-SHQ8VQKKGUZA.apinotesc
+    |   │   │   ├── Metal-2EHSCECJ675OC.apinotesc
+    |   │   │   ├── ObjectiveC-316I8REX3VNBQ.apinotesc
+    |   │   │   ├── OpenGLES-3H4M6CQGPF3TS.apinotesc
+    |   │   │   ├── QuartzCore-8C7BHA6CIDSP.apinotesc
+    |   │   │   ├── Session.modulevalidation
+    |   │   │   ├── UIKit-Q44AMGXP91XM.apinotesc
+    |   │   │   ├── modules.timestamp
+    ├── mysite
+    │   ├── chatter
+    │   │   ├── __pycache__
+    |   │   │   ├── __init__.cpython-36.pyc
+    |   │   │   ├── urls.cpython-36.pyc
+    |   │   │   ├── views.cpython-36.pyc
+    │   │   ├── migrations
+    |   │   │   ├── __init__.py
+    │   │   ├── __init.py__
+    │   │   ├── admin.py
+    │   │   ├── apps.py
+    │   │   ├── models.py
+    │   │   ├── tests.py
+    │   │   ├── urls.py
+    │   │   ├── views.py
+    │   ├── mysite
+    │   │   ├── __pycache__
+    |   │   │   ├── __init__.cpython-36.pyc
+    |   │   │   ├── settings.cpython-36.pyc
+    |   │   │   ├── urls.cpython-36.pyc
+    |   │   │   ├── wsgi.cpython-36.pyc
+    │   │   ├── __init__.py
+    │   │   ├── settings.py
+    │   │   ├── urls.py
+    │   │   ├── wsgi.py
+    │   ├── .DS_Store
+    │   ├── db.sqlite3
+    │   ├── manage.py
+    '
+```
 
 ## Built With
 
