@@ -19,9 +19,9 @@ xcode-select --install
 
 ### Build
 
-'''
+```
 xcodebuild -scheme Chatter build
-'''
+```
 
 
 ### Run 
