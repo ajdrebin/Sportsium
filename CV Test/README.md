@@ -1,3 +1,4 @@
+Adapting a CV demo for new colors, etc
 Demo Source: [link](https://github.com/KananVyas/PlayerDetection?source=post_page-----6fd2e4e373f0----------------------)
 
 Algorithm:
