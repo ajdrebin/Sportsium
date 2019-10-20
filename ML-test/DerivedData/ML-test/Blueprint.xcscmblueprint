@@ -1,0 +1,23 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "67F745DA57F6EE489217A91F6D145B94FD0FF11E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "67F745DA57F6EE489217A91F6D145B94FD0FF11E" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "380EFA59-DB38-477F-9BFF-72128F57331A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "67F745DA57F6EE489217A91F6D145B94FD0FF11E" : "Sportsium\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ML-test",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ML-test\/ML-test.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ajdrebin\/Sportsium.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "67F745DA57F6EE489217A91F6D145B94FD0FF11E"
+    }
+  ]
+}
