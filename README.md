@@ -3,6 +3,27 @@
 Get to know the faces of the National Women’s Soccer League using computer vision and motion tracking for real-time player identification with access to bios, stats and more.
 
 
+## LOG INTO Digital Ocean droplet
+* Droplet Name: django-sportsium
+* IP Address: 159.89.234.82
+* Username: root
+* Password: MasYNoSport0
+
+So type this in the terminal
+```
+ssh root@159.89.234.82
+```
+
+Then you are prompted with a password
+```
+[Enter password]
+```
+and your are in!
+
+
+
+
+
 ## TODO LIST 
 * Begin IOS development - CV part
 * Add more fields into databases by adding to /django_project/nwsl_app/models.py
