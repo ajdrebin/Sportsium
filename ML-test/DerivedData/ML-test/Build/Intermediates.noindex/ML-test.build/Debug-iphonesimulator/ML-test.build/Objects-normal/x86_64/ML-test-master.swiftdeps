@@ -1,6 +1,0 @@
-version: "Apple Swift version 4.0.3 (swiftlang-900.0.74.1 clang-900.0.39.2)"
-options: "fdfea62801c90004eb5b2543d388b312"
-build_time: [1571685507, 591972000]
-inputs:
-  "/Users/Alina/Desktop/Sportsium/ML-test/ML-test/ViewController.swift": [1571605404, 0]
-  "/Users/Alina/Desktop/Sportsium/ML-test/ML-test/AppDelegate.swift": [1571602054, 0]
