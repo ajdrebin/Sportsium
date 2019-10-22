@@ -24,7 +24,7 @@ class Team_Info_Table(models.Model):
 
 class Player_Info_Table(models.Model): 
     # player personal info
-    player_id = models.IntegerField(primary_key=True)
+    player_id = models.AutoField(primary_key=True)
     first_name = models.CharField(max_length=64)
     last_name = models.CharField(max_length=64)
     date_of_birth = models.DateField(max_length=8)
@@ -44,6 +44,17 @@ class Player_Info_Table(models.Model):
     national_team = models.CharField(max_length=256)
     player_national_number = models.IntegerField()
 
+
+    pass
+
+class Game_Info_Table(models.Model):
+    # !!!
+    game_id = models.AutoField(primary_key=True)
+    home_team = models.CharField(max_length=128)
+    away_team = models.CharField(max_length=128)
+    stadium = models.CharField(max_length=128)
+    date = models.DateField(max_length=16)
+    time = models.DateTimeField(max_length=16)
 
     pass
 
