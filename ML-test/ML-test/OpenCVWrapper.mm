@@ -8,6 +8,7 @@
 #import <opencv2/opencv.hpp>
 #import "OpenCVWrapper.h"
 using namespace std;
+using namespace cv;
 
 @interface OpenCVWrapper ()
 
@@ -19,6 +20,12 @@ using namespace std;
 }
 - (void) isThisWorking {
      cout << "Hey" << endl;
+    
+     //cap.open(0) for camera
+    cv::VideoCapture cap(0);
+    if(!cap.isOpened()) NSLog(@"Could not open file");
+    
+
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
