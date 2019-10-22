@@ -1,1 +1,1 @@
-** Test app to play around with OpenCV. Will be obsolete soon. 
+## Test app to play around with OpenCV. Will be obsolete soon. 
