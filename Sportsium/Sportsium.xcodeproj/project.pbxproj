@@ -16,6 +16,8 @@
 		894709DD235CF948004283AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 894709DB235CF948004283AF /* LaunchScreen.storyboard */; };
 		894709E8235CF948004283AF /* SportsiumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894709E7235CF948004283AF /* SportsiumTests.swift */; };
 		894709F3235CF948004283AF /* SportsiumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894709F2235CF948004283AF /* SportsiumUITests.swift */; };
+		EC19AD4423602240007C5C6F /* GameInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC19AD4323602240007C5C6F /* GameInfo.storyboard */; };
+		EC19AD462360235B007C5C6F /* GameInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC19AD452360235B007C5C6F /* GameInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		894709EE235CF948004283AF /* SportsiumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SportsiumUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		894709F2235CF948004283AF /* SportsiumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsiumUITests.swift; sourceTree = "<group>"; };
 		894709F4235CF948004283AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC19AD4323602240007C5C6F /* GameInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameInfo.storyboard; sourceTree = "<group>"; };
+		EC19AD452360235B007C5C6F /* GameInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				894709D2235CF945004283AF /* AppDelegate.swift */,
+				EC19AD452360235B007C5C6F /* GameInfo.swift */,
+				EC19AD4323602240007C5C6F /* GameInfo.storyboard */,
 				894709D4235CF945004283AF /* ViewController.swift */,
 				894709D6235CF945004283AF /* Main.storyboard */,
 				893AEC0F235E74BC009E36FB /* CheckIn.storyboard */,
@@ -236,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				894709DD235CF948004283AF /* LaunchScreen.storyboard in Resources */,
+				EC19AD4423602240007C5C6F /* GameInfo.storyboard in Resources */,
 				894709DA235CF948004283AF /* Assets.xcassets in Resources */,
 				893AEC10235E74BC009E36FB /* CheckIn.storyboard in Resources */,
 				894709D8235CF945004283AF /* Main.storyboard in Resources */,
@@ -266,6 +273,7 @@
 				894709D5235CF945004283AF /* ViewController.swift in Sources */,
 				893AEC12235E74DA009E36FB /* CheckInViewController.swift in Sources */,
 				894709D3235CF945004283AF /* AppDelegate.swift in Sources */,
+				EC19AD462360235B007C5C6F /* GameInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
