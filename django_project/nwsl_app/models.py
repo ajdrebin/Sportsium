@@ -18,7 +18,6 @@ class Team_Info_Table(models.Model):
     current_ties = models.IntegerField()
     current_losses = models.IntegerField()
 
-
     pass
 
 
@@ -30,8 +29,7 @@ class Player_Info_Table(models.Model):
     date_of_birth = models.DateField(max_length=8)
     height = models.CharField(max_length=16)
     twitter_link = models.CharField(max_length=512)
-
-
+    hometown = models.CharField(max_length=256)
 
     # player club team info
     current_club_team = models.ForeignKey(Team_Info_Table, on_delete=models.CASCADE)
@@ -44,7 +42,6 @@ class Player_Info_Table(models.Model):
     national_team = models.CharField(max_length=256)
     player_national_number = models.IntegerField()
 
-
     pass
 
 class Game_Info_Table(models.Model):
@@ -53,7 +50,7 @@ class Game_Info_Table(models.Model):
     home_team = models.CharField(max_length=128)
     away_team = models.CharField(max_length=128)
     stadium = models.CharField(max_length=128)
-    date = models.DateField(max_length=16)
+    date = models.DateField(max_length=16) # YYYY-MM-DD
     time = models.DateTimeField(max_length=16)
 
     pass
