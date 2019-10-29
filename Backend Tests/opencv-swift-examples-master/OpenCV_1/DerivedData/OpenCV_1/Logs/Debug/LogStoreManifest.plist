@@ -6,6 +6,210 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
+		<key>032E0E95-DB7F-49B6-A06B-F323D0C63301</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>032E0E95-DB7F-49B6-A06B-F323D0C63301.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>timeStartedRecording</key>
+			<real>594065458.58466196</real>
+			<key>timeStoppedRecording</key>
+			<real>594065553.09585702</real>
+			<key>title</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>uniqueIdentifier</key>
+			<string>032E0E95-DB7F-49B6-A06B-F323D0C63301</string>
+		</dict>
+		<key>08EC4644-3D5E-450A-868E-BEC498EC916D</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>08EC4644-3D5E-450A-868E-BEC498EC916D.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>timeStartedRecording</key>
+			<real>594061860.19597101</real>
+			<key>timeStoppedRecording</key>
+			<real>594061878.19814503</real>
+			<key>title</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>uniqueIdentifier</key>
+			<string>08EC4644-3D5E-450A-868E-BEC498EC916D</string>
+		</dict>
+		<key>0A6404D4-1384-4FF0-9DEF-4F8AB5B72FA9</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>0A6404D4-1384-4FF0-9DEF-4F8AB5B72FA9.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>timeStartedRecording</key>
+			<real>594060293.75367796</real>
+			<key>timeStoppedRecording</key>
+			<real>594060370.33656001</real>
+			<key>title</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>uniqueIdentifier</key>
+			<string>0A6404D4-1384-4FF0-9DEF-4F8AB5B72FA9</string>
+		</dict>
+		<key>0B77E35A-CFF2-45DE-A5C3-E7955D90D770</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>0B77E35A-CFF2-45DE-A5C3-E7955D90D770.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>timeStartedRecording</key>
+			<real>594059764.38619602</real>
+			<key>timeStoppedRecording</key>
+			<real>594059802.70013702</real>
+			<key>title</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>uniqueIdentifier</key>
+			<string>0B77E35A-CFF2-45DE-A5C3-E7955D90D770</string>
+		</dict>
+		<key>0D2C1BB7-16A4-4445-8DB7-5653F733EF7B</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>0D2C1BB7-16A4-4445-8DB7-5653F733EF7B.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>timeStartedRecording</key>
+			<real>594061952.61796105</real>
+			<key>timeStoppedRecording</key>
+			<real>594062029.40003097</real>
+			<key>title</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>uniqueIdentifier</key>
+			<string>0D2C1BB7-16A4-4445-8DB7-5653F733EF7B</string>
+		</dict>
+		<key>0FD6CC04-E6A6-49AA-A3E1-716DAF660A0A</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>0FD6CC04-E6A6-49AA-A3E1-716DAF660A0A.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>timeStartedRecording</key>
+			<real>594061753.53530002</real>
+			<key>timeStoppedRecording</key>
+			<real>594061770.19953299</real>
+			<key>title</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>uniqueIdentifier</key>
+			<string>0FD6CC04-E6A6-49AA-A3E1-716DAF660A0A</string>
+		</dict>
 		<key>144D2132-870E-4277-BC9B-E99227F13845</key>
 		<dict>
 			<key>className</key>
@@ -73,6 +277,74 @@
 			<string>Debug OpenCV_1</string>
 			<key>uniqueIdentifier</key>
 			<string>14EDF09F-B0B4-4A75-9B84-C53EADD8D093</string>
+		</dict>
+		<key>199279B3-5EE5-4078-B382-725DCB072587</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>199279B3-5EE5-4078-B382-725DCB072587.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>timeStartedRecording</key>
+			<real>594063655.55339897</real>
+			<key>timeStoppedRecording</key>
+			<real>594063675.09539998</real>
+			<key>title</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>uniqueIdentifier</key>
+			<string>199279B3-5EE5-4078-B382-725DCB072587</string>
+		</dict>
+		<key>1AC59C7B-9230-4F80-B994-B4D77FC32859</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>1AC59C7B-9230-4F80-B994-B4D77FC32859.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>timeStartedRecording</key>
+			<real>594060425.05313396</real>
+			<key>timeStoppedRecording</key>
+			<real>594060455.788203</real>
+			<key>title</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>uniqueIdentifier</key>
+			<string>1AC59C7B-9230-4F80-B994-B4D77FC32859</string>
 		</dict>
 		<key>211399B5-15C9-4700-97EF-37DA26D0EFBC</key>
 		<dict>
@@ -142,6 +414,40 @@
 			<key>uniqueIdentifier</key>
 			<string>2939BF72-BA17-4919-B455-BBB8A84CC594</string>
 		</dict>
+		<key>2A603EB6-4EDC-4F38-8AA2-0485EE99A815</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>2A603EB6-4EDC-4F38-8AA2-0485EE99A815.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>timeStartedRecording</key>
+			<real>594066225.16310704</real>
+			<key>timeStoppedRecording</key>
+			<real>594066281.60228395</real>
+			<key>title</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>uniqueIdentifier</key>
+			<string>2A603EB6-4EDC-4F38-8AA2-0485EE99A815</string>
+		</dict>
 		<key>2C58AB51-8D53-479D-9E8D-576D4F60EF72</key>
 		<dict>
 			<key>className</key>
@@ -175,6 +481,108 @@
 			<string>Debug OpenCV_1</string>
 			<key>uniqueIdentifier</key>
 			<string>2C58AB51-8D53-479D-9E8D-576D4F60EF72</string>
+		</dict>
+		<key>2D72A192-7674-4880-BA8A-E9CDC4A9B70D</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>2D72A192-7674-4880-BA8A-E9CDC4A9B70D.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>timeStartedRecording</key>
+			<real>594065644.342188</real>
+			<key>timeStoppedRecording</key>
+			<real>594065685.54262304</real>
+			<key>title</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>uniqueIdentifier</key>
+			<string>2D72A192-7674-4880-BA8A-E9CDC4A9B70D</string>
+		</dict>
+		<key>338B90BA-EF3B-49A4-9BF0-C2A5E84B1CA9</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>338B90BA-EF3B-49A4-9BF0-C2A5E84B1CA9.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>timeStartedRecording</key>
+			<real>594065558.934497</real>
+			<key>timeStoppedRecording</key>
+			<real>594065621.81098604</real>
+			<key>title</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>uniqueIdentifier</key>
+			<string>338B90BA-EF3B-49A4-9BF0-C2A5E84B1CA9</string>
+		</dict>
+		<key>47414C6B-948B-4371-928C-C6D76FDE8CBC</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>47414C6B-948B-4371-928C-C6D76FDE8CBC.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>timeStartedRecording</key>
+			<real>594060492.16119397</real>
+			<key>timeStoppedRecording</key>
+			<real>594061753.38909805</real>
+			<key>title</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>uniqueIdentifier</key>
+			<string>47414C6B-948B-4371-928C-C6D76FDE8CBC</string>
 		</dict>
 		<key>495C3652-CF56-4110-A1C6-146F4D48D94B</key>
 		<dict>
@@ -380,6 +788,40 @@
 			<key>uniqueIdentifier</key>
 			<string>561E53EA-5FC1-400C-ADF0-8A8FFE16C0D1</string>
 		</dict>
+		<key>565141B5-075C-45E1-A4F7-F13A5547C8AE</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>565141B5-075C-45E1-A4F7-F13A5547C8AE.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>timeStartedRecording</key>
+			<real>594059807.98664498</real>
+			<key>timeStoppedRecording</key>
+			<real>594059821.82949901</real>
+			<key>title</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>uniqueIdentifier</key>
+			<string>565141B5-075C-45E1-A4F7-F13A5547C8AE</string>
+		</dict>
 		<key>5A036A3F-9496-4216-B9C6-D16478B1F9B6</key>
 		<dict>
 			<key>className</key>
@@ -413,6 +855,40 @@
 			<string>Debug OpenCV_1</string>
 			<key>uniqueIdentifier</key>
 			<string>5A036A3F-9496-4216-B9C6-D16478B1F9B6</string>
+		</dict>
+		<key>5E2EB846-E3FE-4DF8-8866-16FB1AE98A42</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>5E2EB846-E3FE-4DF8-8866-16FB1AE98A42.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>timeStartedRecording</key>
+			<real>594064572.52961695</real>
+			<key>timeStoppedRecording</key>
+			<real>594064731.83705795</real>
+			<key>title</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>uniqueIdentifier</key>
+			<string>5E2EB846-E3FE-4DF8-8866-16FB1AE98A42</string>
 		</dict>
 		<key>61964DE5-8F14-4738-A842-16D6A0CCB59B</key>
 		<dict>
@@ -618,6 +1094,74 @@
 			<key>uniqueIdentifier</key>
 			<string>73712322-A76B-495F-8606-08708B5E036F</string>
 		</dict>
+		<key>75522176-341D-44F9-AF11-E91B274FD33B</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>75522176-341D-44F9-AF11-E91B274FD33B.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>timeStartedRecording</key>
+			<real>594063625.67102504</real>
+			<key>timeStoppedRecording</key>
+			<real>594063637.21164203</real>
+			<key>title</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>uniqueIdentifier</key>
+			<string>75522176-341D-44F9-AF11-E91B274FD33B</string>
+		</dict>
+		<key>7BB460D1-4F43-401F-BE6B-9C0891F569A9</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>7BB460D1-4F43-401F-BE6B-9C0891F569A9.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>timeStartedRecording</key>
+			<real>594063763.83403504</real>
+			<key>timeStoppedRecording</key>
+			<real>594064206.11077499</real>
+			<key>title</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>uniqueIdentifier</key>
+			<string>7BB460D1-4F43-401F-BE6B-9C0891F569A9</string>
+		</dict>
 		<key>7DBD3F1C-201E-4856-A32E-E915F8B3408F</key>
 		<dict>
 			<key>className</key>
@@ -651,6 +1195,40 @@
 			<string>Debug OpenCV_1</string>
 			<key>uniqueIdentifier</key>
 			<string>7DBD3F1C-201E-4856-A32E-E915F8B3408F</string>
+		</dict>
+		<key>7E7CF6B4-69EB-4F9C-B90F-E262AA3FF779</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>7E7CF6B4-69EB-4F9C-B90F-E262AA3FF779.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>timeStartedRecording</key>
+			<real>594061916.94006503</real>
+			<key>timeStoppedRecording</key>
+			<real>594061946.53489602</real>
+			<key>title</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>uniqueIdentifier</key>
+			<string>7E7CF6B4-69EB-4F9C-B90F-E262AA3FF779</string>
 		</dict>
 		<key>80750722-21AB-4A57-A649-E85DEAF7CA14</key>
 		<dict>
@@ -719,6 +1297,40 @@
 			<string>Debug OpenCV_1</string>
 			<key>uniqueIdentifier</key>
 			<string>849DF148-3D37-40B4-9462-932F7725FABD</string>
+		</dict>
+		<key>8E979B6D-607D-49BB-8DE6-3B48DEB9ABF3</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>8E979B6D-607D-49BB-8DE6-3B48DEB9ABF3.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>timeStartedRecording</key>
+			<real>594064428.28076804</real>
+			<key>timeStoppedRecording</key>
+			<real>594064564.46039402</real>
+			<key>title</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>uniqueIdentifier</key>
+			<string>8E979B6D-607D-49BB-8DE6-3B48DEB9ABF3</string>
 		</dict>
 		<key>8FF79C98-F38C-4608-A807-7AAEC22D4428</key>
 		<dict>
@@ -822,6 +1434,40 @@
 			<key>uniqueIdentifier</key>
 			<string>9C7CF0AF-E4AE-474A-8ACA-D95513EF5250</string>
 		</dict>
+		<key>9CEDA1CE-3884-4EC8-8730-5C44E66C7C5A</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>9CEDA1CE-3884-4EC8-8730-5C44E66C7C5A.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>timeStartedRecording</key>
+			<real>594064795.61922204</real>
+			<key>timeStoppedRecording</key>
+			<real>594065449.880602</real>
+			<key>title</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>uniqueIdentifier</key>
+			<string>9CEDA1CE-3884-4EC8-8730-5C44E66C7C5A</string>
+		</dict>
 		<key>9DE3B738-20CD-42B9-968B-3AFCC20AB73C</key>
 		<dict>
 			<key>className</key>
@@ -890,6 +1536,40 @@
 			<key>uniqueIdentifier</key>
 			<string>9FF04BD5-9EB1-4C90-B0C5-B47BE5BCD564</string>
 		</dict>
+		<key>A18DC4A2-00EB-4FA1-9B6F-FB323C869110</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>A18DC4A2-00EB-4FA1-9B6F-FB323C869110.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>timeStartedRecording</key>
+			<real>594062443.63326597</real>
+			<key>timeStoppedRecording</key>
+			<real>594062648.97483897</real>
+			<key>title</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>uniqueIdentifier</key>
+			<string>A18DC4A2-00EB-4FA1-9B6F-FB323C869110</string>
+		</dict>
 		<key>AB78EDC7-505A-4D19-905E-48F14F6902FA</key>
 		<dict>
 			<key>className</key>
@@ -923,6 +1603,74 @@
 			<string>Debug OpenCV_1</string>
 			<key>uniqueIdentifier</key>
 			<string>AB78EDC7-505A-4D19-905E-48F14F6902FA</string>
+		</dict>
+		<key>AC110836-1315-4E38-BE60-370247EBEC36</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>AC110836-1315-4E38-BE60-370247EBEC36.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>timeStartedRecording</key>
+			<real>594060378.14017606</real>
+			<key>timeStoppedRecording</key>
+			<real>594060395.90652001</real>
+			<key>title</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>uniqueIdentifier</key>
+			<string>AC110836-1315-4E38-BE60-370247EBEC36</string>
+		</dict>
+		<key>ADCD79C8-5CF8-49A9-B110-62FDB09E62B6</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>ADCD79C8-5CF8-49A9-B110-62FDB09E62B6.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>timeStartedRecording</key>
+			<real>594060141.49488699</real>
+			<key>timeStoppedRecording</key>
+			<real>594060158.87554705</real>
+			<key>title</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>uniqueIdentifier</key>
+			<string>ADCD79C8-5CF8-49A9-B110-62FDB09E62B6</string>
 		</dict>
 		<key>B2B0075D-1979-4D70-B147-7C459EAA9744</key>
 		<dict>
@@ -991,6 +1739,40 @@
 			<string>Debug OpenCV_1</string>
 			<key>uniqueIdentifier</key>
 			<string>B36D6975-71AC-42D1-B32B-937B8C0044F4</string>
+		</dict>
+		<key>B4F3DF9F-F472-4B6C-A1F9-65989CFC20C8</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>B4F3DF9F-F472-4B6C-A1F9-65989CFC20C8.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>timeStartedRecording</key>
+			<real>594060470.13491297</real>
+			<key>timeStoppedRecording</key>
+			<real>594060486.14045298</real>
+			<key>title</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>uniqueIdentifier</key>
+			<string>B4F3DF9F-F472-4B6C-A1F9-65989CFC20C8</string>
 		</dict>
 		<key>B72DEAD4-D6BE-4C6E-95E0-73DF962A90F6</key>
 		<dict>
@@ -1128,6 +1910,40 @@
 			<key>uniqueIdentifier</key>
 			<string>C18BAB43-A9F5-47D0-9647-56C8D191D1D6</string>
 		</dict>
+		<key>C23D8D8E-2875-4F54-86BD-106D82C1547C</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>C23D8D8E-2875-4F54-86BD-106D82C1547C.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>timeStartedRecording</key>
+			<real>594066925.96619201</real>
+			<key>timeStoppedRecording</key>
+			<real>594067021.72227502</real>
+			<key>title</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>uniqueIdentifier</key>
+			<string>C23D8D8E-2875-4F54-86BD-106D82C1547C</string>
+		</dict>
 		<key>C2836A31-06FC-4D9C-9FCB-4DE3C8CC254F</key>
 		<dict>
 			<key>className</key>
@@ -1230,6 +2046,40 @@
 			<key>uniqueIdentifier</key>
 			<string>D01722BF-96FB-4F0B-A837-5CABB9B1D6D6</string>
 		</dict>
+		<key>D9414E2A-017B-4010-B560-08871E60FB55</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>D9414E2A-017B-4010-B560-08871E60FB55.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>timeStartedRecording</key>
+			<real>594065843.47859204</real>
+			<key>timeStoppedRecording</key>
+			<real>594065886.86375701</real>
+			<key>title</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>uniqueIdentifier</key>
+			<string>D9414E2A-017B-4010-B560-08871E60FB55</string>
+		</dict>
 		<key>DB682969-3DC0-4BEE-9E22-6389DE7AA494</key>
 		<dict>
 			<key>className</key>
@@ -1263,6 +2113,142 @@
 			<string>Debug ml_test_opencv_2</string>
 			<key>uniqueIdentifier</key>
 			<string>DB682969-3DC0-4BEE-9E22-6389DE7AA494</string>
+		</dict>
+		<key>DCCC4D6F-09C3-469C-8818-EEED86097310</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>DCCC4D6F-09C3-469C-8818-EEED86097310.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>timeStartedRecording</key>
+			<real>594062656.21426296</real>
+			<key>timeStoppedRecording</key>
+			<real>594062727.69686794</real>
+			<key>title</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>uniqueIdentifier</key>
+			<string>DCCC4D6F-09C3-469C-8818-EEED86097310</string>
+		</dict>
+		<key>E8BE6048-A2CA-407A-85A3-74F00A31FCA2</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>E8BE6048-A2CA-407A-85A3-74F00A31FCA2.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>timeStartedRecording</key>
+			<real>594059688.99044704</real>
+			<key>timeStoppedRecording</key>
+			<real>594059700.77520704</real>
+			<key>title</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>uniqueIdentifier</key>
+			<string>E8BE6048-A2CA-407A-85A3-74F00A31FCA2</string>
+		</dict>
+		<key>E8E80291-8197-4368-9293-A16C626F2237</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>E8E80291-8197-4368-9293-A16C626F2237.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>timeStartedRecording</key>
+			<real>594061829.389099</real>
+			<key>timeStoppedRecording</key>
+			<real>594061841.66228998</real>
+			<key>title</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>uniqueIdentifier</key>
+			<string>E8E80291-8197-4368-9293-A16C626F2237</string>
+		</dict>
+		<key>EA4CE7DA-5EA1-4D37-89A3-F3D174B33D93</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>EA4CE7DA-5EA1-4D37-89A3-F3D174B33D93.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>timeStartedRecording</key>
+			<real>594062295.64928603</real>
+			<key>timeStoppedRecording</key>
+			<real>594062437.13294303</real>
+			<key>title</key>
+			<string>Debug ml_test_opencv_2</string>
+			<key>uniqueIdentifier</key>
+			<string>EA4CE7DA-5EA1-4D37-89A3-F3D174B33D93</string>
 		</dict>
 		<key>EFF1A226-6682-4A56-8EB1-E5B06FA388DF</key>
 		<dict>

@@ -6,6 +6,40 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
+		<key>0E39D04E-3CAA-49DC-93C8-84818086E4D3</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>0E39D04E-3CAA-49DC-93C8-84818086E4D3.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenCV_1</string>
+			<key>timeStartedRecording</key>
+			<real>594059758.31142795</real>
+			<key>timeStoppedRecording</key>
+			<real>594059764.37940001</real>
+			<key>title</key>
+			<string>Build OpenCV_1</string>
+			<key>uniqueIdentifier</key>
+			<string>0E39D04E-3CAA-49DC-93C8-84818086E4D3</string>
+		</dict>
 		<key>13248BB3-6D09-46D4-8058-F3848F3265EA</key>
 		<dict>
 			<key>className</key>
@@ -210,6 +244,40 @@
 			<key>uniqueIdentifier</key>
 			<string>256F680A-CEDF-45C3-9BE6-3939417E985C</string>
 		</dict>
+		<key>2A4CA59C-B1BF-4611-B9EC-0CEF31531576</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>2A4CA59C-B1BF-4611-B9EC-0CEF31531576.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenCV_1</string>
+			<key>timeStartedRecording</key>
+			<real>594062437.31224</real>
+			<key>timeStoppedRecording</key>
+			<real>594062443.62364602</real>
+			<key>title</key>
+			<string>Build OpenCV_1</string>
+			<key>uniqueIdentifier</key>
+			<string>2A4CA59C-B1BF-4611-B9EC-0CEF31531576</string>
+		</dict>
 		<key>2A64EAC9-35F9-4BD8-8FD2-174C9AF3C6F3</key>
 		<dict>
 			<key>className</key>
@@ -243,6 +311,40 @@
 			<string>Build OpenCV_1</string>
 			<key>uniqueIdentifier</key>
 			<string>2A64EAC9-35F9-4BD8-8FD2-174C9AF3C6F3</string>
+		</dict>
+		<key>35F17387-EE98-483D-A4AC-5A382C6022E7</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>35F17387-EE98-483D-A4AC-5A382C6022E7.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenCV_1</string>
+			<key>timeStartedRecording</key>
+			<real>594063757.77311599</real>
+			<key>timeStoppedRecording</key>
+			<real>594063763.82583904</real>
+			<key>title</key>
+			<string>Build OpenCV_1</string>
+			<key>uniqueIdentifier</key>
+			<string>35F17387-EE98-483D-A4AC-5A382C6022E7</string>
 		</dict>
 		<key>40E1CC55-CF4A-42B3-B812-ADD09D5909B1</key>
 		<dict>
@@ -550,6 +652,108 @@
 			<key>uniqueIdentifier</key>
 			<string>60179B3C-E497-4EC2-A0BF-F47F3EC6BF89</string>
 		</dict>
+		<key>613C5FB9-2E2B-4B9F-8249-68075AE25AF2</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>613C5FB9-2E2B-4B9F-8249-68075AE25AF2.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenCV_1</string>
+			<key>timeStartedRecording</key>
+			<real>594065553.25858295</real>
+			<key>timeStoppedRecording</key>
+			<real>594065558.92850602</real>
+			<key>title</key>
+			<string>Build OpenCV_1</string>
+			<key>uniqueIdentifier</key>
+			<string>613C5FB9-2E2B-4B9F-8249-68075AE25AF2</string>
+		</dict>
+		<key>62809366-5A6E-4964-A22E-33F6DFDF3047</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>62809366-5A6E-4964-A22E-33F6DFDF3047.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenCV_1</string>
+			<key>timeStartedRecording</key>
+			<real>594064564.60273099</real>
+			<key>timeStoppedRecording</key>
+			<real>594064572.517259</real>
+			<key>title</key>
+			<string>Build OpenCV_1</string>
+			<key>uniqueIdentifier</key>
+			<string>62809366-5A6E-4964-A22E-33F6DFDF3047</string>
+		</dict>
+		<key>66A1E9D1-78A3-47EF-B72D-2FB85752527A</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>66A1E9D1-78A3-47EF-B72D-2FB85752527A.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenCV_1</string>
+			<key>timeStartedRecording</key>
+			<real>594062649.19763601</real>
+			<key>timeStoppedRecording</key>
+			<real>594062656.20837903</real>
+			<key>title</key>
+			<string>Build OpenCV_1</string>
+			<key>uniqueIdentifier</key>
+			<string>66A1E9D1-78A3-47EF-B72D-2FB85752527A</string>
+		</dict>
 		<key>6F1B9085-C7A9-45A3-8017-3528E1C9C0BA</key>
 		<dict>
 			<key>className</key>
@@ -583,6 +787,108 @@
 			<string>Build OpenCV_1</string>
 			<key>uniqueIdentifier</key>
 			<string>6F1B9085-C7A9-45A3-8017-3528E1C9C0BA</string>
+		</dict>
+		<key>74B512CB-4998-4706-8D86-FEB49B5CF462</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>74B512CB-4998-4706-8D86-FEB49B5CF462.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenCV_1</string>
+			<key>timeStartedRecording</key>
+			<real>594065635.61328995</real>
+			<key>timeStoppedRecording</key>
+			<real>594065644.33673</real>
+			<key>title</key>
+			<string>Build OpenCV_1</string>
+			<key>uniqueIdentifier</key>
+			<string>74B512CB-4998-4706-8D86-FEB49B5CF462</string>
+		</dict>
+		<key>74C24772-99D4-457F-97B2-0156A68B8C74</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>74C24772-99D4-457F-97B2-0156A68B8C74.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenCV_1</string>
+			<key>timeStartedRecording</key>
+			<real>594061853.69544303</real>
+			<key>timeStoppedRecording</key>
+			<real>594061860.18784702</real>
+			<key>title</key>
+			<string>Build OpenCV_1</string>
+			<key>uniqueIdentifier</key>
+			<string>74C24772-99D4-457F-97B2-0156A68B8C74</string>
+		</dict>
+		<key>76897928-F4BE-42B8-AFDA-9C4DB61C8045</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>76897928-F4BE-42B8-AFDA-9C4DB61C8045.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenCV_1</string>
+			<key>timeStartedRecording</key>
+			<real>594061822.06075597</real>
+			<key>timeStoppedRecording</key>
+			<real>594061829.38245904</real>
+			<key>title</key>
+			<string>Build OpenCV_1</string>
+			<key>uniqueIdentifier</key>
+			<string>76897928-F4BE-42B8-AFDA-9C4DB61C8045</string>
 		</dict>
 		<key>784414C9-1573-4E0C-9A33-6BE37E25FFBF</key>
 		<dict>
@@ -618,6 +924,108 @@
 			<key>uniqueIdentifier</key>
 			<string>784414C9-1573-4E0C-9A33-6BE37E25FFBF</string>
 		</dict>
+		<key>7A50B265-F4EE-49D3-A2A4-4090ABD79AD0</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>7A50B265-F4EE-49D3-A2A4-4090ABD79AD0.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenCV_1</string>
+			<key>timeStartedRecording</key>
+			<real>594059802.69012403</real>
+			<key>timeStoppedRecording</key>
+			<real>594059807.97928905</real>
+			<key>title</key>
+			<string>Build OpenCV_1</string>
+			<key>uniqueIdentifier</key>
+			<string>7A50B265-F4EE-49D3-A2A4-4090ABD79AD0</string>
+		</dict>
+		<key>7F5CD83F-8208-4480-B4F9-D8D1E4D29E8B</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>7F5CD83F-8208-4480-B4F9-D8D1E4D29E8B.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenCV_1</string>
+			<key>timeStartedRecording</key>
+			<real>594061753.31796503</real>
+			<key>timeStoppedRecording</key>
+			<real>594061753.51643395</real>
+			<key>title</key>
+			<string>Build OpenCV_1</string>
+			<key>uniqueIdentifier</key>
+			<string>7F5CD83F-8208-4480-B4F9-D8D1E4D29E8B</string>
+		</dict>
+		<key>8179E7BE-3575-43DA-8304-02691B610556</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>8179E7BE-3575-43DA-8304-02691B610556.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenCV_1</string>
+			<key>timeStartedRecording</key>
+			<real>594061946.52748704</real>
+			<key>timeStoppedRecording</key>
+			<real>594061952.61170197</real>
+			<key>title</key>
+			<string>Build OpenCV_1</string>
+			<key>uniqueIdentifier</key>
+			<string>8179E7BE-3575-43DA-8304-02691B610556</string>
+		</dict>
 		<key>8316175F-CA1A-422E-848D-E30A7CAD9906</key>
 		<dict>
 			<key>className</key>
@@ -652,6 +1060,74 @@
 			<key>uniqueIdentifier</key>
 			<string>8316175F-CA1A-422E-848D-E30A7CAD9906</string>
 		</dict>
+		<key>854C2567-04A9-42FD-99EE-7574AD76494F</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>854C2567-04A9-42FD-99EE-7574AD76494F.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenCV_1</string>
+			<key>timeStartedRecording</key>
+			<real>594061911.81132305</real>
+			<key>timeStoppedRecording</key>
+			<real>594061916.93395495</real>
+			<key>title</key>
+			<string>Build OpenCV_1</string>
+			<key>uniqueIdentifier</key>
+			<string>854C2567-04A9-42FD-99EE-7574AD76494F</string>
+		</dict>
+		<key>8D55F4D3-8A26-4680-A448-4D23FBC17B5E</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>8D55F4D3-8A26-4680-A448-4D23FBC17B5E.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenCV_1</string>
+			<key>timeStartedRecording</key>
+			<real>594060419.93596101</real>
+			<key>timeStoppedRecording</key>
+			<real>594060425.04621506</real>
+			<key>title</key>
+			<string>Build OpenCV_1</string>
+			<key>uniqueIdentifier</key>
+			<string>8D55F4D3-8A26-4680-A448-4D23FBC17B5E</string>
+		</dict>
 		<key>8DF53F49-8B8E-4E6A-AB64-9B93CC42F046</key>
 		<dict>
 			<key>className</key>
@@ -685,6 +1161,40 @@
 			<string>Build OpenCV_1</string>
 			<key>uniqueIdentifier</key>
 			<string>8DF53F49-8B8E-4E6A-AB64-9B93CC42F046</string>
+		</dict>
+		<key>91BB4012-9938-469B-98B7-A8D30DED0397</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>91BB4012-9938-469B-98B7-A8D30DED0397.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenCV_1</string>
+			<key>timeStartedRecording</key>
+			<real>594064419.83655906</real>
+			<key>timeStoppedRecording</key>
+			<real>594064428.27089405</real>
+			<key>title</key>
+			<string>Build OpenCV_1</string>
+			<key>uniqueIdentifier</key>
+			<string>91BB4012-9938-469B-98B7-A8D30DED0397</string>
 		</dict>
 		<key>93FFBD42-6E17-4F3C-A087-9B9C8EA1C195</key>
 		<dict>
@@ -822,6 +1332,74 @@
 			<key>uniqueIdentifier</key>
 			<string>96214F79-87C3-42CB-A1F0-51BF1A16FD97</string>
 		</dict>
+		<key>9898BED8-43E6-4560-BC1C-0A010F5DC3C1</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>9898BED8-43E6-4560-BC1C-0A010F5DC3C1.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenCV_1</string>
+			<key>timeStartedRecording</key>
+			<real>594059682.65641296</real>
+			<key>timeStoppedRecording</key>
+			<real>594059688.98220098</real>
+			<key>title</key>
+			<string>Build OpenCV_1</string>
+			<key>uniqueIdentifier</key>
+			<string>9898BED8-43E6-4560-BC1C-0A010F5DC3C1</string>
+		</dict>
+		<key>9B24B57B-311A-418B-9E9F-CC3423703497</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>9B24B57B-311A-418B-9E9F-CC3423703497.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenCV_1</string>
+			<key>timeStartedRecording</key>
+			<real>594060136.19498599</real>
+			<key>timeStoppedRecording</key>
+			<real>594060141.487795</real>
+			<key>title</key>
+			<string>Build OpenCV_1</string>
+			<key>uniqueIdentifier</key>
+			<string>9B24B57B-311A-418B-9E9F-CC3423703497</string>
+		</dict>
 		<key>9BB7D9D2-42F1-4391-80FC-9E9F91405C42</key>
 		<dict>
 			<key>className</key>
@@ -958,6 +1536,74 @@
 			<key>uniqueIdentifier</key>
 			<string>A8C2C3E3-86A3-4761-BE90-2E53C3050F50</string>
 		</dict>
+		<key>AA5C3F1B-A6BD-4D67-88B8-67EA31C11269</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>AA5C3F1B-A6BD-4D67-88B8-67EA31C11269.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenCV_1</string>
+			<key>timeStartedRecording</key>
+			<real>594063619.38958299</real>
+			<key>timeStoppedRecording</key>
+			<real>594063625.66176403</real>
+			<key>title</key>
+			<string>Build OpenCV_1</string>
+			<key>uniqueIdentifier</key>
+			<string>AA5C3F1B-A6BD-4D67-88B8-67EA31C11269</string>
+		</dict>
+		<key>ACE03045-02FC-4D18-81D1-95DE4194692A</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>ACE03045-02FC-4D18-81D1-95DE4194692A.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenCV_1</string>
+			<key>timeStartedRecording</key>
+			<real>594060371.09481704</real>
+			<key>timeStoppedRecording</key>
+			<real>594060378.13420105</real>
+			<key>title</key>
+			<string>Build OpenCV_1</string>
+			<key>uniqueIdentifier</key>
+			<string>ACE03045-02FC-4D18-81D1-95DE4194692A</string>
+		</dict>
 		<key>AD657FD1-2D55-47EB-B6CE-56A0C3F1F45D</key>
 		<dict>
 			<key>className</key>
@@ -1025,6 +1671,108 @@
 			<string>Build OpenCV_1</string>
 			<key>uniqueIdentifier</key>
 			<string>B191E4FB-E593-4033-87D8-6AE953D6BE8B</string>
+		</dict>
+		<key>B1E60A4A-11B5-41D0-89C3-2CC5131DBAD5</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>B1E60A4A-11B5-41D0-89C3-2CC5131DBAD5.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenCV_1</string>
+			<key>timeStartedRecording</key>
+			<real>594064788.96550798</real>
+			<key>timeStoppedRecording</key>
+			<real>594064795.61004698</real>
+			<key>title</key>
+			<string>Build OpenCV_1</string>
+			<key>uniqueIdentifier</key>
+			<string>B1E60A4A-11B5-41D0-89C3-2CC5131DBAD5</string>
+		</dict>
+		<key>B3830666-90A7-4EA1-9276-50239ED3B639</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>B3830666-90A7-4EA1-9276-50239ED3B639.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenCV_1</string>
+			<key>timeStartedRecording</key>
+			<real>594067039.67276895</real>
+			<key>timeStoppedRecording</key>
+			<real>594067045.76610601</real>
+			<key>title</key>
+			<string>Build OpenCV_1</string>
+			<key>uniqueIdentifier</key>
+			<string>B3830666-90A7-4EA1-9276-50239ED3B639</string>
+		</dict>
+		<key>B5E1D56F-9651-4295-A474-948550A5BAC5</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>B5E1D56F-9651-4295-A474-948550A5BAC5.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenCV_1</string>
+			<key>timeStartedRecording</key>
+			<real>594063649.635975</real>
+			<key>timeStoppedRecording</key>
+			<real>594063655.547508</real>
+			<key>title</key>
+			<string>Build OpenCV_1</string>
+			<key>uniqueIdentifier</key>
+			<string>B5E1D56F-9651-4295-A474-948550A5BAC5</string>
 		</dict>
 		<key>B83D2A10-02AE-4F96-843C-4D4D9FA4133B</key>
 		<dict>
@@ -1094,6 +1842,108 @@
 			<key>uniqueIdentifier</key>
 			<string>B9A02420-A1A8-4AF1-A5F7-95387A584014</string>
 		</dict>
+		<key>B9D51D2B-3716-4442-AFB1-C89BD6D37EC4</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>B9D51D2B-3716-4442-AFB1-C89BD6D37EC4.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenCV_1</string>
+			<key>timeStartedRecording</key>
+			<real>594066218.51801097</real>
+			<key>timeStoppedRecording</key>
+			<real>594066225.155195</real>
+			<key>title</key>
+			<string>Build OpenCV_1</string>
+			<key>uniqueIdentifier</key>
+			<string>B9D51D2B-3716-4442-AFB1-C89BD6D37EC4</string>
+		</dict>
+		<key>BB630043-48C0-4F2A-AF17-7E1EDDF8D219</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>BB630043-48C0-4F2A-AF17-7E1EDDF8D219.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenCV_1</string>
+			<key>timeStartedRecording</key>
+			<real>594060464.57269895</real>
+			<key>timeStoppedRecording</key>
+			<real>594060470.12761402</real>
+			<key>title</key>
+			<string>Build OpenCV_1</string>
+			<key>uniqueIdentifier</key>
+			<string>BB630043-48C0-4F2A-AF17-7E1EDDF8D219</string>
+		</dict>
+		<key>C20DE015-CF61-4B77-A856-3EB7BF7EC091</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>C20DE015-CF61-4B77-A856-3EB7BF7EC091.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenCV_1</string>
+			<key>timeStartedRecording</key>
+			<real>594062289.51305902</real>
+			<key>timeStoppedRecording</key>
+			<real>594062295.64213705</real>
+			<key>title</key>
+			<string>Build OpenCV_1</string>
+			<key>uniqueIdentifier</key>
+			<string>C20DE015-CF61-4B77-A856-3EB7BF7EC091</string>
+		</dict>
 		<key>C2BA2CE5-D09A-4E1F-B638-FB15C67331A2</key>
 		<dict>
 			<key>className</key>
@@ -1127,6 +1977,40 @@
 			<string>Build OpenCV_1</string>
 			<key>uniqueIdentifier</key>
 			<string>C2BA2CE5-D09A-4E1F-B638-FB15C67331A2</string>
+		</dict>
+		<key>C2E9BF36-8EF7-4A7C-AB17-C25F91A00528</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>C2E9BF36-8EF7-4A7C-AB17-C25F91A00528.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenCV_1</string>
+			<key>timeStartedRecording</key>
+			<real>594065450.63680398</real>
+			<key>timeStoppedRecording</key>
+			<real>594065458.57296097</real>
+			<key>title</key>
+			<string>Build OpenCV_1</string>
+			<key>uniqueIdentifier</key>
+			<string>C2E9BF36-8EF7-4A7C-AB17-C25F91A00528</string>
 		</dict>
 		<key>CBB60CB9-848D-47C6-9EC0-0BFC19E3E5F8</key>
 		<dict>
@@ -1196,6 +2080,40 @@
 			<key>uniqueIdentifier</key>
 			<string>D2EBDA22-F843-4BE8-A944-A654BC3FA496</string>
 		</dict>
+		<key>D4C09E0B-8157-4650-9325-489FE5495C80</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>D4C09E0B-8157-4650-9325-489FE5495C80.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenCV_1</string>
+			<key>timeStartedRecording</key>
+			<real>594060486.352934</real>
+			<key>timeStoppedRecording</key>
+			<real>594060492.15555096</real>
+			<key>title</key>
+			<string>Build OpenCV_1</string>
+			<key>uniqueIdentifier</key>
+			<string>D4C09E0B-8157-4650-9325-489FE5495C80</string>
+		</dict>
 		<key>DBA345A1-04F7-427A-A851-5A1D5D5DF3DD</key>
 		<dict>
 			<key>className</key>
@@ -1229,6 +2147,108 @@
 			<string>Build OpenCV_1</string>
 			<key>uniqueIdentifier</key>
 			<string>DBA345A1-04F7-427A-A851-5A1D5D5DF3DD</string>
+		</dict>
+		<key>DD2A90BD-6D53-45AE-9D10-3AB429335E60</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>DD2A90BD-6D53-45AE-9D10-3AB429335E60.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenCV_1</string>
+			<key>timeStartedRecording</key>
+			<real>594060287.78311801</real>
+			<key>timeStoppedRecording</key>
+			<real>594060293.74576294</real>
+			<key>title</key>
+			<string>Build OpenCV_1</string>
+			<key>uniqueIdentifier</key>
+			<string>DD2A90BD-6D53-45AE-9D10-3AB429335E60</string>
+		</dict>
+		<key>E45ADD66-FAFC-4E7A-B1E8-3D702AD74EEE</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>E45ADD66-FAFC-4E7A-B1E8-3D702AD74EEE.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenCV_1</string>
+			<key>timeStartedRecording</key>
+			<real>594066917.85237098</real>
+			<key>timeStoppedRecording</key>
+			<real>594066925.95761895</real>
+			<key>title</key>
+			<string>Build OpenCV_1</string>
+			<key>uniqueIdentifier</key>
+			<string>E45ADD66-FAFC-4E7A-B1E8-3D702AD74EEE</string>
+		</dict>
+		<key>EFCF8BC3-C78B-48D3-B31F-6512CDC55BE6</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>EFCF8BC3-C78B-48D3-B31F-6512CDC55BE6.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenCV_1 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenCV_1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenCV_1</string>
+			<key>timeStartedRecording</key>
+			<real>594065835.00783503</real>
+			<key>timeStoppedRecording</key>
+			<real>594065843.46596396</real>
+			<key>title</key>
+			<string>Build OpenCV_1</string>
+			<key>uniqueIdentifier</key>
+			<string>EFCF8BC3-C78B-48D3-B31F-6512CDC55BE6</string>
 		</dict>
 		<key>F0852564-8799-4CE5-8D97-ECEFBEE441EF</key>
 		<dict>
