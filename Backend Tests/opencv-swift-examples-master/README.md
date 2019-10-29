@@ -1,4 +1,8 @@
-# opencv-swift-examples
+# SOURCED FROM https://github.com/aperedera/opencv-swift-examples
+mostly just to get infrastructure of using OpenCV in iOS, aiming translate working Python code in CV Tests folder into C++ to be used in iOS
+
+README copied below:
+## opencv-swift-examples
 Miscellaneous sample Swift projects using OpenCV. 
 
 OpenCV_1

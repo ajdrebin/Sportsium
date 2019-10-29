@@ -2,6 +2,18 @@
 
 Get to know the faces of the National Women’s Soccer League using computer vision and motion tracking for real-time player identification with access to bios, stats and more.
 
+## NOTE ON CONTRIBUTIONS
+* Jessica (jesscheng) had email issues so not all of her commits count as contributions. Please see commit log for her work. 
+* Alina (ajdrebin, adrebin) shows up as two contributors due to using two different accounts as a consequence of updating readmes online versus pushing code. Consider them the same person for all intents and purposes. (She will be using @adrebin to push code)
+
+
+## File Structure
+* Backend Tests: test scripts and apps to play around with OpenCV and other frameworks for computer vision and machine learning
+* django_project: backend server for database
+  * nwsl_app: API specific to NWSL version of app
+* img: directory of images to be used in app
+* Sportsium: UI development apps to work on front-end UI/UX
+* Starter App: starter app assignment
 
 ## LOG INTO Digital Ocean droplet
 * Droplet Name: django-sportsium
