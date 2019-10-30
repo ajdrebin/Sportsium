@@ -25,7 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B663D9701CF6749900FF1C8C /* OpenCV_1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenCV_1.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B663D9701CF6749900FF1C8C /* ml_test_opencv_2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ml_test_opencv_2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B663D9731CF6749A00FF1C8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B663D9751CF6749A00FF1C8C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B663D9781CF6749A00FF1C8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 		B663D9711CF6749900FF1C8C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B663D9701CF6749900FF1C8C /* OpenCV_1.app */,
+				B663D9701CF6749900FF1C8C /* ml_test_opencv_2.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -132,7 +132,7 @@
 			);
 			name = OpenCV_1;
 			productName = OpenCV_1;
-			productReference = B663D9701CF6749900FF1C8C /* OpenCV_1.app */;
+			productReference = B663D9701CF6749900FF1C8C /* ml_test_opencv_2.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -340,8 +340,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_CFLAGS = "-fvisibility=hidden";
-				PRODUCT_BUNDLE_IDENTIFIER = "ML-test-opencv-1";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "ML-test-opencv-2";
+				PRODUCT_NAME = ml_test_opencv_2;
 				SWIFT_OBJC_BRIDGING_HEADER = "OpenCV_1/OpenCV_1-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -367,8 +367,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_CFLAGS = "-fvisibility=hidden";
-				PRODUCT_BUNDLE_IDENTIFIER = "ML-test-opencv-1";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "ML-test-opencv-2";
+				PRODUCT_NAME = ml_test_opencv_2;
 				SWIFT_OBJC_BRIDGING_HEADER = "OpenCV_1/OpenCV_1-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
