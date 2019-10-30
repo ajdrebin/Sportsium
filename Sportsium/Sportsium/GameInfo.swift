@@ -11,10 +11,10 @@ import Foundation
 
 class GameInfoViewController: UIViewController {
     
-    let layer = UIView()
-    
-    layer.frame = CGRect(x: 1, y: 0, width: 375, height: 812)
-    layer.backgroundColor = UIColor(red: 0.53, green: 0.68, blue: 0.34, alpha: 1)
-    view.addSubview(layer)
+//    let layer = UIView()
+//
+//    layer.frame = CGRect(x: 1, y: 0, width: 375, height: 812)
+//    layer.backgroundColor = UIColor(red: 0.53, green: 0.68, blue: 0.34, alpha: 1)
+//    view.addSubview(layer)
     
 }
