@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Real Game Info View Controller-->
         <scene sceneID="Wi8-8A-Rwr">
             <objects>
-                <viewController id="3Yj-Cm-gwH" sceneMemberID="viewController">
+                <viewController id="3Yj-Cm-gwH" customClass="RealGameInfoViewController" customModule="Sportsium" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RX5-g3-QrR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -474,9 +474,13 @@
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" button="YES" staticText="YES"/>
                                         </accessibility>
+                                        <gestureRecognizers/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="L0S-Qc-6H7" appends="YES" id="SVu-h6-92H"/>
+                                        </connections>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Goalkeeper" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p0w-tr-JYh">
                                         <rect key="frame" x="58" y="22" width="74" height="17"/>
@@ -494,12 +498,23 @@
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" button="YES" staticText="YES"/>
                                         </accessibility>
+                                        <gestureRecognizers/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="L0S-Qc-6H7" appends="YES" id="GrW-6k-EZW"/>
+                                        </connections>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" allowsDirectInteraction="YES" causesPageTurn="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="L0S-Qc-6H7" appends="YES" id="Pfe-JU-gvk"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CqY-Dn-y7b">
                                 <rect key="frame" x="201" y="340" width="180" height="39"/>
@@ -876,10 +891,27 @@
                         <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="kOx-mH-1RZ"/>
                     </view>
+                    <connections>
+                        <outlet property="TeamOne" destination="5Dy-Fn-pAK" id="bQ4-IH-mnf"/>
+                        <outlet property="TeamTwo" destination="8a4-Hs-IGn" id="MPC-sU-IGk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pae-nw-EKf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="L0S-Qc-6H7">
+                    <connections>
+                        <segue destination="20J-pD-5y8" kind="presentation" id="Ce0-zD-BcT"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.6696428571428571"/>
+        </scene>
+        <!--PlayerInfo-->
+        <scene sceneID="7Ar-iZ-lWn">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PlayerInfo" id="20J-pD-5y8" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R58-uP-waZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="717" y="-42"/>
         </scene>
     </scenes>
     <resources>
