@@ -40,6 +40,15 @@
                                     <action selector="onClickSelectTeam2:" destination="Rtx-Ib-j2R" eventType="touchUpInside" id="D0p-s7-fOy"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jai-WC-Szu">
+                                <rect key="frame" x="173" y="526" width="68" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Go"/>
+                                <connections>
+                                    <segue destination="Mg0-cF-oHk" kind="presentation" id="ufH-9p-Khj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.076685495674610138" green="0.47192865610122681" blue="0.96561425924301147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -59,6 +68,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fms-wr-P5U" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="97.767857142857139"/>
+        </scene>
+        <!--RealGameInfo-->
+        <scene sceneID="Oob-aP-tfp">
+            <objects>
+                <viewControllerPlaceholder storyboardName="RealGameInfo" id="Mg0-cF-oHk" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zsI-cB-gBg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="695" y="55"/>
         </scene>
     </scenes>
 </document>
