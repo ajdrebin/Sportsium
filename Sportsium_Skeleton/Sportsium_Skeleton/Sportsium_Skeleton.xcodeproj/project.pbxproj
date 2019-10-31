@@ -28,9 +28,11 @@
 		C799F5BE236B720200184E36 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C799F5BD236B720200184E36 /* CoreImage.framework */; };
 		C799F5C0236B720900184E36 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C799F5BF236B720900184E36 /* QuartzCore.framework */; };
 		C799F5C1236B74D700184E36 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C799F5A4236B717200184E36 /* opencv2.framework */; };
-		C799F5C9236B8F9600184E36 /* TeamInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C799F5C8236B8F9600184E36 /* TeamInfo.storyboard */; };
 		C799F5CC236B90C500184E36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C799F58D236B714000184E36 /* Assets.xcassets */; };
-		C799F5CD236B910900184E36 /* TeamInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C799F5C6236B8EC300184E36 /* TeamInfoViewController.swift */; };
+		C799F5CF236B9A2D00184E36 /* TeamInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C799F5C6236B8EC300184E36 /* TeamInfoViewController.swift */; };
+		C799F5D4236B9B9000184E36 /* TeamInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C799F5D2236B9B0200184E36 /* TeamInfo.storyboard */; };
+		C799F5D6236BA50B00184E36 /* GameInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C799F5D5236BA50B00184E36 /* GameInfo.storyboard */; };
+		C799F5D8236BA51F00184E36 /* GameInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C799F5D7236BA51F00184E36 /* GameInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -74,7 +76,9 @@
 		C799F5BD236B720200184E36 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		C799F5BF236B720900184E36 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C799F5C6236B8EC300184E36 /* TeamInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamInfoViewController.swift; sourceTree = "<group>"; };
-		C799F5C8236B8F9600184E36 /* TeamInfo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = TeamInfo.storyboard; path = ../../../Sportsium/Sportsium/Sportsium/TeamInfo.storyboard; sourceTree = "<group>"; };
+		C799F5D2236B9B0200184E36 /* TeamInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TeamInfo.storyboard; sourceTree = "<group>"; };
+		C799F5D5236BA50B00184E36 /* GameInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameInfo.storyboard; sourceTree = "<group>"; };
+		C799F5D7236BA51F00184E36 /* GameInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,9 @@
 		C799F583236B713F00184E36 /* Sportsium_Skeleton */ = {
 			isa = PBXGroup;
 			children = (
+				C799F5D2236B9B0200184E36 /* TeamInfo.storyboard */,
+				C799F5D5236BA50B00184E36 /* GameInfo.storyboard */,
+				C799F5D7236BA51F00184E36 /* GameInfoViewController.swift */,
 				C799F584236B713F00184E36 /* AppDelegate.swift */,
 				C799F586236B713F00184E36 /* SceneDelegate.swift */,
 				C799F588236B713F00184E36 /* ViewController.swift */,
@@ -129,7 +136,6 @@
 				C799F5A5236B717200184E36 /* PlayerInfo.storyboard */,
 				C799F5AB236B718000184E36 /* ViewController.swift */,
 				C799F5A6236B717200184E36 /* PlayerInfoViewController.swift */,
-				C799F5C8236B8F9600184E36 /* TeamInfo.storyboard */,
 				C799F59C236B715F00184E36 /* CvVideoCameraWrapper.mm */,
 				C799F58A236B713F00184E36 /* Main.storyboard */,
 				C799F58D236B714000184E36 /* Assets.xcassets */,
@@ -216,11 +222,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C799F5D6236BA50B00184E36 /* GameInfo.storyboard in Resources */,
+				C799F5D4236B9B9000184E36 /* TeamInfo.storyboard in Resources */,
 				C799F5CC236B90C500184E36 /* Assets.xcassets in Resources */,
 				C799F591236B714000184E36 /* LaunchScreen.storyboard in Resources */,
 				C799F59F236B716000184E36 /* CheckIn.storyboard in Resources */,
 				C799F5A8236B717200184E36 /* PlayerInfo.storyboard in Resources */,
-				C799F5C9236B8F9600184E36 /* TeamInfo.storyboard in Resources */,
 				C799F58C236B713F00184E36 /* Main.storyboard in Resources */,
 				C799F5A0236B716000184E36 /* Camera.storyboard in Resources */,
 			);
@@ -233,9 +240,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C799F5CD236B910900184E36 /* TeamInfoViewController.swift in Sources */,
+				C799F5CF236B9A2D00184E36 /* TeamInfoViewController.swift in Sources */,
 				C799F5A9236B717200184E36 /* PlayerInfoViewController.swift in Sources */,
 				C799F589236B713F00184E36 /* ViewController.swift in Sources */,
+				C799F5D8236BA51F00184E36 /* GameInfoViewController.swift in Sources */,
 				C799F5A3236B716000184E36 /* CheckIn.swift in Sources */,
 				C799F5A2236B716000184E36 /* CameraViewController.swift in Sources */,
 				C799F5A1236B716000184E36 /* CvVideoCameraWrapper.mm in Sources */,
