@@ -12,7 +12,6 @@
 		894709D3235CF945004283AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894709D2235CF945004283AF /* AppDelegate.swift */; };
 		894709D5235CF945004283AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894709D4235CF945004283AF /* ViewController.swift */; };
 		894709D8235CF945004283AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 894709D6235CF945004283AF /* Main.storyboard */; };
-		894709DA235CF948004283AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 894709D9235CF948004283AF /* Assets.xcassets */; };
 		894709E8235CF948004283AF /* SportsiumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894709E7235CF948004283AF /* SportsiumTests.swift */; };
 		894709F3235CF948004283AF /* SportsiumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894709F2235CF948004283AF /* SportsiumUITests.swift */; };
 		89579C6E236A6D88004A9391 /* TeamInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89579C66236A6D88004A9391 /* TeamInfo.storyboard */; };
@@ -51,7 +50,6 @@
 		894709D2235CF945004283AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		894709D4235CF945004283AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		894709D7235CF945004283AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		894709D9235CF948004283AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		894709DE235CF948004283AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		894709E3235CF948004283AF /* SportsiumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SportsiumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		894709E7235CF948004283AF /* SportsiumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsiumTests.swift; sourceTree = "<group>"; };
@@ -134,7 +132,6 @@
 				89579C6A236A6D88004A9391 /* RealGameInfo.swift */,
 				89579C66236A6D88004A9391 /* TeamInfo.storyboard */,
 				89579C6C236A6D88004A9391 /* TeamInfoViewController.swift */,
-				894709D9235CF948004283AF /* Assets.xcassets */,
 				894709DE235CF948004283AF /* Info.plist */,
 			);
 			path = Sportsium;
@@ -266,7 +263,6 @@
 				89579C71236A6D88004A9391 /* Base.lproj in Resources */,
 				89579C75236A6D88004A9391 /* PlayerInfo.storyboard in Resources */,
 				EC19AD4423602240007C5C6F /* GameInfo.storyboard in Resources */,
-				894709DA235CF948004283AF /* Assets.xcassets in Resources */,
 				89579C6E236A6D88004A9391 /* TeamInfo.storyboard in Resources */,
 				89579C6F236A6D88004A9391 /* Assets.xcassets in Resources */,
 				893AEC10235E74BC009E36FB /* CheckIn.storyboard in Resources */,

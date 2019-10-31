@@ -84,45 +84,28 @@ using namespace std;
     cv::Scalar upper_white(0,0,255);
 
     cv::inRange(HSV, lower_green, upper_green, mask);
-//    cout << "mask: " << mask << endl;
-    cout << "size: " << mask.size() << endl;
-    cout << "camera size: " << cameraFeed.size() << endl;
     cv::Mat res, res_bgr, res_gray;
     cv::bitwise_and(cameraFeed, cameraFeed, res, mask);
-//    cv::bitwise_and(<#InputArray src1#>, <#InputArray src2#>, <#OutputArray dst#>)
-    
-//    cout << "res: " << res << endl;
-//    cv::cvtColor(res, res_bgr, CV_HSV2BGR);
-//    cv::cvtColor(res, res_gray, CV_BGR2HSV);
     cv::cvtColor(res, res_gray, CV_BGR2GRAY);
-//    return res;
-//
+
     cv::Mat kernel = getStructuringElement( cv::MORPH_RECT, cvSize(13,13));
     cv::Mat thresh;
     cv::threshold(res_gray, thresh, 127, 255, cv::THRESH_BINARY_INV | cv::THRESH_OTSU);
     cv::morphologyEx(thresh, thresh, cv::MORPH_CLOSE, kernel);
-//
+
     cv::Mat temp;
     thresh.copyTo(temp);
     vector< vector<cv::Point> > contours;
     vector<cv::Vec4i> hierarchy;
 
     findContours( temp, contours, hierarchy, CV_RETR_TREE,  CV_CHAIN_APPROX_SIMPLE, cv::Point(0, 0) );
-//    cout << "hit: " << res << endl;
-//    cout << "contours: " << contours.size() << endl;
-//    cout << "hierarchy: " << hierarchy.size() << endl;
     
 
     int font = cv::FONT_HERSHEY_SIMPLEX;
-//     contours.resize(contours0.size());
+
     cout << contours.size() << endl;
     for( size_t k = 0; k < contours.size(); k = k + 1 ) {
         cv::Rect rect = cv::boundingRect(contours[k]);
-//        cout << rect << endl;
-//        cout << rect.x << endl;
-//        cout << rect.y << endl;
-//        cout << rect.width << endl;
-//        cout << rect.height << endl;
         cv::Point pt1, pt2;
         pt1.x = rect.x;
         pt1.y = rect.y;
@@ -152,11 +135,13 @@ using namespace std;
                 cout << "nzCountRed: " << nzCountRed << endl;
                 
                 if(nzCountBlue >= 10){
-                    cv::putText(cameraFeed, "Blue Team", pt1, font, 0.8, cv::Scalar(255,0,0), 2, cv::LINE_AA);
+                    cv::putText(cameraFeed, "Blue Team", pt1, font, 0.5, cv::Scalar(255,0,0));
                     cv::rectangle(cameraFeed, pt1, pt2, CV_RGB(0,0,255), 1);
                 }
                 if(nzCountRed >= 10){
-                    cv::putText(cameraFeed, "Red Team", pt1, font, 0.8, cv::Scalar(0,0,255), 2, cv::LINE_AA);
+//                    cv::putText(cameraFeed, "Red Team", pt1, font, 0.5, cv::Scalar(0,0,255));
+                    cv::putText(cameraFeed, " Detection off ", pt1, cv::FONT_HERSHEY_COMPLEX_SMALL, 2,  cv::Scalar(0,0,255), 2 , 8 , false);
+                    cout << "hit here" << endl;
                     cv::rectangle(cameraFeed, pt1, pt2, CV_RGB(255,0,0), 1);
                 }
             }
