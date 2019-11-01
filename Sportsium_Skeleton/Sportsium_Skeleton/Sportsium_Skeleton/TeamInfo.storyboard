@@ -39,9 +39,15 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="yjr-1m-BBe" firstAttribute="top" secondItem="CNQ-ay-6dG" secondAttribute="top" constant="15" id="HOp-FM-h4F"/>
+                            <constraint firstItem="CNQ-ay-6dG" firstAttribute="bottom" secondItem="w7g-aE-Cb0" secondAttribute="bottom" constant="8" id="J2O-4e-cxn"/>
+                            <constraint firstItem="w7g-aE-Cb0" firstAttribute="top" secondItem="CNQ-ay-6dG" secondAttribute="top" constant="15" id="MHl-uP-Pu2"/>
+                            <constraint firstItem="CNQ-ay-6dG" firstAttribute="trailing" secondItem="yjr-1m-BBe" secondAttribute="trailing" constant="20" id="UHh-hR-Tcm"/>
                             <constraint firstItem="yjr-1m-BBe" firstAttribute="trailing" secondItem="wZF-Fx-o98" secondAttribute="trailingMargin" id="cHh-nv-GiL"/>
+                            <constraint firstItem="CNQ-ay-6dG" firstAttribute="trailing" secondItem="w7g-aE-Cb0" secondAttribute="trailing" constant="20" id="nFs-zR-Acs"/>
                             <constraint firstItem="yjr-1m-BBe" firstAttribute="leading" secondItem="wZF-Fx-o98" secondAttribute="leadingMargin" id="v4t-pJ-ytq"/>
+                            <constraint firstItem="yjr-1m-BBe" firstAttribute="leading" secondItem="CNQ-ay-6dG" secondAttribute="leading" constant="20" id="wH3-0E-fOw"/>
                             <constraint firstItem="yjr-1m-BBe" firstAttribute="bottom" secondItem="CNQ-ay-6dG" secondAttribute="bottom" id="wuC-Pm-41b"/>
+                            <constraint firstItem="w7g-aE-Cb0" firstAttribute="leading" secondItem="CNQ-ay-6dG" secondAttribute="leading" constant="20" id="x4r-Hm-LbC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CNQ-ay-6dG"/>
                     </view>

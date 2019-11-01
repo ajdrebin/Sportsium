@@ -31,13 +31,18 @@
                                     <action selector="actionStopWithSender:" destination="MWN-Bc-eaf" eventType="touchUpInside" id="aZb-Hj-U4i"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Ud-pB-XVW">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Ud-pB-XVW">
                                 <rect key="frame" x="20" y="62" width="374" height="597"/>
-                                <autoresizingMask key="autoresizingMask"/>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="oes-pt-4lc" firstAttribute="trailing" secondItem="5Ud-pB-XVW" secondAttribute="trailing" constant="20" id="3Ze-F9-eA3"/>
+                            <constraint firstItem="oes-pt-4lc" firstAttribute="bottom" secondItem="5Ud-pB-XVW" secondAttribute="bottom" constant="203" id="kmB-K5-dvu"/>
+                            <constraint firstItem="5Ud-pB-XVW" firstAttribute="top" secondItem="oes-pt-4lc" secondAttribute="top" constant="18" id="osx-bc-dW7"/>
+                            <constraint firstItem="5Ud-pB-XVW" firstAttribute="leading" secondItem="oes-pt-4lc" secondAttribute="leading" constant="20" id="rNS-5f-uBy"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="oes-pt-4lc"/>
                     </view>
                     <connections>

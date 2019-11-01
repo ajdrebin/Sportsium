@@ -10,16 +10,15 @@
         <!--Player Info View Controller-->
         <scene sceneID="hME-Fe-1ab">
             <objects>
-                <viewController id="Zbu-NP-nmN" customClass="PlayerInfoViewController" customModule="test_multi_ui" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Zbu-NP-nmN" customClass="PlayerInfoViewController" customModule="Sportsium_Skeleton" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pvu-uA-z70">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PkQ-BV-afp">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PkQ-BV-afp">
                                 <rect key="frame" x="30" y="275" width="364" height="504"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -43,6 +42,12 @@
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PkQ-BV-afp" firstAttribute="leading" secondItem="lz8-r2-mbw" secondAttribute="leading" constant="30" id="K1Y-ww-hsZ"/>
+                            <constraint firstItem="PkQ-BV-afp" firstAttribute="top" secondItem="lz8-r2-mbw" secondAttribute="top" constant="231" id="V71-jw-uVM"/>
+                            <constraint firstItem="lz8-r2-mbw" firstAttribute="bottom" secondItem="PkQ-BV-afp" secondAttribute="bottom" constant="83" id="b4K-Xs-cAb"/>
+                            <constraint firstItem="lz8-r2-mbw" firstAttribute="trailing" secondItem="PkQ-BV-afp" secondAttribute="trailing" constant="20" id="dDv-Z5-Is5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="lz8-r2-mbw"/>
                     </view>
                     <connections>
