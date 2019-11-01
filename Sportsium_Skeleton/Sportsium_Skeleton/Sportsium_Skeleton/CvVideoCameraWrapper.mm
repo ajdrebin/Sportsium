@@ -20,8 +20,6 @@ using namespace std;
 @interface CvVideoCameraWrapper () <CvVideoCameraDelegate>
 @end
 
-#define DEGREES_RADIANS(angle) ((angle) / 180.0 * M_PI)
-
 @implementation CvVideoCameraWrapper
 {
     // A member variable holding the wrapped CvVideoCamera
@@ -30,6 +28,7 @@ using namespace std;
 
 -(id)initWithImageView:(UIImageView*)iv
 {
+    NSNumber *value = [NSNumber numberWithInt:UIInterfaceOrientationPortrait]; [[UIDevice currentDevice] setValue:value forKey:@"orientation"];
     videoCamera = [[CvVideoCamera alloc] initWithParentView:iv];
     
     videoCamera.defaultAVCaptureDevicePosition = AVCaptureDevicePositionBack;
@@ -40,12 +39,13 @@ using namespace std;
     
     videoCamera.delegate = self;
     
+    
     return self;
 }
 
 // The only method of the CvVideoCameraDelegate protocol, visible only
 // to C++ (including Objective-C++) code.
-#ifdef __cplusplus 
+#ifdef __cplusplus
 - (void)processImage:(cv::Mat&)image
 {
 //    std::cout<< "hello" << std::endl;
@@ -142,7 +142,7 @@ using namespace std;
                 }
                 if(nzCountRed >= 10){
 //                    cv::putText(cameraFeed, "Red Team", pt1, font, 0.5, cv::Scalar(0,0,255));
-                    cv::putText(cameraFeed, " Detection off ", pt1, cv::FONT_HERSHEY_COMPLEX_SMALL, 2,  cv::Scalar(0,0,255), 2 , 8 , false);
+                    cv::putText(cameraFeed, " Detection off ", pt1, cv::FONT_HERSHEY_COMPLEX_SMALL, 0.5,  cv::Scalar(0,0,255), 2 , 8 , false);
                     cout << "hit here" << endl;
                     cv::rectangle(cameraFeed, pt1, pt2, CV_RGB(255,0,0), 1);
                 }
@@ -153,8 +153,72 @@ using namespace std;
         // Draws the rect in the original image and show it
 //        cv::rectangle(cameraFeed, pt1, pt2, CV_RGB(255,0,0), 1);
     }
+//    transpose(cameraFeed, cameraFeed);
+//    flip(cameraFeed, cameraFeed, 1);
     
+//    cv::cvFlip(cameraFeed);
+    transpose(cameraFeed, cameraFeed);
+    flip(cameraFeed, cameraFeed, 0);
     return cameraFeed;
+}
+
+
+
+- (cv::Mat)convertToYellow:(cv::Mat)image
+{
+cv::Mat cameraFeed = image;
+cv::Mat HSV, threshold;
+cv::cvtColor(cameraFeed, HSV, CV_BGR2HSV);
+cv::inRange(HSV, cv::Scalar(90,50,50), cv::Scalar(130,255,255), threshold);
+
+cv::Mat erodeElement = getStructuringElement( cv::MORPH_RECT,    cvSize(3,3));
+//dilate with larger element so make sure object is nicely visible
+cv::Mat dilateElement = getStructuringElement(  cv::MORPH_RECT,cvSize(3,3));
+
+erode(threshold,threshold,erodeElement);
+erode(threshold,threshold,erodeElement);
+
+dilate(threshold,threshold,dilateElement);
+dilate(threshold,threshold,dilateElement);
+
+cv::Mat temp;
+threshold.copyTo(temp);
+vector< vector<cv::Point> > contours;
+vector<cv::Vec4i> hierarchy;
+
+findContours( temp, contours, hierarchy, CV_RETR_EXTERNAL,  CV_CHAIN_APPROX_SIMPLE, cv::Point(0, 0) );
+
+bool objectFound = false;
+if (hierarchy.size() > 0) {
+
+    for (int index = 0; index >= 0; index = hierarchy[index][0]) {
+
+        cv::Moments moment = moments((cv::Mat)contours[index]);
+        double area = moment.m00;
+
+
+        if(area > 500){
+
+            objectFound = true;
+
+        }else objectFound = false;
+    }
+
+    //let user know you found an object
+    if(objectFound ==true){
+
+        for(int i=0; i < contours.size() ; i++)
+        {
+                    cv::drawContours(cameraFeed,contours,i, cv::Scalar(0,255,255,255),CV_FILLED);
+
+        }
+
+    }
+
+}
+
+return cameraFeed;
+
 }
 #endif
 
@@ -168,8 +232,4 @@ using namespace std;
 {
     [videoCamera stop];
 }
-
-
-
-
 @end

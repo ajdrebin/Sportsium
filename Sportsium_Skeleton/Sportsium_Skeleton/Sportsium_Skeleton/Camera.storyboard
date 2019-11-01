@@ -31,16 +31,17 @@
                                     <action selector="actionStopWithSender:" destination="MWN-Bc-eaf" eventType="touchUpInside" id="aZb-Hj-U4i"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K9P-cG-SWe">
-                                <rect key="frame" x="28" y="44" width="358" height="570"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Ud-pB-XVW">
+                                <rect key="frame" x="20" y="62" width="374" height="597"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="oes-pt-4lc"/>
                     </view>
                     <connections>
-                        <outlet property="imageView" destination="K9P-cG-SWe" id="lj3-Pu-jjd"/>
+                        <outlet property="imageView" destination="5Ud-pB-XVW" id="yvt-qw-dZm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n9u-FJ-L4M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

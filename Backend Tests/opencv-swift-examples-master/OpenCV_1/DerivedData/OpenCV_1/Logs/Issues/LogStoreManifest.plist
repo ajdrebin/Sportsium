@@ -6,7 +6,7 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>343B6AC4-5784-482B-B632-2ADC37518ECF</key>
+		<key>BB20F0D4-EF18-4E9B-81DC-B01C6C9AB086</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogMajorGroupSection</string>
@@ -15,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
 			<key>fileName</key>
-			<string>343B6AC4-5784-482B-B632-2ADC37518ECF.xcactivitylog</string>
+			<string>BB20F0D4-EF18-4E9B-81DC-B01C6C9AB086.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -26,13 +26,13 @@
 			<key>signature</key>
 			<string>OpenCV_1-bkwvnuzqamokqdeidnjsowgtwfir</string>
 			<key>timeStartedRecording</key>
-			<real>594236970.91289496</real>
+			<real>594258553.59651196</real>
 			<key>timeStoppedRecording</key>
-			<real>594236984.32381904</real>
+			<real>594258553.60755205</real>
 			<key>title</key>
 			<string>Build target OpenCV_1</string>
 			<key>uniqueIdentifier</key>
-			<string>343B6AC4-5784-482B-B632-2ADC37518ECF</string>
+			<string>BB20F0D4-EF18-4E9B-81DC-B01C6C9AB086</string>
 		</dict>
 	</dict>
 	<key>preserveOldLogs</key>
