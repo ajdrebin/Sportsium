@@ -15,6 +15,19 @@ class CameraViewController: UIViewController {
     // processImage() delegate method in this implementation.
     var videoCameraWrapper : CvVideoCameraWrapper!
     
+    
+    
+    
+    @IBAction func HelpButton(_ sender: UIButton) {
+        self.view.addSubview(Popover)
+        Popover.center = self.view.center
+    }
+    
+    @IBAction func DoneButton(_ sender: Any) {
+        self.Popover.removeFromSuperview()
+    }
+    
+    @IBOutlet var Popover: UIView!
     @IBOutlet weak var imageView: UIImageView!
     
     /// Start camera.
@@ -33,6 +46,9 @@ class CameraViewController: UIViewController {
      */
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.addSubview(Popover)
+        Popover.center = self.view.center
+        self.Popover.layer.cornerRadius = 10
         self.videoCameraWrapper = CvVideoCameraWrapper(imageView:imageView)
 
         // This is not essential...
