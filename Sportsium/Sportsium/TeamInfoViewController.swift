@@ -137,6 +137,8 @@ class TeamInfoViewController: UIViewController {
   @objc func buttonAction(sender: UIButton!) {
     let btn: UIButton = sender
     print(btn.titleLabel?.text)
+    performSegue(withIdentifier: "player_info", sender: self)
+    
   }
   
   @objc func pressBtn(sender: UIButton!) {
