@@ -55,4 +55,7 @@ class CameraViewController: UIViewController {
         imageView.layer.borderColor = UIColor.black.cgColor
         imageView.layer.borderWidth = 3
     }
+    @IBOutlet weak var home: UIImageView!
+    @IBOutlet weak var camera: UIImageView!
+    @IBOutlet weak var listTeams: UIImageView!
 }

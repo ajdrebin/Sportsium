@@ -17,4 +17,7 @@ class GameInfoViewController: UIViewController {
 
     @IBOutlet var TeamOne: UIView!
     
+    @IBOutlet var home: UIImageView!
+    @IBOutlet var camera: UIImageView!
+    @IBOutlet var listTeams: UIImageView!
 }

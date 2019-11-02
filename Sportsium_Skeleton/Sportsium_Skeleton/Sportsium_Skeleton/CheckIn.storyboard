@@ -45,7 +45,7 @@
                                     <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ezZ-sx-WTO" kind="presentation" id="Zlm-61-29h"/>
+                                    <segue destination="ezZ-sx-WTO" kind="show" id="Pwt-UA-k1a"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -64,7 +64,9 @@
         <!--GameInfo-->
         <scene sceneID="Yq3-fo-Sxl">
             <objects>
-                <viewControllerPlaceholder storyboardName="GameInfo" id="ezZ-sx-WTO" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="GameInfo" id="ezZ-sx-WTO" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="G4b-AC-J9U"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wj7-gH-gwc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="877" y="61"/>

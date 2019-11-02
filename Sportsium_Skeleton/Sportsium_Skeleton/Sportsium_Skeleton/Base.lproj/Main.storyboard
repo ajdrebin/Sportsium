@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,7 +20,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Go To Camera"/>
                                 <connections>
-                                    <segue destination="vmv-Hd-I8i" kind="presentation" id="pPz-Ka-AYp"/>
+                                    <segue destination="vmv-Hd-I8i" kind="show" id="pPz-Ka-AYp"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YvM-8w-taZ">
@@ -28,7 +28,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Check In"/>
                                 <connections>
-                                    <segue destination="W9a-X4-EjI" kind="presentation" id="XdG-ok-D8t"/>
+                                    <segue destination="W9a-X4-EjI" kind="show" id="hzu-dM-l6L"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1qO-GM-m8H">
@@ -36,7 +36,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Go To Player Info"/>
                                 <connections>
-                                    <segue destination="Km8-CY-5jn" kind="presentation" id="RwQ-pN-0wR"/>
+                                    <segue destination="Km8-CY-5jn" kind="show" id="RwQ-pN-0wR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grR-b1-rRP">
@@ -44,22 +44,67 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Go To Team Info"/>
                                 <connections>
-                                    <segue destination="J4J-IE-XAr" kind="presentation" id="Av7-k3-2yO"/>
+                                    <segue destination="J4J-IE-XAr" kind="show" id="Av7-k3-2yO"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TdP-qv-e2C">
+                                <rect key="frame" x="0.0" y="796" width="414" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="home" translatesAutoresizingMaskIntoConstraints="NO" id="2Ur-4u-KZP">
+                                <rect key="frame" x="46" y="829" width="92" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="circle" translatesAutoresizingMaskIntoConstraints="NO" id="iBa-6I-Kwx">
+                                <rect key="frame" x="109" y="774" width="197" height="104"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="6Bs-wT-ZZJ" appends="YES" id="NXK-b8-pPq"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="explore" translatesAutoresizingMaskIntoConstraints="NO" id="2jD-9D-VHv">
+                                <rect key="frame" x="290" y="829" width="56" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="h5d-Zy-rp5" appends="YES" id="GVw-gl-qcy"/>
+                                </connections>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="camera" destination="iBa-6I-Kwx" id="20A-Cq-Zhs"/>
+                        <outlet property="listTeams" destination="2jD-9D-VHv" id="Zqb-lW-ppJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="6Bs-wT-ZZJ">
+                    <connections>
+                        <segue destination="vmv-Hd-I8i" kind="show" id="7VZ-w0-Lae"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="h5d-Zy-rp5">
+                    <connections>
+                        <segue destination="az4-oR-a3E" kind="show" id="bld-i7-51g"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="139" y="120"/>
         </scene>
         <!--CheckIn-->
         <scene sceneID="Ix5-wq-Z6N">
             <objects>
-                <viewControllerPlaceholder storyboardName="CheckIn" id="W9a-X4-EjI" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="CheckIn" id="W9a-X4-EjI" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Kdd-cz-rTG"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z3S-m5-CxP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="627" y="-4"/>
@@ -67,7 +112,9 @@
         <!--Camera-->
         <scene sceneID="EYC-DZ-YN2">
             <objects>
-                <viewControllerPlaceholder storyboardName="Camera" id="vmv-Hd-I8i" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Camera" id="vmv-Hd-I8i" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="e9M-US-IDS"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ujP-g5-w07" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="637" y="61"/>
@@ -75,7 +122,9 @@
         <!--PlayerInfo-->
         <scene sceneID="zuK-MS-2Qg">
             <objects>
-                <viewControllerPlaceholder storyboardName="PlayerInfo" id="Km8-CY-5jn" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="PlayerInfo" id="Km8-CY-5jn" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="SKO-LH-5OX"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kNV-45-Xng" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="598" y="102"/>
@@ -83,10 +132,30 @@
         <!--TeamInfo-->
         <scene sceneID="kHX-cI-o4D">
             <objects>
-                <viewControllerPlaceholder storyboardName="TeamInfo" id="J4J-IE-XAr" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="TeamInfo" id="J4J-IE-XAr" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="B85-GT-m3v"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RUV-QQ-f91" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="666" y="143"/>
         </scene>
+        <!--ListTeams-->
+        <scene sceneID="Wcu-X7-BGd">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ListTeams" id="az4-oR-a3E" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="kSb-5X-0fp"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9N2-Lk-J6t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="622" y="185"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="circle" width="104" height="104"/>
+        <image name="explore" width="111" height="111"/>
+        <image name="home" width="138.66667175292969" height="118"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="pPz-Ka-AYp"/>
+    </inferredMetricsTieBreakers>
 </document>

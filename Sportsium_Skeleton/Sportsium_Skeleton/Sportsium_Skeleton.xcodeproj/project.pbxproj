@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89B35B6D236DFABB004BE9E8 /* ListTeams.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89B35B6C236DFABB004BE9E8 /* ListTeams.storyboard */; };
+		89B35B6F236DFAC8004BE9E8 /* ListTeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B35B6E236DFAC8004BE9E8 /* ListTeamsViewController.swift */; };
 		C799F585236B713F00184E36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C799F584236B713F00184E36 /* AppDelegate.swift */; };
 		C799F587236B713F00184E36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C799F586236B713F00184E36 /* SceneDelegate.swift */; };
 		C799F589236B713F00184E36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C799F588236B713F00184E36 /* ViewController.swift */; };
@@ -48,6 +50,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		89B35B6C236DFABB004BE9E8 /* ListTeams.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListTeams.storyboard; sourceTree = "<group>"; };
+		89B35B6E236DFAC8004BE9E8 /* ListTeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTeamsViewController.swift; sourceTree = "<group>"; };
 		C799F581236B713F00184E36 /* Sportsium_Skeleton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sportsium_Skeleton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C799F584236B713F00184E36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C799F586236B713F00184E36 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +127,8 @@
 			children = (
 				C799F5D2236B9B0200184E36 /* TeamInfo.storyboard */,
 				C799F5D5236BA50B00184E36 /* GameInfo.storyboard */,
+				89B35B6C236DFABB004BE9E8 /* ListTeams.storyboard */,
+				89B35B6E236DFAC8004BE9E8 /* ListTeamsViewController.swift */,
 				C799F5D7236BA51F00184E36 /* GameInfoViewController.swift */,
 				C799F584236B713F00184E36 /* AppDelegate.swift */,
 				C799F586236B713F00184E36 /* SceneDelegate.swift */,
@@ -226,6 +232,7 @@
 				C799F5D4236B9B9000184E36 /* TeamInfo.storyboard in Resources */,
 				C799F5CC236B90C500184E36 /* Assets.xcassets in Resources */,
 				C799F591236B714000184E36 /* LaunchScreen.storyboard in Resources */,
+				89B35B6D236DFABB004BE9E8 /* ListTeams.storyboard in Resources */,
 				C799F59F236B716000184E36 /* CheckIn.storyboard in Resources */,
 				C799F5A8236B717200184E36 /* PlayerInfo.storyboard in Resources */,
 				C799F58C236B713F00184E36 /* Main.storyboard in Resources */,
@@ -247,6 +254,7 @@
 				C799F5A3236B716000184E36 /* CheckIn.swift in Sources */,
 				C799F5A2236B716000184E36 /* CameraViewController.swift in Sources */,
 				C799F5A1236B716000184E36 /* CvVideoCameraWrapper.mm in Sources */,
+				89B35B6F236DFAC8004BE9E8 /* ListTeamsViewController.swift in Sources */,
 				C799F585236B713F00184E36 /* AppDelegate.swift in Sources */,
 				C799F587236B713F00184E36 /* SceneDelegate.swift in Sources */,
 			);

@@ -15,6 +15,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBOutlet var camera: UIImageView!
+    @IBOutlet var listTeams: UIImageView!
+    
 }
 
