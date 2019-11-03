@@ -31,7 +31,7 @@ Then you are prompted with a password
 ```
 [Enter password]
 ```
-and your are in!
+and you are in!
 
 
 
