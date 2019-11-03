@@ -13,6 +13,7 @@ Get to know the faces of the National Women’s Soccer League using computer vis
   * nwsl_app: API specific to NWSL version of app
 * img: directory of images to be used in app
 * Sportsium: UI development apps to work on front-end UI/UX
+* Sportsium_Skeletal: Skeletal App for code demo
 * Starter App: starter app assignment
 
 ## LOG INTO Digital Ocean droplet
@@ -30,7 +31,7 @@ Then you are prompted with a password
 ```
 [Enter password]
 ```
-and your are in!
+and you are in!
 
 
 

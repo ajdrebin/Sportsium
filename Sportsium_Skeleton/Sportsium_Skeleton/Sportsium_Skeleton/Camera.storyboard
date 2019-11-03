@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MWN-Bc-eaf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MWN-Bc-eaf">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,7 +10,7 @@
         <!--Camera View Controller-->
         <scene sceneID="B5v-Nj-wbR">
             <objects>
-                <viewController id="MWN-Bc-eaf" customClass="CameraViewController" customModule="Sportsium_Skeleton" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CameraViewController" id="MWN-Bc-eaf" customClass="CameraViewController" customModule="Sportsium_Skeleton" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AXD-tR-duL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,17 +19,14 @@
                                 <rect key="frame" x="83" y="616" width="34" height="30"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
-                                    <action selector="actionStart:" destination="MWN-Bc-eaf" eventType="touchUpInside" id="Ksy-Gu-S54"/>
-                                    <action selector="actionStartWithSender:" destination="MWN-Bc-eaf" eventType="touchUpInside" id="S3d-fl-G3X"/>
-                                    <action selector="start:" destination="MWN-Bc-eaf" eventType="touchUpInside" id="z7h-7S-h5P"/>
+                                    <action selector="actionStartWithSender:" destination="MWN-Bc-eaf" eventType="touchUpInside" id="8x3-Mr-W6u"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lP2-II-7bh">
                                 <rect key="frame" x="261" y="616" width="32" height="30"/>
                                 <state key="normal" title="Stop"/>
                                 <connections>
-                                    <action selector="actionStop:" destination="MWN-Bc-eaf" eventType="touchUpInside" id="s0o-Wd-DCb"/>
-                                    <action selector="actionStopWithSender:" destination="MWN-Bc-eaf" eventType="touchUpInside" id="aZb-Hj-U4i"/>
+                                    <action selector="actionStopWithSender:" destination="MWN-Bc-eaf" eventType="touchUpInside" id="TUi-3w-KBa"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Ud-pB-XVW">
@@ -46,7 +43,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Identify a Player" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Mx-SP-9dq">
                                 <rect key="frame" x="103.99999999999999" y="61.999999999999993" width="173.66666666666663" height="27.666666666666664"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sOh-tZ-ydQ">
@@ -55,12 +52,18 @@
                                 <state key="normal" title="?">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.FitToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="HelpButton:" destination="MWN-Bc-eaf" eventType="touchUpInside" id="Bi2-kP-MKf"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q34-hf-fsS">
-                                <rect key="frame" x="0.0" y="678" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="712" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -68,7 +71,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="home" translatesAutoresizingMaskIntoConstraints="NO" id="MoH-Tt-ejK">
-                                <rect key="frame" x="26" y="711" width="92" height="28"/>
+                                <rect key="frame" x="26" y="745" width="92" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <connections>
@@ -76,7 +79,7 @@
                                 </connections>
                             </imageView>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="circle" translatesAutoresizingMaskIntoConstraints="NO" id="k9P-6h-PtT">
-                                <rect key="frame" x="89" y="656" width="197" height="104"/>
+                                <rect key="frame" x="89" y="690" width="197" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <connections>
@@ -84,7 +87,7 @@
                                 </connections>
                             </imageView>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="explore" translatesAutoresizingMaskIntoConstraints="NO" id="GMe-BW-fvK">
-                                <rect key="frame" x="270" y="711" width="56" height="32"/>
+                                <rect key="frame" x="270" y="745" width="56" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <connections>
@@ -123,8 +126,9 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8hH-tP-KoK">
-                            <rect key="frame" x="140" y="124" width="42" height="30"/>
+                            <rect key="frame" x="131" y="122" width="66" height="42"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
                             <state key="normal" title="Got it!"/>
                             <connections>
                                 <action selector="DoneButton:" destination="MWN-Bc-eaf" eventType="touchUpInside" id="3OG-Xp-C7D"/>
@@ -159,30 +163,30 @@
             </objects>
             <point key="canvasLocation" x="-95.200000000000003" y="-59.852216748768477"/>
         </scene>
-        <!--Camera-->
+        <!--CameraViewController-->
         <scene sceneID="eLh-8U-8OJ">
             <objects>
-                <viewControllerPlaceholder storyboardName="Camera" id="eBn-vo-ivv" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Camera" referencedIdentifier="CameraViewController" id="eBn-vo-ivv" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="gT0-li-KE1"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9jw-ek-6MJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="353" y="-177"/>
         </scene>
-        <!--ListTeams-->
+        <!--ListTeamsViewController-->
         <scene sceneID="q3w-ch-GwN">
             <objects>
-                <viewControllerPlaceholder storyboardName="ListTeams" id="Ewq-EB-Jd3" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="ListTeams" referencedIdentifier="ListTeamsViewController" id="Ewq-EB-Jd3" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="dFp-g0-9ab"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Vg-O8-vZ2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="382" y="-132"/>
         </scene>
-        <!--Main-->
+        <!--ViewController-->
         <scene sceneID="QCg-MZ-ueg">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="2ae-Vd-FKq" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="ViewController" id="2ae-Vd-FKq" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="ddY-8z-eGj"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0UN-zl-sPR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
