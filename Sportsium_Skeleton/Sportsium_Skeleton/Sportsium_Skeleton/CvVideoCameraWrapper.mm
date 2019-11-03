@@ -137,12 +137,12 @@ using namespace std;
                 cout << "nzCountRed: " << nzCountRed << endl;
                 
                 if(nzCountBlue >= 20){
-                    cv::putText(cameraFeed, "Orlando", pt1, font, 0.5, cv::Scalar(255,0,0));
-                    cv::rectangle(cameraFeed, pt1, pt2, CV_RGB(0,0,255), 2);
+                    cv::putText(cameraFeed, "Chicago", pt1, font, 0.5, cv::Scalar(255,0,0));
+                    cv::rectangle(cameraFeed, pt1, pt2, CV_RGB(0,18,176), 2);
                 }
                 if(nzCountRed >= 20){
 //                    cv::putText(cameraFeed, "Red Team", pt1, font, 0.5, cv::Scalar(0,0,255));
-                    cv::putText(cameraFeed, "Chicago", pt1, font, 0.5,  cv::Scalar(0,0,255), 2 , 8 , false);
+                    cv::putText(cameraFeed, "Orlando", pt1, font, 0.5,  cv::Scalar(0,0,255), 2 , 8 , false);
                     cv::rectangle(cameraFeed, pt1, pt2, CV_RGB(255,0,0), 2);
                 }
             }
