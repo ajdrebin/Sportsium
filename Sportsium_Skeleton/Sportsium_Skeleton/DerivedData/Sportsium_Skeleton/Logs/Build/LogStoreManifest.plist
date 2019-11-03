@@ -74,6 +74,40 @@
 			<key>uniqueIdentifier</key>
 			<string>2E084DDC-EE05-4EBF-9E5B-9C76C23E7B27</string>
 		</dict>
+		<key>3477FF3D-FA27-4F7B-B413-D77D68B8689E</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>3477FF3D-FA27-4F7B-B413-D77D68B8689E.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Sportsium_Skeleton project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Sportsium_Skeleton</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build Sportsium_Skeleton</string>
+			<key>timeStartedRecording</key>
+			<real>594498482.90735102</real>
+			<key>timeStoppedRecording</key>
+			<real>594498485.69521403</real>
+			<key>title</key>
+			<string>Build Sportsium_Skeleton</string>
+			<key>uniqueIdentifier</key>
+			<string>3477FF3D-FA27-4F7B-B413-D77D68B8689E</string>
+		</dict>
 		<key>382ABF7E-13E9-4D44-9991-7B4939906BA6</key>
 		<dict>
 			<key>className</key>
@@ -277,6 +311,40 @@
 			<string>Build Sportsium_Skeleton</string>
 			<key>uniqueIdentifier</key>
 			<string>78BAE502-40CC-468C-BE81-0A388645B8B0</string>
+		</dict>
+		<key>AFE966FA-618C-472F-B5FB-C8FD4C24030E</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>AFE966FA-618C-472F-B5FB-C8FD4C24030E.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Sportsium_Skeleton project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Sportsium_Skeleton</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build Sportsium_Skeleton</string>
+			<key>timeStartedRecording</key>
+			<real>594498225.73394799</real>
+			<key>timeStoppedRecording</key>
+			<real>594498231.27344298</real>
+			<key>title</key>
+			<string>Build Sportsium_Skeleton</string>
+			<key>uniqueIdentifier</key>
+			<string>AFE966FA-618C-472F-B5FB-C8FD4C24030E</string>
 		</dict>
 		<key>B6666FE8-1C50-42DF-9B6B-E045A0E47E38</key>
 		<dict>
