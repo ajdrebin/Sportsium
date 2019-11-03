@@ -31,12 +31,12 @@ class CameraViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     
     /// Start camera.
-    @IBAction func actionStart(sender: AnyObject) {
+    @IBAction func actionStart(sender: Any) {
         self.videoCameraWrapper.startCamera()
     }
     
     /// Stop camera.
-    @IBAction func actionStop(sender: AnyObject) {
+    @IBAction func actionStop(sender: Any) {
         self.videoCameraWrapper.stopCamera()
     }
     

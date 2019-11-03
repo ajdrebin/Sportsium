@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MWN-Bc-eaf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MWN-Bc-eaf">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,17 +19,14 @@
                                 <rect key="frame" x="83" y="616" width="34" height="30"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
-                                    <action selector="actionStart:" destination="MWN-Bc-eaf" eventType="touchUpInside" id="Ksy-Gu-S54"/>
-                                    <action selector="actionStartWithSender:" destination="MWN-Bc-eaf" eventType="touchUpInside" id="S3d-fl-G3X"/>
-                                    <action selector="start:" destination="MWN-Bc-eaf" eventType="touchUpInside" id="z7h-7S-h5P"/>
+                                    <action selector="actionStartWithSender:" destination="MWN-Bc-eaf" eventType="touchUpInside" id="8x3-Mr-W6u"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lP2-II-7bh">
                                 <rect key="frame" x="261" y="616" width="32" height="30"/>
                                 <state key="normal" title="Stop"/>
                                 <connections>
-                                    <action selector="actionStop:" destination="MWN-Bc-eaf" eventType="touchUpInside" id="s0o-Wd-DCb"/>
-                                    <action selector="actionStopWithSender:" destination="MWN-Bc-eaf" eventType="touchUpInside" id="aZb-Hj-U4i"/>
+                                    <action selector="actionStopWithSender:" destination="MWN-Bc-eaf" eventType="touchUpInside" id="TUi-3w-KBa"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Ud-pB-XVW">
