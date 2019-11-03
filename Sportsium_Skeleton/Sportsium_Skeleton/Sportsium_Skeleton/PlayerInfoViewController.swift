@@ -48,7 +48,14 @@ class PlayerInfoViewController: UIViewController {
     textView.layer.cornerRadius = 10.0;
 
     textView.text = "\n\n\n\n\n" + playerName.uppercased()
-    textView.text += " \n\n\n\nhello"
+    
+    
+    
+    
+    textView.text += " \n\n\n\nJoanna Bess Boyles (born November 13, 1995) is an American soccer player who plays as a midfielder for Orlando Pride in the NWSL."
+    
+    textView.textAlignment = .left
+    
     
   }
   
