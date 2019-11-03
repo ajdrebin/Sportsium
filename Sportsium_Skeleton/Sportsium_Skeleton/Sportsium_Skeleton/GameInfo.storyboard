@@ -796,6 +796,10 @@
                                     <outletCollection property="gestureRecognizers" destination="ivd-t7-wZG" appends="YES" id="NCC-LE-Ew7"/>
                                 </connections>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lens" translatesAutoresizingMaskIntoConstraints="NO" id="GxN-1J-Tga">
+                                <rect key="frame" x="123" y="695" width="129" height="94"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <gestureRecognizers/>
@@ -1015,6 +1019,7 @@
         <image name="circle" width="104" height="104"/>
         <image name="explore" width="111" height="111"/>
         <image name="home" width="138.66667175292969" height="118"/>
+        <image name="lens" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="sTD-di-k7Z"/>

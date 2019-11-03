@@ -61,6 +61,10 @@
                                     <outletCollection property="gestureRecognizers" destination="T57-Cm-SdQ" appends="YES" id="JDH-Su-dfR"/>
                                 </connections>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lens" translatesAutoresizingMaskIntoConstraints="NO" id="zWO-Nx-96T">
+                                <rect key="frame" x="141" y="698" width="92" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="0fF-WO-UVB"/>
@@ -83,7 +87,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="5.7971014492753632" y="146.65178571428569"/>
+            <point key="canvasLocation" x="5.5999999999999996" y="146.30541871921181"/>
         </scene>
         <!--ViewController-->
         <scene sceneID="01b-R2-d1v">
@@ -120,5 +124,6 @@
         <image name="circle" width="104" height="104"/>
         <image name="explore" width="111" height="111"/>
         <image name="home" width="138.66667175292969" height="118"/>
+        <image name="lens" width="64" height="64"/>
     </resources>
 </document>
