@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nf0-Oj-Ieb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nf0-Oj-Ieb">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,7 +10,7 @@
         <!--Team Info View Controller-->
         <scene sceneID="cFq-6h-oeX">
             <objects>
-                <viewController id="nf0-Oj-Ieb" customClass="TeamInfoViewController" customModule="Sportsium" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TeamInfoViewController" id="nf0-Oj-Ieb" customClass="TeamInfoViewController" customModule="Sportsium_Skeleton" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wZF-Fx-o98">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="2000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -70,10 +70,10 @@
             </objects>
             <point key="canvasLocation" x="73.913043478260875" y="19.419642857142858"/>
         </scene>
-        <!--PlayerInfo-->
+        <!--PlayerInfoViewController-->
         <scene sceneID="Uvf-SP-4Rk">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="TeamInfo" storyboardName="PlayerInfo" id="sgr-TX-uQV" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="TeamInfo" storyboardName="PlayerInfo" referencedIdentifier="PlayerInfoViewController" id="sgr-TX-uQV" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="6CU-Ez-EKj"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yx0-wm-Hii" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

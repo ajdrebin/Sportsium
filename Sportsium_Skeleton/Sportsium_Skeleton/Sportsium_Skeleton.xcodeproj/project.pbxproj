@@ -125,17 +125,18 @@
 		C799F583236B713F00184E36 /* Sportsium_Skeleton */ = {
 			isa = PBXGroup;
 			children = (
+				C799F58A236B713F00184E36 /* Main.storyboard */,
 				C799F5D2236B9B0200184E36 /* TeamInfo.storyboard */,
 				C799F5D5236BA50B00184E36 /* GameInfo.storyboard */,
 				89B35B6C236DFABB004BE9E8 /* ListTeams.storyboard */,
+				C799F59B236B715F00184E36 /* Camera.storyboard */,
+				C799F59A236B715F00184E36 /* CheckIn.storyboard */,
 				89B35B6E236DFAC8004BE9E8 /* ListTeamsViewController.swift */,
 				C799F5D7236BA51F00184E36 /* GameInfoViewController.swift */,
 				C799F584236B713F00184E36 /* AppDelegate.swift */,
 				C799F586236B713F00184E36 /* SceneDelegate.swift */,
 				C799F588236B713F00184E36 /* ViewController.swift */,
-				C799F59B236B715F00184E36 /* Camera.storyboard */,
 				C799F59D236B715F00184E36 /* CameraViewController.swift */,
-				C799F59A236B715F00184E36 /* CheckIn.storyboard */,
 				C799F59E236B715F00184E36 /* CheckIn.swift */,
 				C799F599236B715F00184E36 /* CvVideoCameraWrapper.h */,
 				C799F5A4236B717200184E36 /* opencv2.framework */,
@@ -143,7 +144,6 @@
 				C799F5AB236B718000184E36 /* ViewController.swift */,
 				C799F5A6236B717200184E36 /* PlayerInfoViewController.swift */,
 				C799F59C236B715F00184E36 /* CvVideoCameraWrapper.mm */,
-				C799F58A236B713F00184E36 /* Main.storyboard */,
 				C799F58D236B714000184E36 /* Assets.xcassets */,
 				C799F58F236B714000184E36 /* LaunchScreen.storyboard */,
 				C799F592236B714000184E36 /* Info.plist */,

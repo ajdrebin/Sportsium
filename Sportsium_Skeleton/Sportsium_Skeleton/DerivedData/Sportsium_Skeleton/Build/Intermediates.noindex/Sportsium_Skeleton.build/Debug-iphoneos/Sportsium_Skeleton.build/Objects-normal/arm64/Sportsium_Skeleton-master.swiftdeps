@@ -1,0 +1,13 @@
+version: "Apple Swift version 5.1 (swiftlang-1100.0.270.13 clang-1100.0.33.7)"
+options: "56ef7619982cdbc22142f347a9638919"
+build_time: [1572803586, 562890000]
+inputs:
+  "/Users/Alina/Desktop/Sportsium/Sportsium_Skeleton/Sportsium_Skeleton/Sportsium_Skeleton/TeamInfoViewController.swift": [1572802989, 356220612]
+  "/Users/Alina/Desktop/Sportsium/Sportsium_Skeleton/Sportsium_Skeleton/Sportsium_Skeleton/PlayerInfoViewController.swift": [1572802989, 355454465]
+  "/Users/Alina/Desktop/Sportsium/Sportsium_Skeleton/Sportsium_Skeleton/Sportsium_Skeleton/ViewController.swift": [1572802989, 356478993]
+  "/Users/Alina/Desktop/Sportsium/Sportsium_Skeleton/Sportsium_Skeleton/Sportsium_Skeleton/GameInfoViewController.swift": [1572802989, 354393749]
+  "/Users/Alina/Desktop/Sportsium/Sportsium_Skeleton/Sportsium_Skeleton/Sportsium_Skeleton/CheckIn.swift": [1572802989, 352833192]
+  "/Users/Alina/Desktop/Sportsium/Sportsium_Skeleton/Sportsium_Skeleton/Sportsium_Skeleton/CameraViewController.swift": [1572803499, 741599318]
+  "/Users/Alina/Desktop/Sportsium/Sportsium_Skeleton/Sportsium_Skeleton/Sportsium_Skeleton/ListTeamsViewController.swift": [1572802989, 355091206]
+  "/Users/Alina/Desktop/Sportsium/Sportsium_Skeleton/Sportsium_Skeleton/Sportsium_Skeleton/AppDelegate.swift": [1572802989, 337351407]
+  "/Users/Alina/Desktop/Sportsium/Sportsium_Skeleton/Sportsium_Skeleton/Sportsium_Skeleton/SceneDelegate.swift": [1572802989, 355656065]
