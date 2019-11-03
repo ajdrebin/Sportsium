@@ -21,7 +21,7 @@ def game_check(request):
 
     # obtaining date and checking for query result
     date = datetime.datetime.now().date()
-    q_set_games = Game_Info_Table.objects.filter(date__exact=date)
+    q_set_games = Game_Info_Table.objects.all()
     if len(q_set_games) < 1:
         response['debug'] = "need to add data"
         return JsonResponse(response) 
