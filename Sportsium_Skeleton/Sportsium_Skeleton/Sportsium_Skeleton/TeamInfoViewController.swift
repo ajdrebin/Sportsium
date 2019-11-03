@@ -26,8 +26,10 @@ class TeamInfoViewController: UIViewController {
   
   @IBOutlet weak var innerViewHeight: NSLayoutConstraint!
   
-  var playerArray = ["andy","ben","carol","steve","nick","james","mandy"]
-  var playerNum = ["1","2","3","4","5","6","7"]
+  var playerArray = ["Sydney Leroux","Toni Pressley","Shelina Zadorsky","Emily van Egmond","Claire Emslie","Danica Evans", "Camila Pereira", "Marta Silva", "Ali Krieger", "Kristen Edmonds", "Alex Morgan", "Alanna Kennedy", "Rachel Hill", "Caron Pickett", "Dani Weatherholt", "Lainey Burdett"]
+  var playerNum = ["2","3","4","5","7","8","9", "10", "11", "12", "13", "14", "15", "16", "17", "18"]
+  
+  var playerPosition = ["Forward", "Defender", "Defender", "Midfielder", "Forward", "Forward", "Forward", "Forward", "Defender", "Midfielder", "Forward", "Defender", "Forward", "Defender", "Midfielder", "Goalkeeper"]
   
   var teamName = "orlando_pride"
   
@@ -72,7 +74,7 @@ class TeamInfoViewController: UIViewController {
     // x, y, width, height
     var x = 0
     var y = 10
-    button.frame = CGRect(x: -20, y: 60, width: 100, height: 40)
+    button.frame = CGRect(x: -20, y: 30, width: 100, height: 40)
     button.setTitleColor(UIColor.init(displayP3Red: 11/255, green: 96/255, blue: 168/255, alpha: 1), for: UIControl.State.normal)
     button.backgroundColor = UIColor.init(displayP3Red: 221/255, green: 240/255, blue: 1, alpha: 0)
     button.setTitle("< Back", for: UIControl.State.normal)
@@ -81,7 +83,7 @@ class TeamInfoViewController: UIViewController {
     
     
     
-    mainView.addSubview(button)
+    scrollView.addSubview(button)
     
   }
   
@@ -234,7 +236,7 @@ class TeamInfoViewController: UIViewController {
       
       //Allow for multi line text \n separated.
       button.titleLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping;
-      button.setTitle(name + "\t\t\t\t\t\t\t\t\t\t " + "#" + playerNum[i] + "\nMidfielder", for: UIControl.State.normal)
+      button.setTitle(name + "\t\t\t\t\t\t\t\t\t\t " + "#" + playerNum[i] + "\n" + playerPosition[i], for: UIControl.State.normal)
       
 
       
