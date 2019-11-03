@@ -6,7 +6,7 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>B3626E56-E71F-4255-96DD-418A561A0604</key>
+		<key>DD34D93E-3747-45DC-BC94-42A20C3AB420</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogMajorGroupSection</string>
@@ -15,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
 			<key>fileName</key>
-			<string>B3626E56-E71F-4255-96DD-418A561A0604.xcactivitylog</string>
+			<string>DD34D93E-3747-45DC-BC94-42A20C3AB420.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -26,13 +26,13 @@
 			<key>signature</key>
 			<string>Sportsium_Skeleton-boqxlmlpeimdbfagszviwbaaopjf</string>
 			<key>timeStartedRecording</key>
-			<real>594496386.50251901</real>
+			<real>594496903.75823402</real>
 			<key>timeStoppedRecording</key>
-			<real>594496392.37892604</real>
+			<real>594496907.32571304</real>
 			<key>title</key>
 			<string>Build target Sportsium_Skeleton</string>
 			<key>uniqueIdentifier</key>
-			<string>B3626E56-E71F-4255-96DD-418A561A0604</string>
+			<string>DD34D93E-3747-45DC-BC94-42A20C3AB420</string>
 		</dict>
 	</dict>
 	<key>preserveOldLogs</key>

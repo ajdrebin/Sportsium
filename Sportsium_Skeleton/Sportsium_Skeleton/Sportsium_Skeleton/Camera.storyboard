@@ -10,7 +10,7 @@
         <!--Camera View Controller-->
         <scene sceneID="B5v-Nj-wbR">
             <objects>
-                <viewController id="MWN-Bc-eaf" customClass="CameraViewController" customModule="Sportsium_Skeleton" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CameraViewController" id="MWN-Bc-eaf" customClass="CameraViewController" customModule="Sportsium_Skeleton" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AXD-tR-duL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -156,30 +156,30 @@
             </objects>
             <point key="canvasLocation" x="-95.200000000000003" y="-59.852216748768477"/>
         </scene>
-        <!--Camera-->
+        <!--CameraViewController-->
         <scene sceneID="eLh-8U-8OJ">
             <objects>
-                <viewControllerPlaceholder storyboardName="Camera" id="eBn-vo-ivv" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Camera" referencedIdentifier="CameraViewController" id="eBn-vo-ivv" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="gT0-li-KE1"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9jw-ek-6MJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="353" y="-177"/>
         </scene>
-        <!--ListTeams-->
+        <!--ListTeamsViewController-->
         <scene sceneID="q3w-ch-GwN">
             <objects>
-                <viewControllerPlaceholder storyboardName="ListTeams" id="Ewq-EB-Jd3" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="ListTeams" referencedIdentifier="ListTeamsViewController" id="Ewq-EB-Jd3" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="dFp-g0-9ab"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Vg-O8-vZ2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="382" y="-132"/>
         </scene>
-        <!--Main-->
+        <!--ViewController-->
         <scene sceneID="QCg-MZ-ueg">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="2ae-Vd-FKq" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="ViewController" id="2ae-Vd-FKq" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="ddY-8z-eGj"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0UN-zl-sPR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

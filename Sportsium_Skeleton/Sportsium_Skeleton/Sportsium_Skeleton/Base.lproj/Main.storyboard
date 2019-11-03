@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="o2y-Im-W3P">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Sportsium_Skeleton" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="Sportsium_Skeleton" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -80,6 +80,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="8Au-hF-E6N"/>
                     <connections>
                         <outlet property="camera" destination="iBa-6I-Kwx" id="20A-Cq-Zhs"/>
                         <outlet property="listTeams" destination="2jD-9D-VHv" id="Zqb-lW-ppJ"/>
@@ -97,57 +98,74 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="138.40000000000001" y="119.70443349753695"/>
+            <point key="canvasLocation" x="1080.8" y="119.70443349753695"/>
         </scene>
-        <!--CheckIn-->
+        <!--CheckInViewController-->
         <scene sceneID="Ix5-wq-Z6N">
             <objects>
-                <viewControllerPlaceholder storyboardName="CheckIn" id="W9a-X4-EjI" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="CheckIn" referencedIdentifier="CheckInViewController" id="W9a-X4-EjI" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Kdd-cz-rTG"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z3S-m5-CxP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="627" y="-4"/>
+            <point key="canvasLocation" x="1568" y="-4.4334975369458132"/>
         </scene>
-        <!--Camera-->
+        <!--CameraViewController-->
         <scene sceneID="EYC-DZ-YN2">
             <objects>
-                <viewControllerPlaceholder storyboardName="Camera" id="vmv-Hd-I8i" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Camera" referencedIdentifier="CameraViewController" id="vmv-Hd-I8i" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="e9M-US-IDS"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ujP-g5-w07" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="637" y="61"/>
+            <point key="canvasLocation" x="1578.4000000000001" y="60.591133004926114"/>
         </scene>
-        <!--PlayerInfo-->
+        <!--PlayerInfoViewController-->
         <scene sceneID="zuK-MS-2Qg">
             <objects>
-                <viewControllerPlaceholder storyboardName="PlayerInfo" id="Km8-CY-5jn" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="PlayerInfo" referencedIdentifier="PlayerInfoViewController" id="Km8-CY-5jn" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="SKO-LH-5OX"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kNV-45-Xng" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="598" y="102"/>
+            <point key="canvasLocation" x="1539.2" y="101.97044334975369"/>
         </scene>
-        <!--TeamInfo-->
+        <!--TeamInfoViewController-->
         <scene sceneID="kHX-cI-o4D">
             <objects>
-                <viewControllerPlaceholder storyboardName="TeamInfo" id="J4J-IE-XAr" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="TeamInfo" referencedIdentifier="TeamInfoViewController" id="J4J-IE-XAr" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="B85-GT-m3v"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RUV-QQ-f91" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="666" y="143"/>
+            <point key="canvasLocation" x="1608" y="142.61083743842366"/>
         </scene>
-        <!--ListTeams-->
+        <!--ListTeamsViewController-->
         <scene sceneID="Wcu-X7-BGd">
             <objects>
-                <viewControllerPlaceholder storyboardName="ListTeams" id="az4-oR-a3E" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="ListTeams" referencedIdentifier="ListTeamsViewController" id="az4-oR-a3E" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="kSb-5X-0fp"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9N2-Lk-J6t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="622" y="185"/>
+            <point key="canvasLocation" x="1563.2" y="184.72906403940888"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fnL-Qe-TUt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="o2y-Im-W3P" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="x8s-nx-5iV">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="2aG-dO-HDt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XO6-cS-Uo5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.40000000000001" y="119.70443349753695"/>
         </scene>
     </scenes>
     <resources>
