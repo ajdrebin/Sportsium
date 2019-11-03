@@ -11,23 +11,44 @@ import UIKit
 class TeamInfoViewController: UIViewController {
   
   
+  //@IBOutlet var mainView: UIView!
+  
+  //@IBOutlet weak var scrollView: UIScrollView!
+  
   @IBOutlet var mainView: UIView!
   
   @IBOutlet weak var scrollView: UIScrollView!
+  
+  @IBOutlet weak var innerView: UIView!
+  
+  @IBOutlet weak var innerViewHeight: NSLayoutConstraint!
   
   var playerArray = ["andy","ben","carol","steve","nick","james","mandy"]
   var playerNum = ["1","2","3","4","5","6","7"]
   
   var teamName = "orlando_pride"
   
+  
+  
+  
+  
+  
 
   override func viewDidLoad() {
+    var scrollHeight = 400 + 100 * playerArray.count
+    innerViewHeight.constant = CGFloat(scrollHeight)
+
     super.viewDidLoad()
+    
+
+
     makeButtons()
     addBackgroundImage()
     addTeamLogo()
     playerLabel()
     addTeamNameLabel()
+    
+    
   }
   
   
@@ -138,6 +159,7 @@ class TeamInfoViewController: UIViewController {
   @objc func buttonAction(sender: UIButton!) {
     let btn: UIButton = sender
     print(btn.titleLabel?.text)
+    performSegue(withIdentifier: "PlayerInfo", sender: self)
   }
   
   @objc func pressBtn(sender: UIButton!) {
