@@ -7,13 +7,18 @@ Get to know the faces of the National Women’s Soccer League using computer vis
 * Alina (ajdrebin, adrebin) shows up as two contributors due to using two different accounts as a consequence of updating readmes online versus pushing code. Consider them the same person for all intents and purposes. (She will be using @adrebin to push code)
 
 
+## TODO LIST 
+* Complete IOS development - CV part
+* Need to implement scrubber to populate the databases
+* IOS frontend development
+
+
 ## File Structure
-<<<<<<< HEAD
 * **Backend Tests:** test scripts and apps to play around with OpenCV and other frameworks for computer vision and machine learning
 * **Sportsium:** UI development apps to work on front-end UI/UX *(not in use for skeletal app)*
 * **Sportsium_Skeleton/Sportsium_Skeleton:** UI development apps to work on front-end UI/UX - includes all storyboards and swift files **(*IN USE for skeletal app*)**
 * **Starter App:** starter app assignment
-* **django_project:** backend server for database
+* **django_project:** copy of backend server for database
   * *nwsl_app:* API specific to NWSL version of app - includes population of database
   * *django_project:* configuration of backend server
 * **img:** directory of images to be used in app
@@ -86,17 +91,10 @@ Get to know the faces of the National Women’s Soccer League using computer vis
     ├── README.md
     ├── simple_sftp_file.json
 ```
-=======
-* Backend Tests: test scripts and apps to play around with OpenCV and other frameworks for computer vision and machine learning
-* django_project: backend server for database
-  * nwsl_app: API specific to NWSL version of app
-* img: directory of images to be used in app
-* Sportsium: UI development apps to work on front-end UI/UX
-* Sportsium_Skeletal: Skeletal App for code demo
-* Starter App: starter app assignment
->>>>>>> a00e1d6d6dc83fe0dd0d877a3ee7220c692c3062
 
-## LOG INTO Digital Ocean droplet
+## Digital Ocean Droplet
+
+### LOGIN
 * Droplet Name: django-sportsium
 * IP Address: 159.89.234.82
 * Username: root
@@ -107,25 +105,52 @@ So type this in the terminal
 ssh root@159.89.234.82
 ```
 
-Then you are prompted with a password
+Then you are prompted with a password. Note: The password will not be visible
 ```
 [Enter password]
 ```
 and you are in!
 
+### Development
+All of these actions are to take place in the django_project folder since we will be using mange.py as our CLI.
+```
+├── django_project
+    ├── django_project (folder)
+    ├── nwsl_app (folder)
+    ├── manage.py
+```
 
+#### Changing the Database Schema
+Any changes done to the database schema should be made in django_project/nwsl_app/models.py
 
+Then run the following to apply the changes
+```
+python manage.py makemigrations
+python manage.py migrate
+```
 
+#### Changing the API
+Any changes to the API are done in django_project/nwsl_app/views.py
 
-## TODO LIST 
-* Complete IOS development - CV part
-* Need to implement scrubber to populate the databases
-* IOS frontend development
+Apply these changes by running 
+```
+service gunicorn restart
+```
 
+#### Populating the Database
+To populate the database, one must run Django's python shell and then import our populate.py script
 
+```
+python manage.py shell
+```
+This will trigger an interactive python shell. Type in the following to be able to call 
 
+```
+>>> from nwsl_app.populate import delete_all, populate
+>>> (call delete_all() or populate())
+```
 
-## Getting Started
+## Getting Started with our IOS application
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
@@ -148,10 +173,12 @@ Once in the xcode environment, choose the simulated device to be an iPhone 11 Pr
 
 ## Deployment
 
-The backend web server is fully functioning at 159.89.234.82. Server will be uploaded to ios store in December 2019. 
+The backend web server is fully functioning at 159.89.234.82. This was deployed with Digital Ocean. 
+
+The ios app will be uploaded to ios store in December 2019. 
 
 ## Built With
-
+* [Xcode](https://apps.apple.com/us/app/xcode/id497799835?mt=12) - IOS Development tool
 * [Digital Ocean](https://www.digitalocean.com/) - Cloud computing company
 * [Django](https://docs.djangoproject.com/en/1.11/) - The web framework used
 * [PostgreSQL](https://www.postgresql.org/docs/) - Free and open-source relational database management system 
@@ -159,10 +186,10 @@ The backend web server is fully functioning at 159.89.234.82. Server will be upl
 ## Authors
 Sportsium Development Team
 
-* Alfonzo Acosta,         aaram
-* Chia Chen,              chiahche
-* Jessica Cheng,          jesca
-* Alina Drebin,           ajdrebin
-* Claire Drebin,          cdrebin
-* Mashfy Rahman,          rmashfy
-* Gustavo Ramirez,        grami
+* Alfonzo Acosta,         aaram@umich.edu
+* Chia Chen,              chiahche@umich.edu
+* Jessica Cheng,          jesca@umich.edu
+* Alina Drebin,           ajdrebin@umich.edu
+* Claire Drebin,          cdrebin@umich.edu
+* Mashfy Rahman,          rmashfy@umich.edu
+* Gustavo Ramirez,        grami@umich.edu
