@@ -36,7 +36,7 @@ class Player_Info_Table(models.Model):
     player_club_number = models.IntegerField()
 
     # !!! might limit the number of positions (might do same to clubs)
-    postition = models.CharField(max_length=256)
+    position = models.CharField(max_length=256)
 
     # player national team
     national_team = models.CharField(max_length=256)

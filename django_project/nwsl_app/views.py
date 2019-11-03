@@ -67,16 +67,16 @@ def check_in(request):
         return JsonResponse(response)
 
     # add home team to response
-    h_player_holder = {}
+    h_player_holder = []
     for h_player in q_set_h_players:
         temp_h = {}
         temp_h['player_id'] = h_player.player_id
         temp_h['first_name'] = h_player.first_name
         temp_h['last_name'] = h_player.last_name
         temp_h['player_club_number'] = h_player.player_club_number
-        temp_h['postition'] = h_player.position
-        h_player_holder[h_player.player_id] = temp_h
-    response[home_team] = temp_h
+        temp_h['position'] = h_player.position
+        h_player_holder.append(temp_h)
+    response[home_team] = h_player_holder
 
     # get home team's win loss ratio and manager
     home_team_obj = get_object_or_404(Team_Info_Table, pk=home_team)
@@ -86,16 +86,16 @@ def check_in(request):
     response['home_manager'] = home_team_obj.general_manager
 
     # add away team to response
-    a_player_holder = {}
+    a_player_holder = []
     for a_player in q_set_a_players:
         temp_a = {}
         temp_a['player_id'] = a_player.player_id
         temp_a['first_name'] = a_player.first_name
         temp_a['last_name'] = a_player.last_name
         temp_a['player_club_number'] = a_player.player_club_number
-        temp_a['postition'] = a_player.position
-        a_player_holder[a_player.player_id] = temp_a
-    response[away_team] = temp_a
+        temp_a['position'] = a_player.position
+        a_player_holder.append(temp_a)
+    response[away_team] = a_player_holder
     
      # get away team's win loss ratio and manager
     away_team_obj = get_object_or_404(Team_Info_Table, pk=away_team)
@@ -117,7 +117,7 @@ def player_lookup(request):
     player_id = request.GET.get('player_id', None)
     if player_id == None:
         return HttpResponse(status=404)
-
+ 
     # obtain specific player using player_id and add to response
     player_obj = get_object_or_404(Player_Info_Table, pk=player_id)
     response['player_id'] = player_obj.player_id
@@ -127,12 +127,12 @@ def player_lookup(request):
     response['height'] = player_obj.height
     response['twitter_link'] = player_obj.twitter_link
     response['hometown'] = player_obj.hometown
-    response['player_club_team'] = player_obj.player_club_team
-    response['player_club_number'] = player_obj.player_club_number
-    response['postition'] = player_obj.position
+    response['current_club_team'] = player_obj.current_club_team.team_name
+    response['current_club_number'] = player_obj.player_club_number
+    response['position'] = player_obj.position
     response['national_team'] = player_obj.national_team
     response['player_national_number'] = player_obj.player_national_number
-
+ 
     return JsonResponse(response)
 
 
@@ -155,9 +155,9 @@ def team_lookup(request):
     response['stadium'] = team_obj.stadium
     response['general_manager'] = team_obj.general_manager
     response['league'] = team_obj.league
-    response['current_wins'] = team_obj.wins
-    response['current_ties'] = team_obj.ties
-    response['current_losses'] = team_obj.losses
+    response['current_wins'] = team_obj.current_wins
+    response['current_ties'] = team_obj.current_ties
+    response['current_losses'] = team_obj.current_losses
 
     return JsonResponse(response)
 
