@@ -10,7 +10,7 @@
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		Nb284z+oX/S3jBQLHXMv84nyq/w=
+		/UVNBr6F5QnH/DK8HemEFRABMZ4=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -18,107 +18,111 @@
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		IHG/5p5+KGvwB3OpYD+Swa9sAis=
+		ki4sEycsLnfxUsCn/o0zRIR0lUY=
 		</data>
 		<key>Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<data>
-		A/lFXLMGm3xz2zMxMYgSGEoN6oo=
+		JOc04yyH9umMBFzp8jQI/1QJ6r8=
 		</data>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<data>
-		c7/TyLAQMe/QJKZYdUKxUZQHW10=
+		2nn6C/V0skMcCKbJAp4Q7oCpfPM=
 		</data>
-		<key>Base.lproj/Main.storyboardc/UIViewController-BYZ-38-t0r.nib</key>
+		<key>Base.lproj/Main.storyboardc/UINavigationController-o2y-Im-W3P.nib</key>
 		<data>
-		hV3geM7sVgIpo6ScZBtjr4ICg3g=
+		LaFbMndJ0Ac3j530+FzJQZjER/c=
 		</data>
 		<key>Base.lproj/Main.storyboardc/UIViewController-J4J-IE-XAr.nib</key>
 		<data>
-		5Kl3TLtc+mPNqQ+BA8SrSiciKho=
+		EJkQspcbgYUe5N0xh8Zm1K0BBcM=
 		</data>
 		<key>Base.lproj/Main.storyboardc/UIViewController-Km8-CY-5jn.nib</key>
 		<data>
-		lUT3VCOzNIz0NETHI+33tqwznoE=
+		ZxrdVmxG03CkEP/Gnz7IMmTSkiY=
 		</data>
 		<key>Base.lproj/Main.storyboardc/UIViewController-W9a-X4-EjI.nib</key>
 		<data>
-		ZtJ5yWA8n2RvLW6t/hvwBMOvN/g=
+		cS9QcDmshBKWltdITnT/s9MRvdM=
 		</data>
 		<key>Base.lproj/Main.storyboardc/UIViewController-az4-oR-a3E.nib</key>
 		<data>
-		wa31IBPsjKHGGKDuBopb6thLeuc=
+		rQ7Xrj090IqxGU/JLOqpphwgEKw=
 		</data>
 		<key>Base.lproj/Main.storyboardc/UIViewController-vmv-Hd-I8i.nib</key>
 		<data>
-		S0obhK8Te/3JwOo4fHkO4gU3YzA=
+		Ez4hF9DLnkuCQyP2IsCeqJdHEnQ=
+		</data>
+		<key>Base.lproj/Main.storyboardc/ViewController.nib</key>
+		<data>
+		nxHnKrsQxr9G8bXZHfyzNVO9pCk=
+		</data>
+		<key>Camera.storyboardc/CameraViewController.nib</key>
+		<data>
+		+REKajvGjnU4KcKXLGQ2rAJ8PyI=
 		</data>
 		<key>Camera.storyboardc/Info.plist</key>
 		<data>
-		id8vXjuODQ2RYUoKSNl9afqyR5c=
+		sWdMleDcVxzhEXQw5TnBDL0bcCA=
 		</data>
 		<key>Camera.storyboardc/MWN-Bc-eaf-view-AXD-tR-duL.nib</key>
 		<data>
-		80IMj205PBgCMyTD6PfMaurXVb8=
+		YHqBxfJCKzuyDXk7Vl4VBcg3Fok=
 		</data>
 		<key>Camera.storyboardc/UIViewController-2ae-Vd-FKq.nib</key>
 		<data>
-		wlBqltdlfOnKeSIdaCVXhjrCB9Q=
+		B+BwWzjabgJJGciyyjs6twCVWvU=
 		</data>
 		<key>Camera.storyboardc/UIViewController-Ewq-EB-Jd3.nib</key>
 		<data>
-		fT4l6gYeZFI6NG4yCqamOBjmGqs=
-		</data>
-		<key>Camera.storyboardc/UIViewController-MWN-Bc-eaf.nib</key>
-		<data>
-		XKlz5ABF8htR84rWUzdUAijBst8=
+		ejR8ERjru4n3VOT7cA6U8HWtV6w=
 		</data>
 		<key>Camera.storyboardc/UIViewController-eBn-vo-ivv.nib</key>
 		<data>
-		IZOAXx5mlviPfGNpiE/UhBidbZs=
+		ZO+MSd/ATKDS6bStqC/PON3LU1U=
+		</data>
+		<key>CheckIn.storyboardc/CheckInViewController.nib</key>
+		<data>
+		qyXurRoDvlNpAfKSSiX8L1ZlzMA=
 		</data>
 		<key>CheckIn.storyboardc/Info.plist</key>
 		<data>
-		XeGnbGCgRsmTwYKWeVUm6OiB4/I=
+		TyGCfvscqjYpynOPMOSx9RnUxlI=
 		</data>
 		<key>CheckIn.storyboardc/UIViewController-ezZ-sx-WTO.nib</key>
 		<data>
-		TImijUMw0M8o7RbYUE1mGpjVY9Q=
-		</data>
-		<key>CheckIn.storyboardc/UIViewController-wMt-Uf-gYL.nib</key>
-		<data>
-		XsTHvfgnvwcU9RP3+sFCUXprDcw=
+		SAZMt3Ls5B0YqoAP4rweZhLK5TI=
 		</data>
 		<key>CheckIn.storyboardc/wMt-Uf-gYL-view-n3k-QD-6FJ.nib</key>
 		<data>
-		Nj6NQ2ko0tDGkP4SsNsygOtJrqA=
+		RFkNuN8DWt9PlHiZWCdIkTy8Bk8=
+		</data>
+		<key>GameInfo.storyboardc/GameInfoViewController.nib</key>
+		<data>
+		Q/Lup5wA1fTNhXrVpcuw/a2m7M0=
 		</data>
 		<key>GameInfo.storyboardc/Info.plist</key>
 		<data>
-		0qtblA5N3018fIdcD+F2hilh4wc=
+		LbrsJuYKMlyX+LfabLN42EUO0Yk=
 		</data>
 		<key>GameInfo.storyboardc/RNs-1H-ThH-view-rok-9W-Hct.nib</key>
 		<data>
-		H4cdNBEJFJgAgsJO8YnOnuFRaxU=
+		4blmy9NMvct9laG4lnBTvaiV+xU=
 		</data>
 		<key>GameInfo.storyboardc/UIViewController-DGM-gn-wg0.nib</key>
 		<data>
-		vVj1wFH+XV6f2xhmzFlCZIdReUE=
+		xv0cGFVJAouZ6mCkUaZjld1bVVc=
 		</data>
 		<key>GameInfo.storyboardc/UIViewController-EAe-kd-65X.nib</key>
 		<data>
-		FVH65ObkOVs8vbEU5SmQIBlBtV4=
+		uDcfHnJDhNRY1/Lxt2pAD4eYFsU=
 		</data>
 		<key>GameInfo.storyboardc/UIViewController-EAq-tb-HBx.nib</key>
 		<data>
-		bcQ86Ozh7rQ4Rhma+C5N2j8sqRo=
+		TG03H4Kr8qHf09XRa0FXDdxHLPY=
 		</data>
 		<key>GameInfo.storyboardc/UIViewController-IOU-fP-Rfa.nib</key>
 		<data>
-		p7gbKjbwiN5LUGJAxGlfm4zkLDI=
-		</data>
-		<key>GameInfo.storyboardc/UIViewController-RNs-1H-ThH.nib</key>
-		<data>
-		4LYQu1jwnb+hy+f8zB8N83FvKJA=
+		gjiqTIhtOXmHn3xQ8uvaa8QClaM=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -126,27 +130,27 @@
 		</data>
 		<key>ListTeams.storyboardc/Info.plist</key>
 		<data>
-		0+PP4NOYYA5EJKH2EnA9hQtpv5c=
+		v/8hN3NJ3QHpT3KP0rGo1qi6EMs=
+		</data>
+		<key>ListTeams.storyboardc/ListTeamsViewController.nib</key>
+		<data>
+		19BzghRAPzCJQWrLpDpAODfVm4c=
 		</data>
 		<key>ListTeams.storyboardc/UIViewController-4eS-3K-sXH.nib</key>
 		<data>
-		nBtOx2689jjvyEf2MJhNKrcj6us=
+		3mdw3kZoPp9lyc4i7Qp5uQZmRu8=
 		</data>
 		<key>ListTeams.storyboardc/UIViewController-Abk-tY-EmO.nib</key>
 		<data>
-		Le6acfuRUPA9KtufGAeiORsQqho=
+		De1ApbQwyGbEUsdt0F0Il+eYwl0=
 		</data>
 		<key>ListTeams.storyboardc/UIViewController-cnu-xB-N99.nib</key>
 		<data>
-		PKcsLJzdbFmCnv5fYInZRQtIDT0=
-		</data>
-		<key>ListTeams.storyboardc/UIViewController-jQi-dP-Hyq.nib</key>
-		<data>
-		d6MDLA9vZB5bZlZ7W1coxaK3fEo=
+		GSDEfZHGQlI5OESCFDKBTkf2kNw=
 		</data>
 		<key>ListTeams.storyboardc/jQi-dP-Hyq-view-r8h-sw-VCZ.nib</key>
 		<data>
-		OhIvbj5Vr0tLMbzLK7PA4EgMlKw=
+		VganKJDzdDv9e/o7thrKUVBh9H8=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -154,31 +158,31 @@
 		</data>
 		<key>PlayerInfo.storyboardc/Info.plist</key>
 		<data>
-		+NM2ELJhe6WVc+br8k9OasMLUls=
+		Xz29ALglh2ZRtRy5WGWGNmOQecY=
 		</data>
-		<key>PlayerInfo.storyboardc/PlayerInfo.nib</key>
+		<key>PlayerInfo.storyboardc/PlayerInfoViewController.nib</key>
 		<data>
-		YYxBs3s4DBdwr4v9tUKb6COeN1A=
+		egBhp2E20jfZRHEzCKVdhoCzrzM=
 		</data>
 		<key>PlayerInfo.storyboardc/Zbu-NP-nmN-view-Pvu-uA-z70.nib</key>
 		<data>
-		9Elb1NCI72QnQlRSc8Ud/0EnybA=
+		eEC5wLsZe5hzx2gCGZx8aJA3r8E=
 		</data>
 		<key>TeamInfo.storyboardc/Info.plist</key>
 		<data>
-		tw2ziPU0IEF37OANOfh9c1j4zVU=
+		4grJ8JqUuzlv83nOZprFhLOqdA0=
 		</data>
 		<key>TeamInfo.storyboardc/TeamInfo.nib</key>
 		<data>
-		c2wBQxBLVQB2yg3Wexlz0Ip4oxE=
+		PXyLn3bsLT0B6bOOlJ40nYRSgXw=
 		</data>
-		<key>TeamInfo.storyboardc/UIViewController-nf0-Oj-Ieb.nib</key>
+		<key>TeamInfo.storyboardc/TeamInfoViewController.nib</key>
 		<data>
-		mmFFZdIkrHOZ5OJ+76+xJI30CAs=
+		StZkIrhpv+23HyLG6rtUIqH4bEs=
 		</data>
 		<key>TeamInfo.storyboardc/nf0-Oj-Ieb-view-wZF-Fx-o98.nib</key>
 		<data>
-		Cyi7tpFNRq9It/MI+vVwBamR680=
+		lI7NQfuIC8+dv/YkVYQn8uOqEQc=
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
@@ -198,7 +202,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			hRYZbNJrgAP86m/vKTV1/O8uaXyRWpw6KQGSTOWD2Q8=
+			C5UERunqwxYhYAbgTroWKKid4jG0n6A8buUhOfKhNXs=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/Info.plist</key>
@@ -212,273 +216,280 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			vm/TN4T7nkzRT1VhZgbV6474OGN/8ls9RJqI4h8LcYE=
+			bK/50mf6pKUkxrwise3NzdkJ2IyaOZwJgWlpMZEliyc=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			DsGy9D/B3aULQnb4xynVm8WcfseuaZ1Xu+pTRayalTw=
+			FDMdZDPtRUuNtbkeQfCE3Ej+LS+XecXp2GejQTP7Dfc=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			J4imRtpk/5w5yeq6aMuq2Ky/bzxY77XdLQ2F+1WY9A8=
+			6JBvJuVkZEMQgJzA5NigBZqFWKrSSkZCgFYCNMO4aXw=
 			</data>
 		</dict>
-		<key>Base.lproj/Main.storyboardc/UIViewController-BYZ-38-t0r.nib</key>
+		<key>Base.lproj/Main.storyboardc/UINavigationController-o2y-Im-W3P.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			nklFUBg6aTvZjjhJsn4k36lxiRkdbPacIIt+MCyFnzA=
+			oEEFRkafElLBLnTH0b87mXLPDy5YIceWiqcpHwPR5MA=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/UIViewController-J4J-IE-XAr.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			h28gQEfhzO822af4whwvPq5pswJfpIe92dC/Zd12cpM=
+			dK41fcYzcqotyaBTFLXNeX303O9ch0RSa/J2m5q9PhI=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/UIViewController-Km8-CY-5jn.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			pMEAoyHybLdHH/t4tKerfjDZwBv1WcqZcL/gFsALcuk=
+			f8PMKZXIgFuku5eRp7N5NOTdLKcm0+LApf/mriJNEzU=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/UIViewController-W9a-X4-EjI.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+ndNA6RK4Dz5dLB8Ce6Br1Ov4lSUzWf3sERmRgkrJPo=
+			P+HpkN/tJZEDxZuq+jbqDof8eejv2wDe5X7Subp4pVY=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/UIViewController-az4-oR-a3E.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			StJBkhJxApTTGn3vVsAaOnZ3EJRczBrO5CJgwG9SzlQ=
+			wp5Po3hBP6B269aSMx2cw6UFF38dyxM25P4re9sgpeU=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/UIViewController-vmv-Hd-I8i.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			anb5YbtR8RJw9tqVWFfg5YDZ1bhWpwDuwpAOd2BnOGg=
+			4o0duNQudBJKt6tedzVTiRP2fihvRWUSCHF5w4h1Ylo=
+			</data>
+		</dict>
+		<key>Base.lproj/Main.storyboardc/ViewController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			YiqPTH5tKPIp0zhjfn90cEiYVUqRz/uZVfSVueBr26s=
+			</data>
+		</dict>
+		<key>Camera.storyboardc/CameraViewController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			vlDUU5FVFuEKbN/p26rfAtiaTrNIGTGLpZ03QMeJgqk=
 			</data>
 		</dict>
 		<key>Camera.storyboardc/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Stp7vygfQqkURXcgdtVJYEIjn8C+h5yhg5Z4lOpg3yM=
+			7IpEeMlRC/XaJm1wKv8tR66F219PQW7KOJBmA48u8pA=
 			</data>
 		</dict>
 		<key>Camera.storyboardc/MWN-Bc-eaf-view-AXD-tR-duL.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			uwE/ZaE2HVEojwcYU6kkjloM4MgOxk2a7RwVULJxm6s=
+			rdER2H1adliRFAnowbVBZP3WYEOrAbHDfk23G7wTz7g=
 			</data>
 		</dict>
 		<key>Camera.storyboardc/UIViewController-2ae-Vd-FKq.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			h5jmTLD734TkNLDyA1whaNhK3rVO6yr4HKYOXhSr6/0=
+			X89rHfdLtqUCQglPMgG0ukyB1QNshS22vJ9mWRTGuxQ=
 			</data>
 		</dict>
 		<key>Camera.storyboardc/UIViewController-Ewq-EB-Jd3.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jvioVOevb6VkYxyPIhvFBZEcbGoNA1ya+EXr86SBxrk=
-			</data>
-		</dict>
-		<key>Camera.storyboardc/UIViewController-MWN-Bc-eaf.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			0KSu4ot+1q8ynQh9GCLt7BX1IHG/7Cg75mVaZEy+xuE=
+			cjbAg4c365cHDhnDCI7WZ54oS9lvEI8Y5G2AL0cDl3A=
 			</data>
 		</dict>
 		<key>Camera.storyboardc/UIViewController-eBn-vo-ivv.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WnCW2vA1Hgc8lV8RMj9oo+Ou1+USstaC4Ckmnba+vec=
+			eRci1cfzCJ32Y5X3IyRYks7Gmj77qjM6PjXNG4eyJO8=
+			</data>
+		</dict>
+		<key>CheckIn.storyboardc/CheckInViewController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			J7mp/kd0zlHPHc0+C72U+lyIiVpiSQ4EDBCodMH93is=
 			</data>
 		</dict>
 		<key>CheckIn.storyboardc/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jjTQDjO+adp8u+a5anEWY7I8UThD1aO08sSr3vh9x8w=
+			gdYUWmEp3EcrPlCXIrqq2aewG7JDLRmeU2j6UDkQ0r8=
 			</data>
 		</dict>
 		<key>CheckIn.storyboardc/UIViewController-ezZ-sx-WTO.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			tT0XTzl/alHOgwjgnNPg9NkruuxHee8MLVtIanlcGlo=
-			</data>
-		</dict>
-		<key>CheckIn.storyboardc/UIViewController-wMt-Uf-gYL.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			rLGcomFXLIFXO4YXitbTZfJRSIwXz1hcawTkRujkI4M=
+			MWHM6U7ruH7JNhg6zOfpJqFzKp98NhoNpfqqO1zv+/o=
 			</data>
 		</dict>
 		<key>CheckIn.storyboardc/wMt-Uf-gYL-view-n3k-QD-6FJ.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zurO/ZsefCgHCcSgdspC+LIiXvUdTu8enpDsn/j8imk=
+			jcfeKOzUbhQ5xQY5+0T/bblFUXPJn0ePwLWFNXLipTc=
+			</data>
+		</dict>
+		<key>GameInfo.storyboardc/GameInfoViewController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			TdUTnUBsXRzqot5+oCqOhuvGRuezHhFoBCdCbGNXY8w=
 			</data>
 		</dict>
 		<key>GameInfo.storyboardc/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			qGNaooMk72bt2/DCE7A3YOhXpaMUEzjDPDJXINrpWeQ=
+			1SheBUTqbSjOUG12xD40DV21CVrNKBPmk/QOm+g4Nmg=
 			</data>
 		</dict>
 		<key>GameInfo.storyboardc/RNs-1H-ThH-view-rok-9W-Hct.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dWTYd/P1Z2NxoJk8S2pUC7tsKOmnNK2Apz+XaFhr95w=
+			vuPqP6CPr4U9u+5j+LoUYjK8FPcWEtb2B6U/YAMYtUY=
 			</data>
 		</dict>
 		<key>GameInfo.storyboardc/UIViewController-DGM-gn-wg0.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yJMNKnotUOld8o7NuUpX7/fUwNp3Vcw3B2CNlnZVIww=
+			+g8T2suktm8/e1PAP6sGN/bEa8wbCTrgyQkJ8/Lf1EE=
 			</data>
 		</dict>
 		<key>GameInfo.storyboardc/UIViewController-EAe-kd-65X.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IWS+9gdmbOAWtr35ngmzyocyAHhEnTvONSdG+1aZGIY=
+			UxbZhsCBnfDFm7oA4gHPO/vE4z1GHqkyegDtMSe8xhU=
 			</data>
 		</dict>
 		<key>GameInfo.storyboardc/UIViewController-EAq-tb-HBx.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ThW14nGKES/aw9GkZb7wgsoN6w6+dXaGqrt2/+EFtFc=
+			/Y6wdaHEpo4v7BE5o6Dy7qaq48FdD7l35BNdc6+XGXI=
 			</data>
 		</dict>
 		<key>GameInfo.storyboardc/UIViewController-IOU-fP-Rfa.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Yyf3BpiMKhaXQ52IdB4sN4mrVgYMyDzejqDAyKsR6Fw=
-			</data>
-		</dict>
-		<key>GameInfo.storyboardc/UIViewController-RNs-1H-ThH.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			7c1eH7CQLdzpdji642sIopWmQ6fjMWh9pamrem+rFxc=
+			Co+DSrr7hjb7kPRr2R1VySREbf7a2bm51kNUrgfOZs4=
 			</data>
 		</dict>
 		<key>ListTeams.storyboardc/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yn/9mE/uAAlMLPgafsnO6QIu/c5prIgXOGUdz2yTdyA=
+			RRCtLzqOLvrcmjPlu+gdKHVIB3TCGXwbNPnL3dm3+9s=
+			</data>
+		</dict>
+		<key>ListTeams.storyboardc/ListTeamsViewController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			p3lgFcjzbecoZK2reArFFiWv4ZSSFPWRZr7wxw2o7Dg=
 			</data>
 		</dict>
 		<key>ListTeams.storyboardc/UIViewController-4eS-3K-sXH.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4sO3T4P/JIKHQQqvMnveS9o7bTggPcTj09kf9cl8iHc=
+			zkiAxpKY549slhFZQesEm/0we9PONmzvkNjR4mIBfkE=
 			</data>
 		</dict>
 		<key>ListTeams.storyboardc/UIViewController-Abk-tY-EmO.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			g7nFlPOpeTBn7tOutb5qZqtEB5qDSZqKUpHEuPeUQSY=
+			2ADkY8+u+rP0fdHKqTC+lpgGXYXrIkxR2p350NHx+ZA=
 			</data>
 		</dict>
 		<key>ListTeams.storyboardc/UIViewController-cnu-xB-N99.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YM8rfPOOOH4aZXFAkH3csYqXoGy8fZCpKCC7m1i7ArU=
-			</data>
-		</dict>
-		<key>ListTeams.storyboardc/UIViewController-jQi-dP-Hyq.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			mN7ofnPCF93yn8Fb6XDtxnZ4R5tNlKtlt5eUUCMxbko=
+			ER7PDiuhkHPZ1PvjOuSgfdR2MCLIDvmSwP5ngVI44I4=
 			</data>
 		</dict>
 		<key>ListTeams.storyboardc/jQi-dP-Hyq-view-r8h-sw-VCZ.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			cjKewfpwEt+t6TFn6UFS2zk9hzZ0x01aHsKOiR/CwFA=
+			sXu+xKi08c6LtgMoHtGp46hJ2ANQ+/UJ3WR578gekns=
 			</data>
 		</dict>
 		<key>PlayerInfo.storyboardc/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iy/B79ghHcG6HcM7xInY40Yz2CqFA/lgm39TsG5tfU0=
+			Sz5gneGctfkb8JdGWtDWr2VTzH9RATbiy5Iaj77zCcU=
 			</data>
 		</dict>
-		<key>PlayerInfo.storyboardc/PlayerInfo.nib</key>
+		<key>PlayerInfo.storyboardc/PlayerInfoViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JpOZqZ1gKdoU6vz8iDiTFDgiPH4EM0+eSCX/hN5tCCs=
+			Uc6pzmvW9JZ2voT+8wg5QASjt8GLjOIpz8pFoJVIVPU=
 			</data>
 		</dict>
 		<key>PlayerInfo.storyboardc/Zbu-NP-nmN-view-Pvu-uA-z70.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			g7BLRgUTp7skpZ5bdSUx2sRlyThriwCY+qxx7+LllrM=
+			+iNX0qY5SNWwK9W0p1I4uLK9wsFGeaRiXelKcJ9mKjg=
 			</data>
 		</dict>
 		<key>TeamInfo.storyboardc/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NuPrEk3LfA3ubKofRIDn5U9WqRs9Whr+FHrZR7nBQ/c=
+			CGvqf11QptHt+W0+YAFNG5iOHlJQX6+iltcTMZtJe2w=
 			</data>
 		</dict>
 		<key>TeamInfo.storyboardc/TeamInfo.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			nmlcqtNAB8if/PovDUZ5vF93F6UNjgYHcL9UGl9vt14=
+			dTZjyjWU1kbptEuT7n/vsthrXNQSNn2r+1TD+SgCUR8=
 			</data>
 		</dict>
-		<key>TeamInfo.storyboardc/UIViewController-nf0-Oj-Ieb.nib</key>
+		<key>TeamInfo.storyboardc/TeamInfoViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			O3z4KlEnPi9Mg0W53X9uh0EmRDI1OEo+viS5M0226ls=
+			7B1J9owUrPDAA5L1QYGAL0Ose2oivI3Y4Lsu0j+tgTI=
 			</data>
 		</dict>
 		<key>TeamInfo.storyboardc/nf0-Oj-Ieb-view-wZF-Fx-o98.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wz3cP3TOFE+o847AYaY/bjAIz3TUZoCUWHMVA0qWPCY=
+			I7B9L95RfJ/7rCpkQdSkSgHfQlIjyqKOUvF9VwYxJ14=
 			</data>
 		</dict>
 		<key>embedded.mobileprovision</key>

@@ -6,6 +6,40 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
+		<key>1599BD9F-8C9D-4361-86DB-7CE263BCED40</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>1599BD9F-8C9D-4361-86DB-7CE263BCED40.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Sportsium_Skeleton project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Sportsium_Skeleton</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug Sportsium_Skeleton</string>
+			<key>timeStartedRecording</key>
+			<real>594497206.33709002</real>
+			<key>timeStoppedRecording</key>
+			<real>594497224.55770898</real>
+			<key>title</key>
+			<string>Debug Sportsium_Skeleton</string>
+			<key>uniqueIdentifier</key>
+			<string>1599BD9F-8C9D-4361-86DB-7CE263BCED40</string>
+		</dict>
 		<key>4AD0C615-9D0B-498A-8A78-5AFD25685130</key>
 		<dict>
 			<key>className</key>

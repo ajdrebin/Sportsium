@@ -72,12 +72,12 @@ using namespace std;
 //    cv::Scalar upper_blue(130,255,255);
 //    cv::Scalar lower_blue(0,0,150);
 //    cv::Scalar upper_blue(70,70,255);
-    cv::Scalar lower_blue(100,100,20);
-    cv::Scalar upper_blue(130,255,255);
+    cv::Scalar lower_blue(95,50,20);
+    cv::Scalar upper_blue(140,255,255);
 
     //red range
-    cv::Scalar lower_red(0,31,255);
-    cv::Scalar upper_red(176,255,255);
+    cv::Scalar lower_red(0,0,80);
+    cv::Scalar upper_red(40,30,255);
 //    cv::Scalar lower_red(0,0,0);
 //    cv::Scalar upper_red(15,80,80);
 
@@ -137,14 +137,13 @@ using namespace std;
                 cout << "nzCountRed: " << nzCountRed << endl;
                 
                 if(nzCountBlue >= 10){
-                    cv::putText(cameraFeed, "Blue Team", pt1, font, 0.5, cv::Scalar(255,0,0));
-                    cv::rectangle(cameraFeed, pt1, pt2, CV_RGB(0,0,255), 1);
+                    cv::putText(cameraFeed, "(blue) Home", pt1, font, 0.5, cv::Scalar(255,0,0));
+                    cv::rectangle(cameraFeed, pt1, pt2, CV_RGB(0,0,255), 2);
                 }
                 if(nzCountRed >= 10){
 //                    cv::putText(cameraFeed, "Red Team", pt1, font, 0.5, cv::Scalar(0,0,255));
-                    cv::putText(cameraFeed, " Detection off ", pt1, cv::FONT_HERSHEY_COMPLEX_SMALL, 0.5,  cv::Scalar(0,0,255), 2 , 8 , false);
-                    cout << "hit here" << endl;
-                    cv::rectangle(cameraFeed, pt1, pt2, CV_RGB(255,0,0), 1);
+                    cv::putText(cameraFeed, "(red/w) Away", pt1, font, 0.5,  cv::Scalar(0,0,255), 2 , 8 , false);
+                    cv::rectangle(cameraFeed, pt1, pt2, CV_RGB(255,0,0), 2);
                 }
             }
         }
