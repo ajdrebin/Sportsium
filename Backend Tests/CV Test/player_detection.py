@@ -7,7 +7,9 @@ import os
 import numpy as np
 
 #Reading the video
-vidcap = cv2.VideoCapture('uswnt.mov')
+vidcap = cv2.VideoCapture('nwsl_footage/Houston_Dash_vs_Sky_Blue_FC.mp4')
+
+
 success,image = vidcap.read()
 count = 0
 success = True
@@ -17,26 +19,55 @@ idx = 0
 while success:
 	#converting into hsv image
 	hsv = cv2.cvtColor(image,cv2.COLOR_BGR2HSV)
+
 	#green range
-	lower_green = np.array([40,40, 40])
+	lower_green = np.array([40, 40, 40])
+	# !!!!!
 	upper_green = np.array([70, 255, 255])
-	
-	#blue range
-	lower_blue = np.array([110,50,50])
-	upper_blue = np.array([130,255,255])
+	# !!!!!!!!!!!!!!!!!!!!!
+################################################################################
 
-	#Red range
-	lower_red = np.array([0,31,255])
-	upper_red = np.array([176,255,255])
 
+
+	# HOME range
+	# lower_home = np.array([5,0,0])
+	# upper_home = np.array([45,255,255])
+
+	lower_home = np.array([0,30,50])
+	upper_home = np.array([361,255,255])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	# AWAY range
+	lower_away = np.array([0,0,80])
+	upper_away = np.array([50,50,255])
+
+
+	# lower_away =  np.array([0,0,0])
+	# upper_away = np.array([180,255,255])
+###########################################################################
 	#white range
 	lower_white = np.array([0,0,0])
 	upper_white = np.array([0,0,255])
 
-    #Define a mask ranging from lower to upper
+    #Define a mask ranging from lower to uppers
 	mask = cv2.inRange(hsv, lower_green, upper_green)
+
     #Do masking
 	res = cv2.bitwise_and(image, image, mask=mask)
+
 	#convert to hsv to gray
 	res_bgr = cv2.cvtColor(res,cv2.COLOR_HSV2BGR)
 	res_gray = cv2.cvtColor(res,cv2.COLOR_BGR2GRAY)
@@ -64,28 +95,28 @@ while success:
 				player_img = image[y:y+h,x:x+w]
 				player_hsv = cv2.cvtColor(player_img,cv2.COLOR_BGR2HSV)
 				#If player has blue jersy
-				mask1 = cv2.inRange(player_hsv, lower_blue, upper_blue)
+				mask1 = cv2.inRange(player_hsv, lower_home, upper_home)
 				res1 = cv2.bitwise_and(player_img, player_img, mask=mask1)
 				res1 = cv2.cvtColor(res1,cv2.COLOR_HSV2BGR)
 				res1 = cv2.cvtColor(res1,cv2.COLOR_BGR2GRAY)
 				nzCount = cv2.countNonZero(res1)
 				#If player has red jersy
-				mask2 = cv2.inRange(player_hsv, lower_red, upper_red)
+				mask2 = cv2.inRange(player_hsv, lower_away, upper_away)
 				res2 = cv2.bitwise_and(player_img, player_img, mask=mask2)
 				res2 = cv2.cvtColor(res2,cv2.COLOR_HSV2BGR)
 				res2 = cv2.cvtColor(res2,cv2.COLOR_BGR2GRAY)
 				nzCountred = cv2.countNonZero(res2)
 
-				if(nzCount >= 20):
+				if(nzCount >= 30):
 					#Mark blue jersy players as france
-					cv2.putText(image, 'France', (x-2, y-2), font, 0.8, (255,0,0), 2, cv2.LINE_AA)
-					cv2.rectangle(image,(x,y),(x+w,y+h),(255,0,0),3)
+					cv2.putText(image, 'Home', (x-2, y-2), font, 0.8, (0,0,0), 2, cv2.LINE_AA)
+					cv2.rectangle(image,(x,y),(x+w,y+h),(0,0,0),3)
 				else:
 					pass
-				if(nzCountred>=20):
+				if(nzCountred>=30):
 					#Mark red jersy players as belgium
-					cv2.putText(image, 'Belgium', (x-2, y-2), font, 0.8, (0,0,255), 2, cv2.LINE_AA)
-					cv2.rectangle(image,(x,y),(x+w,y+h),(0,0,255),3)
+					cv2.putText(image, 'Away', (x-2, y-2), font, 0.8, (255,255,255), 2, cv2.LINE_AA)
+					cv2.rectangle(image,(x,y),(x+w,y+h),(255,255,255),3)
 				else:
 					pass
 		if((h>=1 and w>=1) and (h<=30 and w<=30)):
@@ -110,6 +141,7 @@ while success:
 	print ('Read a new frame: ', success)     # save frame as JPEG file	
 	count += 1
 	cv2.imshow('Match Detection',image)
+	
 	if cv2.waitKey(1) & 0xFF == ord('q'):
 		break
 	success,image = vidcap.read()

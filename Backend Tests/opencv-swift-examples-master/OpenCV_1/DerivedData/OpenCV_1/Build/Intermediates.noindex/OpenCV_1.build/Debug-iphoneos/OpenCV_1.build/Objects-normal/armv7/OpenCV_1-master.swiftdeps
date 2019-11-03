@@ -1,0 +1,6 @@
+version: "Apple Swift version 5.1 (swiftlang-1100.0.270.13 clang-1100.0.33.7)"
+options: "c6155d4fadc636f01c7629d32700903f"
+build_time: [1572542688, 332573000]
+inputs:
+  "/Users/Alina/Desktop/Sportsium/Backend Tests/opencv-swift-examples-master/OpenCV_1/OpenCV_1/ViewController.swift": [1567547296, 0]
+  "/Users/Alina/Desktop/Sportsium/Backend Tests/opencv-swift-examples-master/OpenCV_1/OpenCV_1/AppDelegate.swift": [1571719615, 441880226]

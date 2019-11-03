@@ -7,3 +7,11 @@
 __pycache__/
 env/
 .vscode/
+Backend\ Tests/CV\ Test/opencv-4.1.1/build
+Backend\ Tests/CV\ Test/opencv-4.1.1/platforms/maven/.settings/
+Backend\ Tests/CV\ Test/opencv-4.1.1/platforms/maven/opencv-it/.settings/
+Backend\ Tests/CV\ Test/opencv-4.1.1/platforms/maven/opencv/.settings/
+Backend\ Tests/CV\ Test/opencv-4.1.1/platforms/maven/.project
+Backend\ Tests/CV\ Test/opencv-4.1.1/platforms/maven/opencv-it/.project
+Backend\ Tests/CV\ Test/opencv-4.1.1/platforms/maven/opencv/.project
+Backend\ Tests/CV\ Test/nwsl_footage/

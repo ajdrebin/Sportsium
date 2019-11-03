@@ -8,8 +8,10 @@
 
 #import "CvVideoCameraWrapper.h"
 #import <opencv2/videoio/cap_ios.h>
+#include <opencv2/imgcodecs/ios.h>
 
-#import "OpenCV_1-Swift.h"
+
+//#import "OpenCV_1-Swift.h"
 
 //using namespace cv;
 using namespace std;
@@ -28,7 +30,7 @@ using namespace std;
 {
     videoCamera = [[CvVideoCamera alloc] initWithParentView:iv];
     
-    videoCamera.defaultAVCaptureDevicePosition = AVCaptureDevicePositionFront;
+    videoCamera.defaultAVCaptureDevicePosition = AVCaptureDevicePositionBack;
     videoCamera.defaultAVCaptureSessionPreset = AVCaptureSessionPreset352x288;
     videoCamera.defaultAVCaptureVideoOrientation = AVCaptureVideoOrientationPortrait;
     videoCamera.defaultFPS = 30;
@@ -44,75 +46,174 @@ using namespace std;
 #ifdef __cplusplus 
 - (void)processImage:(cv::Mat&)image
 {
-    // Do some OpenCV stuff with the image
-//    Mat image_copy;
-//    cvtColor(image, image_copy, CV_BGRA2BGR);
-    
-    // invert image
-//    bitwise_not(image_copy, image_copy);
-//    cvtColor(image_copy, image, CV_BGR2BGRA);
-//    cvtColor(image_copy, image, CV_BGR2HSV);
-    cv::Mat hsvImage;
-    cv::cvtColor(image , hsvImage, CV_BGR2HSV);
+//    std::cout<< "hello" << std::endl;
+//     cv::Mat image_copy = [self convertToYellow:image];
+    cv::Mat image_copy = [self convertToGreen:image];
+
+
+        
+}
+
+- (cv::Mat)convertToGreen:(cv::Mat)image
+{
+    cout << "got here" << endl;
+    cv::Mat cameraFeed = image;
+    cv::Mat HSV, mask;
+    cv::cvtColor(cameraFeed, HSV, CV_BGR2HSV);
     
     //green range
      cv::Scalar lower_green(0,50,50);
      cv::Scalar upper_green(70,255,255);
 
     //blue range
-    cv::Scalar lower_blue(110,50,50);
+//    cv::Scalar lower_blue(110,50,50);
+//    cv::Scalar upper_blue(130,255,255);
+//    cv::Scalar lower_blue(0,0,150);
+//    cv::Scalar upper_blue(70,70,255);
+    cv::Scalar lower_blue(100,100,20);
     cv::Scalar upper_blue(130,255,255);
-    
+
     //red range
     cv::Scalar lower_red(0,31,255);
     cv::Scalar upper_red(176,255,255);
-    
+//    cv::Scalar lower_red(0,0,0);
+//    cv::Scalar upper_red(15,80,80);
+
     //white range
     cv::Scalar lower_white(0,0,0);
     cv::Scalar upper_white(0,0,255);
-    
-//    Define a mask ranging from lower to upper
-    cv::Mat mask;
-    cv::inRange(hsvImage, lower_green, lower_white, mask);
-    cv::Mat res(image.size(), image.type());
-    cv::bitwise_and(image, image, res, mask);
-    
-    cv::Mat res_bgr(image.size(), image.type());
-    cv::cvtColor(res, res_bgr, cv::COLOR_BGRA2BGR);
 
-    cv::Mat res_gray;
-    cv::cvtColor(res, res_gray, cv::COLOR_BGRA2GRAY);
-    
-//    cv::Mat kernel = cv::Mat::ones(10, 10, CV_8UC1);
-//    double thresh = threshold(res_gray, mask, 127, 255, cv::THRESH_BINARY_INV | cv::THRESH_OTSU);
-//    cv::Mat thresh_out;
-//    cv::morphologyEx(thresh, thresh_out, cv::MORPH_CLOSE, kernel);
-//
-//    std::vector<std::vector<Point> > contours;
-//    cv::Mat heirarchy;
-//    cv::findContours(thresh_out, contours, heirarchy, cv::RETR_TREE, cv::CHAIN_APPROX_SIMPLE);
-    
-    cv::Mat thresholded;
-    cv::inRange(res_gray, cv::Scalar(40,40,40), cv::Scalar(160,160,160), thresholded);
+    cv::inRange(HSV, lower_green, upper_green, mask);
+    cv::Mat res, res_bgr, res_gray;
+    cv::bitwise_and(cameraFeed, cameraFeed, res, mask);
+    cv::cvtColor(res, res_gray, CV_BGR2GRAY);
 
-    cv::Mat kernel = cv::Mat::ones(13, 13, CV_64FC1);
-    cv::Mat opening;
-    cv::morphologyEx(thresholded, opening, cv::MORPH_CLOSE, kernel);
+    cv::Mat kernel = getStructuringElement( cv::MORPH_RECT, cvSize(13,13));
+    cv::Mat thresh;
+    cv::threshold(res_gray, thresh, 127, 255, cv::THRESH_BINARY_INV | cv::THRESH_OTSU);
+    cv::morphologyEx(thresh, thresh, cv::MORPH_CLOSE, kernel);
 
-    vector<vector<cv::Point>> contours;
-    cv::findContours(opening, contours, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE);
+    cv::Mat temp;
+    thresh.copyTo(temp);
+    vector< vector<cv::Point> > contours;
+    vector<cv::Vec4i> hierarchy;
+
+    findContours( temp, contours, hierarchy, CV_RETR_TREE,  CV_CHAIN_APPROX_SIMPLE, cv::Point(0, 0) );
     
-    int prev = 0;
+
     int font = cv::FONT_HERSHEY_SIMPLEX;
-//     contours.resize(contours0.size());
+
     cout << contours.size() << endl;
     for( size_t k = 0; k < contours.size(); k = k + 1 ) {
         cv::Rect rect = cv::boundingRect(contours[k]);
-        cout << rect << endl;
-    }
+        cv::Point pt1, pt2;
+        pt1.x = rect.x;
+        pt1.y = rect.y;
+        pt2.x = rect.x + rect.width;
+        pt2.y = rect.y + rect.height;
         
+        if(rect.height>=(1.5)*rect.width){
+            if(rect.width>15 and rect.height>= 15){
+                cv::Mat player_img = cv::Mat(cameraFeed, rect);
+                cv::Mat player_hsv;
+                cv::cvtColor(player_img, player_hsv, cv::COLOR_BGR2HSV);
+                
+                //If player has blue jersy
+                cv::Mat mask1, res1;
+                cv::inRange(player_hsv, lower_blue, upper_blue, mask1);
+                cv::bitwise_and(player_img, player_img, res1, mask1);
+                cv::cvtColor(res1, res1, cv::COLOR_BGR2GRAY);
+                int nzCountBlue = cv::countNonZero(res1);
+                cout << "nzCountBlue: " << nzCountBlue << endl;
+                
+                //If player has red jersy
+                cv::Mat mask2, res2;
+                cv::inRange(player_hsv, lower_red, upper_red, mask2);
+                cv::bitwise_and(player_img, player_img, res2, mask2);
+                cv::cvtColor(res2, res2, cv::COLOR_BGR2GRAY);
+                int nzCountRed = cv::countNonZero(res2);
+                cout << "nzCountRed: " << nzCountRed << endl;
+                
+                if(nzCountBlue >= 10){
+                    cv::putText(cameraFeed, "Blue Team", pt1, font, 0.5, cv::Scalar(255,0,0));
+                    cv::rectangle(cameraFeed, pt1, pt2, CV_RGB(0,0,255), 1);
+                }
+                if(nzCountRed >= 10){
+//                    cv::putText(cameraFeed, "Red Team", pt1, font, 0.5, cv::Scalar(0,0,255));
+                    cv::putText(cameraFeed, " Detection off ", pt1, cv::FONT_HERSHEY_COMPLEX_SMALL, 2,  cv::Scalar(0,0,255), 2 , 8 , false);
+                    cout << "hit here" << endl;
+                    cv::rectangle(cameraFeed, pt1, pt2, CV_RGB(255,0,0), 1);
+                }
+            }
+        }
+            
+                
+        // Draws the rect in the original image and show it
+//        cv::rectangle(cameraFeed, pt1, pt2, CV_RGB(255,0,0), 1);
+    }
+    
+    return cameraFeed;
+}
+
+
+- (cv::Mat)convertToYellow:(cv::Mat)image
+{
+cv::Mat cameraFeed = image;
+cv::Mat HSV, threshold;
+cv::cvtColor(cameraFeed, HSV, CV_BGR2HSV);
+cv::inRange(HSV, cv::Scalar(90,50,50), cv::Scalar(130,255,255), threshold);
+
+cv::Mat erodeElement = getStructuringElement( cv::MORPH_RECT,    cvSize(3,3));
+//dilate with larger element so make sure object is nicely visible
+cv::Mat dilateElement = getStructuringElement(  cv::MORPH_RECT,cvSize(3,3));
+
+erode(threshold,threshold,erodeElement);
+erode(threshold,threshold,erodeElement);
+
+dilate(threshold,threshold,dilateElement);
+dilate(threshold,threshold,dilateElement);
+
+cv::Mat temp;
+threshold.copyTo(temp);
+vector< vector<cv::Point> > contours;
+vector<cv::Vec4i> hierarchy;
+
+findContours( temp, contours, hierarchy, CV_RETR_EXTERNAL,  CV_CHAIN_APPROX_SIMPLE, cv::Point(0, 0) );
+
+bool objectFound = false;
+if (hierarchy.size() > 0) {
+
+    for (int index = 0; index >= 0; index = hierarchy[index][0]) {
+
+        cv::Moments moment = moments((cv::Mat)contours[index]);
+        double area = moment.m00;
+
+
+        if(area > 500){
+
+            objectFound = true;
+
+        }else objectFound = false;
+    }
+
+    //let user know you found an object
+    if(objectFound ==true){
+
+        for(int i=0; i < contours.size() ; i++)
+        {
+                    cv::drawContours(cameraFeed,contours,i, cv::Scalar(0,255,255,255),CV_FILLED);
+
+        }
+
+    }
+
+}
+
+return cameraFeed;
+
 }
 #endif
+
 
 -(void)startCamera
 {
