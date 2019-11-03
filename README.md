@@ -8,6 +8,85 @@ Get to know the faces of the National Women’s Soccer League using computer vis
 
 
 ## File Structure
+<<<<<<< HEAD
+* **Backend Tests:** test scripts and apps to play around with OpenCV and other frameworks for computer vision and machine learning
+* **Sportsium:** UI development apps to work on front-end UI/UX *(not in use for skeletal app)*
+* **Sportsium_Skeleton/Sportsium_Skeleton:** UI development apps to work on front-end UI/UX - includes all storyboards and swift files **(*IN USE for skeletal app*)**
+* **Starter App:** starter app assignment
+* **django_project:** backend server for database
+  * *nwsl_app:* API specific to NWSL version of app - includes population of database
+  * *django_project:* configuration of backend server
+* **img:** directory of images to be used in app
+
+## Folder Structure
+```
+    .
+    ├── Backend Tests
+    │   ├── CV Test
+    │   ├── ML Test
+    │   ├── opencv-swift-examples-master
+    │   ├── README.md
+    ├── Sportsium 
+    │   ├── DerivedData
+    │   ├── Sportsium.xcodeproj
+    │   ├── Sportsium
+    │   ├── SportsiumTests
+    │   ├── SporotsiumUITests
+    │   ├── CheckIn.storyboard
+    ├── Sportsium_Skeleton/Sportsium_Skeleton
+    │   ├── DerviedData
+    │   ├── Sporstium_Skeleton.xcodeproj
+    │   ├── Sportsium_Skeleton
+    │   │   ├── Assets.xcassets
+    │   │   ├── Base.lproj
+    │   │   ├── opencv2.framework
+    │   │   ├── AppDelegate.swift
+    │   │   ├── Camera.storyboard
+    │   │   ├── CameraViewController.swift
+    │   │   ├── CheckIn.storyboard
+    │   │   ├── CheckIn.swift
+    │   │   ├── CVVideoCameraWrapper.h
+    │   │   ├── CVVideoCameraWrapper.mm
+    │   │   ├── GameInfo.storyboard
+    │   │   ├── GameInfoViewController.swift
+    │   │   ├── info.plist
+    │   │   ├── ListTeams.storyboard
+    │   │   ├── ListTeamsViewController.swift
+    │   │   ├── PlayerInfo.storyboard
+    │   │   ├── PlayerInfoViewController.swift
+    │   │   ├── SceneDelegate.swift
+    │   │   ├── Sportsium_Skeleton-Bridging-Header.h
+    │   │   ├── TeamInfo.storyboard
+    │   │   ├── TeamInfoViewController.swift
+    │   │   ├── ViewController.swift
+    ├── Starter App
+    │   ├── ios-project-sample-f17-master
+    │   ├── mysite
+    │   ├── README.md
+    ├── django_project
+    │   ├── django_project
+    │   │   ├── __init__.py
+    │   │   ├── settings.py
+    │   │   ├── settings.py.orig
+    │   │   ├── urls.py
+    │   │   ├── wsgi.py
+    │   ├── nwsl_app
+    │   │   ├── migrations
+    │   │   ├── __init__.py
+    │   │   ├── admin.py
+    │   │   ├── apps.py
+    │   │   ├── models.py
+    │   │   ├── populate.py
+    │   │   ├── tests.py
+    │   │   ├── urls.py
+    │   │   ├── views.py
+    │   ├── manage.py
+    ├── img
+    ├── .gitignore
+    ├── README.md
+    ├── simple_sftp_file.json
+```
+=======
 * Backend Tests: test scripts and apps to play around with OpenCV and other frameworks for computer vision and machine learning
 * django_project: backend server for database
   * nwsl_app: API specific to NWSL version of app
@@ -15,6 +94,7 @@ Get to know the faces of the National Women’s Soccer League using computer vis
 * Sportsium: UI development apps to work on front-end UI/UX
 * Sportsium_Skeletal: Skeletal App for code demo
 * Starter App: starter app assignment
+>>>>>>> a00e1d6d6dc83fe0dd0d877a3ee7220c692c3062
 
 ## LOG INTO Digital Ocean droplet
 * Droplet Name: django-sportsium
@@ -38,71 +118,37 @@ and you are in!
 
 
 ## TODO LIST 
-* Begin IOS development - CV part
-* Add more fields into databases by adding to /django_project/nwsl_app/models.py
-* Finish implementing the views functions in /django_project/nwsl_app/views.py
+* Complete IOS development - CV part
 * Need to implement scrubber to populate the databases
 * IOS frontend development
-* FINISH README
-* 
 
-Everything below this is a Work in Progress 
-===
+
 
 
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-### Prerequisites
-
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
-
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
+First clone the root directory by clicking on the "Clone" button and copying the https link
 
 ```
-Give the example
+git clone https://github.com/ajdrebin/Sportsium.git
 ```
 
-And repeat
+### Building
 
-```
-until finished
-```
+Make sure your xcode version is at least version 11 or above 
 
-End with an example of getting some data out of the system or using it for a little demo
+Navigate to the /Sporotsium/Sportsium_Skeleton/Sportsium_Skeleton.xcodeproj and open it. 
 
-## Running the tests
+Once in the xcode environment, choose the simulated device to be an iPhone 11 Pro or an iPhone X. After this just click the play button to build and run. 
 
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+The backend web server is fully functioning at 159.89.234.82. Server will be uploaded to ios store in December 2019. 
 
 ## Built With
 
