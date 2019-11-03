@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nf0-Oj-Ieb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nf0-Oj-Ieb">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,22 +10,11 @@
         <!--Team Info View Controller-->
         <scene sceneID="cFq-6h-oeX">
             <objects>
-                <viewController storyboardIdentifier="TeamInfoViewController" id="nf0-Oj-Ieb" customClass="TeamInfoViewController" customModule="Sportsium_Skeleton" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TeamInfoViewController" id="nf0-Oj-Ieb" customClass="TeamInfoViewController" customModule="Sportsium" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wZF-Fx-o98">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="2000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tk3-rh-uOe">
-                                <rect key="frame" x="0.0" y="950" width="414" height="100"/>
-                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="414" id="90y-eX-cdJ"/>
-                                    <constraint firstAttribute="height" constant="100" id="bd7-D8-1fF"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mup-nn-Ifs">
                                 <rect key="frame" x="0.0" y="44" width="414" height="1922"/>
                                 <subviews>
@@ -61,9 +50,11 @@
                         <outlet property="innerView" destination="9Or-V6-Odi" id="Uk3-LW-lEN"/>
                         <outlet property="innerViewHeight" destination="KhX-ve-Uh5" id="Dum-Kg-VTt"/>
                         <outlet property="mainView" destination="wZF-Fx-o98" id="CEA-QR-55T"/>
-                        <outlet property="nav_label" destination="tk3-rh-uOe" id="inF-Vk-7Oq"/>
                         <outlet property="scrollView" destination="mup-nn-Ifs" id="yNp-uU-v2n"/>
                         <segue destination="sgr-TX-uQV" kind="show" identifier="PlayerInfo" id="GKG-dz-c4d"/>
+                        <segue destination="J0A-Du-sU7" kind="show" identifier="Camera" id="Xas-ho-7DD"/>
+                        <segue destination="K9J-Sa-H1b" kind="show" identifier="Home" id="c6J-k9-Y5k"/>
+                        <segue destination="iOU-yg-gOS" kind="show" identifier="GameInfo" id="V0b-pR-rqe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8wt-An-FmA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -73,12 +64,42 @@
         <!--PlayerInfoViewController-->
         <scene sceneID="Uvf-SP-4Rk">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="TeamInfo" storyboardName="PlayerInfo" referencedIdentifier="PlayerInfoViewController" id="sgr-TX-uQV" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="PlayerInfo" referencedIdentifier="PlayerInfoViewController" id="sgr-TX-uQV" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="6CU-Ez-EKj"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yx0-wm-Hii" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="638" y="-354"/>
+        </scene>
+        <!--CameraViewController-->
+        <scene sceneID="HOI-Kl-2Hd">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Camera" referencedIdentifier="CameraViewController" id="J0A-Du-sU7" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="6mV-Zu-wkd"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nce-Wb-GBs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="793" y="-128"/>
+        </scene>
+        <!--ViewController-->
+        <scene sceneID="YG4-S8-5aE">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="ViewController" id="K9J-Sa-H1b" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="0IS-15-OAI"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wPu-st-yQO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="780" y="71"/>
+        </scene>
+        <!--GameInfoViewController-->
+        <scene sceneID="bWp-WF-XOp">
+            <objects>
+                <viewControllerPlaceholder storyboardName="GameInfo" referencedIdentifier="GameInfoViewController" id="iOU-yg-gOS" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="rHF-Kj-DUB"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b8E-rj-TyP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="769" y="178"/>
         </scene>
     </scenes>
 </document>
