@@ -29,68 +29,57 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWq-1I-nCt">
-                                <rect key="frame" x="-20" y="676" width="414" height="100"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1mn-1x-lEA">
+                                <rect key="frame" x="0.0" y="678" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="home" translatesAutoresizingMaskIntoConstraints="NO" id="X6o-EA-hk1">
-                                <rect key="frame" x="16" y="699" width="92" height="38"/>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="home" translatesAutoresizingMaskIntoConstraints="NO" id="m17-LC-qon">
+                                <rect key="frame" x="26" y="711" width="92" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
-                                </accessibility>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="xrq-lY-ibj" appends="YES" id="bhd-4z-dK9"/>
+                                    <outletCollection property="gestureRecognizers" destination="oCX-cw-qki" appends="YES" id="4EH-9c-dbY"/>
                                 </connections>
                             </imageView>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="circle" translatesAutoresizingMaskIntoConstraints="NO" id="ZtW-aE-xU3">
-                                <rect key="frame" x="89" y="654" width="197" height="104"/>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="explore" translatesAutoresizingMaskIntoConstraints="NO" id="cgZ-eL-Rkf">
+                                <rect key="frame" x="270" y="711" width="56" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
-                                </accessibility>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="fUg-QG-mZH" appends="YES" id="AeJ-uf-jcw"/>
+                                    <outletCollection property="gestureRecognizers" destination="vtU-EL-eXy" appends="YES" id="0Ec-uh-MDR"/>
                                 </connections>
                             </imageView>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="explore" translatesAutoresizingMaskIntoConstraints="NO" id="jAZ-l9-B8G">
-                                <rect key="frame" x="284" y="699" width="56" height="43"/>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="circle" translatesAutoresizingMaskIntoConstraints="NO" id="B90-vv-apD">
+                                <rect key="frame" x="89" y="656" width="197" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="7KI-Hp-MYM" appends="YES" id="nFg-q6-5N2"/>
+                                    <outletCollection property="gestureRecognizers" destination="T57-Cm-SdQ" appends="YES" id="JDH-Su-dfR"/>
                                 </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="0fF-WO-UVB"/>
                     </view>
-                    <connections>
-                        <outlet property="camera" destination="ZtW-aE-xU3" id="1Ci-n9-3AF"/>
-                        <outlet property="home" destination="X6o-EA-hk1" id="eyf-BE-Ynz"/>
-                        <outlet property="listTeams" destination="jAZ-l9-B8G" id="let-a6-49M"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TvV-V9-E2G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="xrq-lY-ibj">
+                <tapGestureRecognizer id="T57-Cm-SdQ">
                     <connections>
-                        <segue destination="4eS-3K-sXH" kind="show" id="RXf-AP-X2N"/>
+                        <segue destination="Abk-tY-EmO" kind="show" id="fxm-js-B14"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="fUg-QG-mZH">
+                <tapGestureRecognizer id="oCX-cw-qki">
                     <connections>
-                        <segue destination="Abk-tY-EmO" kind="show" id="SkZ-Ev-8yZ"/>
+                        <segue destination="4eS-3K-sXH" kind="show" id="pgm-gS-CPq"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="7KI-Hp-MYM">
+                <tapGestureRecognizer id="vtU-EL-eXy">
                     <connections>
-                        <segue destination="cnu-xB-N99" kind="show" id="s7F-VU-m9q"/>
+                        <segue destination="cnu-xB-N99" kind="show" id="F9c-dd-P0j"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
