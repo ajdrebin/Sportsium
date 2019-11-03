@@ -136,13 +136,13 @@ using namespace std;
                 int nzCountRed = cv::countNonZero(res2);
                 cout << "nzCountRed: " << nzCountRed << endl;
                 
-                if(nzCountBlue >= 10){
-                    cv::putText(cameraFeed, "(blue) Home", pt1, font, 0.5, cv::Scalar(255,0,0));
+                if(nzCountBlue >= 20){
+                    cv::putText(cameraFeed, "Orlando", pt1, font, 0.5, cv::Scalar(255,0,0));
                     cv::rectangle(cameraFeed, pt1, pt2, CV_RGB(0,0,255), 2);
                 }
-                if(nzCountRed >= 10){
+                if(nzCountRed >= 20){
 //                    cv::putText(cameraFeed, "Red Team", pt1, font, 0.5, cv::Scalar(0,0,255));
-                    cv::putText(cameraFeed, "(red/w) Away", pt1, font, 0.5,  cv::Scalar(0,0,255), 2 , 8 , false);
+                    cv::putText(cameraFeed, "Chicago", pt1, font, 0.5,  cv::Scalar(0,0,255), 2 , 8 , false);
                     cv::rectangle(cameraFeed, pt1, pt2, CV_RGB(255,0,0), 2);
                 }
             }
