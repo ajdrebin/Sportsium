@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RNs-1H-ThH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RNs-1H-ThH">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -80,7 +80,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ixd-VS-Vmk">
-                                <rect key="frame" x="0.0" y="678" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="712" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -88,22 +88,32 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="home" translatesAutoresizingMaskIntoConstraints="NO" id="ktF-Nd-XYt">
-                                <rect key="frame" x="26" y="711" width="92" height="28"/>
+                                <rect key="frame" x="26" y="745" width="92" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="K8g-GJ-bG7" appends="YES" id="8Rz-00-8aZ"/>
+                                </connections>
                             </imageView>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="explore" translatesAutoresizingMaskIntoConstraints="NO" id="qHg-XU-zf1">
-                                <rect key="frame" x="270" y="711" width="56" height="32"/>
+                                <rect key="frame" x="270" y="745" width="56" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="ft4-KP-V55" appends="YES" id="JpV-42-8GU"/>
+                                </connections>
                             </imageView>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="circle" translatesAutoresizingMaskIntoConstraints="NO" id="2sf-SV-hkM">
-                                <rect key="frame" x="89" y="656" width="197" height="104"/>
+                                <rect key="frame" x="89" y="690" width="197" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="ivd-t7-wZG" appends="YES" id="NCC-LE-Ew7"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="4Mz-QG-RDC"/>
                     </view>
                 </viewController>
@@ -118,19 +128,19 @@
                         <segue destination="DGM-gn-wg0" kind="show" id="aFs-VY-2fu"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="ueW-dc-USb">
+                <tapGestureRecognizer id="ivd-t7-wZG">
                     <connections>
-                        <segue destination="EAq-tb-HBx" kind="show" id="5nq-lI-q6k"/>
+                        <segue destination="EAe-kd-65X" kind="show" id="dcf-tV-Wav"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="PP2-ms-ZAq">
+                <tapGestureRecognizer id="K8g-GJ-bG7">
                     <connections>
-                        <segue destination="EAe-kd-65X" kind="show" id="ezB-ip-YWM"/>
+                        <segue destination="EAq-tb-HBx" kind="show" id="bbZ-TS-bCK"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="Yr4-NG-4Wr">
+                <tapGestureRecognizer id="ft4-KP-V55">
                     <connections>
-                        <segue destination="IOU-fP-Rfa" kind="show" id="McU-HA-3Ak"/>
+                        <segue destination="IOU-fP-Rfa" kind="show" id="g0p-CY-Df9"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -185,6 +195,6 @@
         <image name="home" width="138.66667175292969" height="118"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aFs-VY-2fu"/>
+        <segue reference="sTD-di-k7Z"/>
     </inferredMetricsTieBreakers>
 </document>
