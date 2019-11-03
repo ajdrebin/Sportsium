@@ -15,6 +15,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="2000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tk3-rh-uOe">
+                                <rect key="frame" x="0.0" y="950" width="414" height="100"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="90y-eX-cdJ"/>
+                                    <constraint firstAttribute="height" constant="100" id="bd7-D8-1fF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mup-nn-Ifs">
                                 <rect key="frame" x="0.0" y="44" width="414" height="1922"/>
                                 <subviews>
@@ -50,6 +61,7 @@
                         <outlet property="innerView" destination="9Or-V6-Odi" id="Uk3-LW-lEN"/>
                         <outlet property="innerViewHeight" destination="KhX-ve-Uh5" id="Dum-Kg-VTt"/>
                         <outlet property="mainView" destination="wZF-Fx-o98" id="CEA-QR-55T"/>
+                        <outlet property="nav_label" destination="tk3-rh-uOe" id="inF-Vk-7Oq"/>
                         <outlet property="scrollView" destination="mup-nn-Ifs" id="yNp-uU-v2n"/>
                         <segue destination="sgr-TX-uQV" kind="show" identifier="PlayerInfo" id="GKG-dz-c4d"/>
                     </connections>

@@ -15,6 +15,12 @@ class TeamInfoViewController: UIViewController {
   
   //@IBOutlet weak var scrollView: UIScrollView!
   
+  
+  
+
+  
+  
+  
   @IBOutlet var mainView: UIView!
   
   @IBOutlet weak var scrollView: UIScrollView!
@@ -31,6 +37,7 @@ class TeamInfoViewController: UIViewController {
   
   
   
+  @IBOutlet weak var nav_label: UILabel!
   
   
 
@@ -38,10 +45,38 @@ class TeamInfoViewController: UIViewController {
     var scrollHeight = 400 + 100 * playerArray.count
     innerViewHeight.constant = CGFloat(scrollHeight)
 
+        
+    
+  
+    nav_label.frame = CGRect(x: 0, y: 20, width: scrollView.frame.width, height: 300)
+         
+    mainView.addSubview(nav_label)
+    
+    
+    
+    
+    
+    
     super.viewDidLoad()
+    
+   
+    
+    //scrollView.contentInsetAdjustmentBehavior = .automatic
+scrollView.contentInsetAdjustmentBehavior = UIScrollView.ContentInsetAdjustmentBehavior.never
+
+    
+    
+    
+    
+ 
+
+//
+    
     
 
 
+    
+  
     makeButtons()
     addBackgroundImage()
     addTeamLogo()
