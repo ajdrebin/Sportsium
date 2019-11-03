@@ -7,7 +7,7 @@ import os
 import numpy as np
 
 #Reading the video
-vidcap = cv2.VideoCapture('nwsl_footage/Houston_Dash_vs_Sky_Blue_FC.mp4')
+vidcap = cv2.VideoCapture('nwsl_footage/Chicago_Red_Stars_vs_Orlando_Pride.mp4')
 
 
 success,image = vidcap.read()
@@ -33,8 +33,8 @@ while success:
 	# lower_home = np.array([5,0,0])
 	# upper_home = np.array([45,255,255])
 
-	lower_home = np.array([0,30,50])
-	upper_home = np.array([361,255,255])
+	lower_home = np.array([95,90,20])
+	upper_home = np.array([140,255,255])
 
 
 
@@ -51,8 +51,8 @@ while success:
 
 
 	# AWAY range
-	lower_away = np.array([0,0,80])
-	upper_away = np.array([50,50,255])
+	lower_away = np.array([0,0, 80])
+	upper_away = np.array([40,30,255])
 
 
 	# lower_away =  np.array([0,0,0])
