@@ -290,13 +290,21 @@ class TeamInfoViewController: UIViewController {
   }
   
   
-  
+  var last_pressed = "none"
   @objc func buttonAction(sender: UIButton!) {
     let btn: UIButton = sender
     print(btn.titleLabel?.text)
+    last_pressed = btn.titleLabel!.text!
     performSegue(withIdentifier: "PlayerInfo", sender: self)
   }
-  
+
+ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     if(segue.identifier == "PlayerInfo"){
+             let displayVC = segue.destination as! PlayerInfoViewController
+             displayVC.button_text = last_pressed
+     }
+ }
+
   @objc func pressBtn(sender: UIButton!) {
     let btn: UIButton = sender
     btn.setTitleColor(UIColor.lightGray, for: UIControl.State.normal)

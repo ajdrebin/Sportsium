@@ -20,11 +20,22 @@ class PlayerInfoViewController: UIViewController {
   var teamName = "orlando_pride"
   var playerName = "Joanna Boyles"
   var playerNum = "25"
+  var playerPos = "Midfielder"
+  var button_text = "Joanna Boyles\t\t\t\t\t\t\t\t\t\t #25\nMidfielder"
   
   
   override func viewDidLoad() {
     
     super.viewDidLoad()
+    let full_arr = button_text.components(separatedBy: "\t")
+    print(full_arr)
+    playerName = full_arr[0] + " " + full_arr[1]
+    
+    let info_str = full_arr[10]
+    let info_arr = info_str.components(separatedBy: "\n")
+    playerNum = info_arr[0].replacingOccurrences(of: "#", with: "")
+    playerPos = info_arr[1]
+    
     textView.isUserInteractionEnabled = false
     
     mainView.backgroundColor = UIColor.init(displayP3Red: 128/255, green: 196/255, blue: 249/255, alpha: 1)
@@ -56,9 +67,7 @@ class PlayerInfoViewController: UIViewController {
         .bold("Bold Text")
 
     
-    
-    
-    textView.text = "\n\n\nPOSITION: MIDFIELDER\n"
+    textView.text = "\n\n\nPOSITION: " + playerPos.uppercased() + "\n"
     textView.text +=  "AGE: 23 (11-13-1995)\n"
     textView.text +=  "HEIGHT: 5'9\"\n"
     
@@ -66,11 +75,8 @@ class PlayerInfoViewController: UIViewController {
     textView.text += "   Stats:\n\tGames player: 30\n\tScores: 17 \n\tAssists: 12\n\tSaves: 2\n\tCards Given: 5\n"
     
     
-    
-    
-    
-    
-    textView.text += " \nJoanna Bess Boyles (born November 13, 1995) is an American soccer player who plays as a midfielder for Orlando Pride in the NWSL."
+
+    textView.text += " \n" + playerName + "(born November 13, 1995) is an American soccer player who plays as a " + playerPos.lowercased() + " for Orlando Pride in the NWSL."
     
     textView.textAlignment = .left
 
