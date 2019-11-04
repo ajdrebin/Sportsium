@@ -47,15 +47,42 @@ class PlayerInfoViewController: UIViewController {
     textView.clipsToBounds = true;
     textView.layer.cornerRadius = 10.0;
 
-    textView.text = "\n\n\n\n\n" + playerName.uppercased()
+    
+    
+    let formattedString = NSMutableAttributedString()
+    formattedString
+        .bold("Bold Text")
+        .normal(" Normal Text ")
+        .bold("Bold Text")
+
+    
+    
+    
+    textView.text = "\n\n\nPOSITION: MIDFIELDER\n"
+    textView.text +=  "AGE: 23 (11-13-1995)\n"
+    textView.text +=  "HEIGHT: 5'9\"\n"
+    
+    textView.text += "HOMETOWN: RALEIGH, NC\n\n"
+    textView.text += "   Stats:\n\tGames player: 30\n\tScores: 17 \n\tAssists: 12\n\tSaves: 2\n\tCards Given: 5\n"
     
     
     
     
-    textView.text += " \n\n\n\nJoanna Bess Boyles (born November 13, 1995) is an American soccer player who plays as a midfielder for Orlando Pride in the NWSL."
+    
+    
+    textView.text += " \nJoanna Bess Boyles (born November 13, 1995) is an American soccer player who plays as a midfielder for Orlando Pride in the NWSL."
     
     textView.textAlignment = .left
+
+    // textView.addCharacterSpacing(kernValue: 1.3)
+    textView.setLineSpacing(lineSpacing: 5.0)
     
+    textView.textColor = UIColor.init(displayP3Red: 50/255, green: 153/255, blue: 254/255, alpha: 1)
+     
+    
+    
+    
+
     
   }
   
@@ -129,6 +156,8 @@ class PlayerInfoViewController: UIViewController {
     
     explore_btn.frame = CGRect(x: 275, y: 750, width: 38, height: 38)
     
+    explore_btn.addTarget(self, action: #selector(segueListTeams), for: UIControl.Event.touchDown)
+    
     explore_btn.layer.zPosition = 1;
     
     mainView.addSubview(explore_btn)
@@ -195,6 +224,75 @@ class PlayerInfoViewController: UIViewController {
     performSegue(withIdentifier: "TeamInfo", sender: self)
   }
   
+  @objc func segueListTeams(sender: UIButton!) {
+    let btn: UIButton = sender
+    print(btn.titleLabel?.text)
+    performSegue(withIdentifier: "ListTeams", sender: self)
+  }
+  
 }
+
+
+extension NSMutableAttributedString {
+    @discardableResult func bold(_ text: String) -> NSMutableAttributedString {
+      let attrs: [NSAttributedString.Key: Any] = [.font: UIFont(name: "AvenirNext-Medium", size: 12)!]
+        let boldString = NSMutableAttributedString(string:text, attributes: attrs)
+        append(boldString)
+
+        return self
+    }
+
+    @discardableResult func normal(_ text: String) -> NSMutableAttributedString {
+        let normal = NSAttributedString(string: text)
+        append(normal)
+
+        return self
+    }
+}
+
+
+extension UITextView {
+  //Source
+//https://stackoverflow.com/questions/27535901/change-character-spacing-on-uilabel-within-interface-builder/27536438#27536438
+  func addCharacterSpacing(kernValue: Double = 1.15) {
+    if let labelText = text, labelText.count > 0 {
+      let attributedString = NSMutableAttributedString(string: labelText)
+      attributedString.addAttribute(NSAttributedString.Key.kern, value: kernValue, range: NSRange(location: 0, length: attributedString.length - 1))
+      attributedText = attributedString
+    }
+  }
+  
+  
+  //Source
+  // https://stackoverflow.com/questions/39158604/how-to-increase-line-spacing-in-uilabel-in-swift
+  func setLineSpacing(lineSpacing: CGFloat = 0.0, lineHeightMultiple: CGFloat = 0.0) {
+
+      guard let labelText = self.text else { return }
+
+      let paragraphStyle = NSMutableParagraphStyle()
+      paragraphStyle.lineSpacing = lineSpacing
+      paragraphStyle.lineHeightMultiple = lineHeightMultiple
+
+      let attributedString:NSMutableAttributedString
+      if let labelattributedText = self.attributedText {
+          attributedString = NSMutableAttributedString(attributedString: labelattributedText)
+      } else {
+          attributedString = NSMutableAttributedString(string: labelText)
+      }
+
+      // (Swift 4.2 and above) Line spacing attribute
+      attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attributedString.length))
+
+
+      // (Swift 4.1 and 4.0) Line spacing attribute
+    attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attributedString.length))
+
+      self.attributedText = attributedString
+  }
+}
+
+
+
+
 
 

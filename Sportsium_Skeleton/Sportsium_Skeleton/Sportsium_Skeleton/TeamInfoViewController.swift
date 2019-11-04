@@ -122,6 +122,8 @@ class TeamInfoViewController: UIViewController {
     
     explore_btn.layer.zPosition = 1;
     
+    home_btn.addTarget(self, action: #selector(segueListTeams), for: UIControl.Event.touchDown)
+    
     mainView.addSubview(explore_btn)
     
     
@@ -167,11 +169,11 @@ class TeamInfoViewController: UIViewController {
     performSegue(withIdentifier: "GameInfo", sender: self)
   }
   
-//  @objc func segueExplore(sender: UIButton!) {
-//      let btn: UIButton = sender
-//      print(btn.titleLabel?.text)
-//      performSegue(withIdentifier: "Camera", sender: self)
-//    }
+  @objc func segueListTeams(sender: UIButton!) {
+      let btn: UIButton = sender
+      print(btn.titleLabel?.text)
+      performSegue(withIdentifier: "ListTeams", sender: self)
+    }
   
   
   

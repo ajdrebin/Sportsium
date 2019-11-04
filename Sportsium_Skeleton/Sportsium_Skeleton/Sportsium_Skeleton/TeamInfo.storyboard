@@ -55,6 +55,7 @@
                         <segue destination="J0A-Du-sU7" kind="show" identifier="Camera" id="Xas-ho-7DD"/>
                         <segue destination="K9J-Sa-H1b" kind="show" identifier="Home" id="c6J-k9-Y5k"/>
                         <segue destination="iOU-yg-gOS" kind="show" identifier="GameInfo" id="V0b-pR-rqe"/>
+                        <segue destination="FSW-4e-xx2" kind="show" identifier="ListTeams" id="cii-A9-tDb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8wt-An-FmA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -100,6 +101,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b8E-rj-TyP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="769" y="178"/>
+        </scene>
+        <!--ListTeamsViewController-->
+        <scene sceneID="dYb-9x-8gj">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ListTeams" referencedIdentifier="ListTeamsViewController" id="FSW-4e-xx2" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="TFD-ud-dF6"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EeF-NN-5UY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="740" y="288"/>
         </scene>
     </scenes>
 </document>
