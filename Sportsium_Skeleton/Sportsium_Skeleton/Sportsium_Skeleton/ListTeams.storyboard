@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jQi-dP-Hyq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jQi-dP-Hyq">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -81,11 +81,7 @@
                         <segue destination="4eS-3K-sXH" kind="show" id="pgm-gS-CPq"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="vtU-EL-eXy">
-                    <connections>
-                        <segue destination="cnu-xB-N99" kind="show" id="F9c-dd-P0j"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <tapGestureRecognizer id="vtU-EL-eXy"/>
             </objects>
             <point key="canvasLocation" x="5.5999999999999996" y="146.30541871921181"/>
         </scene>
@@ -108,16 +104,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r78-8C-zCs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="573" y="153"/>
-        </scene>
-        <!--ListTeamsViewController-->
-        <scene sceneID="4H0-7o-PuJ">
-            <objects>
-                <viewControllerPlaceholder storyboardName="ListTeams" referencedIdentifier="ListTeamsViewController" id="cnu-xB-N99" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="lbC-bf-Xbe"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BOE-Ph-xem" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="556" y="184"/>
         </scene>
     </scenes>
     <resources>
