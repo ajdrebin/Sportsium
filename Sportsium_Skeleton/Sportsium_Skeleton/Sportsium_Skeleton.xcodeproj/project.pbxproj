@@ -35,6 +35,7 @@
 		C799F5D4236B9B9000184E36 /* TeamInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C799F5D2236B9B0200184E36 /* TeamInfo.storyboard */; };
 		C799F5D6236BA50B00184E36 /* GameInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C799F5D5236BA50B00184E36 /* GameInfo.storyboard */; };
 		C799F5D8236BA51F00184E36 /* GameInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C799F5D7236BA51F00184E36 /* GameInfoViewController.swift */; };
+		C799F6012371CAEC00184E36 /* soccer.png in Resources */ = {isa = PBXBuildFile; fileRef = C799F6002371CAEC00184E36 /* soccer.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -83,6 +84,7 @@
 		C799F5D2236B9B0200184E36 /* TeamInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TeamInfo.storyboard; sourceTree = "<group>"; };
 		C799F5D5236BA50B00184E36 /* GameInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameInfo.storyboard; sourceTree = "<group>"; };
 		C799F5D7236BA51F00184E36 /* GameInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInfoViewController.swift; sourceTree = "<group>"; };
+		C799F6002371CAEC00184E36 /* soccer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = soccer.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 				C799F592236B714000184E36 /* Info.plist */,
 				C799F598236B715E00184E36 /* Sportsium_Skeleton-Bridging-Header.h */,
 				C799F5C6236B8EC300184E36 /* TeamInfoViewController.swift */,
+				C799F6002371CAEC00184E36 /* soccer.png */,
 			);
 			path = Sportsium_Skeleton;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				C799F591236B714000184E36 /* LaunchScreen.storyboard in Resources */,
 				89B35B6D236DFABB004BE9E8 /* ListTeams.storyboard in Resources */,
 				C799F59F236B716000184E36 /* CheckIn.storyboard in Resources */,
+				C799F6012371CAEC00184E36 /* soccer.png in Resources */,
 				C799F5A8236B717200184E36 /* PlayerInfo.storyboard in Resources */,
 				C799F58C236B713F00184E36 /* Main.storyboard in Resources */,
 				C799F5A0236B716000184E36 /* Camera.storyboard in Resources */,

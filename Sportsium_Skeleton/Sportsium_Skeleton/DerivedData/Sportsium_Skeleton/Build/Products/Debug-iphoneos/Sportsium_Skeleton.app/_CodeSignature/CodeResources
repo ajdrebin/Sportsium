@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		JSnjEaGqbgxlU82b6WW0iebOgG8=
+		RbOs6RNSf6Hqi1j2l5nTg4phZks=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
@@ -126,7 +126,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		TVVZcdcyo0mH3To8G+Hr9lgo6s0=
+		c32acEyHBsJCedShL0+ocr44S68=
 		</data>
 		<key>ListTeams.storyboardc/Info.plist</key>
 		<data>
@@ -216,6 +216,10 @@
 		<data>
 		j10wahYdtoVSHDHub5uSHa00VDw=
 		</data>
+		<key>soccer.png</key>
+		<data>
+		tcu/itW2k8tMh0Kyl/8o2RWoZPw=
+		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
@@ -223,7 +227,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			3s73ALAmZYu/9TzEksB3/hBLxQYJYT19ZpGH+2l/hMI=
+			RJCTODUVt3JaXHfrdLmAtS+deyQn6ivvNFLgSUif3GM=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
@@ -574,6 +578,13 @@
 			<key>hash2</key>
 			<data>
 			UGq7jVMG3qHlo5n3OylXH/ifPPM9atLrPPX0jn05IAs=
+			</data>
+		</dict>
+		<key>soccer.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			4Ize+9nFE3Npxxt2BWEnElG2qUGqAHzQ52nd3SJvqbc=
 			</data>
 		</dict>
 	</dict>

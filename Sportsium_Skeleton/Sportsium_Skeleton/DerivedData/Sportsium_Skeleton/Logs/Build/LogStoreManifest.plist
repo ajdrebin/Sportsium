@@ -1468,6 +1468,40 @@
 			<key>uniqueIdentifier</key>
 			<string>F14B64E3-DBBB-462C-82CE-A27356E18CEF</string>
 		</dict>
+		<key>F2E59505-7894-47BA-B6FF-2C28631BB225</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>F2E59505-7894-47BA-B6FF-2C28631BB225.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Sportsium_Skeleton project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Sportsium_Skeleton</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build Sportsium_Skeleton</string>
+			<key>timeStartedRecording</key>
+			<real>594660152.94057405</real>
+			<key>timeStoppedRecording</key>
+			<real>594660158.24590898</real>
+			<key>title</key>
+			<string>Build Sportsium_Skeleton</string>
+			<key>uniqueIdentifier</key>
+			<string>F2E59505-7894-47BA-B6FF-2C28631BB225</string>
+		</dict>
 		<key>F572960C-71CA-4567-A78D-815FC0C4E630</key>
 		<dict>
 			<key>className</key>
