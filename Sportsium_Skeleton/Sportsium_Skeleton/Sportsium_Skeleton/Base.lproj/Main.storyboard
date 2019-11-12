@@ -10,149 +10,20 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
+                <tapGestureRecognizer id="h5d-Zy-rp5"/>
+                <tapGestureRecognizer id="6Bs-wT-ZZJ"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="Sportsium_Skeleton" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qg6-dP-tT2">
-                                <rect key="frame" x="143" y="321" width="98" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Go To Camera"/>
-                                <connections>
-                                    <segue destination="vmv-Hd-I8i" kind="show" id="pPz-Ka-AYp"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YvM-8w-taZ">
-                                <rect key="frame" x="162" y="241" width="60" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Check In"/>
-                                <connections>
-                                    <segue destination="W9a-X4-EjI" kind="show" id="hzu-dM-l6L"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1qO-GM-m8H">
-                                <rect key="frame" x="134" y="394" width="116" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Go To Player Info"/>
-                                <connections>
-                                    <segue destination="Km8-CY-5jn" kind="show" id="RwQ-pN-0wR"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grR-b1-rRP">
-                                <rect key="frame" x="137" y="467" width="111" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Go To Team Info"/>
-                                <connections>
-                                    <segue destination="J4J-IE-XAr" kind="show" id="Av7-k3-2yO"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TdP-qv-e2C">
-                                <rect key="frame" x="0.0" y="712" width="375" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="home" translatesAutoresizingMaskIntoConstraints="NO" id="2Ur-4u-KZP">
-                                <rect key="frame" x="26" y="745" width="92" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="circle" translatesAutoresizingMaskIntoConstraints="NO" id="iBa-6I-Kwx">
-                                <rect key="frame" x="89" y="690" width="197" height="104"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="6Bs-wT-ZZJ" appends="YES" id="NXK-b8-pPq"/>
-                                </connections>
-                            </imageView>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="explore" translatesAutoresizingMaskIntoConstraints="NO" id="2jD-9D-VHv">
-                                <rect key="frame" x="270" y="745" width="56" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="h5d-Zy-rp5" appends="YES" id="GVw-gl-qcy"/>
-                                </connections>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="aperture" translatesAutoresizingMaskIntoConstraints="NO" id="7vF-y3-X4B">
-                                <rect key="frame" x="97" y="706" width="180" height="71"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.95677906274795532" green="0.95691639184951782" blue="0.95674902200698853" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="8Au-hF-E6N"/>
-                    <connections>
-                        <outlet property="camera" destination="iBa-6I-Kwx" id="20A-Cq-Zhs"/>
-                        <outlet property="listTeams" destination="2jD-9D-VHv" id="Zqb-lW-ppJ"/>
-                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="6Bs-wT-ZZJ">
-                    <connections>
-                        <segue destination="vmv-Hd-I8i" kind="show" id="7VZ-w0-Lae"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="h5d-Zy-rp5">
-                    <connections>
-                        <segue destination="az4-oR-a3E" kind="show" id="bld-i7-51g"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1080.8" y="119.70443349753695"/>
-        </scene>
-        <!--CheckInViewController-->
-        <scene sceneID="Ix5-wq-Z6N">
-            <objects>
-                <viewControllerPlaceholder storyboardName="CheckIn" referencedIdentifier="CheckInViewController" id="W9a-X4-EjI" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="Kdd-cz-rTG"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="z3S-m5-CxP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1568" y="-4.4334975369458132"/>
-        </scene>
-        <!--CameraViewController-->
-        <scene sceneID="EYC-DZ-YN2">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Camera" referencedIdentifier="CameraViewController" id="vmv-Hd-I8i" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="e9M-US-IDS"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ujP-g5-w07" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1578.4000000000001" y="60.591133004926114"/>
-        </scene>
-        <!--PlayerInfoViewController-->
-        <scene sceneID="zuK-MS-2Qg">
-            <objects>
-                <viewControllerPlaceholder storyboardName="PlayerInfo" referencedIdentifier="PlayerInfoViewController" id="Km8-CY-5jn" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="SKO-LH-5OX"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kNV-45-Xng" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1539.2" y="101.97044334975369"/>
-        </scene>
-        <!--TeamInfoViewController-->
-        <scene sceneID="kHX-cI-o4D">
-            <objects>
-                <viewControllerPlaceholder storyboardName="TeamInfo" referencedIdentifier="TeamInfoViewController" id="J4J-IE-XAr" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="B85-GT-m3v"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RUV-QQ-f91" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1608" y="142.61083743842366"/>
-        </scene>
-        <!--ListTeamsViewController-->
-        <scene sceneID="Wcu-X7-BGd">
-            <objects>
-                <viewControllerPlaceholder storyboardName="ListTeams" referencedIdentifier="ListTeamsViewController" id="az4-oR-a3E" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="kSb-5X-0fp"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9N2-Lk-J6t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1563.2" y="184.72906403940888"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fnL-Qe-TUt">
@@ -172,13 +43,4 @@
             <point key="canvasLocation" x="138.40000000000001" y="119.70443349753695"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="aperture" width="170.66667175292969" height="170.66667175292969"/>
-        <image name="circle" width="104" height="104"/>
-        <image name="explore" width="111" height="111"/>
-        <image name="home" width="138.66667175292969" height="118"/>
-    </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="pPz-Ka-AYp"/>
-    </inferredMetricsTieBreakers>
 </document>
