@@ -1,0 +1,23 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "67F745DA57F6EE489217A91F6D145B94FD0FF11E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "67F745DA57F6EE489217A91F6D145B94FD0FF11E" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "FF7EFF3E-864F-4C9D-9898-797F94C81884",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "67F745DA57F6EE489217A91F6D145B94FD0FF11E" : "Sportsium\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "HumanDetectnTrack",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Backend Tests\/HumanDetectnTrack\/HumanDetectnTrack\/HumanDetectnTrack.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ajdrebin\/Sportsium.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "67F745DA57F6EE489217A91F6D145B94FD0FF11E"
+    }
+  ]
+}

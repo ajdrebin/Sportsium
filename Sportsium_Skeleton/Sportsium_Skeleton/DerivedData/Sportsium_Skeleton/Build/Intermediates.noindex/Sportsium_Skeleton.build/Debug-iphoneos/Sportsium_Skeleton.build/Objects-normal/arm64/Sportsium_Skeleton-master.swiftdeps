@@ -1,6 +1,6 @@
 version: "Apple Swift version 5.1 (swiftlang-1100.0.270.13 clang-1100.0.33.7)"
-options: "56ef7619982cdbc22142f347a9638919"
-build_time: [1572966542, 27039000]
+options: "b8ec94a33b5d732f440f51ea90a62146"
+build_time: [1573572546, 828972000]
 inputs:
   "/Users/Alina/Desktop/Sportsium/Sportsium_Skeleton/Sportsium_Skeleton/Sportsium_Skeleton/TeamInfoViewController.swift": [1572966536, 491428324]
   "/Users/Alina/Desktop/Sportsium/Sportsium_Skeleton/Sportsium_Skeleton/Sportsium_Skeleton/PlayerInfoViewController.swift": [1572887319, 538611833]
