@@ -46,26 +46,14 @@ class TeamInfoViewController: UIViewController {
     
     var scrollHeight = 480 + 100 * playerArray.count
     innerViewHeight.constant = CGFloat(scrollHeight)
-  
-    
-    
     super.viewDidLoad()
-    
-    
-
-
-    
-  
     makeButtons()
     addBackgroundImage()
     addTeamLogo()
     playerLabel()
     addTeamNameLabel()
-    
-    
     makeBackButton()
     addNavBar()
-    
   }
   
   func makeBackButton() {

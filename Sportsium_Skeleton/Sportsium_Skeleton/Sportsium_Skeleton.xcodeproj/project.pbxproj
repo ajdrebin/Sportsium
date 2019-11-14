@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		893D7E092378ECD2003D5643 /* Rules.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 893D7E082378ECD2003D5643 /* Rules.storyboard */; };
+		893D7E0B2378ED2E003D5643 /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893D7E0A2378ED2E003D5643 /* RulesViewController.swift */; };
 		89B35B6D236DFABB004BE9E8 /* ListTeams.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89B35B6C236DFABB004BE9E8 /* ListTeams.storyboard */; };
 		89B35B6F236DFAC8004BE9E8 /* ListTeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B35B6E236DFAC8004BE9E8 /* ListTeamsViewController.swift */; };
+		89D5A6F2237B361B00FB1668 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89D5A6F1237B361B00FB1668 /* Home.storyboard */; };
+		89D5A6F4237B363B00FB1668 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D5A6F3237B363B00FB1668 /* HomeViewController.swift */; };
 		C799F585236B713F00184E36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C799F584236B713F00184E36 /* AppDelegate.swift */; };
 		C799F587236B713F00184E36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C799F586236B713F00184E36 /* SceneDelegate.swift */; };
 		C799F589236B713F00184E36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C799F588236B713F00184E36 /* ViewController.swift */; };
@@ -51,8 +55,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		893D7E082378ECD2003D5643 /* Rules.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Rules.storyboard; sourceTree = "<group>"; };
+		893D7E0A2378ED2E003D5643 /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
 		89B35B6C236DFABB004BE9E8 /* ListTeams.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListTeams.storyboard; sourceTree = "<group>"; };
 		89B35B6E236DFAC8004BE9E8 /* ListTeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTeamsViewController.swift; sourceTree = "<group>"; };
+		89D5A6F1237B361B00FB1668 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		89D5A6F3237B363B00FB1668 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C799F581236B713F00184E36 /* Sportsium_Skeleton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sportsium_Skeleton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C799F584236B713F00184E36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C799F586236B713F00184E36 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -128,16 +136,21 @@
 			isa = PBXGroup;
 			children = (
 				C799F58A236B713F00184E36 /* Main.storyboard */,
+				89D5A6F1237B361B00FB1668 /* Home.storyboard */,
 				C799F5D2236B9B0200184E36 /* TeamInfo.storyboard */,
 				C799F5D5236BA50B00184E36 /* GameInfo.storyboard */,
 				89B35B6C236DFABB004BE9E8 /* ListTeams.storyboard */,
+				893D7E082378ECD2003D5643 /* Rules.storyboard */,
+				893D7E0A2378ED2E003D5643 /* RulesViewController.swift */,
 				C799F59B236B715F00184E36 /* Camera.storyboard */,
 				C799F59A236B715F00184E36 /* CheckIn.storyboard */,
+				C799F588236B713F00184E36 /* ViewController.swift */,
+				89D5A6F3237B363B00FB1668 /* HomeViewController.swift */,
 				89B35B6E236DFAC8004BE9E8 /* ListTeamsViewController.swift */,
 				C799F5D7236BA51F00184E36 /* GameInfoViewController.swift */,
 				C799F584236B713F00184E36 /* AppDelegate.swift */,
 				C799F586236B713F00184E36 /* SceneDelegate.swift */,
-				C799F588236B713F00184E36 /* ViewController.swift */,
+				C799F5C6236B8EC300184E36 /* TeamInfoViewController.swift */,
 				C799F59D236B715F00184E36 /* CameraViewController.swift */,
 				C799F59E236B715F00184E36 /* CheckIn.swift */,
 				C799F599236B715F00184E36 /* CvVideoCameraWrapper.h */,
@@ -150,7 +163,6 @@
 				C799F58F236B714000184E36 /* LaunchScreen.storyboard */,
 				C799F592236B714000184E36 /* Info.plist */,
 				C799F598236B715E00184E36 /* Sportsium_Skeleton-Bridging-Header.h */,
-				C799F5C6236B8EC300184E36 /* TeamInfoViewController.swift */,
 				C799F6002371CAEC00184E36 /* soccer.png */,
 			);
 			path = Sportsium_Skeleton;
@@ -232,7 +244,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C799F5D6236BA50B00184E36 /* GameInfo.storyboard in Resources */,
+				893D7E092378ECD2003D5643 /* Rules.storyboard in Resources */,
 				C799F5D4236B9B9000184E36 /* TeamInfo.storyboard in Resources */,
+				89D5A6F2237B361B00FB1668 /* Home.storyboard in Resources */,
 				C799F5CC236B90C500184E36 /* Assets.xcassets in Resources */,
 				C799F591236B714000184E36 /* LaunchScreen.storyboard in Resources */,
 				89B35B6D236DFABB004BE9E8 /* ListTeams.storyboard in Resources */,
@@ -260,7 +274,9 @@
 				C799F5A1236B716000184E36 /* CvVideoCameraWrapper.mm in Sources */,
 				89B35B6F236DFAC8004BE9E8 /* ListTeamsViewController.swift in Sources */,
 				C799F585236B713F00184E36 /* AppDelegate.swift in Sources */,
+				893D7E0B2378ED2E003D5643 /* RulesViewController.swift in Sources */,
 				C799F587236B713F00184E36 /* SceneDelegate.swift in Sources */,
+				89D5A6F4237B363B00FB1668 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
