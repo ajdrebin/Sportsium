@@ -150,6 +150,7 @@
 				C799F5D7236BA51F00184E36 /* GameInfoViewController.swift */,
 				C799F584236B713F00184E36 /* AppDelegate.swift */,
 				C799F586236B713F00184E36 /* SceneDelegate.swift */,
+				C799F5C6236B8EC300184E36 /* TeamInfoViewController.swift */,
 				C799F59D236B715F00184E36 /* CameraViewController.swift */,
 				C799F59E236B715F00184E36 /* CheckIn.swift */,
 				C799F599236B715F00184E36 /* CvVideoCameraWrapper.h */,
@@ -162,7 +163,6 @@
 				C799F58F236B714000184E36 /* LaunchScreen.storyboard */,
 				C799F592236B714000184E36 /* Info.plist */,
 				C799F598236B715E00184E36 /* Sportsium_Skeleton-Bridging-Header.h */,
-				C799F5C6236B8EC300184E36 /* TeamInfoViewController.swift */,
 				C799F6002371CAEC00184E36 /* soccer.png */,
 			);
 			path = Sportsium_Skeleton;

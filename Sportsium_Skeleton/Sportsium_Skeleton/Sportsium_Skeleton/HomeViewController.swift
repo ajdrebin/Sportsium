@@ -12,6 +12,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
         guard let url = URL(string:"http://159.89.234.82/game_check/") else { return }
         let session = URLSession.shared
         session.dataTask(with: url) { ( data, response, error ) in

@@ -10,7 +10,7 @@
         <!--Home View Controller-->
         <scene sceneID="ks5-fP-e2R">
             <objects>
-                <viewController id="Dv5-Zf-RPS" customClass="HomeViewController" customModule="Sportsium_Skeleton" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="Dv5-Zf-RPS" customClass="HomeViewController" customModule="Sportsium_Skeleton" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rUb-h9-OXu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
