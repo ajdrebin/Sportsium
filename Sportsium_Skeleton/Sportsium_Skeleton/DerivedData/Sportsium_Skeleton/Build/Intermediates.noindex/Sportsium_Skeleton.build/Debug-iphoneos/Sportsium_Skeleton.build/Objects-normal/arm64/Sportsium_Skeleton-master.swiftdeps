@@ -1,13 +1,15 @@
 version: "Apple Swift version 5.1 (swiftlang-1100.0.270.13 clang-1100.0.33.7)"
-options: "56ef7619982cdbc22142f347a9638919"
-build_time: [1572966542, 27039000]
+options: "b8ec94a33b5d732f440f51ea90a62146"
+build_time: [1573759032, 769900000]
 inputs:
-  "/Users/Alina/Desktop/Sportsium/Sportsium_Skeleton/Sportsium_Skeleton/Sportsium_Skeleton/TeamInfoViewController.swift": [1572966536, 491428324]
+  "/Users/Alina/Desktop/Sportsium/Sportsium_Skeleton/Sportsium_Skeleton/Sportsium_Skeleton/TeamInfoViewController.swift": [1573759029, 661848308]
   "/Users/Alina/Desktop/Sportsium/Sportsium_Skeleton/Sportsium_Skeleton/Sportsium_Skeleton/PlayerInfoViewController.swift": [1572887319, 538611833]
-  "/Users/Alina/Desktop/Sportsium/Sportsium_Skeleton/Sportsium_Skeleton/Sportsium_Skeleton/ViewController.swift": [1572802989, 356478993]
+  "/Users/Alina/Desktop/Sportsium/Sportsium_Skeleton/Sportsium_Skeleton/Sportsium_Skeleton/ViewController.swift": [1573759029, 662943487]
   "/Users/Alina/Desktop/Sportsium/Sportsium_Skeleton/Sportsium_Skeleton/Sportsium_Skeleton/GameInfoViewController.swift": [1572883717, 721585047]
   "/Users/Alina/Desktop/Sportsium/Sportsium_Skeleton/Sportsium_Skeleton/Sportsium_Skeleton/CheckIn.swift": [1572802989, 352833192]
   "/Users/Alina/Desktop/Sportsium/Sportsium_Skeleton/Sportsium_Skeleton/Sportsium_Skeleton/CameraViewController.swift": [1572803499, 741599318]
   "/Users/Alina/Desktop/Sportsium/Sportsium_Skeleton/Sportsium_Skeleton/Sportsium_Skeleton/ListTeamsViewController.swift": [1572802989, 355091206]
   "/Users/Alina/Desktop/Sportsium/Sportsium_Skeleton/Sportsium_Skeleton/Sportsium_Skeleton/AppDelegate.swift": [1572802989, 337351407]
+  "/Users/Alina/Desktop/Sportsium/Sportsium_Skeleton/Sportsium_Skeleton/Sportsium_Skeleton/RulesViewController.swift": [9223372036, 854775807]
   "/Users/Alina/Desktop/Sportsium/Sportsium_Skeleton/Sportsium_Skeleton/Sportsium_Skeleton/SceneDelegate.swift": [1572802989, 355656065]
+  "/Users/Alina/Desktop/Sportsium/Sportsium_Skeleton/Sportsium_Skeleton/Sportsium_Skeleton/HomeViewController.swift": [9223372036, 854775807]

@@ -292,6 +292,14 @@ SWIFT_CLASS("_TtC18Sportsium_Skeleton22GameInfoViewController")
 @end
 
 
+SWIFT_CLASS("_TtC18Sportsium_Skeleton18HomeViewController")
+@interface HomeViewController : UIViewController
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_CLASS("_TtC18Sportsium_Skeleton23ListTeamsViewController")
 @interface ListTeamsViewController : UIViewController
 - (void)viewDidLoad;
@@ -371,8 +379,7 @@ SWIFT_CLASS("_TtC18Sportsium_Skeleton22TeamInfoViewController")
 SWIFT_CLASS("_TtC18Sportsium_Skeleton14ViewController")
 @interface ViewController : UIViewController
 - (void)viewDidLoad;
-@property (nonatomic, strong) IBOutlet UIImageView * _Null_unspecified camera;
-@property (nonatomic, strong) IBOutlet UIImageView * _Null_unspecified listTeams;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified chooseSoccerLeague;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end

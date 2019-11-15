@@ -5,36 +5,7 @@
 	<key>logFormatVersion</key>
 	<integer>10</integer>
 	<key>logs</key>
-	<dict>
-		<key>ECE37568-00A0-49B3-AF44-DC075818FA50</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogMajorGroupSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
-			<key>fileName</key>
-			<string>ECE37568-00A0-49B3-AF44-DC075818FA50.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>signature</key>
-			<string>Sportsium_Skeleton-boqxlmlpeimdbfagszviwbaaopjf</string>
-			<key>timeStartedRecording</key>
-			<real>594660153.34963596</real>
-			<key>timeStoppedRecording</key>
-			<real>594660158.22577596</real>
-			<key>title</key>
-			<string>Build target Sportsium_Skeleton</string>
-			<key>uniqueIdentifier</key>
-			<string>ECE37568-00A0-49B3-AF44-DC075818FA50</string>
-		</dict>
-	</dict>
+	<dict/>
 	<key>preserveOldLogs</key>
 	<true/>
 </dict>

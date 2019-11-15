@@ -8,3 +8,6 @@ Objective-C test app to figure out how to use OpenCV
 
 ## opencv-swift-examples-master
 C++ version of OpenCV as an iOS app, aiming to translate python version to be usable here
+
+## FaceTracker
+Uses Apple's vision framework to detect human rectangles via VNDetectHumanRectangleRequest
