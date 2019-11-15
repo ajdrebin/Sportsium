@@ -9,9 +9,71 @@ import json
 
 from .models import Team_Info_Table
 from .models import Player_Info_Table
+from .models import Team_Player_Table
 from .models import Game_Info_Table
 
-# Create your views here.
+def sports_check(request):
+    """ Server returns json object of entire sport """
+    if request.method != 'GET':
+        return HttpResponse(status=404)
+    response = {}
+
+    # check what sport is being looked at return 404 if None found
+    league = request.GET.get('league', None)
+    if league == None:
+        return HttpResponse(status=404)
+    elif league == "NWSL":
+        # get a q_set of all the teams
+        q_set_teams = Team_Info_Table.objects.all()
+        for team in q_set_teams:
+            
+            # create a dictionary for each player on the team
+            q_set_players = Team_Player_Table.objects.filter(team=team)
+            player_list = []
+            for i in q_set_players:
+                player_dict = {}
+                player_dict['player_id'] = i.player.player_id
+                player_dict['first_name'] = i.player.first_name
+                player_dict['last_name'] = i.player.last_name
+                player_dict['number'] = i.player.number
+                player_dict['position'] = i.player.position
+                player_dict['hometown'] = i.player.hometown
+                player_dict['country'] = i.player.country
+                player_dict['date_of_birth'] = i.player.date_of_birth
+                player_dict['height'] = i.player.height
+                player_dict['fb'] = i.player.fb
+                player_dict['twitter'] = i.player.twitter
+                player_dict['instagram'] = i.player.instagram
+                player_dict['snapchat'] = i.player.snapchat           
+                player_list.append(player_dict)
+
+            # create a dictionary for the team information
+            team_dict = {}
+            team_dict['date_founded'] = team.date_founded
+            team_dict['city_location'] = team.city_location
+            team_dict['stadium'] = team.stadium
+            team_dict['head_coach'] = team.head_coach
+            team_dict['league'] = team.league
+            team_dict['current_wins'] = team.current_wins
+            team_dict['current_ties'] = team.current_ties
+            team_dict['current_losses'] = team.current_losses
+            team_dict['fb'] = team.fb
+            team_dict['twitter'] = team.twitter
+            team_dict['instagram'] = team.instagram
+            team_dict['snapchat'] = team.snapchat
+            team_dict['player_list'] = player_list
+            response[team.team_name] = team_dict
+
+        return JsonResponse(response)
+    elif league == "WNBA":
+        
+        return JsonResponse(response)
+
+
+
+
+
+
 
 """ Server returns a list of all games being played that day"""
 def game_check(request):

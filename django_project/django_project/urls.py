@@ -19,7 +19,7 @@ from nwsl_app import views
 
 urlpatterns = [
     url(r'^game_check/$', views.game_check, name='game_check'),
-    url(r'^game_check/$', views.game_check, name='game_check'),
+    url(r'^sports_check/$', views.sports_check, name='sports_check'),
     url(r'^check_in/$', views.check_in, name='check_in'),
     url(r'^player_lookup/$', views.player_lookup, name='player_lookup'),
     url(r'^team_lookup/$', views.team_lookup, name='team_lookup'),
