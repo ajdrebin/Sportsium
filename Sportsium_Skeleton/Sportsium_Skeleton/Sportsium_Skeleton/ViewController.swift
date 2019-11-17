@@ -17,15 +17,15 @@ class ViewController: UIViewController {
     }
     
     @IBAction func selectNWSL(_ sender: Any) {
-        league = "NWSL"
-        print(league)
+        self.league = "NWSL"
+        print(self.league)
         performSegue(withIdentifier: "chooseLeague", sender: self)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "chooseLeague"){
-                let displayVC = segue.destination as! HomeViewController
-                displayVC.chosenLeague = league
+            let displayVC = segue.destination as! HomeViewController
+            displayVC.chosenLeague = self.league
         }
     }
 
