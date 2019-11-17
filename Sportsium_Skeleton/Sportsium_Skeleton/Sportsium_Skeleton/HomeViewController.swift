@@ -35,8 +35,6 @@ class HomeViewController: UIViewController {
         
         
         //TEST
-        print("here")
-
         homeLabel.text = "|"+chosenLeague+"|"
         
         
