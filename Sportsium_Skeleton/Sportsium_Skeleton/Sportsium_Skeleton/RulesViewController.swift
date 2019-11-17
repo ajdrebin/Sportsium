@@ -6,4 +6,14 @@
 //  Copyright © 2019 Alina Drebin. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class RulesViewController: UIViewController {
+    var chosenLeague = ""
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+
+    }
+
+}
