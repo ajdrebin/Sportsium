@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="o2y-Im-W3P">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
@@ -36,42 +36,40 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nwsl" translatesAutoresizingMaskIntoConstraints="NO" id="BBR-Wa-w8y">
-                                <rect key="frame" x="147" y="307" width="240" height="128"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyE-b9-8N6">
+                                <rect key="frame" x="183" y="285" width="217" height="149"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="cuW-bp-NsX" appends="YES" id="Vc5-N0-68c"/>
-                                </connections>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="wnba" translatesAutoresizingMaskIntoConstraints="NO" id="VfM-YA-6es">
-                                <rect key="frame" x="-13" y="296" width="240" height="128"/>
+                                <state key="normal" title="Button" image="nwsl"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tLg-SP-AUn">
+                                <rect key="frame" x="35" y="302" width="140" height="116"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <state key="normal" title="Button" image="wnba"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="8Au-hF-E6N"/>
+                    <connections>
+                        <outlet property="nwsl_button" destination="vyE-b9-8N6" id="E4G-6P-nhC"/>
+                        <outlet property="wnba_button" destination="tLg-SP-AUn" id="CbV-P9-30k"/>
+                        <segue destination="uCa-c3-RDR" kind="show" identifier="Home" id="wZA-Di-RhF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="cuW-bp-NsX">
-                    <connections>
-                        <segue destination="AWW-DK-7U8" kind="show" id="r23-tT-LuO"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1080.8" y="119.70443349753695"/>
         </scene>
         <!--HomeViewController-->
-        <scene sceneID="o06-5F-p6z">
+        <scene sceneID="BeC-Pf-eCX">
             <objects>
-                <viewControllerPlaceholder storyboardName="Home" referencedIdentifier="HomeViewController" id="AWW-DK-7U8" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="jmu-H7-fkG"/>
+                <viewControllerPlaceholder storyboardName="Home" referencedIdentifier="HomeViewController" id="uCa-c3-RDR" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="sGB-Vg-8ds"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Iae-YF-LZk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T0v-bz-1Zt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1618" y="108"/>
+            <point key="canvasLocation" x="1630" y="102"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fnL-Qe-TUt">
