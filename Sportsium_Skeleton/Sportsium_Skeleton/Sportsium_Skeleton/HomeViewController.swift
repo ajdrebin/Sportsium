@@ -39,8 +39,35 @@ class HomeViewController: UIViewController {
 
         homeLabel.text = "|"+chosenLeague+"|"
         
+        print(chosenLeague)
         
-        
+//        var request = URLRequest(url: URL(string: "http://159.89.234.82/sports_check/?league=NWSL")!)
+//request.httpMethod = "GET"
+//request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+//
+//let session = URLSession.shared
+//let task = session.dataTask(with: request, completionHandler: { data, response, error -> Void in
+//    do {
+//        let json = try JSONSerialization.jsonObject(with: data!) as! Dictionary<String, AnyObject>
+//      print(json["portland_thorns"]!["city_location"]);
+//    } catch {
+//        print("error")
+//    }
+//})
+//
+//
+//
+//
+//task.resume()
+
+
+      
+      
+      
+      
+      
+      
+      
     
 //        // 1
 //        let urlString = "http://159.89.234.82/sports_check/?league=NWSL"

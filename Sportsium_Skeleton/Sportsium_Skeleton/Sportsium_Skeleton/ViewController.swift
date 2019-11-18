@@ -10,30 +10,43 @@ import UIKit
 
 class ViewController: UIViewController {
     var league = ""
+  
+  @IBOutlet weak var wnba_button: UIButton!
+  @IBOutlet weak var nwsl_button: UIButton!
+  
+  
+  
+  
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        let selectLeague = UITapGestureRecognizer(target: self, action: #selector(self.selectNWSL(sender:)))
+      
+        nwsl_button.tag = 1
+        wnba_button.tag = 2
+        nwsl_button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        wnba_button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+    }
 
+  
+  
+    @objc func buttonAction(sender: UIButton!) {
+      let btn: UIButton = sender
+   
+      if btn.tag == 1 {
+        league = "NWSL"
+      }
+      else{
+        league = "WNBA"
+      }
+      performSegue(withIdentifier: "Home", sender: self)
     }
-    @IBOutlet weak var chooseSoccerLeague: UIImageView!
+      
     
-    @objc func selectNWSL(sender: UITapGestureRecognizer) {
-       print("Please Help!")
-    }
-    
-    
-//
-//    @IBAction func selectNWSL(sender: UITapGestureRecognizer) {
-//
-//        league = "NWSL"
-//        print("league")
-//        print(league)
-//        performSegue(withIdentifier: "chooseLeague", sender: self)
-//    }
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier == "chooseLeague"){
+        if(segue.identifier == "Home"){
                 let displayVC = segue.destination as! HomeViewController
                 displayVC.chosenLeague = league
         }
