@@ -1,7 +1,7 @@
 import json
 import requests
 import os
-
+import re
 from bs4 import BeautifulSoup
 
 # import django_project.nwsl_app
@@ -156,9 +156,11 @@ def populate():
         final_losses += int(losses_str)
         final_ties += int(ties_str)
 
+        final_team = re.sub('-', '_', team)
+
         # registering the team
         team_obj = Team_Info_Table.objects.create(
-            team_name=team,
+            team_name=final_team,
             date_founded=date_founded[team],
             city_location=city_location[team],
             stadium=final_stadium,
