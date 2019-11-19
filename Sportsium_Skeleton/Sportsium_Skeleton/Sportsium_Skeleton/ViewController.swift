@@ -13,10 +13,7 @@ class ViewController: UIViewController {
   
   @IBOutlet weak var wnba_button: UIButton!
   @IBOutlet weak var nwsl_button: UIButton!
-  
-  
-  
-  
+
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +24,6 @@ class ViewController: UIViewController {
         nwsl_button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         wnba_button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
     }
-
-  
   
     @objc func buttonAction(sender: UIButton!) {
       let btn: UIButton = sender
@@ -41,10 +36,7 @@ class ViewController: UIViewController {
       }
       performSegue(withIdentifier: "Home", sender: self)
     }
-      
-    
 
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "Home"){
                 let displayVC = segue.destination as! HomeViewController
