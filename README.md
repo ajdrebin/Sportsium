@@ -36,14 +36,14 @@ Get to know the faces of the National Women’s Soccer League using computer vis
     │   ├── Sportsium.xcodeproj
     │   ├── Sportsium
     │   ├── SportsiumTests
-    │   ├── SporotsiumUITests
+    │   ├── SportsiumUITests
     │   ├── CheckIn.storyboard
     ├── Sportsium_Skeleton/Sportsium_Skeleton
     │   ├── DerviedData
-    │   ├── Sporstium_Skeleton.xcodeproj
+    │   ├── Sportsium_Skeleton.xcodeproj
     │   ├── Sportsium_Skeleton
     │   │   ├── Assets.xcassets
-    │   │   ├── Base.lproj
+    │   │   ├── Base.proj
     │   │   ├── opencv2.framework
     │   │   ├── AppDelegate.swift
     │   │   ├── Camera.storyboard
@@ -96,13 +96,13 @@ Get to know the faces of the National Women’s Soccer League using computer vis
 
 ### LOGIN
 * Droplet Name: django-sportsium
-* IP Address: 159.89.234.82
+* IP Address: 159.89.139.18
 * Username: root
 * Password: MasYNoSport0
 
 So type this in the terminal
 ```
-ssh root@159.89.234.82
+ssh root@159.89.139.18
 ```
 
 Then you are prompted with a password. Note: The password will not be visible
@@ -166,7 +166,7 @@ git clone https://github.com/ajdrebin/Sportsium.git
 
 Make sure your xcode version is at least version 11 or above 
 
-Navigate to the /Sporotsium/Sportsium_Skeleton/Sportsium_Skeleton.xcodeproj and open it. 
+Navigate to the /Sportsium/Sportsium_Skeleton/Sportsium_Skeleton.xcodeproj and open it. 
 
 Once in the xcode environment, choose the simulated device to be an iPhone 11 Pro or an iPhone X. After this just click the play button to build and run. 
 
