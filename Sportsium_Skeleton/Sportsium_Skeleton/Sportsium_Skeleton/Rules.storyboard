@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IQY-Nv-6Pd">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--RulesViewController-->
         <scene sceneID="6w4-Py-L4D">
             <objects>
-                <viewController id="IQY-Nv-6Pd" sceneMemberID="viewController">
+                <viewController title="RulesViewController" id="IQY-Nv-6Pd" customClass="RulesViewController" customModule="Sportsium_Skeleton" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rJn-se-8mb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -34,6 +34,9 @@
                                 <rect key="frame" x="26" y="745" width="92" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="U7s-j9-dRD" appends="YES" id="3xZ-vn-Rjg"/>
+                                </connections>
                             </imageView>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="circle" translatesAutoresizingMaskIntoConstraints="NO" id="W72-vv-MLQ">
                                 <rect key="frame" x="89" y="690" width="197" height="104"/>
@@ -44,10 +47,17 @@
                                 <rect key="frame" x="270" y="745" width="56" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="GIh-fg-jR1" appends="YES" id="YKn-D4-vRo"/>
+                                </connections>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="aperture" translatesAutoresizingMaskIntoConstraints="NO" id="aq2-3P-lvc">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="aperture" translatesAutoresizingMaskIntoConstraints="NO" id="aq2-3P-lvc">
                                 <rect key="frame" x="97" y="706" width="180" height="71"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="TKS-hQ-UTC" appends="YES" id="ChU-1Q-yAo"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKn-qW-DCe">
                                 <rect key="frame" x="0.0" y="100" width="375" height="84"/>
@@ -100,8 +110,53 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tX6-mc-myG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="U7s-j9-dRD">
+                    <connections>
+                        <segue destination="NVN-Ok-dQk" kind="show" id="owP-sK-HTV"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="TKS-hQ-UTC">
+                    <connections>
+                        <segue destination="QSZ-Ik-uAY" kind="show" id="z0C-qO-2dx"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="GIh-fg-jR1">
+                    <connections>
+                        <segue destination="Z6C-0q-knq" kind="show" id="fAF-Pn-W2q"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-95.200000000000003" y="56.896551724137936"/>
+        </scene>
+        <!--ListTeamsViewController-->
+        <scene sceneID="wGe-Q4-t00">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ListTeams" referencedIdentifier="ListTeamsViewController" id="Z6C-0q-knq" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ZSf-Ik-Ptr"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Epv-uf-Ihe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="415" y="-69"/>
+        </scene>
+        <!--CameraViewController-->
+        <scene sceneID="SZO-HQ-50x">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Camera" referencedIdentifier="CameraViewController" id="QSZ-Ik-uAY" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="IvC-5J-o1U"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tYp-HD-nCa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="391" y="-15"/>
+        </scene>
+        <!--HomeViewController-->
+        <scene sceneID="UiJ-u8-crt">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" referencedIdentifier="HomeViewController" id="NVN-Ok-dQk" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="WrR-Zb-bSW"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7bx-vo-5oI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="391" y="41"/>
         </scene>
     </scenes>
     <resources>

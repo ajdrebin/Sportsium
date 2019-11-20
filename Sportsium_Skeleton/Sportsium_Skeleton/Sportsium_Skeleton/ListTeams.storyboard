@@ -42,7 +42,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="oCX-cw-qki" appends="YES" id="4EH-9c-dbY"/>
+                                    <outletCollection property="gestureRecognizers" destination="fIc-lX-lwb" appends="YES" id="zJQ-gZ-Zqk"/>
                                 </connections>
                             </imageView>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="explore" translatesAutoresizingMaskIntoConstraints="NO" id="cgZ-eL-Rkf">
@@ -76,12 +76,12 @@
                         <segue destination="Abk-tY-EmO" kind="show" id="fxm-js-B14"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="oCX-cw-qki">
+                <tapGestureRecognizer id="vtU-EL-eXy"/>
+                <tapGestureRecognizer id="fIc-lX-lwb">
                     <connections>
-                        <segue destination="4eS-3K-sXH" kind="show" id="pgm-gS-CPq"/>
+                        <segue destination="21i-rp-IYB" kind="show" id="H9Y-Vj-nME"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="vtU-EL-eXy"/>
             </objects>
             <point key="canvasLocation" x="5.5999999999999996" y="146.30541871921181"/>
         </scene>
@@ -94,6 +94,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UwE-ng-mBe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="571" y="214"/>
+        </scene>
+        <!--HomeViewController-->
+        <scene sceneID="dqE-tv-3Mf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" referencedIdentifier="HomeViewController" id="21i-rp-IYB" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="O3x-9i-2dm"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jN6-Bt-Uux" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="492" y="85"/>
         </scene>
         <!--CameraViewController-->
         <scene sceneID="CpH-Rt-A3q">

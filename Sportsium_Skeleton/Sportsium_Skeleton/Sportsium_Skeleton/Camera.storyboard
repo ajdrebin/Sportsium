@@ -76,6 +76,7 @@
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="Odq-74-Ig4" appends="YES" id="bil-zC-g1E"/>
+                                    <outletCollection property="gestureRecognizers" destination="bug-cE-xXF" appends="YES" id="HAL-Uw-vmf"/>
                                 </connections>
                             </imageView>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="circle" translatesAutoresizingMaskIntoConstraints="NO" id="k9P-6h-PtT">
@@ -160,6 +161,11 @@
                         <segue destination="Ewq-EB-Jd3" kind="show" id="QVz-YD-maR"/>
                     </connections>
                 </tapGestureRecognizer>
+                <tapGestureRecognizer id="bug-cE-xXF">
+                    <connections>
+                        <segue destination="dqq-0T-sH0" kind="show" id="OC2-Rd-C66"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-95.200000000000003" y="-59.852216748768477"/>
         </scene>
@@ -171,7 +177,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Vg-O8-vZ2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="382" y="-132"/>
+            <point key="canvasLocation" x="586" y="-117"/>
         </scene>
         <!--ViewController-->
         <scene sceneID="QCg-MZ-ueg">
@@ -181,7 +187,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0UN-zl-sPR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="387" y="-93"/>
+            <point key="canvasLocation" x="481" y="-42"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="aa9-zT-LWB">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" id="dqq-0T-sH0" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="X4a-KQ-aqS"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XNz-CJ-lT1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="500" y="23"/>
         </scene>
     </scenes>
     <resources>

@@ -11,6 +11,17 @@ import UIKit
 class HomeViewController: UIViewController {
     var chosenLeague = ""
     
+    @IBOutlet weak var home1: UILabel!
+    
+//    playerLabel()
+    
+    func playerLabel() {
+      let label = UILabel()
+      label.text = "Players"
+      label.font = UIFont(name:"HelveticaNeue-Bold", size: 20.0)
+      label.textColor = UIColor.init(displayP3Red: 50/255, green: 153/255, blue: 247/255, alpha: 1)
+    }
+    
     struct Teams: Codable {
         let orlandoPride: TeamInfo
         let skyBlue: TeamInfo
