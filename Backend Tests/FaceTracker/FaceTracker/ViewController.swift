@@ -13,7 +13,14 @@ import Vision
 class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
     
     
-    @IBOutlet weak var camView: UIImageView!
+    @IBOutlet weak var speedSwitch: UISegmentedControl!
+        @IBOutlet weak var camView: UIImageView!
+    @IBAction func startButton(_ sender: Any) {
+        self.captureSession.startRunning()
+    }
+    @IBAction func StopButton(_ sender: Any) {
+        self.captureSession.stopRunning()
+    }
     
     private let captureSession = AVCaptureSession()
     private lazy var previewLayer = AVCaptureVideoPreviewLayer(session: self.captureSession)
@@ -25,7 +32,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         self.addCameraInput()
         self.showCameraFeed()
         self.getCameraFrames()
-        self.captureSession.startRunning()
+//        self.captureSession.startRunning()
     }
     
     override func viewDidLayoutSubviews() {
@@ -43,7 +50,10 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
             return
         }
         self.detecthuman(in: frame)
-        self.processImage(in: frame)
+//        self.processImage(in: frame)
+//        DispatchQueue.main.async {
+//            print("switch: ", self.speedSwitch.selectedSegmentIndex)
+//        }
         
     }
     
@@ -59,11 +69,12 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     }
     
     private func showCameraFeed() {
-        self.previewLayer.videoGravity = .resizeAspectFill
-        self.view.layer.addSublayer(self.previewLayer)
-        self.previewLayer.frame = self.view.frame
-//        camView.layer.addSublayer(self.previewLayer)
-//        self.previewLayer.frame = camView.layer.bounds
+        
+//        self.view.layer.addSublayer(self.previewLayer)
+//        self.previewLayer.frame = self.view.frame
+        camView.layer.addSublayer(self.previewLayer)
+        self.previewLayer.frame = camView.layer.bounds
+//        self.previewLayer.videoGravity = .resizeAspect
     }
     
     private func getCameraFrames() {
@@ -81,9 +92,9 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
             DispatchQueue.main.async {
                 if let results = request.results as? [VNDetectedObjectObservation] {
 //                    print("did detect \(results.count) human(s)")
-                    self.handleHumanDetectionResults(results)
+                    self.handleHumanDetectionResults(results, in: image)
 //                    print("in between")
-//                    self.processImage()
+//                    self.processImage(in: image)
                     
                 } else {
                     self.clearDrawings()
@@ -95,7 +106,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         try? imageRequestHandler.perform([humanDetectionRequest])
     }
     
-    private func handleHumanDetectionResults(_ observedhumans: [VNDetectedObjectObservation]) {
+    private func handleHumanDetectionResults(_ observedhumans: [VNDetectedObjectObservation], in image: CVPixelBuffer) {
         self.clearDrawings()
         let humansBoundingBoxes: [CAShapeLayer] = observedhumans.map({ (observedhuman: VNDetectedObjectObservation) -> CAShapeLayer in
             let humanBoundingBoxOnScreen = self.previewLayer.layerRectConverted(fromMetadataOutputRect: observedhuman.boundingBox)
@@ -106,9 +117,17 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
             humanBoundingBoxShape.strokeColor = UIColor.green.cgColor
             return humanBoundingBoxShape
         })
-        humansBoundingBoxes.forEach({ humanBoundingBox in self.view.layer.addSublayer(humanBoundingBox) })
+        humansBoundingBoxes.forEach({ humanBoundingBox in self.view.layer.addSublayer(humanBoundingBox)
+            self.processImage(in: image)
+            
+            
+            
+        })
+        
+       
         self.drawings = humansBoundingBoxes
     }
+    
     
     private func clearDrawings() {
         self.drawings.forEach({ drawing in drawing.removeFromSuperlayer() })
@@ -116,20 +135,40 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     
     
     
-    lazy var textDetectionRequest: VNRecognizeTextRequest = {
+    lazy var textDetectionRequestFast: VNRecognizeTextRequest = {
            let request = VNRecognizeTextRequest(completionHandler: self.handleDetectedText)
-           request.recognitionLevel = .fast
+        let speed = self.speedSwitch.selectedSegmentIndex
+            request.recognitionLevel = .fast
+           
            request.usesLanguageCorrection = false
-           request.customWords = ["13"]
+//           request.customWords = ["13", "17", "10", "2", "Orlando", "Health"]
            request.recognitionLanguages = ["en_US"]
            return request
        }()
+    
+    lazy var textDetectionRequestAccurate: VNRecognizeTextRequest = {
+               let request = VNRecognizeTextRequest(completionHandler: self.handleDetectedText)
+            let speed = self.speedSwitch.selectedSegmentIndex
+                request.recognitionLevel = .accurate
+               
+               request.usesLanguageCorrection = false
+    //           request.customWords = ["13", "17", "10", "2", "Orlando", "Health"]
+               request.recognitionLanguages = ["en_US"]
+               return request
+           }()
        
     func processImage(in image: CVPixelBuffer) {
-//           guard let image = image,
-//           let cgImage = image.cgImage
-//           print("got here???")
-           let requests = [textDetectionRequest]
+        let speed = self.speedSwitch.selectedSegmentIndex
+        var requests = [textDetectionRequestFast]
+        if(speed == 0){
+            print("using fast")
+            requests = [textDetectionRequestFast]
+        }
+        else{
+            print("using accurate")
+            requests = [textDetectionRequestAccurate]
+        }
+//           let requests = [textDetectionRequest]
        let imageRequestHandler = VNImageRequestHandler(cvPixelBuffer: image,  options: [:])
 //           DispatchQueue.global(qos: .userInitiated).async {
 //               do {
@@ -173,8 +212,12 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
                 print("text:", text.string)
 //                print("bounding box: ", observation.boundingBox.origin.x,
 //                      observation.boundingBox.origin.y)
-                if(text.string == "13"){
-                    print("hit 13!!")
+//                if(text.string == "7" || text.string == "21" || text.string == "12" || text.string == "15" || text.string == "17"){
+//                    print("HIT MOTHEFUCKERS LETS GOOOOOOOOOO")
+//                }
+                let nums = ["2","4","14", "10","11", "7", "21","24", "12", "15", "17", "20", "23", "16", "6", "8"]
+                if(nums.contains(text.string)){
+                    print("HIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIT")
                 }
             }
         }

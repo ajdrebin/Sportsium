@@ -6,7 +6,7 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>AE58063C-BF55-451D-B2FE-88E73F71A030</key>
+		<key>77E68AF6-0A37-41E9-B210-302C498CA51E</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogMajorGroupSection</string>
@@ -15,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
 			<key>fileName</key>
-			<string>AE58063C-BF55-451D-B2FE-88E73F71A030.xcactivitylog</string>
+			<string>77E68AF6-0A37-41E9-B210-302C498CA51E.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -26,13 +26,13 @@
 			<key>signature</key>
 			<string>FaceTracker-cmcrciwtrycrqlgszvoquknyonke</string>
 			<key>timeStartedRecording</key>
-			<real>595991692.45840502</real>
+			<real>596064939.70578301</real>
 			<key>timeStoppedRecording</key>
-			<real>595991694.425385</real>
+			<real>596064941.88933206</real>
 			<key>title</key>
 			<string>Build target FaceTracker</string>
 			<key>uniqueIdentifier</key>
-			<string>AE58063C-BF55-451D-B2FE-88E73F71A030</string>
+			<string>77E68AF6-0A37-41E9-B210-302C498CA51E</string>
 		</dict>
 	</dict>
 	<key>preserveOldLogs</key>

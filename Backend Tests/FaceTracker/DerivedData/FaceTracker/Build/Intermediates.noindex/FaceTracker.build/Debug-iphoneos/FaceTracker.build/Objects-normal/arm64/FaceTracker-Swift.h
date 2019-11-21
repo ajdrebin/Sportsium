@@ -216,6 +216,7 @@ SWIFT_CLASS("_TtC11FaceTracker11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UISegmentedControl;
 @class UIImageView;
 @class AVCaptureOutput;
 @class AVCaptureConnection;
@@ -224,7 +225,10 @@ SWIFT_CLASS("_TtC11FaceTracker11AppDelegate")
 
 SWIFT_CLASS("_TtC11FaceTracker14ViewController")
 @interface ViewController : UIViewController <AVCaptureVideoDataOutputSampleBufferDelegate>
+@property (nonatomic, weak) IBOutlet UISegmentedControl * _Null_unspecified speedSwitch;
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified camView;
+- (IBAction)startButton:(id _Nonnull)sender;
+- (IBAction)StopButton:(id _Nonnull)sender;
 - (void)viewDidLoad;
 - (void)viewDidLayoutSubviews;
 - (void)captureOutput:(AVCaptureOutput * _Nonnull)output didOutputSampleBuffer:(CMSampleBufferRef _Nonnull)sampleBuffer fromConnection:(AVCaptureConnection * _Nonnull)connection;
