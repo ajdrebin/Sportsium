@@ -10,7 +10,7 @@
         <!--RulesViewController-->
         <scene sceneID="6w4-Py-L4D">
             <objects>
-                <viewController title="RulesViewController" id="IQY-Nv-6Pd" customClass="RulesViewController" customModule="Sportsium_Skeleton" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RulesViewController" title="RulesViewController" id="IQY-Nv-6Pd" customClass="RulesViewController" customModule="Sportsium_Skeleton" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rJn-se-8mb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
