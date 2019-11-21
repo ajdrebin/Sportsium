@@ -13,15 +13,6 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var home1: UILabel!
     
-//    playerLabel()
-    
-    func playerLabel() {
-      let label = UILabel()
-      label.text = "Players"
-      label.font = UIFont(name:"HelveticaNeue-Bold", size: 20.0)
-      label.textColor = UIColor.init(displayP3Red: 50/255, green: 153/255, blue: 247/255, alpha: 1)
-    }
-    
     struct Teams: Codable {
         let orlandoPride: TeamInfo
         let skyBlue: TeamInfo
@@ -108,9 +99,36 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var stadiumLabel: UILabel!
     @IBOutlet weak var awayLabel: UILabel!
     
+    // Game Buttons
+    @IBOutlet weak var game1: UIButton!
+    @IBOutlet weak var game2: UIButton!
+    @IBOutlet weak var game3: UIButton!
+    
+    // Initializing Team Info to Send
+    var home = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", playerList: [])
+    var away = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", playerList: [])
+    var orlandoInfo = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", playerList: [])
+    var skyBlueInfo = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", playerList: [])
+    var houstonInfo = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", playerList: [])
+    var washingtonInfo = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", playerList: [])
+    var northCarolinaInfo = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", playerList: [])
+    var reignInfo = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", playerList: [])
+    var portlandInfo = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", playerList: [])
+    var chicagoInfo = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", playerList: [])
+    var utahInfo = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", playerList: [])
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Setting tags for buttons
+        game1.tag = 1
+        game2.tag = 2
+        game3.tag = 3
+        
+        game1.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        game2.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        game3.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+
         // 1
         let urlString = "http://159.89.234.82/sports_check/?league=" + chosenLeague
         guard let url = URL(string: urlString) else { return }
@@ -128,15 +146,15 @@ class HomeViewController: UIViewController {
                 let teams = try JSONDecoder().decode(Teams.self, from: data)
                 
                 // Teams
-                let orlandoInfo = teams.orlandoPride
-                let skyBlueInfo = teams.skyBlue
-                let houstonInfo = teams.houstonDash
-                let washingtonInfo = teams.washingtonSpirit
-                let northCarolinaInfo = teams.northCarolinaCourage
-                let reignInfo = teams.reign
-                let portlandInfo = teams.portlandThorns
-                let chicagoInfo = teams.chicagoRedStars
-                let utahInfo = teams.utahRoyals
+                self.orlandoInfo = teams.orlandoPride
+                self.skyBlueInfo = teams.skyBlue
+                self.houstonInfo = teams.houstonDash
+                self.washingtonInfo = teams.washingtonSpirit
+                self.northCarolinaInfo = teams.northCarolinaCourage
+                self.reignInfo = teams.reign
+                self.portlandInfo = teams.portlandThorns
+                self.chicagoInfo = teams.chicagoRedStars
+                self.utahInfo = teams.utahRoyals
                 
                 // For Chia & Gustavo - USAGE FOR PLAYERS
 //                let playerKeys = teamInfo.players.keys // player numbers: "23", "3"
@@ -152,7 +170,50 @@ class HomeViewController: UIViewController {
             }
             // 5
             }.resume()
-        
+         }
+     @objc func buttonAction(sender: UIButton!) {
+       let btn: UIButton = sender
+    
+       if btn.tag == 1 {
+        // Set Team Info to Pass
+        home = chicagoInfo
+        away = orlandoInfo
+       }
+       else if btn.tag == 2 {
+        // Set Team Info to Pass
+        home = reignInfo
+        away = portlandInfo
+       }
+       else{
+        // Set Team Info to Pass
+        home = utahInfo
+        away = northCarolinaInfo
+       }
+        performSegue(withIdentifier: "Game", sender: self)
+        performSegue(withIdentifier: "ListTeams", sender: self)
     }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if(segue.identifier == "Game"){
+//                let displayVC = segue.destination as! GameInfoViewController
+//                displayVC.home = home
+//                displayVC.away = away
+//        }
+//    }
+//
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if(segue.identifier == "ListTeams"){
+//                let displayVC = segue.destination as! ListTeamsViewController
+//                displayVC.orlandoInfo = orlandoInfo
+//                displayVC.skyBlueInfo = skyBlueInfo
+//                displayVC.houstonInfo = houstonInfo
+//                displayVC.washingtonInfo = washingtonInfo
+//                displayVC.northCarolinaInfo = northCarolinaInfo
+//                displayVC.reignInfo = reignInfo
+//                displayVC.portlandInfo = portlandInfo
+//                displayVC.chicagoInfo = chicagoInfo
+//                displayVC.utahInfo = utahInfo
+//        }
+//    }
 }
 
