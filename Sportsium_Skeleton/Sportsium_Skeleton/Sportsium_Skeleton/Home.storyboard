@@ -75,6 +75,9 @@
                                 <rect key="frame" x="0.0" y="103" width="375" height="106"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.9873796105" green="0.89401727909999995" blue="0.75685626269999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <segue destination="S75-0g-Ojp" kind="show" identifier="Rules" id="fFw-SN-NZh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EQ3-Ip-XE5">
                                 <rect key="frame" x="0.0" y="256" width="375" height="134"/>
