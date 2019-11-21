@@ -6,6 +6,40 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
+		<key>104C123E-73C5-48AC-B429-ABD6ECDEAD2F</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>104C123E-73C5-48AC-B429-ABD6ECDEAD2F.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Sportsium_Skeleton project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Sportsium_Skeleton</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build Sportsium_Skeleton</string>
+			<key>timeStartedRecording</key>
+			<real>595981337.63553798</real>
+			<key>timeStoppedRecording</key>
+			<real>595981355.87519896</real>
+			<key>title</key>
+			<string>Build Sportsium_Skeleton</string>
+			<key>uniqueIdentifier</key>
+			<string>104C123E-73C5-48AC-B429-ABD6ECDEAD2F</string>
+		</dict>
 		<key>181C66AA-68AC-444F-BAFD-CF7F7C16FD07</key>
 		<dict>
 			<key>className</key>

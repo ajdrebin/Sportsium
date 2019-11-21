@@ -291,9 +291,15 @@ SWIFT_CLASS("_TtC18Sportsium_Skeleton22GameInfoViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UILabel;
 
 SWIFT_CLASS("_TtC18Sportsium_Skeleton18HomeViewController")
 @interface HomeViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified home1;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified homeLabel;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified timeLabel;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified stadiumLabel;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified awayLabel;
 - (void)viewDidLoad;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
@@ -313,7 +319,6 @@ SWIFT_CLASS("_TtC18Sportsium_Skeleton23ListTeamsViewController")
 
 
 @class UITextView;
-@class UILabel;
 
 SWIFT_CLASS("_TtC18Sportsium_Skeleton24PlayerInfoViewController")
 @interface PlayerInfoViewController : UIViewController
@@ -327,6 +332,14 @@ SWIFT_CLASS("_TtC18Sportsium_Skeleton24PlayerInfoViewController")
 - (void)segueHomeWithSender:(UIButton * _Null_unspecified)sender;
 - (void)segueTeamInfoWithSender:(UIButton * _Null_unspecified)sender;
 - (void)segueListTeamsWithSender:(UIButton * _Null_unspecified)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC18Sportsium_Skeleton19RulesViewController")
+@interface RulesViewController : UIViewController
+- (void)viewDidLoad;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -378,8 +391,11 @@ SWIFT_CLASS("_TtC18Sportsium_Skeleton22TeamInfoViewController")
 
 SWIFT_CLASS("_TtC18Sportsium_Skeleton14ViewController")
 @interface ViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified wnba_button;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified nwsl_button;
 - (void)viewDidLoad;
-@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified chooseSoccerLeague;
+- (void)buttonActionWithSender:(UIButton * _Null_unspecified)sender;
+- (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end

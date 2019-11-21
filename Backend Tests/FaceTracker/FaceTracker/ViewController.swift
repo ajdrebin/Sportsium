@@ -12,6 +12,9 @@ import Vision
 
 class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
     
+    
+    @IBOutlet weak var camView: UIImageView!
+    
     private let captureSession = AVCaptureSession()
     private lazy var previewLayer = AVCaptureVideoPreviewLayer(session: self.captureSession)
     private let videoDataOutput = AVCaptureVideoDataOutput()
@@ -40,6 +43,8 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
             return
         }
         self.detecthuman(in: frame)
+        self.processImage(in: frame)
+        
     }
     
     private func addCameraInput() {
@@ -57,6 +62,8 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         self.previewLayer.videoGravity = .resizeAspectFill
         self.view.layer.addSublayer(self.previewLayer)
         self.previewLayer.frame = self.view.frame
+//        camView.layer.addSublayer(self.previewLayer)
+//        self.previewLayer.frame = camView.layer.bounds
     }
     
     private func getCameraFrames() {
@@ -75,6 +82,9 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
                 if let results = request.results as? [VNDetectedObjectObservation] {
 //                    print("did detect \(results.count) human(s)")
                     self.handleHumanDetectionResults(results)
+//                    print("in between")
+//                    self.processImage()
+                    
                 } else {
                     self.clearDrawings()
 //                    print("no humans detected")
@@ -103,4 +113,77 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     private func clearDrawings() {
         self.drawings.forEach({ drawing in drawing.removeFromSuperlayer() })
     }
+    
+    
+    
+    lazy var textDetectionRequest: VNRecognizeTextRequest = {
+           let request = VNRecognizeTextRequest(completionHandler: self.handleDetectedText)
+           request.recognitionLevel = .fast
+           request.usesLanguageCorrection = false
+           request.customWords = ["13"]
+           request.recognitionLanguages = ["en_US"]
+           return request
+       }()
+       
+    func processImage(in image: CVPixelBuffer) {
+//           guard let image = image,
+//           let cgImage = image.cgImage
+//           print("got here???")
+           let requests = [textDetectionRequest]
+       let imageRequestHandler = VNImageRequestHandler(cvPixelBuffer: image,  options: [:])
+//           DispatchQueue.global(qos: .userInitiated).async {
+//               do {
+//                   try imageRequestHandler.perform(requests)
+//               } catch let error {
+//                   print("Error: \(error)")
+//               }
+//           }
+         DispatchQueue.main.async {
+            do {
+                  try imageRequestHandler.perform(requests)
+//                  print("and here")
+              } catch let error {
+                  print("Error: \(error)")
+              }
+        }
+       }
+    
+    fileprivate func handleDetectedText(request: VNRequest?, error: Error?) {
+//        print("in handle detected text")
+        if let error = error {
+    //        presentAlert(title: "Error", message: error.localizedDescription)
+            print("Error: ", error.localizedDescription)
+            return
+        }
+        guard let results = request?.results, results.count > 0 else {
+    //        presentAlert(title: "Error", message: "No text was found.")
+            print("Error: no text was found")
+            return
+    }
+
+        print("results: ", results.count)
+    for result in results {
+        if let observation = result as? VNRecognizedTextObservation {
+            for text in observation.topCandidates(1) {
+//                let component = ""
+//                component.x = observation.boundingBox.origin.x
+//                component.y = observation.boundingBox.origin.y
+//                component.text = text.string
+//                components.append(component)
+                print("text:", text.string)
+//                print("bounding box: ", observation.boundingBox.origin.x,
+//                      observation.boundingBox.origin.y)
+                if(text.string == "13"){
+                    print("hit 13!!")
+                }
+            }
+        }
+        }
+    }
+    fileprivate func presentAlert(title: String, message: String) {
+        let controller = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        controller.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(controller, animated: true, completion: nil)
+    }
+            
 }
