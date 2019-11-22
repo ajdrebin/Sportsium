@@ -176,6 +176,40 @@
 			<key>uniqueIdentifier</key>
 			<string>055A021E-FD9D-4D4E-8F15-64AFDD571324</string>
 		</dict>
+		<key>0579AE4F-275E-48A4-AAD9-A76BE499B018</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>0579AE4F-275E-48A4-AAD9-A76BE499B018.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FaceTracker project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FaceTracker</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug FaceTracker</string>
+			<key>timeStartedRecording</key>
+			<real>596076793.70580399</real>
+			<key>timeStoppedRecording</key>
+			<real>596076816.54597998</real>
+			<key>title</key>
+			<string>Debug FaceTracker</string>
+			<key>uniqueIdentifier</key>
+			<string>0579AE4F-275E-48A4-AAD9-A76BE499B018</string>
+		</dict>
 		<key>0642C0E5-9316-41E4-97D7-5EE4277BD6E8</key>
 		<dict>
 			<key>className</key>
@@ -821,6 +855,40 @@
 			<string>Debug FaceTracker</string>
 			<key>uniqueIdentifier</key>
 			<string>22E3ECFE-A47F-49A8-81BF-AA5D317D5E40</string>
+		</dict>
+		<key>2432A008-6295-4A40-8A6F-39C8D9FE0A55</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>2432A008-6295-4A40-8A6F-39C8D9FE0A55.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FaceTracker project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FaceTracker</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug FaceTracker</string>
+			<key>timeStartedRecording</key>
+			<real>596078467.66706896</real>
+			<key>timeStoppedRecording</key>
+			<real>596078599.91033602</real>
+			<key>title</key>
+			<string>Debug FaceTracker</string>
+			<key>uniqueIdentifier</key>
+			<string>2432A008-6295-4A40-8A6F-39C8D9FE0A55</string>
 		</dict>
 		<key>26A379DA-D429-448B-B462-80BAADCA1AAB</key>
 		<dict>
@@ -1638,6 +1706,40 @@
 			<key>uniqueIdentifier</key>
 			<string>3E9E0D0C-7825-4A14-BE02-26C5D79B2333</string>
 		</dict>
+		<key>3FD1FB22-8E16-45D6-9394-903680B64E67</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>3FD1FB22-8E16-45D6-9394-903680B64E67.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FaceTracker project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FaceTracker</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug FaceTracker</string>
+			<key>timeStartedRecording</key>
+			<real>596078838.651564</real>
+			<key>timeStoppedRecording</key>
+			<real>596080578.10898697</real>
+			<key>title</key>
+			<string>Debug FaceTracker</string>
+			<key>uniqueIdentifier</key>
+			<string>3FD1FB22-8E16-45D6-9394-903680B64E67</string>
+		</dict>
 		<key>4004089B-0C6D-4F1C-8875-481DD9EAB7AC</key>
 		<dict>
 			<key>className</key>
@@ -2046,6 +2148,40 @@
 			<key>uniqueIdentifier</key>
 			<string>5231915C-A0C2-4988-A411-0D4712CC67A2</string>
 		</dict>
+		<key>52632297-88CB-4166-8F94-E34B6D6B306E</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>52632297-88CB-4166-8F94-E34B6D6B306E.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FaceTracker project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FaceTracker</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug FaceTracker</string>
+			<key>timeStartedRecording</key>
+			<real>596076852.47928798</real>
+			<key>timeStoppedRecording</key>
+			<real>596076894.54023099</real>
+			<key>title</key>
+			<string>Debug FaceTracker</string>
+			<key>uniqueIdentifier</key>
+			<string>52632297-88CB-4166-8F94-E34B6D6B306E</string>
+		</dict>
 		<key>52E3EAEB-A57D-4BA5-9244-3E70C34D5865</key>
 		<dict>
 			<key>className</key>
@@ -2249,6 +2385,40 @@
 			<string>Debug FaceTracker</string>
 			<key>uniqueIdentifier</key>
 			<string>59E5134A-1418-478A-925D-7ABE655CD500</string>
+		</dict>
+		<key>5AFD4210-4074-4C9F-A52D-9D43293B0FBC</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>5AFD4210-4074-4C9F-A52D-9D43293B0FBC.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FaceTracker project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FaceTracker</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug FaceTracker</string>
+			<key>timeStartedRecording</key>
+			<real>596078214.295789</real>
+			<key>timeStoppedRecording</key>
+			<real>596078239.05181003</real>
+			<key>title</key>
+			<string>Debug FaceTracker</string>
+			<key>uniqueIdentifier</key>
+			<string>5AFD4210-4074-4C9F-A52D-9D43293B0FBC</string>
 		</dict>
 		<key>5EA81545-721F-47C4-88D1-97AACEE3B2C1</key>
 		<dict>
@@ -2725,6 +2895,40 @@
 			<string>Debug FaceTracker</string>
 			<key>uniqueIdentifier</key>
 			<string>6E8613EB-5B2E-43A0-B7D3-83647E098F28</string>
+		</dict>
+		<key>6EF6A955-E2A1-42DF-862B-845CB179ED35</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>6EF6A955-E2A1-42DF-862B-845CB179ED35.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FaceTracker project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FaceTracker</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug FaceTracker</string>
+			<key>timeStartedRecording</key>
+			<real>596076377.88761103</real>
+			<key>timeStoppedRecording</key>
+			<real>596076493.53426301</real>
+			<key>title</key>
+			<string>Debug FaceTracker</string>
+			<key>uniqueIdentifier</key>
+			<string>6EF6A955-E2A1-42DF-862B-845CB179ED35</string>
 		</dict>
 		<key>6F04580B-BEEB-41A1-9008-BC052F8B814A</key>
 		<dict>
@@ -3576,6 +3780,40 @@
 			<key>uniqueIdentifier</key>
 			<string>89BE6689-0312-40B9-80C0-7EC13FA8DE62</string>
 		</dict>
+		<key>8A008BC1-46B9-4601-92B8-A58E9D51DF57</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>8A008BC1-46B9-4601-92B8-A58E9D51DF57.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FaceTracker project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FaceTracker</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug FaceTracker</string>
+			<key>timeStartedRecording</key>
+			<real>596080843.621503</real>
+			<key>timeStoppedRecording</key>
+			<real>596080874.19977295</real>
+			<key>title</key>
+			<string>Debug FaceTracker</string>
+			<key>uniqueIdentifier</key>
+			<string>8A008BC1-46B9-4601-92B8-A58E9D51DF57</string>
+		</dict>
 		<key>8B7C7E1C-DC4A-4C8D-9ADA-8E52E84BBABB</key>
 		<dict>
 			<key>className</key>
@@ -3712,6 +3950,40 @@
 			<key>uniqueIdentifier</key>
 			<string>912D09D7-239A-4965-B260-775F07C4FE20</string>
 		</dict>
+		<key>93097A07-88EE-4F23-93AC-6DEFF117F453</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>93097A07-88EE-4F23-93AC-6DEFF117F453.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FaceTracker project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FaceTracker</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug FaceTracker</string>
+			<key>timeStartedRecording</key>
+			<real>596076317.96156096</real>
+			<key>timeStoppedRecording</key>
+			<real>596076377.02406597</real>
+			<key>title</key>
+			<string>Debug FaceTracker</string>
+			<key>uniqueIdentifier</key>
+			<string>93097A07-88EE-4F23-93AC-6DEFF117F453</string>
+		</dict>
 		<key>93B3941C-92D4-4787-B89F-0725FBC53C81</key>
 		<dict>
 			<key>className</key>
@@ -3780,6 +4052,40 @@
 			<key>uniqueIdentifier</key>
 			<string>93FEC381-5B71-4AA7-B9BC-33E4E998C5FB</string>
 		</dict>
+		<key>94BD2872-A493-4612-8800-793918EA8074</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>94BD2872-A493-4612-8800-793918EA8074.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FaceTracker project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FaceTracker</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug FaceTracker</string>
+			<key>timeStartedRecording</key>
+			<real>596076495.07693398</real>
+			<key>timeStoppedRecording</key>
+			<real>596076561.36998105</real>
+			<key>title</key>
+			<string>Debug FaceTracker</string>
+			<key>uniqueIdentifier</key>
+			<string>94BD2872-A493-4612-8800-793918EA8074</string>
+		</dict>
 		<key>96ECE62F-45FE-41BB-85F5-50821BBEBD3E</key>
 		<dict>
 			<key>className</key>
@@ -3847,6 +4153,40 @@
 			<string>Debug FaceTracker</string>
 			<key>uniqueIdentifier</key>
 			<string>983165AC-4411-497E-84BA-FED56361E715</string>
+		</dict>
+		<key>9831D61F-9A2F-4BBE-9A6B-70F4FB8799FA</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>9831D61F-9A2F-4BBE-9A6B-70F4FB8799FA.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FaceTracker project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FaceTracker</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug FaceTracker</string>
+			<key>timeStartedRecording</key>
+			<real>596077900.47219896</real>
+			<key>timeStoppedRecording</key>
+			<real>596077975.92249298</real>
+			<key>title</key>
+			<string>Debug FaceTracker</string>
+			<key>uniqueIdentifier</key>
+			<string>9831D61F-9A2F-4BBE-9A6B-70F4FB8799FA</string>
 		</dict>
 		<key>985CDE6A-AB29-44E0-8B3A-737C16E0049A</key>
 		<dict>
@@ -3983,6 +4323,40 @@
 			<string>Debug FaceTracker</string>
 			<key>uniqueIdentifier</key>
 			<string>9DFFFF28-442F-4431-B388-251BB28E19AA</string>
+		</dict>
+		<key>9E9FE366-1E33-4B00-AC08-7143C5BB55DA</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>9E9FE366-1E33-4B00-AC08-7143C5BB55DA.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FaceTracker project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FaceTracker</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug FaceTracker</string>
+			<key>timeStartedRecording</key>
+			<real>596076601.72218394</real>
+			<key>timeStoppedRecording</key>
+			<real>596076713.47802997</real>
+			<key>title</key>
+			<string>Debug FaceTracker</string>
+			<key>uniqueIdentifier</key>
+			<string>9E9FE366-1E33-4B00-AC08-7143C5BB55DA</string>
 		</dict>
 		<key>A1D14AB1-CFD9-40EB-8B9F-0D422A7BB61D</key>
 		<dict>
@@ -4256,6 +4630,40 @@
 			<key>uniqueIdentifier</key>
 			<string>AFB5C713-DEAF-419A-8688-E102C42A83CE</string>
 		</dict>
+		<key>B029B236-BBC9-42FE-B207-401B6B6DAB33</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>B029B236-BBC9-42FE-B207-401B6B6DAB33.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FaceTracker project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FaceTracker</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug FaceTracker</string>
+			<key>timeStartedRecording</key>
+			<real>596078604.10286999</real>
+			<key>timeStoppedRecording</key>
+			<real>596078663.87570095</real>
+			<key>title</key>
+			<string>Debug FaceTracker</string>
+			<key>uniqueIdentifier</key>
+			<string>B029B236-BBC9-42FE-B207-401B6B6DAB33</string>
+		</dict>
 		<key>B0D80AEC-9781-4CB0-B342-6B3E65523C6F</key>
 		<dict>
 			<key>className</key>
@@ -4323,6 +4731,40 @@
 			<string>Debug FaceTracker</string>
 			<key>uniqueIdentifier</key>
 			<string>B3D2C8FD-892B-4867-9617-45AD7B838057</string>
+		</dict>
+		<key>B4A3A3E2-4598-4EB4-A2DB-9E8CC77108BD</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>B4A3A3E2-4598-4EB4-A2DB-9E8CC77108BD.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FaceTracker project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FaceTracker</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug FaceTracker</string>
+			<key>timeStartedRecording</key>
+			<real>596075115.58906901</real>
+			<key>timeStoppedRecording</key>
+			<real>596075185.89329898</real>
+			<key>title</key>
+			<string>Debug FaceTracker</string>
+			<key>uniqueIdentifier</key>
+			<string>B4A3A3E2-4598-4EB4-A2DB-9E8CC77108BD</string>
 		</dict>
 		<key>B66CC935-EDFF-4BE9-864B-BA6F99A6AAEC</key>
 		<dict>
@@ -4425,6 +4867,40 @@
 			<string>Debug FaceTracker</string>
 			<key>uniqueIdentifier</key>
 			<string>BA275999-8526-44FC-823D-64B8E9E3D26C</string>
+		</dict>
+		<key>BC8AC774-CC91-4514-9654-67877DBA42EA</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>BC8AC774-CC91-4514-9654-67877DBA42EA.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FaceTracker project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FaceTracker</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug FaceTracker</string>
+			<key>timeStartedRecording</key>
+			<real>596078757.81435394</real>
+			<key>timeStoppedRecording</key>
+			<real>596078838.08960998</real>
+			<key>title</key>
+			<string>Debug FaceTracker</string>
+			<key>uniqueIdentifier</key>
+			<string>BC8AC774-CC91-4514-9654-67877DBA42EA</string>
 		</dict>
 		<key>BCE2B693-2F68-48C9-B603-23A7409FEBF7</key>
 		<dict>
@@ -4834,6 +5310,74 @@
 			<key>uniqueIdentifier</key>
 			<string>D462695F-FCA3-4657-BA00-AC70ADB0DE11</string>
 		</dict>
+		<key>D55D724A-FCBF-40DD-AA16-AE0D766DB29C</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>D55D724A-FCBF-40DD-AA16-AE0D766DB29C.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FaceTracker project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FaceTracker</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug FaceTracker</string>
+			<key>timeStartedRecording</key>
+			<real>596080699.19515002</real>
+			<key>timeStoppedRecording</key>
+			<real>596080744.56722701</real>
+			<key>title</key>
+			<string>Debug FaceTracker</string>
+			<key>uniqueIdentifier</key>
+			<string>D55D724A-FCBF-40DD-AA16-AE0D766DB29C</string>
+		</dict>
+		<key>D6967298-6628-43A8-903E-E6A43714FF29</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>D6967298-6628-43A8-903E-E6A43714FF29.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FaceTracker project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FaceTracker</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug FaceTracker</string>
+			<key>timeStartedRecording</key>
+			<real>596074863.62531805</real>
+			<key>timeStoppedRecording</key>
+			<real>596074990.460778</real>
+			<key>title</key>
+			<string>Debug FaceTracker</string>
+			<key>uniqueIdentifier</key>
+			<string>D6967298-6628-43A8-903E-E6A43714FF29</string>
+		</dict>
 		<key>D94751C9-23A2-4799-B809-2E735C19EE20</key>
 		<dict>
 			<key>className</key>
@@ -5003,6 +5547,40 @@
 			<string>Debug FaceTracker</string>
 			<key>uniqueIdentifier</key>
 			<string>DE8624DF-DF78-4939-AE5A-79AC837D3E15</string>
+		</dict>
+		<key>DF822858-6D28-45BD-83F5-92A83FFC63D9</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>DF822858-6D28-45BD-83F5-92A83FFC63D9.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FaceTracker project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FaceTracker</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug FaceTracker</string>
+			<key>timeStartedRecording</key>
+			<real>596078324.19449306</real>
+			<key>timeStoppedRecording</key>
+			<real>596078339.64442098</real>
+			<key>title</key>
+			<string>Debug FaceTracker</string>
+			<key>uniqueIdentifier</key>
+			<string>DF822858-6D28-45BD-83F5-92A83FFC63D9</string>
 		</dict>
 		<key>DFF24A02-D658-4BF2-841D-6F1209F37AFC</key>
 		<dict>

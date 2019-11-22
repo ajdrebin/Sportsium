@@ -136,28 +136,49 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
             humanBoundingBoxShape.path = humanBoundingBoxPath
             humanBoundingBoxShape.fillColor = UIColor.clear.cgColor
             humanBoundingBoxShape.strokeColor = UIColor.green.cgColor
+            
+            
+            let ciImage = CIImage(cvPixelBuffer: image)
+            let context = CIContext()
+            let cgimage = context.createCGImage(ciImage, from: ciImage.extent)
+            let imageRef = cgimage?.cropping(to: humanBoundingBoxOnScreen)
+            let uiImage =  UIImage(cgImage: imageRef!)
+            UIImageWriteToSavedPhotosAlbum(uiImage, nil, nil, nil);
+            
+            
             return humanBoundingBoxShape
         })
+
         humansBoundingBoxes.forEach({ humanBoundingBox in self.view.layer.addSublayer(humanBoundingBox)
             
-//            srcPixelBuffer: CVPixelBuffer,
-//                                             cropX: Int,
-//                                             cropY: Int,
-//                                             cropWidth: Int,
-//                                             cropHeight: Int,
-//                                             scaleWidth: Int,
-//                                             scaleHeight: Int)
+
+//            let ciImage = CIImage(cvPixelBuffer: image)
+//            let context = CIContext()
+//            if let cgimage = context.createCGImage(ciImage, from: ciImage.extent) {
+//                let uiImage =  UIImage(cgImage: cgimage)
+//                print("original size: ", uiImage.size)
+//                let imageNew = uiImage.cropping(to: humanBoundingBox.path?.boundingBox)
+////                UIImageWriteToSavedPhotosAlbum(uiImage, nil, nil, nil);
+//            }
             
-            let newImage = resizePixelBuffer(image,
-                              cropX: Int((humanBoundingBox.path?.boundingBox.origin.x)!),
-                              cropY: Int((humanBoundingBox.path?.boundingBox.origin.y)!),
-                              cropWidth: CVPixelBufferGetWidth(image),
-                              cropHeight: CVPixelBufferGetHeight(image),
-                              scaleWidth: Int((humanBoundingBox.path?.boundingBox.width)!),
-                              scaleHeight: Int((humanBoundingBox.path?.boundingBox.height)!))
-//            print("boundingBox: ", humanBoundingBox.path?.boundingBox.y)
             
-            self.processImage(in: newImage!)
+           
+//            let newImage = resizePixelBuffer(image,
+//                              cropX: Int((humanBoundingBox.path?.boundingBox.origin.x)!),
+//                              cropY: Int((humanBoundingBox.path?.boundingBox.origin.y)!),
+//                              cropWidth: CVPixelBufferGetWidth(image),
+//                              cropHeight: CVPixelBufferGetHeight(image),
+//                              scaleWidth: Int((humanBoundingBox.path?.boundingBox.width)!),
+//                              scaleHeight: Int((humanBoundingBox.path?.boundingBox.height)!))
+
+//            let ciImageNew = CIImage(cvPixelBuffer: newImage!)
+//            let contextNew = CIContext()
+//            if let cgimageNew = contextNew.createCGImage(ciImageNew, from: ciImageNew.extent) {
+//                let uiImageNew =  UIImage(cgImage: cgimageNew)
+//                UIImageWriteToSavedPhotosAlbum(uiImageNew, nil, nil, nil);
+//            }
+            
+            self.processImage(in: image)
             
             
             
@@ -167,6 +188,17 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         self.drawings = humansBoundingBoxes
     }
     
+    
+//    private func cropImage(object: VNDetectedObjectObservation) -> CGImage? {
+//        let width = object.boundingBox.width * CGFloat(self.detectable.width)
+//        let height = object.boundingBox.height * CGFloat(self.detectable.height)
+//        let x = object.boundingBox.origin.x * CGFloat(self.detectable.width)
+//        let y = (1 - object.boundingBox.origin.y) * CGFloat(self.detectable.height) - height
+//
+//        let croppingRect = CGRect(x: x, y: y, width: width, height: height)
+//        let image = self.detectable.cropping(to: croppingRect)
+//        return image
+//    }
     
     private func clearDrawings() {
         self.drawings.forEach({ drawing in drawing.removeFromSuperlayer() })
@@ -239,20 +271,15 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
             return
     }
 
-        print("results: ", results.count)
     for result in results {
         if let observation = result as? VNRecognizedTextObservation {
             for text in observation.topCandidates(1) {
-                print("text:", text.string)
-//                print("bounding box: ", observation.boundingBox.origin.x,
-//                      observation.boundingBox.origin.y)
-//                let nums = ["2","4","14", "10","11", "7", "21","24", "12", "15", "17", "20", "23", "16", "6", "8"]
                 let text_int = Int(text.string)
                 if(text_int != nil){
                     if(text_int! >= 0 && text_int! <= 66){
                         print("HIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIT")
+                        print("text: ", text.string)
                         self.numberLabel.text = text.string
-                        print("checking: ", self.numberLabel.text!)
                     }
                 }
             }
