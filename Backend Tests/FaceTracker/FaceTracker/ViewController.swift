@@ -9,17 +9,35 @@
 import UIKit
 import AVFoundation
 import Vision
+import Foundation
+import Accelerate
+import CoreImage
 
 class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
     
     
+    @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var speedSwitch: UISegmentedControl!
-        @IBOutlet weak var camView: UIImageView!
+    @IBOutlet weak var camView: UIImageView!
+    
     @IBAction func startButton(_ sender: Any) {
+        is_stopped = false
         self.captureSession.startRunning()
+//        self.addCameraInput()
+        self.showCameraFeed()
+//        self.getCameraFrames()
     }
+    
+    var is_stopped = false
     @IBAction func StopButton(_ sender: Any) {
+        is_stopped = true
         self.captureSession.stopRunning()
+        
+        self.clearDrawings()
+        self.clearDrawings()
+        self.numberLabel.text = "#"
+        self.previewLayer.removeFromSuperlayer()
+        
     }
     
     private let captureSession = AVCaptureSession()
@@ -50,10 +68,6 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
             return
         }
         self.detecthuman(in: frame)
-//        self.processImage(in: frame)
-//        DispatchQueue.main.async {
-//            print("switch: ", self.speedSwitch.selectedSegmentIndex)
-//        }
         
     }
     
@@ -71,10 +85,12 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     private func showCameraFeed() {
         
 //        self.view.layer.addSublayer(self.previewLayer)
-//        self.previewLayer.frame = self.view.frame
-        camView.layer.addSublayer(self.previewLayer)
-        self.previewLayer.frame = camView.layer.bounds
-//        self.previewLayer.videoGravity = .resizeAspect
+        self.view.layer.insertSublayer(self.previewLayer, at: 0)
+        self.previewLayer.frame = self.view.frame
+//        camView.layer.addSublayer(self.previewLayer)
+//        self.previewLayer.frame = camView.layer.bounds
+        self.previewLayer.videoGravity = .resizeAspectFill
+       
     }
     
     private func getCameraFrames() {
@@ -110,6 +126,11 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         self.clearDrawings()
         let humansBoundingBoxes: [CAShapeLayer] = observedhumans.map({ (observedhuman: VNDetectedObjectObservation) -> CAShapeLayer in
             let humanBoundingBoxOnScreen = self.previewLayer.layerRectConverted(fromMetadataOutputRect: observedhuman.boundingBox)
+//            print("origin: ", humanBoundingBoxOnScreen.origin)
+//            print("x: ", humanBoundingBoxOnScreen.origin.x)
+//            print("size: ", humanBoundingBoxOnScreen.size)
+//            print("height: ", humanBoundingBoxOnScreen.size.height)
+
             let humanBoundingBoxPath = CGPath(rect: humanBoundingBoxOnScreen, transform: nil)
             let humanBoundingBoxShape = CAShapeLayer()
             humanBoundingBoxShape.path = humanBoundingBoxPath
@@ -118,7 +139,25 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
             return humanBoundingBoxShape
         })
         humansBoundingBoxes.forEach({ humanBoundingBox in self.view.layer.addSublayer(humanBoundingBox)
-            self.processImage(in: image)
+            
+//            srcPixelBuffer: CVPixelBuffer,
+//                                             cropX: Int,
+//                                             cropY: Int,
+//                                             cropWidth: Int,
+//                                             cropHeight: Int,
+//                                             scaleWidth: Int,
+//                                             scaleHeight: Int)
+            
+            let newImage = resizePixelBuffer(image,
+                              cropX: Int((humanBoundingBox.path?.boundingBox.origin.x)!),
+                              cropY: Int((humanBoundingBox.path?.boundingBox.origin.y)!),
+                              cropWidth: CVPixelBufferGetWidth(image),
+                              cropHeight: CVPixelBufferGetHeight(image),
+                              scaleWidth: Int((humanBoundingBox.path?.boundingBox.width)!),
+                              scaleHeight: Int((humanBoundingBox.path?.boundingBox.height)!))
+//            print("boundingBox: ", humanBoundingBox.path?.boundingBox.y)
+            
+            self.processImage(in: newImage!)
             
             
             
@@ -204,20 +243,17 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     for result in results {
         if let observation = result as? VNRecognizedTextObservation {
             for text in observation.topCandidates(1) {
-//                let component = ""
-//                component.x = observation.boundingBox.origin.x
-//                component.y = observation.boundingBox.origin.y
-//                component.text = text.string
-//                components.append(component)
                 print("text:", text.string)
 //                print("bounding box: ", observation.boundingBox.origin.x,
 //                      observation.boundingBox.origin.y)
-//                if(text.string == "7" || text.string == "21" || text.string == "12" || text.string == "15" || text.string == "17"){
-//                    print("HIT MOTHEFUCKERS LETS GOOOOOOOOOO")
-//                }
-                let nums = ["2","4","14", "10","11", "7", "21","24", "12", "15", "17", "20", "23", "16", "6", "8"]
-                if(nums.contains(text.string)){
-                    print("HIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIT")
+//                let nums = ["2","4","14", "10","11", "7", "21","24", "12", "15", "17", "20", "23", "16", "6", "8"]
+                let text_int = Int(text.string)
+                if(text_int != nil){
+                    if(text_int! >= 0 && text_int! <= 66){
+                        print("HIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIT")
+                        self.numberLabel.text = text.string
+                        print("checking: ", self.numberLabel.text!)
+                    }
                 }
             }
         }
@@ -228,5 +264,76 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         controller.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(controller, animated: true, completion: nil)
     }
-            
+    
+    
+    /**
+      First crops the pixel buffer, then resizes it.
+      - Note: The new CVPixelBuffer is not backed by an IOSurface and therefore
+        cannot be turned into a Metal texture.
+    */
+    public func resizePixelBuffer(_ srcPixelBuffer: CVPixelBuffer,
+                                  cropX: Int,
+                                  cropY: Int,
+                                  cropWidth: Int,
+                                  cropHeight: Int,
+                                  scaleWidth: Int,
+                                  scaleHeight: Int) -> CVPixelBuffer? {
+        if(is_stopped){
+           print("is stopped")
+            return srcPixelBuffer
+        }
+        let flags = CVPixelBufferLockFlags(rawValue: 0)
+      guard kCVReturnSuccess == CVPixelBufferLockBaseAddress(srcPixelBuffer, flags) else {
+        return nil
+      }
+      defer { CVPixelBufferUnlockBaseAddress(srcPixelBuffer, flags) }
+
+      guard let srcData = CVPixelBufferGetBaseAddress(srcPixelBuffer) else {
+        print("Error: could not get pixel buffer base address")
+        return nil
+      }
+      let srcBytesPerRow = CVPixelBufferGetBytesPerRow(srcPixelBuffer)
+      let offset = cropY*srcBytesPerRow + cropX*4
+      var srcBuffer = vImage_Buffer(data: srcData.advanced(by: offset),
+                                    height: vImagePixelCount(cropHeight),
+                                    width: vImagePixelCount(cropWidth),
+                                    rowBytes: srcBytesPerRow)
+
+      let destBytesPerRow = scaleWidth*4
+      guard let destData = malloc(scaleHeight*destBytesPerRow) else {
+        print("Error: out of memory")
+        return nil
+      }
+      var destBuffer = vImage_Buffer(data: destData,
+                                     height: vImagePixelCount(scaleHeight),
+                                     width: vImagePixelCount(scaleWidth),
+                                     rowBytes: destBytesPerRow)
+
+        
+      let error = vImageScale_ARGB8888(&srcBuffer, &destBuffer, nil, vImage_Flags(0))
+      if error != kvImageNoError {
+        print("Error:", error)
+        free(destData)
+        return nil
+      }
+
+      let releaseCallback: CVPixelBufferReleaseBytesCallback = { _, ptr in
+        if let ptr = ptr {
+          free(UnsafeMutableRawPointer(mutating: ptr))
+        }
+      }
+
+      let pixelFormat = CVPixelBufferGetPixelFormatType(srcPixelBuffer)
+      var dstPixelBuffer: CVPixelBuffer?
+      let status = CVPixelBufferCreateWithBytes(nil, scaleWidth, scaleHeight,
+                                                pixelFormat, destData,
+                                                destBytesPerRow, releaseCallback,
+                                                nil, nil, &dstPixelBuffer)
+      if status != kCVReturnSuccess {
+        print("Error: could not create new pixel buffer")
+        free(destData)
+        return nil
+      }
+      return dstPixelBuffer
+    }
 }

@@ -216,6 +216,7 @@ SWIFT_CLASS("_TtC11FaceTracker11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UILabel;
 @class UISegmentedControl;
 @class UIImageView;
 @class AVCaptureOutput;
@@ -225,6 +226,7 @@ SWIFT_CLASS("_TtC11FaceTracker11AppDelegate")
 
 SWIFT_CLASS("_TtC11FaceTracker14ViewController")
 @interface ViewController : UIViewController <AVCaptureVideoDataOutputSampleBufferDelegate>
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified numberLabel;
 @property (nonatomic, weak) IBOutlet UISegmentedControl * _Null_unspecified speedSwitch;
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified camView;
 - (IBAction)startButton:(id _Nonnull)sender;
