@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		893D7E092378ECD2003D5643 /* Rules.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 893D7E082378ECD2003D5643 /* Rules.storyboard */; };
 		893D7E0B2378ED2E003D5643 /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893D7E0A2378ED2E003D5643 /* RulesViewController.swift */; };
+		895ABB9B2388C25300973A46 /* TeamInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895ABB982388C25200973A46 /* TeamInfo.swift */; };
+		895ABB9C2388C25300973A46 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895ABB992388C25200973A46 /* Player.swift */; };
+		895ABB9D2388C25300973A46 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895ABB9A2388C25200973A46 /* Team.swift */; };
 		89B35B6D236DFABB004BE9E8 /* ListTeams.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89B35B6C236DFABB004BE9E8 /* ListTeams.storyboard */; };
 		89B35B6F236DFAC8004BE9E8 /* ListTeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B35B6E236DFAC8004BE9E8 /* ListTeamsViewController.swift */; };
 		89D5A6F2237B361B00FB1668 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89D5A6F1237B361B00FB1668 /* Home.storyboard */; };
@@ -57,6 +60,9 @@
 /* Begin PBXFileReference section */
 		893D7E082378ECD2003D5643 /* Rules.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Rules.storyboard; sourceTree = "<group>"; };
 		893D7E0A2378ED2E003D5643 /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
+		895ABB982388C25200973A46 /* TeamInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamInfo.swift; sourceTree = "<group>"; };
+		895ABB992388C25200973A46 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		895ABB9A2388C25200973A46 /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		89B35B6C236DFABB004BE9E8 /* ListTeams.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListTeams.storyboard; sourceTree = "<group>"; };
 		89B35B6E236DFAC8004BE9E8 /* ListTeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTeamsViewController.swift; sourceTree = "<group>"; };
 		89D5A6F1237B361B00FB1668 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
@@ -152,6 +158,9 @@
 				C799F586236B713F00184E36 /* SceneDelegate.swift */,
 				C799F5C6236B8EC300184E36 /* TeamInfoViewController.swift */,
 				C799F59D236B715F00184E36 /* CameraViewController.swift */,
+				895ABB992388C25200973A46 /* Player.swift */,
+				895ABB9A2388C25200973A46 /* Team.swift */,
+				895ABB982388C25200973A46 /* TeamInfo.swift */,
 				C799F59E236B715F00184E36 /* CheckIn.swift */,
 				C799F599236B715F00184E36 /* CvVideoCameraWrapper.h */,
 				C799F5A4236B717200184E36 /* opencv2.framework */,
@@ -268,6 +277,9 @@
 				C799F5CF236B9A2D00184E36 /* TeamInfoViewController.swift in Sources */,
 				C799F5A9236B717200184E36 /* PlayerInfoViewController.swift in Sources */,
 				C799F589236B713F00184E36 /* ViewController.swift in Sources */,
+				895ABB9D2388C25300973A46 /* Team.swift in Sources */,
+				895ABB9B2388C25300973A46 /* TeamInfo.swift in Sources */,
+				895ABB9C2388C25300973A46 /* Player.swift in Sources */,
 				C799F5D8236BA51F00184E36 /* GameInfoViewController.swift in Sources */,
 				C799F5A3236B716000184E36 /* CheckIn.swift in Sources */,
 				C799F5A2236B716000184E36 /* CameraViewController.swift in Sources */,
