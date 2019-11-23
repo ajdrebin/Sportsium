@@ -20,6 +20,9 @@ class GameInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        print(home, away)
+        
         homePlayers = home.playerList  // all player objects
         awayPlayers = away.playerList
     }
