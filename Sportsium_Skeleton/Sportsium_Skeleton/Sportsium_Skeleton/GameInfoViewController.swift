@@ -30,7 +30,7 @@ class GameInfoViewController: UIViewController {
       var x :CGFloat = 0
       var y :CGFloat = 400.0
 
-      for (i, player) in homePlayers.enumerated() {
+      for (i, playerInd) in homePlayers.enumerated() {
         button = UIButton()
         // x, y, width, height
         
@@ -52,8 +52,9 @@ class GameInfoViewController: UIViewController {
 
         //Allow for multi line text \n separated.
         button.titleLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping;
-        button.setTitle(player?.number, for: UIControl.State.normal)
+//        button.setTitle(playerInd.number + "\t\t" + playerInd.firstName + "\n" + playerInd., for: UIControl.State.normal)
 
+//        button.setTitle(name + "\t\t\t\t\t\t\t\t\t\t " + "#" + playerNum[i] + "\n" + playerPosition[i], for: UIControl.State.normal)
 
 
         button.addTarget(self, action: #selector(pressBtn), for: UIControl.Event.touchDown)
