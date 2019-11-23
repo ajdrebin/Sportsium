@@ -21,6 +21,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     @IBOutlet weak var camView: UIImageView!
     
     @IBAction func startButton(_ sender: Any) {
+        photocount = 0
         is_stopped = false
         self.captureSession.startRunning()
 //        self.addCameraInput()
@@ -107,14 +108,9 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         let humanDetectionRequest = VNDetectHumanRectanglesRequest(completionHandler: { (request: VNRequest, error: Error?) in
             DispatchQueue.main.async {
                 if let results = request.results as? [VNDetectedObjectObservation] {
-//                    print("did detect \(results.count) human(s)")
                     self.handleHumanDetectionResults(results, in: image)
-//                    print("in between")
-//                    self.processImage(in: image)
-                    
                 } else {
                     self.clearDrawings()
-//                    print("no humans detected")
                 }
             }
         })
@@ -122,14 +118,11 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         try? imageRequestHandler.perform([humanDetectionRequest])
     }
     
+    var photocount = 0
     private func handleHumanDetectionResults(_ observedhumans: [VNDetectedObjectObservation], in image: CVPixelBuffer) {
         self.clearDrawings()
         let humansBoundingBoxes: [CAShapeLayer] = observedhumans.map({ (observedhuman: VNDetectedObjectObservation) -> CAShapeLayer in
             let humanBoundingBoxOnScreen = self.previewLayer.layerRectConverted(fromMetadataOutputRect: observedhuman.boundingBox)
-//            print("origin: ", humanBoundingBoxOnScreen.origin)
-//            print("x: ", humanBoundingBoxOnScreen.origin.x)
-//            print("size: ", humanBoundingBoxOnScreen.size)
-//            print("height: ", humanBoundingBoxOnScreen.size.height)
 
             let humanBoundingBoxPath = CGPath(rect: humanBoundingBoxOnScreen, transform: nil)
             let humanBoundingBoxShape = CAShapeLayer()
@@ -141,47 +134,24 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
             let ciImage = CIImage(cvPixelBuffer: image)
             let context = CIContext()
             let cgimage = context.createCGImage(ciImage, from: ciImage.extent)
-            let imageRef = cgimage?.cropping(to: humanBoundingBoxOnScreen)
-            let uiImage =  UIImage(cgImage: imageRef!)
-            UIImageWriteToSavedPhotosAlbum(uiImage, nil, nil, nil);
+            let cgimageCropped = cropImage(detectable: cgimage!, object: observedhuman)
+           
+            let uiImage =  UIImage(cgImage: cgimage!)
+            let uiImageCrop =  UIImage(cgImage: cgimageCropped!)
+            photocount += 1
+            if(photocount < 10){
+                UIImageWriteToSavedPhotosAlbum(uiImage, nil, nil, nil)
+                UIImageWriteToSavedPhotosAlbum(uiImageCrop, nil, nil, nil)
+            }
+           
+            let cropPixelBuffer = uiToPixelBuffer(from: uiImageCrop)
+            self.processImage(in: cropPixelBuffer!)
             
             
             return humanBoundingBoxShape
         })
 
         humansBoundingBoxes.forEach({ humanBoundingBox in self.view.layer.addSublayer(humanBoundingBox)
-            
-
-//            let ciImage = CIImage(cvPixelBuffer: image)
-//            let context = CIContext()
-//            if let cgimage = context.createCGImage(ciImage, from: ciImage.extent) {
-//                let uiImage =  UIImage(cgImage: cgimage)
-//                print("original size: ", uiImage.size)
-//                let imageNew = uiImage.cropping(to: humanBoundingBox.path?.boundingBox)
-////                UIImageWriteToSavedPhotosAlbum(uiImage, nil, nil, nil);
-//            }
-            
-            
-           
-//            let newImage = resizePixelBuffer(image,
-//                              cropX: Int((humanBoundingBox.path?.boundingBox.origin.x)!),
-//                              cropY: Int((humanBoundingBox.path?.boundingBox.origin.y)!),
-//                              cropWidth: CVPixelBufferGetWidth(image),
-//                              cropHeight: CVPixelBufferGetHeight(image),
-//                              scaleWidth: Int((humanBoundingBox.path?.boundingBox.width)!),
-//                              scaleHeight: Int((humanBoundingBox.path?.boundingBox.height)!))
-
-//            let ciImageNew = CIImage(cvPixelBuffer: newImage!)
-//            let contextNew = CIContext()
-//            if let cgimageNew = contextNew.createCGImage(ciImageNew, from: ciImageNew.extent) {
-//                let uiImageNew =  UIImage(cgImage: cgimageNew)
-//                UIImageWriteToSavedPhotosAlbum(uiImageNew, nil, nil, nil);
-//            }
-            
-            self.processImage(in: image)
-            
-            
-            
         })
         
        
@@ -189,17 +159,60 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     }
     
     
-//    private func cropImage(object: VNDetectedObjectObservation) -> CGImage? {
-//        let width = object.boundingBox.width * CGFloat(self.detectable.width)
-//        let height = object.boundingBox.height * CGFloat(self.detectable.height)
-//        let x = object.boundingBox.origin.x * CGFloat(self.detectable.width)
-//        let y = (1 - object.boundingBox.origin.y) * CGFloat(self.detectable.height) - height
-//
+    private func cropImage(detectable: CGImage, object: VNDetectedObjectObservation) -> CGImage? {
+        let width = object.boundingBox.width * CGFloat(detectable.width)
+        let height = object.boundingBox.height * CGFloat(detectable.height)
+        let x = object.boundingBox.origin.x * CGFloat(detectable.width)
+        let y = (1 - object.boundingBox.origin.y) * CGFloat(detectable.height) - height
+        let croppingRect = CGRect(x: x , y: y, width: width, height: height + (100))
+
 //        let croppingRect = CGRect(x: x, y: y, width: width, height: height)
-//        let image = self.detectable.cropping(to: croppingRect)
-//        return image
-//    }
+        let image = detectable.cropping(to: croppingRect)
+        return image
+    }
     
+    
+    func uiToPixelBuffer(from image: UIImage) -> CVPixelBuffer? {
+      let attrs = [kCVPixelBufferCGImageCompatibilityKey: kCFBooleanTrue, kCVPixelBufferCGBitmapContextCompatibilityKey: kCFBooleanTrue] as CFDictionary
+      var pixelBuffer : CVPixelBuffer?
+      let status = CVPixelBufferCreate(kCFAllocatorDefault, Int(image.size.width), Int(image.size.height), kCVPixelFormatType_32ARGB, attrs, &pixelBuffer)
+      guard (status == kCVReturnSuccess) else {
+        return nil
+      }
+
+      CVPixelBufferLockBaseAddress(pixelBuffer!, CVPixelBufferLockFlags(rawValue: 0))
+      let pixelData = CVPixelBufferGetBaseAddress(pixelBuffer!)
+
+      let rgbColorSpace = CGColorSpaceCreateDeviceRGB()
+      let context = CGContext(data: pixelData, width: Int(image.size.width), height: Int(image.size.height), bitsPerComponent: 8, bytesPerRow: CVPixelBufferGetBytesPerRow(pixelBuffer!), space: rgbColorSpace, bitmapInfo: CGImageAlphaInfo.noneSkipFirst.rawValue)
+
+      context?.translateBy(x: 0, y: image.size.height)
+      context?.scaleBy(x: 1.0, y: -1.0)
+
+      UIGraphicsPushContext(context!)
+      image.draw(in: CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height))
+      UIGraphicsPopContext()
+      CVPixelBufferUnlockBaseAddress(pixelBuffer!, CVPixelBufferLockFlags(rawValue: 0))
+
+      return pixelBuffer
+    }
+
+    func getAverageColor(inputImage: CIImage) -> UIColor? {
+    
+//        guard let inputImage = CIImage(image: self) else { return nil }
+        let extentVector = CIVector(x: inputImage.extent.origin.x, y: inputImage.extent.origin.y, z: inputImage.extent.size.width, w: inputImage.extent.size.height)
+
+        guard let filter = CIFilter(name: "CIAreaAverage", parameters: [kCIInputImageKey: inputImage, kCIInputExtentKey: extentVector]) else { return nil }
+        guard let outputImage = filter.outputImage else { return nil }
+
+        var bitmap = [UInt8](repeating: 0, count: 4)
+        let context = CIContext(options: [.workingColorSpace: kCFNull!])
+        context.render(outputImage, toBitmap: &bitmap, rowBytes: 4, bounds: CGRect(x: 0, y: 0, width: 1, height: 1), format: .RGBA8, colorSpace: nil)
+
+        return UIColor(red: CGFloat(bitmap[0]) / 255, green: CGFloat(bitmap[1]) / 255, blue: CGFloat(bitmap[2]) / 255, alpha: CGFloat(bitmap[3]) / 255)
+    }
+    
+
     private func clearDrawings() {
         self.drawings.forEach({ drawing in drawing.removeFromSuperlayer() })
     }
@@ -239,19 +252,10 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
             print("using accurate")
             requests = [textDetectionRequestAccurate]
         }
-//           let requests = [textDetectionRequest]
        let imageRequestHandler = VNImageRequestHandler(cvPixelBuffer: image,  options: [:])
-//           DispatchQueue.global(qos: .userInitiated).async {
-//               do {
-//                   try imageRequestHandler.perform(requests)
-//               } catch let error {
-//                   print("Error: \(error)")
-//               }
-//           }
          DispatchQueue.main.async {
             do {
                   try imageRequestHandler.perform(requests)
-//                  print("and here")
               } catch let error {
                   print("Error: \(error)")
               }
