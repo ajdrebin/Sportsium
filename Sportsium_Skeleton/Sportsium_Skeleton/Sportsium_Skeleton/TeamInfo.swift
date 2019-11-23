@@ -8,7 +8,7 @@
 
 import Foundation
 
-class TeamInfo {
+class TeamInfo: Codable {
     
     let cityLocation: String
     let league: String

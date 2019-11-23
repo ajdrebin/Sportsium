@@ -14,16 +14,16 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var home1: UILabel!
     
     struct Teams: Codable {
-        let orlandoPride: TeamInfo
-        let skyBlue: TeamInfo
-        let houstonDash: TeamInfo
-        let washingtonSpirit: TeamInfo
-        let northCarolinaCourage: TeamInfo
-        let reign: TeamInfo
-        let portlandThorns: TeamInfo
-        let chicagoRedStars: TeamInfo
-        let utahRoyals: TeamInfo
-
+        let orlandoPride  = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", playerList: [])
+        let skyBlue = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", playerList: [])
+        let houstonDash = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", playerList: [])
+        let washingtonSpirit = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", playerList: [])
+        let northCarolinaCourage = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", playerList: [])
+        let reign = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", playerList: [])
+        let portlandThorns = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", playerList: [])
+        let chicagoRedStars = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", playerList: [])
+        let utahRoyals = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", playerList: [])
+        
         enum CodingKeys: String, CodingKey {
            case orlandoPride = "orlando_pride"
            case skyBlue = "sky_blue"
@@ -36,63 +36,63 @@ class HomeViewController: UIViewController {
            case utahRoyals = "utah_royals"
        }
    }
-    
-    struct TeamInfo: Codable {
-        let cityLocation: String
-        let league: String
-        let dateFounded: String
-        let instagram: String
-        let currentWins: String
-        let twitter: String
-        let snapchat: String
-        let currentTies: String
-        let currentLosses: String
-        let fb: String
-        let headCoach: String
-        let stadium: String
-        let playerList: [Player]
 
-        enum CodingKeys: String, CodingKey {
-            case cityLocation = "city_location"
-            case league
-            case dateFounded = "date_founded"
-            case instagram
-            case currentWins = "current_wins"
-            case twitter, snapchat
-            case currentTies = "current_ties"
-            case currentLosses = "current_losses"
-            case fb
-            case headCoach = "head_coach"
-            case stadium
-            case playerList = "player_list"
-        }
-    }
-
-    struct Player: Codable {
-        let firstName: String
-        let lastName: String
-        let instagram: String
-        let hometown: String
-        let twitter: String
-        let number: String
-        let snapchat: String
-        let height: String
-        let fb: String
-        let DOB: String
-        let country: String
-        let playerId: Int
-        let position: String
-
-        enum CodingKeys: String, CodingKey {
-            case firstName = "first_name"
-            case lastName = "last_name"
-            case instagram, hometown, twitter, number, snapchat, height, fb
-            case DOB = "date_of_birth"
-            case country
-            case playerId = "player_id"
-            case position
-        }
-    }
+//    struct TeamInfo: Codable {
+//        let cityLocation: String
+//        let league: String
+//        let dateFounded: String
+//        let instagram: String
+//        let currentWins: String
+//        let twitter: String
+//        let snapchat: String
+//        let currentTies: String
+//        let currentLosses: String
+//        let fb: String
+//        let headCoach: String
+//        let stadium: String
+//        let playerList: [Player]
+//
+//        enum CodingKeys: String, CodingKey {
+//            case cityLocation = "city_location"
+//            case league
+//            case dateFounded = "date_founded"
+//            case instagram
+//            case currentWins = "current_wins"
+//            case twitter, snapchat
+//            case currentTies = "current_ties"
+//            case currentLosses = "current_losses"
+//            case fb
+//            case headCoach = "head_coach"
+//            case stadium
+//            case playerList = "player_list"
+//        }
+//    }
+//
+//    struct Player: Codable {
+//        let firstName: String
+//        let lastName: String
+//        let instagram: String
+//        let hometown: String
+//        let twitter: String
+//        let number: String
+//        let snapchat: String
+//        let height: String
+//        let fb: String
+//        let DOB: String
+//        let country: String
+//        let playerId: Int
+//        let position: String
+//
+//        enum CodingKeys: String, CodingKey {
+//            case firstName = "first_name"
+//            case lastName = "last_name"
+//            case instagram, hometown, twitter, number, snapchat, height, fb
+//            case DOB = "date_of_birth"
+//            case country
+//            case playerId = "player_id"
+//            case position
+//        }
+//    }
     
     @IBOutlet weak var homeLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
@@ -193,14 +193,14 @@ class HomeViewController: UIViewController {
         performSegue(withIdentifier: "ListTeams", sender: self)
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if(segue.identifier == "Game"){
-//                let displayVC = segue.destination as! GameInfoViewController
-//                displayVC.home = home
-//                displayVC.away = away
-//        }
-//    }
-//
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "Game"){
+                let displayVC = segue.destination as! GameInfoViewController
+                displayVC.home = home
+                displayVC.away = away
+        }
+    }
+
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        if(segue.identifier == "ListTeams"){
 //                let displayVC = segue.destination as! ListTeamsViewController

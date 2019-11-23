@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Player {
+class Player: Codable {
     
     let firstName: String
     let lastName: String

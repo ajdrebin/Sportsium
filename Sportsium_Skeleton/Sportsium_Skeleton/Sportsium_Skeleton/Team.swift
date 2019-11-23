@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Team {
+class Team: Codable {
     
     let orlandoPride: TeamInfo?
     let skyBlue: TeamInfo?
