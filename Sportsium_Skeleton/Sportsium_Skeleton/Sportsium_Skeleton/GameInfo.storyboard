@@ -26,7 +26,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ORL" translatesAutoresizingMaskIntoConstraints="NO" id="PdQ-59-Jhe">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="orlando_pride" translatesAutoresizingMaskIntoConstraints="NO" id="PdQ-59-Jhe">
                                         <rect key="frame" x="20" y="49" width="156" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -48,7 +48,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SEA" translatesAutoresizingMaskIntoConstraints="NO" id="YwV-Sx-E4a">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="reign" translatesAutoresizingMaskIntoConstraints="NO" id="YwV-Sx-E4a">
                                         <rect key="frame" x="2" y="49" width="223" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -980,7 +980,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2GK-Ro-cIg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1125" y="-195"/>
+            <point key="canvasLocation" x="1339" y="-202"/>
         </scene>
         <!--HomeViewController-->
         <scene sceneID="K3i-Vf-iz2">
@@ -1024,15 +1024,15 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ORL" width="55" height="55"/>
-        <image name="SEA" width="55" height="55"/>
         <image name="aperture" width="170.66667175292969" height="170.66667175292969"/>
         <image name="circle" width="104" height="104"/>
         <image name="explore" width="111" height="111"/>
         <image name="home" width="138.66667175292969" height="118"/>
+        <image name="orlando_pride" width="55" height="55"/>
+        <image name="reign" width="55" height="55"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="sTD-di-k7Z"/>
+        <segue reference="aFs-VY-2fu"/>
         <segue reference="tyR-TW-hOc"/>
     </inferredMetricsTieBreakers>
 </document>

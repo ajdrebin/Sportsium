@@ -84,7 +84,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <segue destination="32m-7B-bzd" kind="show" identifier="Game1" id="wsn-3x-0EZ"/>
+                                    <segue destination="32m-7B-bzd" kind="show" identifier="Game" id="wsn-3x-0EZ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Don't know the rules of the game?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3H-q8-Dcv">
@@ -106,7 +106,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <segue destination="32m-7B-bzd" kind="show" identifier="Game2" id="nP8-9l-fIv"/>
+                                    <segue destination="32m-7B-bzd" kind="show" identifier="Game" id="nP8-9l-fIv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WF7-b6-bxS">
@@ -114,7 +114,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <segue destination="32m-7B-bzd" kind="show" identifier="Game3" id="p5f-9K-Nod"/>
+                                    <segue destination="32m-7B-bzd" kind="show" identifier="Game" id="p5f-9K-Nod"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6J-1Q-97S">
@@ -265,7 +265,7 @@
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="Ufm-ne-vpY">
                     <connections>
-                        <segue destination="sKZ-XD-a28" kind="show" id="LZi-tO-JeI"/>
+                        <segue destination="sKZ-XD-a28" kind="show" identifier="ListTeams" id="LZi-tO-JeI"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="Uw2-UW-bcF"/>
@@ -326,6 +326,6 @@
         <image name="utah_royals" width="55" height="55"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="p5f-9K-Nod"/>
+        <segue reference="wsn-3x-0EZ"/>
     </inferredMetricsTieBreakers>
 </document>
