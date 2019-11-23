@@ -187,8 +187,6 @@ class HomeViewController: UIViewController {
         self.home = utahInfo
         self.away = northCarolinaInfo
        }
-        performSegue(withIdentifier: "Game", sender: self)
-        performSegue(withIdentifier: "ListTeams", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -196,7 +194,6 @@ class HomeViewController: UIViewController {
                 let displayVC = segue.destination as! GameInfoViewController
                 displayVC.home = self.home
                 displayVC.away = self.away
-//                print(home, away)
         }
     }
 
