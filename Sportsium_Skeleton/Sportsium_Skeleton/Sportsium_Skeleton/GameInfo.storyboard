@@ -980,7 +980,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2GK-Ro-cIg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1125" y="-195"/>
+            <point key="canvasLocation" x="1339" y="-202"/>
         </scene>
         <!--HomeViewController-->
         <scene sceneID="K3i-Vf-iz2">
@@ -1032,7 +1032,7 @@
         <image name="reign" width="55" height="55"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="sTD-di-k7Z"/>
+        <segue reference="aFs-VY-2fu"/>
         <segue reference="tyR-TW-hOc"/>
     </inferredMetricsTieBreakers>
 </document>
