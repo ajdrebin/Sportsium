@@ -34,13 +34,15 @@ class GameInfoViewController: UIViewController {
         
         var teamLogoImageView:UIImageView = UIImageView()
         var teamLogo2ImageView:UIImageView = UIImageView()
+        teamLogoImageView.tag = 1
+        teamLogoImageView.tag = 2
 
         // -----------------
         // make change here once team name is passed
         // -----------------
         
         
-        var teamLogo1:UIImage = UIImage(named:"houston_dash")!
+        var teamLogo1:UIImage = UIImage(named:home!)!
         var teamLogoTap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tappedTeam))
         
 //        teamLogoTap.delegate = self as? UIGestureRecognizerDelegate
@@ -52,7 +54,7 @@ class GameInfoViewController: UIViewController {
         teamLogoImageView.image = teamLogo1
         mainView.addSubview(teamLogoImageView)
         
-        var teamLogo2:UIImage = UIImage(named:"houston_dash")!
+        var teamLogo2:UIImage = UIImage(named:away!)!
         var teamLogo2Tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tappedTeam))
                 
         //        teamLogoTap.delegate = self as? UIGestureRecognizerDelegate
@@ -148,7 +150,7 @@ class GameInfoViewController: UIViewController {
           button.addTarget(self, action: #selector(releaseBtn), for: .touchUpInside)
           button.addTarget(self, action: #selector(releaseBtn), for: .touchUpOutside)
 
-          button.tag = i
+          button.tag = i + 11
           
           //x = x * 2.0
           y = y + 40
@@ -179,22 +181,39 @@ class GameInfoViewController: UIViewController {
       performSegue(withIdentifier: "PlayerInfo", sender: self)
     }
     
+    var sendTeam = ""
     @objc func tappedTeam(sender:AnyObject) {
         print("yoooooo")
+        var sender = sender
+        
+        if sender.tag == 2 {
+            sendTeam = away!
+        }
+        else {
+            sendTeam = home!
+        }
+        
         performSegue(withIdentifier: "Team", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "PlayerInfo"){
                 let displayVC = segue.destination as! PlayerInfoViewController
-            displayVC.player_obj = homePlayers[last_pressed]
-            displayVC.team_obj = teamsDict[home!]!
+            
+            if last_pressed > 10 {
+                displayVC.player_obj = awayPlayers[last_pressed - 11]
+                displayVC.team_obj = teamsDict[away!]!
+            }
+            else {
+                displayVC.player_obj = homePlayers[last_pressed]
+                displayVC.team_obj = teamsDict[home!]!
+            }
             displayVC.home_team_name = home
             displayVC.away_team_name = away
         }
         if(segue.identifier == "Team"){
                 let displayVC = segue.destination as! TeamInfoViewController
-            displayVC.home = teamsDict[home!]!
+            displayVC.home = teamsDict[sendTeam]!
             displayVC.home_team_name = home
             displayVC.away_team_name = away
         }
