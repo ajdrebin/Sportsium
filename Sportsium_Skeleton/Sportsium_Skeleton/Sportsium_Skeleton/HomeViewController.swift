@@ -91,16 +91,20 @@ struct Teams: Codable {
      }
  }
 
-// Global teams
+
+// GLOBAL VARIABLES
+var teamsDict = [String: TeamInfo]()
+
 var initiate = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", teamName: "", playerList: [])
 var teams = Teams(orlandoPride: initiate, skyBlue: initiate, houstonDash: initiate, washingtonSpirit: initiate, northCarolinaCourage: initiate, reign: initiate, portlandThorns: initiate, chicagoRedStars: initiate, utahRoyals: initiate)
+
+var home = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", teamName: "", playerList: [])
+var away = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", teamName: "", playerList: [])
 
 class HomeViewController: UIViewController {
     var chosenLeague = ""
     
     @IBOutlet weak var home1: UILabel!
-    
-
     @IBOutlet weak var homeLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var stadiumLabel: UILabel!
@@ -155,6 +159,15 @@ class HomeViewController: UIViewController {
 //                print(Constants)
 //
                 // Teams
+                teamsDict["orlando_pride"] = teams.orlandoPride
+                teamsDict["sky_blue"] = teams.skyBlue
+                teamsDict["houston_dash"] = teams.houstonDash
+                teamsDict["washington_spirit"] = teams.washingtonSpirit
+                teamsDict["north_carolina_courage"] = teams.northCarolinaCourage
+                teamsDict["reign"] = teams.reign
+                teamsDict["portland_thorns"] = teams.portlandThorns
+                teamsDict["chicago_red_stars"] = teams.chicagoRedStars
+                teamsDict["utah_royals"] = teams.utahRoyals
                 self.orlandoInfo = teams.orlandoPride
                 self.skyBlueInfo = teams.skyBlue
                 self.houstonInfo = teams.houstonDash

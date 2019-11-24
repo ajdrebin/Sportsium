@@ -22,6 +22,7 @@ class GameInfoViewController: UIViewController {
         homePlayers = home!.playerList  // all player objects
         awayPlayers = away!.playerList
         print(homePlayers)
+        print("dict:", teamsDict["orlando_pride"])
         makeButtons()
     }
     
