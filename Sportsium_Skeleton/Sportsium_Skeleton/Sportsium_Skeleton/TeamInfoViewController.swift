@@ -298,7 +298,7 @@ class TeamInfoViewController: UIViewController {
     label.adjustsFontSizeToFitWidth=true;
     
     
-    label.font = UIFont(name:"HelveticaNeue-Bold", size: 20.0)
+    //label.font = UIFont(name:"HelveticaNeue-Bold", size: 20.0)
     
     
     
