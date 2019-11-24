@@ -20,6 +20,9 @@ class PlayerInfoViewController: UIViewController {
   var teamName = "orlando_pride"
   
   
+  var home_team_name:String!
+  var away_team_name:String!
+  
   var playerName = "Joanna Boyles"
   var playerNum = "25"
   var playerPos = "Midfielder"
@@ -33,7 +36,7 @@ class PlayerInfoViewController: UIViewController {
   
   var player_obj = Player(firstName: "", lastName: "", instagram: "", hometown: "", twitter: "", number: "", snapchat: "", height: "", fb: "", DOB: "", country: "", playerId: 0, position: "")
 
-  var team_obj = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", playerList: [])
+  var team_obj = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", teamName: "", playerList: [])
   
   
   
@@ -391,6 +394,9 @@ class PlayerInfoViewController: UIViewController {
       if(segue.identifier == "TeamInfo") {
               let displayVC = segue.destination as! TeamInfoViewController
               displayVC.home = team_obj
+        displayVC.home_team_name = home_team_name
+         displayVC.away_team_name = away_team_name
+        
 
       }
   }

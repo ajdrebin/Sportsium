@@ -10,7 +10,7 @@
         <!--PlayerInfo-->
         <scene sceneID="hME-Fe-1ab">
             <objects>
-                <viewController storyboardIdentifier="PlayerInfoViewController" title="PlayerInfo" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Zbu-NP-nmN" customClass="PlayerInfoViewController" customModule="Sportsium" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PlayerInfoViewController" title="PlayerInfo" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Zbu-NP-nmN" customClass="PlayerInfoViewController" customModule="Sportsium_Skeleton" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pvu-uA-z70">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -66,10 +66,10 @@
             </objects>
             <point key="canvasLocation" x="-20.289855072463769" y="75"/>
         </scene>
-        <!--ViewController-->
+        <!--HomeViewController-->
         <scene sceneID="7nx-bF-ATj">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="ViewController" id="uGj-4X-aV0" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Home" referencedIdentifier="HomeViewController" id="uGj-4X-aV0" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="bIb-v8-PFS"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ga-J2-SWC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

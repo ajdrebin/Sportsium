@@ -21,23 +21,34 @@
                                     <constraint firstAttribute="height" constant="579" id="6od-mC-mTN"/>
                                 </constraints>
                             </imageView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ivo-Xa-PKd">
-                                <rect key="frame" x="100" y="731" width="175" height="32"/>
-                                <segments>
-                                    <segment title="Fast"/>
-                                    <segment title="Accurate"/>
-                                </segments>
-                            </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e7M-ff-acY">
-                                <rect key="frame" x="128" y="693" width="34" height="30"/>
-                                <state key="normal" title="Start"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e7M-ff-acY">
+                                <rect key="frame" x="96" y="693" width="66" height="30"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.clipToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PWT-l9-ox9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69N-TW-dNU">
-                                <rect key="frame" x="203" y="693" width="32" height="30"/>
-                                <state key="normal" title="Stop"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69N-TW-dNU">
+                                <rect key="frame" x="203" y="693" width="66" height="30"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Stop">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.clipToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="StopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Z9-Ae-aqP"/>
                                 </connections>
@@ -49,27 +60,39 @@
                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Identify a Player! Press the start button and hold your phone up to the field to get information on a player." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CVn-Et-tuK">
+                                <rect key="frame" x="24" y="258" width="326" height="188"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Navbar placeholder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LbH-Nm-y9G">
+                                <rect key="frame" x="0.0" y="731" width="375" height="81"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="9ag-Qc-aMX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0k7-su-hFO"/>
-                            <constraint firstItem="9ag-Qc-aMX" firstAttribute="centerX" secondItem="Ivo-Xa-PKd" secondAttribute="centerX" id="1xf-9S-bGy"/>
                             <constraint firstItem="9ag-Qc-aMX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="3S6-K1-Jm2"/>
                             <constraint firstItem="e7M-ff-acY" firstAttribute="top" secondItem="9ag-Qc-aMX" secondAttribute="bottom" constant="30" id="Dpw-DG-iZs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="69N-TW-dNU" secondAttribute="trailing" constant="140" id="Ghu-aM-yFK"/>
                             <constraint firstItem="69N-TW-dNU" firstAttribute="top" secondItem="9ag-Qc-aMX" secondAttribute="bottom" constant="30" id="eBa-GN-jug"/>
-                            <constraint firstItem="69N-TW-dNU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="e7M-ff-acY" secondAttribute="trailing" symbolic="YES" id="f0r-3Z-BAk"/>
-                            <constraint firstItem="Ivo-Xa-PKd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="hs9-Cc-f5I"/>
+                            <constraint firstItem="69N-TW-dNU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="e7M-ff-acY" secondAttribute="trailing" constant="8" symbolic="YES" id="f0r-3Z-BAk"/>
                             <constraint firstItem="e7M-ff-acY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="128" id="mQc-2n-6p7"/>
                             <constraint firstItem="9ag-Qc-aMX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pAI-Ka-OdD"/>
-                            <constraint firstItem="Ivo-Xa-PKd" firstAttribute="top" secondItem="9ag-Qc-aMX" secondAttribute="bottom" constant="68" id="tJr-mt-dE6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="camView" destination="9ag-Qc-aMX" id="gh1-gR-17b"/>
+                        <outlet property="helpLabel" destination="CVn-Et-tuK" id="jtP-W2-lXf"/>
                         <outlet property="numberLabel" destination="4j6-Wv-MbS" id="QPy-S7-ZSu"/>
-                        <outlet property="speedSwitch" destination="Ivo-Xa-PKd" id="7Ru-55-9Kg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
