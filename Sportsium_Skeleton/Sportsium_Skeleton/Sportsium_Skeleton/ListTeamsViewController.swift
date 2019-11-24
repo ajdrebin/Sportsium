@@ -9,61 +9,69 @@
 import Foundation
 
 class ListTeamsViewController: UIViewController {
-    
-    var orlandoInfo: TeamInfo?
-    var skyBlueInfo: TeamInfo?
-    var houstonInfo: TeamInfo?
-    var washingtonInfo: TeamInfo?
-    var northCarolinaInfo: TeamInfo?
-    var reignInfo: TeamInfo?
-    var portlandInfo: TeamInfo?
-    var chicagoInfo: TeamInfo?
-    var utahInfo: TeamInfo?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        let urlString = "http://159.89.139.18/sports_check/?league=NWSL"
-        guard let url = URL(string: urlString) else { return }
-        
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
-        if error != nil {
-            print(error!.localizedDescription)
         }
+    
+        func makeButtons() {
+    //      var buttons = [UIButton]()
+          var button : UIButton
 
-        guard let data = data else { return }
-            do {
-                // 3
-                //Decode data
-                let teams = try JSONDecoder().decode(Teams.self, from: data)
-                
-                print(teams)
-                // Teams
-                self.orlandoInfo = teams.orlandoPride
-                self.skyBlueInfo = teams.skyBlue
-                self.houstonInfo = teams.houstonDash
-                self.washingtonInfo = teams.washingtonSpirit
-                self.northCarolinaInfo = teams.northCarolinaCourage
-                self.reignInfo = teams.reign
-                self.portlandInfo = teams.portlandThorns
-                self.chicagoInfo = teams.chicagoRedStars
-                self.utahInfo = teams.utahRoyals
-                
-                // 4
-                //Get back to the main queue
-//                DispatchQueue.main.async {
-//                    self.homeLabel.text = String(JSONData.orlando_pride)
-//                }
-            } catch let jsonError {
-                print(jsonError)
+          var x :CGFloat = 0
+          var y :CGFloat = 250.0
+
+            for (i, teamName) in teamsDict.keys.enumerated() {
+            if i > 10 {
+                break
             }
-            // 5
-            }.resume()
-        
-//        print(orlandoInfo!.cityLocation)
-        
+                
+            button = UIButton()
+            button.tag = i
+            // x, y, width, height
+            
+
+
+            let screenSize = UIScreen.main.bounds
+            let screenWidth = screenSize.width
+
+
+            button.frame = CGRect(x: x, y: y, width: screenWidth/2, height: 40.0)
+            if i % 2 == 0 {
+              button.backgroundColor = UIColor.white
+            }
+            else{
+              button.backgroundColor = UIColor.init(displayP3Red: 221/255, green: 240/255, blue: 1, alpha: 1)
+            }
+
+            button.setTitleColor(UIColor.init(displayP3Red: 11/255, green: 96/255, blue: 168/255, alpha: 1), for: UIControl.State.normal)
+
+            //Allow for multi line text \n separated.
+            button.titleLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping;
+                button.setTitle(teamsDict[teamName]?.teamName, for: UIControl.State.normal)
+
+
+//            button.addTarget(self, action: #selector(pressBtn), for: UIControl.Event.touchDown)
+//            button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+//            button.addTarget(self, action: #selector(releaseBtn), for: .touchUpInside)
+//            button.addTarget(self, action: #selector(releaseBtn), for: .touchUpOutside)
+
+            button.tag = i
+            
+            //x = x * 2.0
+            y = y + 40
+            
+            button.titleLabel?.font = .systemFont(ofSize: 11)
+            
+//            mainView.addSubview(button)
+
+          }
+            
         }
+        
+    
         weak var home: UIImageView!
         weak var camera: UIImageView!
         weak var listTeams: UIImageView!
