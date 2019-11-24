@@ -83,9 +83,6 @@
                                 <rect key="frame" x="0.0" y="256" width="375" height="134"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <connections>
-                                    <segue destination="32m-7B-bzd" kind="show" identifier="Game" id="wsn-3x-0EZ"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Don't know the rules of the game?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3H-q8-Dcv">
                                 <rect key="frame" x="11" y="123" width="258" height="20"/>
@@ -105,17 +102,11 @@
                                 <rect key="frame" x="0.0" y="403" width="375" height="134"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <connections>
-                                    <segue destination="32m-7B-bzd" kind="show" identifier="Game" id="nP8-9l-fIv"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WF7-b6-bxS">
                                 <rect key="frame" x="0.0" y="548" width="375" height="134"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <connections>
-                                    <segue destination="32m-7B-bzd" kind="show" identifier="Game" id="p5f-9K-Nod"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6J-1Q-97S">
                                 <rect key="frame" x="61" y="561" width="40" height="17"/>
@@ -254,13 +245,14 @@
                         <outlet property="game1" destination="EQ3-Ip-XE5" id="ntv-cu-d1n"/>
                         <outlet property="game2" destination="VGN-UR-PRm" id="fnn-eq-MvO"/>
                         <outlet property="game3" destination="WF7-b6-bxS" id="wx2-mo-Bjo"/>
+                        <segue destination="32m-7B-bzd" kind="show" identifier="Game" id="dQA-w4-SDm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pXA-Ox-rLL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="MOi-Ar-otW"/>
                 <tapGestureRecognizer id="4gi-py-fht">
                     <connections>
-                        <segue destination="80j-ht-4KK" kind="show" id="j7c-rO-2l4"/>
+                        <segue destination="80j-ht-4KK" kind="show" identifier="Camera" id="j7c-rO-2l4"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="Ufm-ne-vpY">
@@ -325,7 +317,4 @@
         <image name="reign" width="55" height="55"/>
         <image name="utah_royals" width="55" height="55"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="wsn-3x-0EZ"/>
-    </inferredMetricsTieBreakers>
 </document>

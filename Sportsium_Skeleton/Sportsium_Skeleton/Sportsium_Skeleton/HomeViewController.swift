@@ -145,7 +145,9 @@ class HomeViewController: UIViewController {
                 // 3
                 //Decode data
                 let teams = try JSONDecoder().decode(Teams.self, from: data)
-                
+//                Constants = teams
+//                print(Constants)
+//
                 // Teams
                 self.orlandoInfo = teams.orlandoPride
                 self.skyBlueInfo = teams.skyBlue
@@ -172,7 +174,6 @@ class HomeViewController: UIViewController {
        let btn: UIButton = sender
     
        if btn.tag == 1 {
-        print(chicagoInfo)
         // Set Team Info to Pass
         self.home = chicagoInfo
         self.away = orlandoInfo
@@ -187,6 +188,7 @@ class HomeViewController: UIViewController {
         self.home = utahInfo
         self.away = northCarolinaInfo
        }
+        performSegue(withIdentifier: "Game", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -211,5 +213,21 @@ class HomeViewController: UIViewController {
 //                displayVC.utahInfo = utahInfo
 //        }
 //    }
+//
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if(segue.identifier == "Camera"){
+//                let displayVC = segue.destination as! CameraViewController
+//                displayVC.orlandoInfo = orlandoInfo
+//                displayVC.skyBlueInfo = skyBlueInfo
+//                displayVC.houstonInfo = houstonInfo
+//                displayVC.washingtonInfo = washingtonInfo
+//                displayVC.northCarolinaInfo = northCarolinaInfo
+//                displayVC.reignInfo = reignInfo
+//                displayVC.portlandInfo = portlandInfo
+//                displayVC.chicagoInfo = chicagoInfo
+//                displayVC.utahInfo = utahInfo
+//        }
+//    }
+    
 }
 
