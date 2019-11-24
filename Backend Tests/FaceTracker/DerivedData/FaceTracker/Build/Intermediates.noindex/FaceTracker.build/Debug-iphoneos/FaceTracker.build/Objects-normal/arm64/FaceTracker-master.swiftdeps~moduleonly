@@ -1,6 +1,6 @@
 version: "Apple Swift version 5.1 (swiftlang-1100.0.270.13 clang-1100.0.33.7)"
 options: "0b38eae4030bfd3a133b572cd5347b9b"
-build_time: [1574548042, 796242000]
+build_time: [1574620009, 823768000]
 inputs:
-  "/Users/Alina/Desktop/Sportsium/Backend Tests/FaceTracker/FaceTracker/ViewController.swift": [1574548042, 653590356]
+  "/Users/Alina/Desktop/Sportsium/Backend Tests/FaceTracker/FaceTracker/ViewController.swift": [1574620001, 459723956]
   "/Users/Alina/Desktop/Sportsium/Backend Tests/FaceTracker/FaceTracker/AppDelegate.swift": [1557343144, 0]

@@ -17,16 +17,28 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     
     
     @IBOutlet weak var numberLabel: UILabel!
-    @IBOutlet weak var speedSwitch: UISegmentedControl!
+//    @IBOutlet weak var speedSwitch: UISegmentedControl!
+    @IBOutlet weak var helpLabel: UILabel!
     @IBOutlet weak var camView: UIImageView!
+    var detectedPlayersArr:[(team: String, number: String)] = []
+    
+//    var teamColorCodes:[(team: String, homeColor: (red: Int, green: Int, blue: Int), awayColor: (red: Int, green: Int, blue: Int))] = [(team: "Orlando", homeColor: (red: 96, green: 70, blue: 161), awayColor: (red: 26, green: 82, blue: 228)), (team: "Chicago", homeColor: (red: 96, green: 70, blue: 161), awayColor: (red: 26, green: 82, blue: 228))]
+    
+    var teamColorCodes: [String: (homeColor: (red: Int, green: Int, blue: Int), awayColor: (red: Int, green: Int, blue: Int))] = [:]
+    
+    let homeTeam = "Orlando"
+    let awayTeam = "Chicago"
+    
+    
+//    let homeColor = teamcol
     
     @IBAction func startButton(_ sender: Any) {
         photocount = 0
         is_stopped = false
         self.captureSession.startRunning()
-//        self.addCameraInput()
         self.showCameraFeed()
-//        self.getCameraFrames()
+        self.helpLabel.text = ""
+        self.detectedPlayersArr.removeAll()
     }
     
     var is_stopped = false
@@ -37,6 +49,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         self.clearDrawings()
         self.clearDrawings()
         self.numberLabel.text = "#"
+        self.helpLabel.text = "Identify a Player! Press the start button and hold your phone up to the field to get information on a player."
         self.previewLayer.removeFromSuperlayer()
         
     }
@@ -48,10 +61,18 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.bringSubviewToFront(self.helpLabel)
+        self.populateColors()
         self.addCameraInput()
         self.showCameraFeed()
         self.getCameraFrames()
-//        self.captureSession.startRunning()
+    }
+    
+    func populateColors() {
+        self.teamColorCodes["Orlando"] = (homeColor: (red: 96, green: 70, blue: 161), awayColor: (red: 26, green: 82, blue: 228))
+        self.teamColorCodes["Chicago"] = (homeColor: (red: 96, green: 70, blue: 161), awayColor: (red: 26, green: 82, blue: 228))
+        self.teamColorCodes["North Carolina"] = (homeColor: (red: 96, green: 70, blue: 161), awayColor: (red: 26, green: 82, blue: 228))
+        self.teamColorCodes["Utah"] = (homeColor: (red: 96, green: 70, blue: 161), awayColor: (red: 26, green: 82, blue: 228))
     }
     
     override func viewDidLayoutSubviews() {
@@ -84,12 +105,8 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     }
     
     private func showCameraFeed() {
-        
-//        self.view.layer.addSublayer(self.previewLayer)
         self.view.layer.insertSublayer(self.previewLayer, at: 0)
         self.previewLayer.frame = self.view.frame
-//        camView.layer.addSublayer(self.previewLayer)
-//        self.previewLayer.frame = camView.layer.bounds
         self.previewLayer.videoGravity = .resizeAspectFill
        
     }
@@ -105,6 +122,9 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     }
     
     private func detecthuman(in image: CVPixelBuffer) {
+        if(self.is_stopped){
+            return
+        }
         let humanDetectionRequest = VNDetectHumanRectanglesRequest(completionHandler: { (request: VNRequest, error: Error?) in
             DispatchQueue.main.async {
                 if let results = request.results as? [VNDetectedObjectObservation] {
@@ -121,7 +141,9 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     var photocount = 0
     private func handleHumanDetectionResults(_ observedhumans: [VNDetectedObjectObservation], in image: CVPixelBuffer) {
         self.clearDrawings()
-        
+        if(self.is_stopped){
+            return
+        }
         
         let humansBoundingBoxes: [CAShapeLayer] = observedhumans.map({ (observedhuman: VNDetectedObjectObservation) -> CAShapeLayer in
             let humanBoundingBoxOnScreen = self.previewLayer.layerRectConverted(fromMetadataOutputRect: observedhuman.boundingBox)
@@ -135,27 +157,34 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
             let ciImage = CIImage(cvPixelBuffer: image)
             let context = CIContext()
             let cgimage = context.createCGImage(ciImage, from: ciImage.extent)
-            let uiImage =  UIImage(cgImage: cgimage!)
+//            let uiImage =  UIImage(cgImage: cgimage!)
             if(photocount < 20){
-                UIImageWriteToSavedPhotosAlbum(uiImage, nil, nil, nil)
+//                UIImageWriteToSavedPhotosAlbum(uiImage, nil, nil, nil)
             }
             let cgimageCropped = cropImage(detectable: cgimage!, object: observedhuman)
             let uiImageCrop =  UIImage(cgImage: cgimageCropped!)
             photocount += 1
             if(photocount < 20){
-                UIImageWriteToSavedPhotosAlbum(uiImageCrop, nil, nil, nil)
+//                UIImageWriteToSavedPhotosAlbum(uiImageCrop, nil, nil, nil)
+            
             }
            
             let cropPixelBuffer = uiToPixelBuffer(from: uiImageCrop)
             self.processImage(in: cropPixelBuffer!)
         
-            if(detectedNumber != "-1"){
-                let team = findColor(image: uiImageCrop)
-                detectedNumber = "-1"
-                print("team: ", team)
+            if(self.detectedNumber != "-1"){
+                let team = self.findColor(image: uiImageCrop)
+                let tup = (team: team, number: self.detectedNumber)
+                print("tup: ", tup)
+                if(team != "no team found" && !contains(a: self.detectedPlayersArr, v: tup)){
+                    self.detectedPlayersArr.append(tup)
+                    print(self.detectedPlayersArr)
+                }
+                
+                self.detectedNumber = "-1"
             }
             else{
-                print("no number detected")
+//                print("no number detected")
             }
             
             
@@ -170,8 +199,16 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         self.drawings = humansBoundingBoxes
     }
     
+    func contains(a:[(team: String, number: String)], v:(team: String, number: String)) -> Bool {
+      let (c1, c2) = v
+      for (v1, v2) in a { if v1 == c1 && v2 == c2 { return true } }
+      return false
+    }
     
     private func cropImage(detectable: CGImage, object: VNDetectedObjectObservation) -> CGImage? {
+        if(self.is_stopped){
+            return detectable
+        }
         let width = object.boundingBox.width * CGFloat(detectable.width)
         let height = object.boundingBox.height * CGFloat(detectable.height)
         let x = object.boundingBox.origin.x * CGFloat(detectable.width)
@@ -210,7 +247,6 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     }
 
     func getAverageColor(inputImage: CIImage) -> UIColor? {
-//        guard let inputImage = CIImage(image: self) else { return nil }
         let extentVector = CIVector(x: inputImage.extent.origin.x, y: inputImage.extent.origin.y, z: inputImage.extent.size.width, w: inputImage.extent.size.height)
 
         guard let filter = CIFilter(name: "CIAreaAverage", parameters: [kCIInputImageKey: inputImage, kCIInputExtentKey: extentVector]) else { return nil }
@@ -233,14 +269,19 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     }
     
     func findColor(image: UIImage) -> String{
-        let homeTeam = (red: 96, green: 70, blue: 161)
-        let awayTeam = (red: 235, green: 235, blue: 8)
+        if(self.is_stopped){
+            return "stopping, no team found"
+        }
+//        let homeTeam = (red: 96, green: 70, blue: 161)
+//        let awayTeam = (red: 26, green: 82, blue: 228)
+        let homeColor = self.teamColorCodes[self.homeTeam]?.homeColor
+        let awayColor = self.teamColorCodes[self.awayTeam]?.awayColor
         let tolerance = 30
         var homeCount = 0
         var awayCount = 0
         
-        print("height: ", Int(image.size.height))
-        print("width: ", Int(image.size.width))
+//        print("height: ", Int(image.size.height))
+//        print("width: ", Int(image.size.width))
         
         for yCo in (0 ..< Int(image.size.height)).reversed() {
             for xCo in 0 ..< Int(image.size.width) {
@@ -250,42 +291,41 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
                 let green = Int(round(pixelComps.green * 255))
                 let blue = Int(round(pixelComps.blue * 255))
                 
-                if(abs(red - homeTeam.red) <= tolerance &&
-                   abs(green - homeTeam.green) <= tolerance &&
-                   abs(blue - homeTeam.blue) <= tolerance){
+                if(abs(red - homeColor!.red) <= tolerance &&
+                    abs(green - homeColor!.green) <= tolerance &&
+                   abs(blue - homeColor!.blue) <= tolerance){
         
                     homeCount = homeCount + 1
                 }
-                if(abs(red - awayTeam.red) <= tolerance &&
-                   abs(green - awayTeam.green) <= tolerance &&
-                   abs(blue - awayTeam.blue) <= tolerance){
+                if(abs(red - awayColor!.red) <= tolerance &&
+                   abs(green - awayColor!.green) <= tolerance &&
+                   abs(blue - awayColor!.blue) <= tolerance){
 //                    print("red: ", red, " green: ", green, "blue: ", blue)
                     awayCount = awayCount + 1
                 }
                 
-//                if(homeCount >= 300 || awayCount >= 300){
-//                    if(homeCount >= awayCount){
-//                        print("home count: ", homeCount)
-//                        print("away count: ", awayCount)
-//                        return "home"
-//                    }
-//                    else{
-//                        print("home count: ", homeCount)
-//                        print("away count: ", awayCount)
-//                        return "away"
-//                    }
-//                }
+                if(homeCount >= 1200){
+                    print("home count: ", homeCount)
+                    print("away count: ", awayCount)
+                    return "home"
+                }
+                if(awayCount >= 1200){
+                    print("home count: ", homeCount)
+                    print("away count: ", awayCount)
+                    return "away"
+                }
             }
+            
         }
         print("home count: ", homeCount)
         print("away count: ", awayCount)
-        if(homeCount >= awayCount && homeCount >= 300){
+        if(homeCount >= awayCount && homeCount >= 500){
             return "home"
         }
-        if(awayCount <= homeCount && awayCount >= 300){
+        if(awayCount >= homeCount && awayCount >= 500){
             return "away"
         }
-        return "no team found sdabfbaf"
+        return "no team found"
         
     }
     
@@ -311,7 +351,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     
     lazy var textDetectionRequestFast: VNRecognizeTextRequest = {
            let request = VNRecognizeTextRequest(completionHandler: self.handleDetectedText)
-        let speed = self.speedSwitch.selectedSegmentIndex
+//        let speed = self.speedSwitch.selectedSegmentIndex
             request.recognitionLevel = .fast
            
            request.usesLanguageCorrection = false
@@ -322,7 +362,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     
     lazy var textDetectionRequestAccurate: VNRecognizeTextRequest = {
                let request = VNRecognizeTextRequest(completionHandler: self.handleDetectedText)
-            let speed = self.speedSwitch.selectedSegmentIndex
+//            let speed = self.speedSwitch.selectedSegmentIndex
                 request.recognitionLevel = .accurate
                
                request.usesLanguageCorrection = false
@@ -332,16 +372,19 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
            }()
        
     func processImage(in image: CVPixelBuffer) {
-        let speed = self.speedSwitch.selectedSegmentIndex
-        var requests = [textDetectionRequestFast]
-        if(speed == 0){
-//            print("using fast")
-            requests = [textDetectionRequestFast]
+        if(self.is_stopped){
+            return
         }
-        else{
-//            print("using accurate")
-            requests = [textDetectionRequestAccurate]
-        }
+//        let speed = self.speedSwitch.selectedSegmentIndex
+        let requests = [textDetectionRequestFast]
+//        if(speed == 0){
+////            print("using fast")
+//            requests = [textDetectionRequestFast]
+//        }
+//        else{
+////            print("using accurate")
+//            requests = [textDetectionRequestAccurate]
+//        }
        let imageRequestHandler = VNImageRequestHandler(cvPixelBuffer: image,  options: [:])
          DispatchQueue.main.async {
             do {
@@ -354,16 +397,15 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     
     var detectedNumber = "-1"
     fileprivate func handleDetectedText(request: VNRequest?, error: Error?) {
-//        print("in handle detected text")
+        if(self.is_stopped){
+            return
+        }
         if let error = error {
-    //        presentAlert(title: "Error", message: error.localizedDescription)
             print("Error: ", error.localizedDescription)
             return
         }
         guard let results = request?.results, results.count > 0 else {
-    //        presentAlert(title: "Error", message: "No text was found.")
-            print("Error: no text was found")
-//            detectedNumber = "-1"
+//            print("Error: no text was found")
             return
     }
 
@@ -373,11 +415,8 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
                 let text_int = Int(text.string)
                 if(text_int != nil){
                     if(text_int! >= 0 && text_int! <= 66){
-//                        print("HIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIT")
-                        print("text: ", text.string)
                         self.numberLabel.text = text.string
-                        detectedNumber = text.string
-//                        return text.string
+                        self.detectedNumber = text.string
                     }
                 }
             }

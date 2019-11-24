@@ -1,0 +1,72 @@
+Red Stars v Pride
+Reign FC v Portland thorns
+Utah Royals v North Carolina Courage
+
+						Red Stars Home
+						RGB (92, 106, 137)
+						RGB (173, 195, 245)
+						RGB (128, 159, 202)
+						RGB (81, 107, 146)
+						RGB (85, 104, 133)
+						average (112, 134, 173)
+
+Red Stars Away
+RGB (169, 172, 161)
+RGB (229, 232, 228)
+RGB (211, 216, 211)
+RGB (226, 228, 228)
+RGB (229, 232, 228)
+average (213, 216, 211)
+
+Orlando Pride Home
+RGB (41, 15, 86)
+RGB (106, 79, 156)
+RGB (129, 99, 196)
+RGB (79, 55, 157)
+RGB (28, 14, 84)
+average (77, 52, 136)
+
+						Orlando Pride Away
+						RGB (234, 226, 242)
+						RGB (222, 212, 233)
+						RGB (212, 202, 230)
+						RGB (255, 250, 255)
+						RGB (114, 116, 134)
+						average (208, 202, 219)
+
+
+
+Reign FC Home
+RGB (6, 11, 30)
+RGB (19, 27, 47)
+RGB (13, 28, 47)
+RGB (10, 24 , 38)
+RGB (33, 40, 76)
+average (17, 26, 47)
+
+
+Portland Thorns Away
+RGB (149, 167, 203)
+RGB (230, 230, 255)
+RGB (240, 247, 255)
+RGB (161, 175, 212)
+RGB (169, 187, 225)
+average (190, 201, 230)
+
+
+
+Utah Royals Home
+RGB (211, 159, 1)
+RGB (203, 115, 0)
+RGB (143, 87, 0)
+RGB (255, 190, 43)
+RGB (243, 158, 0)
+average (211, 142, 9)
+
+North Carolina Courage Away
+RGB (249, 233, 249)
+RGB (226, 214, 234)
+RGB (252, 245, 255)
+RGB (221, 206, 238)
+RGB (219, 210, 248)
+average (233, 222, 245)
