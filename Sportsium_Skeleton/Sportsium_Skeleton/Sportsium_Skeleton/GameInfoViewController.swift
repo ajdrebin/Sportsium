@@ -17,11 +17,12 @@ class GameInfoViewController: UIViewController {
     var awayPlayers:[Player] = []
     
     override func viewDidLoad() {
+        print("ypppppppppp")
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         homePlayers = home!.playerList  // all player objects
         awayPlayers = away!.playerList
-        print(homePlayers)
+        print(home)
         makeButtons()
     }
     
@@ -33,8 +34,16 @@ class GameInfoViewController: UIViewController {
       var y :CGFloat = 250.0
         
         var teamLogoImageView:UIImageView = UIImageView()
+        var teamLogo2ImageView:UIImageView = UIImageView()
+
+        // -----------------
+        // make change here once team name is passed
+        // -----------------
+        
+        
         var teamLogo1:UIImage = UIImage(named:"houston_dash")!
         var teamLogoTap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tappedTeam))
+        
 //        teamLogoTap.delegate = self as? UIGestureRecognizerDelegate
         teamLogoImageView.addGestureRecognizer(teamLogoTap)
         teamLogoImageView.isUserInteractionEnabled = true
@@ -43,6 +52,18 @@ class GameInfoViewController: UIViewController {
         teamLogoImageView.contentMode = UIView.ContentMode.scaleAspectFit;
         teamLogoImageView.image = teamLogo1
         mainView.addSubview(teamLogoImageView)
+        
+        var teamLogo2:UIImage = UIImage(named:"houston_dash")!
+        var teamLogo2Tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tappedTeam))
+                
+        //        teamLogoTap.delegate = self as? UIGestureRecognizerDelegate
+        teamLogo2ImageView.addGestureRecognizer(teamLogo2Tap)
+        teamLogo2ImageView.isUserInteractionEnabled = true
+        
+        teamLogo2ImageView.frame = CGRect(x: 250, y: 125, width: 75, height: 75)
+        teamLogo2ImageView.contentMode = UIView.ContentMode.scaleAspectFit;
+        teamLogo2ImageView.image = teamLogo2
+        mainView.addSubview(teamLogo2ImageView)
 
       for (i, playerInd) in homePlayers.enumerated() {
         if i > 10 {
@@ -50,6 +71,7 @@ class GameInfoViewController: UIViewController {
         }
         print(playerInd.firstName)
         button = UIButton()
+        button.tag = i
         // x, y, width, height
         
 
@@ -91,6 +113,8 @@ class GameInfoViewController: UIViewController {
         
         y = 250
         
+        
+        
         for (i, playerInd) in awayPlayers.enumerated() {
           if i > 10 {
               break
@@ -117,7 +141,7 @@ class GameInfoViewController: UIViewController {
 
           //Allow for multi line text \n separated.
           button.titleLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping;
-          button.setTitle(playerInd.number + "\t\t" + playerInd.firstName + "\n" + playerInd.position, for: UIControl.State.normal)
+            button.setTitle(playerInd.number + "\t\t" + playerInd.firstName + " " + playerInd.lastName + "\n" + playerInd.position, for: UIControl.State.normal)
 
 
           button.addTarget(self, action: #selector(pressBtn), for: UIControl.Event.touchDown)
@@ -148,11 +172,11 @@ class GameInfoViewController: UIViewController {
       btn.setTitleColor(UIColor.init(displayP3Red: 11/255, green: 96/255, blue: 168/255, alpha: 1), for: UIControl.State.normal)
     }
     
-    var last_pressed = "none"
+    var last_pressed = 0
     @objc func buttonAction(sender: UIButton!) {
       let btn: UIButton = sender
 //      print(btn.titleLabel?.text)
-      last_pressed = btn.titleLabel!.text!
+      last_pressed = btn.tag
       performSegue(withIdentifier: "PlayerInfo", sender: self)
     }
     
@@ -164,8 +188,11 @@ class GameInfoViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "PlayerInfo"){
                 let displayVC = segue.destination as! PlayerInfoViewController
-                displayVC.button_text = "yeeeer"
-                
+            displayVC.player_obj = homePlayers[last_pressed]
+        }
+        if(segue.identifier == "Team"){
+                let displayVC = segue.destination as! TeamInfoViewController
+            displayVC.home = home!
         }
     }
     
