@@ -8,15 +8,16 @@
 
 import UIKit
 
+
+
+
+
+
+
+
 class TeamInfoViewController: UIViewController {
   
   
-  //@IBOutlet var mainView: UIView!
-  
-  //@IBOutlet weak var scrollView: UIScrollView!
-  
-  
-
   
   @IBOutlet var mainView: UIView!
   
@@ -26,22 +27,51 @@ class TeamInfoViewController: UIViewController {
   
   @IBOutlet weak var innerViewHeight: NSLayoutConstraint!
   
-  var playerArray = ["Sydney Leroux","Toni Pressley","Shelina Zadorsky","Emily van Egmond","Claire Emslie","Danica Evans", "Camila Pereira", "Marta Silva", "Ali Krieger", "Kristen Edmonds", "Alex Morgan", "Alanna Kennedy", "Rachel Hill", "Caron Pickett", "Dani Weatherholt", "Lainey Burdett"]
-  var playerNum = ["2","3","4","5","7","8","9", "10", "11", "12", "13", "14", "15", "16", "17", "18"]
+  @IBOutlet weak var nav_label: UILabel!
+
+
+
+
+  var home = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", teamName: "", playerList: [])
   
-  var playerPosition = ["Forward", "Defender", "Defender", "Midfielder", "Forward", "Forward", "Forward", "Forward", "Defender", "Midfielder", "Forward", "Defender", "Forward", "Defender", "Midfielder", "Goalkeeper"]
   
-  var teamName = "orlando_pride"
+  
+  var away = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", teamName: "", playerList: [])
   
 
   
+  var players = [Player]()
   
-  
-  @IBOutlet weak var nav_label: UILabel!
-  
-  
+  var playerArray = [String]()       // Names
+  var playerNum = [String]()         // Number
+  var playerPosition = [String]()    //Position
+
+  var teamName = "orlando_pride"
+
 
   override func viewDidLoad() {
+    print(home)
+    
+    players = home.playerList
+
+    
+    for p in players {
+      var name = p.firstName + " " +  p.lastName
+      playerArray.append(name)
+      playerPosition.append(p.position)
+      playerNum.append(p.number)
+    }
+    
+    
+  
+    
+    
+    
+    
+    
+
+    
+    
     
     
     var scrollHeight = 480 + 100 * playerArray.count
@@ -54,6 +84,8 @@ class TeamInfoViewController: UIViewController {
     addTeamNameLabel()
     makeBackButton()
     addNavBar()
+    
+    
   }
   
   func makeBackButton() {
@@ -114,9 +146,7 @@ class TeamInfoViewController: UIViewController {
     
     mainView.addSubview(explore_btn)
     
-    
-    
-    
+
     let camera_btn = UIButton()
     imageName = "circle.png"
     image = UIImage(named: imageName)
@@ -145,6 +175,9 @@ class TeamInfoViewController: UIViewController {
      performSegue(withIdentifier: "Camera", sender: self)
    }
   
+  
+  
+  // NEED TO CHANGE THIS.
   @objc func segueHome(sender: UIButton!) {
       let btn: UIButton = sender
       print(btn.titleLabel?.text)
@@ -287,9 +320,34 @@ class TeamInfoViewController: UIViewController {
   }
 
  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     if(segue.identifier == "PlayerInfo"){
+     if(segue.identifier == "PlayerInfo") {
              let displayVC = segue.destination as! PlayerInfoViewController
              displayVC.button_text = last_pressed
+            displayVC.team_obj = home
+              let full_arr = last_pressed.components(separatedBy: "\t")
+              print(full_arr)
+      
+      
+              //This thing ends in a trailing white space lol
+              let playerName = full_arr[0] + " " + full_arr[1]
+              
+      
+              // Find specific player for passing data to PlayerInfo
+              for p in players {
+                  
+                 var name = p.firstName + " " +  p.lastName + " "    //account for trailing whitespace
+                if (name  == playerName) {
+                  displayVC.player_obj = p
+                }
+              }
+      
+      
+      
+      
+      
+      
+      
+      
      }
  }
 
