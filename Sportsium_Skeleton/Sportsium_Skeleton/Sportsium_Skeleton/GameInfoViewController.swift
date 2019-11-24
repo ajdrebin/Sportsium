@@ -185,7 +185,8 @@ class GameInfoViewController: UIViewController {
     @objc func tappedTeam(sender:AnyObject) {
         print("yoooooo")
         var sender = sender
-        
+  
+      
         if sender.tag == 2 {
             sendTeam = away!
         }
