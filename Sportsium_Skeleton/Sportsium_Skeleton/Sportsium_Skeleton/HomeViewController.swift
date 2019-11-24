@@ -91,6 +91,10 @@ struct Teams: Codable {
      }
  }
 
+// Global teams
+var initiate = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", teamName: "", playerList: [])
+var teams = Teams(orlandoPride: initiate, skyBlue: initiate, houstonDash: initiate, washingtonSpirit: initiate, northCarolinaCourage: initiate, reign: initiate, portlandThorns: initiate, chicagoRedStars: initiate, utahRoyals: initiate)
+
 class HomeViewController: UIViewController {
     var chosenLeague = ""
     
@@ -146,7 +150,7 @@ class HomeViewController: UIViewController {
             do {
                 // 3
                 //Decode data
-                let teams = try JSONDecoder().decode(Teams.self, from: data)
+                teams = try JSONDecoder().decode(Teams.self, from: data)
 //                Constants = teams
 //                print(Constants)
 //
