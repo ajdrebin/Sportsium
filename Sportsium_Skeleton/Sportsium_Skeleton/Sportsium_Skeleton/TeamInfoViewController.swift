@@ -30,7 +30,10 @@ class TeamInfoViewController: UIViewController {
   @IBOutlet weak var nav_label: UILabel!
 
 
-
+  var home_team_name:String!
+  var away_team_name:String!
+  
+  
 
   var home = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", teamName: "", playerList: [])
   

@@ -20,6 +20,9 @@ class PlayerInfoViewController: UIViewController {
   var teamName = "orlando_pride"
   
   
+  var home_team_name:String!
+  var away_team_name:String!
+  
   var playerName = "Joanna Boyles"
   var playerNum = "25"
   var playerPos = "Midfielder"
