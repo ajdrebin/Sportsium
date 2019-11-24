@@ -97,9 +97,10 @@ var teamsDict = [String: TeamInfo]()
 
 var initiate = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", teamName: "", playerList: [])
 var teams = Teams(orlandoPride: initiate, skyBlue: initiate, houstonDash: initiate, washingtonSpirit: initiate, northCarolinaCourage: initiate, reign: initiate, portlandThorns: initiate, chicagoRedStars: initiate, utahRoyals: initiate)
+var league = ""
 
-var home = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", teamName: "", playerList: [])
-var away = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", teamName: "", playerList: [])
+var home = ""
+var away = ""
 
 class HomeViewController: UIViewController {
     var chosenLeague = ""
@@ -114,19 +115,6 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var game1: UIButton!
     @IBOutlet weak var game2: UIButton!
     @IBOutlet weak var game3: UIButton!
-    
-    // Initializing Team Info to Send
-    var home = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", teamName: "", playerList: [])
-    var away = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", teamName: "", playerList: [])
-    var orlandoInfo = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", teamName: "", playerList: [])
-    var skyBlueInfo = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", teamName: "", playerList: [])
-    var houstonInfo = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", teamName: "", playerList: [])
-    var washingtonInfo = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", teamName: "", playerList: [])
-    var northCarolinaInfo = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", teamName: "", playerList: [])
-    var reignInfo = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", teamName: "", playerList: [])
-    var portlandInfo = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", teamName: "", playerList: [])
-    var chicagoInfo = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", teamName: "", playerList: [])
-    var utahInfo = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", teamName: "", playerList: [])
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -166,19 +154,13 @@ class HomeViewController: UIViewController {
                 teamsDict["portland_thorns"] = teams.portlandThorns
                 teamsDict["chicago_red_stars"] = teams.chicagoRedStars
                 teamsDict["utah_royals"] = teams.utahRoyals
-                self.orlandoInfo = teams.orlandoPride
-                self.skyBlueInfo = teams.skyBlue
-                self.houstonInfo = teams.houstonDash
-                self.washingtonInfo = teams.washingtonSpirit
-                self.northCarolinaInfo = teams.northCarolinaCourage
-                self.reignInfo = teams.reign
-                self.portlandInfo = teams.portlandThorns
-                self.chicagoInfo = teams.chicagoRedStars
-                self.utahInfo = teams.utahRoyals
                 
                 // Set default home and away
-                self.home = self.orlandoInfo
-                self.away = self.chicagoInfo
+                home = "orlando_pride"
+                away = "chicago_red_stars"
+                
+                // Set league
+                league = self.chosenLeague
                 
                 // 4
                 //Get back to the main queue
@@ -196,18 +178,18 @@ class HomeViewController: UIViewController {
     
        if btn.tag == 1 {
         // Set Team Info to Pass
-        self.home = orlandoInfo
-        self.away = chicagoInfo
+        home = "orlando_pride"
+        away = "chicago_red_stars"
        }
        else if btn.tag == 2 {
         // Set Team Info to Pass
-        self.home = reignInfo
-        self.away = portlandInfo
+        home = "reign"
+        away = "portland_thorns"
        }
        else{
         // Set Team Info to Pass
-        self.home = utahInfo
-        self.away = northCarolinaInfo
+        home = "utah_royals"
+        away = "north_carolina_courage"
        }
         performSegue(withIdentifier: "Game", sender: self)
     }
@@ -215,8 +197,8 @@ class HomeViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "Game"){
                 let displayVC = segue.destination as! GameInfoViewController
-                displayVC.home = self.home
-                displayVC.away = self.away
+                displayVC.home = home
+                displayVC.away = away
         }
     }
 }
