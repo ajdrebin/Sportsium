@@ -189,10 +189,14 @@ class GameInfoViewController: UIViewController {
                 let displayVC = segue.destination as! PlayerInfoViewController
             displayVC.player_obj = homePlayers[last_pressed]
             displayVC.team_obj = teamsDict[home!]!
+            displayVC.home_team_name = home
+            displayVC.away_team_name = away
         }
         if(segue.identifier == "Team"){
                 let displayVC = segue.destination as! TeamInfoViewController
             displayVC.home = teamsDict[home!]!
+            displayVC.home_team_name = home
+            displayVC.away_team_name = away
         }
     }
     
