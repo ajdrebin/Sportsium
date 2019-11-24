@@ -10,18 +10,18 @@ import UIKit
 
 class GameInfoViewController: UIViewController {
     
-    var home: TeamInfo?
-    var away: TeamInfo?
+    var home: String?
+    var away: String?
     
     var homePlayers:[Player] = []
     var awayPlayers:[Player] = []
     
     override func viewDidLoad() {
-        print("ypppppppppp")
+        print(home!)
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        homePlayers = home!.playerList  // all player objects
-        awayPlayers = away!.playerList
+        homePlayers = teamsDict[home!]!.playerList  // all player objects
+        awayPlayers = teamsDict[away!]!.playerList
         makeButtons()
     }
     
@@ -188,10 +188,15 @@ class GameInfoViewController: UIViewController {
         if(segue.identifier == "PlayerInfo"){
                 let displayVC = segue.destination as! PlayerInfoViewController
             displayVC.player_obj = homePlayers[last_pressed]
+            displayVC.team_obj = teamsDict[home!]!
+            displayVC.home_team_name = home
+            displayVC.away_team_name = away
         }
         if(segue.identifier == "Team"){
                 let displayVC = segue.destination as! TeamInfoViewController
-            displayVC.home = home!
+            displayVC.home = teamsDict[home!]!
+            displayVC.home_team_name = home
+            displayVC.away_team_name = away
         }
     }
     

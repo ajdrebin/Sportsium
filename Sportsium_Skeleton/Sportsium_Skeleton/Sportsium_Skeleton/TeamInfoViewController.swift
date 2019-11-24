@@ -9,12 +9,6 @@
 import UIKit
 
 
-
-
-
-
-
-
 class TeamInfoViewController: UIViewController {
   
   
@@ -30,7 +24,10 @@ class TeamInfoViewController: UIViewController {
   @IBOutlet weak var nav_label: UILabel!
 
 
-
+  var home_team_name:String!
+  var away_team_name:String!
+  
+  
 
   var home = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", teamName: "", playerList: [])
   
@@ -53,7 +50,6 @@ class TeamInfoViewController: UIViewController {
     print(home)
     
     players = home.playerList
-
     
     for p in players {
       var name = p.firstName + " " +  p.lastName
@@ -64,16 +60,6 @@ class TeamInfoViewController: UIViewController {
     
     
   
-    
-    
-    
-    
-    
-
-    
-    
-    
-    
     var scrollHeight = 480 + 100 * playerArray.count
     innerViewHeight.constant = CGFloat(scrollHeight)
     super.viewDidLoad()
@@ -324,6 +310,11 @@ class TeamInfoViewController: UIViewController {
              let displayVC = segue.destination as! PlayerInfoViewController
              displayVC.button_text = last_pressed
             displayVC.team_obj = home
+      
+      
+      displayVC.home_team_name = home_team_name
+       displayVC.away_team_name = away_team_name
+      
               let full_arr = last_pressed.components(separatedBy: "\t")
               print(full_arr)
       
@@ -349,6 +340,14 @@ class TeamInfoViewController: UIViewController {
       
       
      }
+  
+  if(segue.identifier == "GameInfo") {
+    let displayVC = segue.destination as! GameInfoViewController
+     displayVC.home = home_team_name
+     displayVC.away = away_team_name
+  }
+  
+  
  }
 
   @objc func pressBtn(sender: UIButton!) {
