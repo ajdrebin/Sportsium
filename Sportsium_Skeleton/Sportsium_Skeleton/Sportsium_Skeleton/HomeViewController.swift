@@ -155,9 +155,7 @@ class HomeViewController: UIViewController {
                 // 3
                 //Decode data
                 teams = try JSONDecoder().decode(Teams.self, from: data)
-//                Constants = teams
-//                print(Constants)
-//
+                
                 // Teams
                 teamsDict["orlando_pride"] = teams.orlandoPride
                 teamsDict["sky_blue"] = teams.skyBlue
@@ -178,6 +176,10 @@ class HomeViewController: UIViewController {
                 self.chicagoInfo = teams.chicagoRedStars
                 self.utahInfo = teams.utahRoyals
                 
+                // Set default home and away
+                self.home = self.orlandoInfo
+                self.away = self.chicagoInfo
+                
                 // 4
                 //Get back to the main queue
 //                DispatchQueue.main.async {
@@ -194,8 +196,8 @@ class HomeViewController: UIViewController {
     
        if btn.tag == 1 {
         // Set Team Info to Pass
-        self.home = chicagoInfo
-        self.away = orlandoInfo
+        self.home = orlandoInfo
+        self.away = chicagoInfo
        }
        else if btn.tag == 2 {
         // Set Team Info to Pass
@@ -217,36 +219,5 @@ class HomeViewController: UIViewController {
                 displayVC.away = self.away
         }
     }
-
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if(segue.identifier == "ListTeams"){
-//                let displayVC = segue.destination as! ListTeamsViewController
-//                displayVC.orlandoInfo = orlandoInfo
-//                displayVC.skyBlueInfo = skyBlueInfo
-//                displayVC.houstonInfo = houstonInfo
-//                displayVC.washingtonInfo = washingtonInfo
-//                displayVC.northCarolinaInfo = northCarolinaInfo
-//                displayVC.reignInfo = reignInfo
-//                displayVC.portlandInfo = portlandInfo
-//                displayVC.chicagoInfo = chicagoInfo
-//                displayVC.utahInfo = utahInfo
-//        }
-//    }
-//
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if(segue.identifier == "Camera"){
-//                let displayVC = segue.destination as! CameraViewController
-//                displayVC.orlandoInfo = orlandoInfo
-//                displayVC.skyBlueInfo = skyBlueInfo
-//                displayVC.houstonInfo = houstonInfo
-//                displayVC.washingtonInfo = washingtonInfo
-//                displayVC.northCarolinaInfo = northCarolinaInfo
-//                displayVC.reignInfo = reignInfo
-//                displayVC.portlandInfo = portlandInfo
-//                displayVC.chicagoInfo = chicagoInfo
-//                displayVC.utahInfo = utahInfo
-//        }
-//    }
-    
 }
 
