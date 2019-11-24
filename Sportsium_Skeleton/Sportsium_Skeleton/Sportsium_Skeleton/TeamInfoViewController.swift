@@ -51,6 +51,7 @@ class TeamInfoViewController: UIViewController {
     
     teamName = home.teamName
     
+    
     //Removed the underscore
     display_teamName = teamName.replacingOccurrences(of: "_", with: " ", options: NSString.CompareOptions.literal, range: nil)
     // Captialize first letter

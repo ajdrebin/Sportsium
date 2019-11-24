@@ -69,6 +69,7 @@ class PlayerInfoViewController: UIViewController {
     
     //initialize some things
     playerName = player_obj.firstName + " " + player_obj.lastName
+    
     playerNum = player_obj.number
     playerPos = player_obj.position
     fb = player_obj.fb
