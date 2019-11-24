@@ -13,7 +13,7 @@ class ListTeamsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        print(teamsDict.keys)
         }
     
         func makeButtons() {
@@ -22,6 +22,8 @@ class ListTeamsViewController: UIViewController {
 
           var x :CGFloat = 0
           var y :CGFloat = 250.0
+            
+            print(teamsDict.keys)
 
             for (i, teamName) in teamsDict.keys.enumerated() {
             if i > 10 {
@@ -51,6 +53,9 @@ class ListTeamsViewController: UIViewController {
             //Allow for multi line text \n separated.
             button.titleLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping;
                 button.setTitle(teamsDict[teamName]?.teamName, for: UIControl.State.normal)
+                
+                var teamLogo:UIImage = UIImage(named:teamName)!
+                button.setImage(teamLogo, for: UIControl.State.normal)
 
 
 //            button.addTarget(self, action: #selector(pressBtn), for: UIControl.Event.touchDown)
