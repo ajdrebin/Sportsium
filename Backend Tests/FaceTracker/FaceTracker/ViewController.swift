@@ -174,7 +174,10 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         
             if(self.detectedNumber != "-1"){
                 let team = self.findColor(image: uiImageCrop)
-                let tup = (team: team, number: self.detectedNumber)
+                var teamName = ""
+                if(team == "home") {teamName = homeTeam}
+                if(team == "away") {teamName = awayTeam}
+                let tup = (team: teamName, number: self.detectedNumber)
                 print("tup: ", tup)
                 if(team != "no team found" && !contains(a: self.detectedPlayersArr, v: tup)){
                     self.detectedPlayersArr.append(tup)
