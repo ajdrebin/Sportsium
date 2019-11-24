@@ -194,12 +194,12 @@ class HomeViewController: UIViewController {
         performSegue(withIdentifier: "Game", sender: self)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier == "Game"){
-                let displayVC = segue.destination as! GameInfoViewController
-                displayVC.home = home
-                displayVC.away = away
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if(segue.identifier == "Game"){
+//                let displayVC = segue.destination as! GameInfoViewController
+//                displayVC.home = home
+//                displayVC.away = away
+//        }
+//    }
 }
 
