@@ -111,7 +111,7 @@ RGB (137, 24, 28)
 RGB (172, 69, 52)
 average (144, 175, 31)
 
-New York Away
+New York liberty Away
 RGB (24, 20, 20)
 RGB (16, 15, 16)
 RGB (16, 12, 16)

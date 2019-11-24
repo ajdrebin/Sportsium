@@ -28,7 +28,7 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
     
     let homeTeam = "orlando_pride"
     let awayTeam = "chicago_red_stars"
-    
+    let league = "NWSL"
     
 //    let homeColor = teamcol
     
@@ -69,13 +69,24 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
     }
     
     func populateColors() {
-        self.teamColorCodes["orlando_pride"] = (homeColor: (red: 77, green: 52, blue: 136), awayColor: (red: 208, green: 202, blue: 219))
-        self.teamColorCodes["chicago_red_stars"] = (homeColor: (red: 112, green: 134, blue: 173), awayColor: (red: 213, green: 216, blue: 211))
-        self.teamColorCodes["reign"] = (homeColor: (red: 17, green: 26, blue: 47), awayColor: (red: 1, green: 1, blue: 1))
-        self.teamColorCodes["portland_thorns"] = (homeColor: (red: 0, green: 0, blue: 0), awayColor: (red: 190, green: 201, blue: 230))
-        self.teamColorCodes["utah_royals"] = (homeColor: (red: 211, green: 142, blue: 9), awayColor: (red: 1, green: 1, blue: 1))
-        self.teamColorCodes["north_carolina_courage"] = (homeColor: (red: 1, green: 1, blue: 1), awayColor: (233, 222, 245))
-        
+        if (self.league == "NWSL"){
+            self.teamColorCodes["orlando_pride"] = (homeColor: (red: 77, green: 52, blue: 136), awayColor: (red: 208, green: 202, blue: 219))
+            self.teamColorCodes["chicago_red_stars"] = (homeColor: (red: 112, green: 134, blue: 173), awayColor: (red: 213, green: 216, blue: 211))
+            self.teamColorCodes["reign"] = (homeColor: (red: 17, green: 26, blue: 47), awayColor: (red: 1, green: 1, blue: 1))
+            self.teamColorCodes["portland_thorns"] = (homeColor: (red: 0, green: 0, blue: 0), awayColor: (red: 190, green: 201, blue: 230))
+            self.teamColorCodes["utah_royals"] = (homeColor: (red: 211, green: 142, blue: 9), awayColor: (red: 1, green: 1, blue: 1))
+            self.teamColorCodes["north_carolina_courage"] = (homeColor: (red: 1, green: 1, blue: 1), awayColor: (233, 222, 245))
+
+        }
+        else if (self.league == "WNBA"){
+            self.teamColorCodes["chicago_sky"] = (homeColor: (red: 67, green: 115, blue: 157), awayColor: (red: 1, green: 1, blue: 1))
+            self.teamColorCodes["atlanta_dream_team"] = (homeColor: (red: 1, green: 1, blue: 1), awayColor: (red: 32, green: 170, blue: 42))
+            self.teamColorCodes["dallas_wings"] = (homeColor: (red: 140, green: 138, blue: 8), awayColor: (red: 1, green: 1, blue: 1))
+            self.teamColorCodes["las_vegas_aces"] = (homeColor: (red: 1, green: 1, blue: 1), awayColor: (red: 128, green: 77, blue: 17))
+            self.teamColorCodes["washington_mystics"] = (homeColor: (red: 144, green: 175, blue: 31), awayColor: (red: 1, green: 1, blue: 1))
+            self.teamColorCodes["new_york_liberty"] = (homeColor: (red: 1, green: 1, blue: 1), awayColor: (red: 23, green: 17, blue: 18))
+        }
+
     }
     
     override func viewDidLayoutSubviews() {
