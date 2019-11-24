@@ -18,7 +18,7 @@ class PlayerInfoViewController: UIViewController {
   
   
   var teamName = "orlando_pride"
-  
+  var display_teamName = "orlando pride"
   
   var home_team_name:String!
   var away_team_name:String!
@@ -56,6 +56,13 @@ class PlayerInfoViewController: UIViewController {
   
     print(player_obj)
     
+    teamName = team_obj.teamName
+    
+    //Removed the underscore
+    display_teamName = teamName.replacingOccurrences(of: "_", with: " ", options: NSString.CompareOptions.literal, range: nil)
+    // Captialize first letter
+    display_teamName = display_teamName.capitalizingFirstLetter()
+
     
     super.viewDidLoad()
 
@@ -229,7 +236,7 @@ class PlayerInfoViewController: UIViewController {
     
     textView.text += " \n" + playerName + " (born " + month + " "
     textView.text += day + ", " + year + ") is an American soccer player who plays as a "
-    textView.text += playerPos.lowercased() + " for Orlando Pride in the NWSL."
+    textView.text += playerPos.lowercased() + " for " + display_teamName + " in the NWSL."
     
     textView.textAlignment = .left
 
@@ -396,6 +403,7 @@ class PlayerInfoViewController: UIViewController {
               displayVC.home = team_obj
         displayVC.home_team_name = home_team_name
          displayVC.away_team_name = away_team_name
+
         
 
       }
@@ -468,6 +476,16 @@ extension UITextView {
 
       self.attributedText = attributedString
   }
+}
+
+extension String {
+    func capitalizingFirstLetter() -> String {
+      return prefix(1).uppercased() + self.lowercased().dropFirst()
+    }
+
+    mutating func capitalizeFirstLetter() {
+      self = self.capitalizingFirstLetter()
+    }
 }
 
 

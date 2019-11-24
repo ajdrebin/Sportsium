@@ -33,8 +33,6 @@ class TeamInfoViewController: UIViewController {
   
   
   
-  var away = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", teamName: "", playerList: [])
-  
 
   
   var players = [Player]()
@@ -44,10 +42,23 @@ class TeamInfoViewController: UIViewController {
   var playerPosition = [String]()    //Position
 
   var teamName = "orlando_pride"
-
+  var display_teamName = "orlando pride"
 
   override func viewDidLoad() {
     print(home)
+    
+    
+    
+    teamName = home.teamName
+    
+    //Removed the underscore
+    display_teamName = teamName.replacingOccurrences(of: "_", with: " ", options: NSString.CompareOptions.literal, range: nil)
+    // Captialize first letter
+    display_teamName = display_teamName.capitalizingFirstLetter()
+    
+    
+
+    
     
     players = home.playerList
     
@@ -282,15 +293,25 @@ class TeamInfoViewController: UIViewController {
   
   func addTeamNameLabel() {
     let label = UILabel()
-    label.text = teamName.uppercased()
+    label.text = display_teamName.uppercased()
+    label.adjustsFontSizeToFitWidth=true;
+    
+    
     label.font = UIFont(name:"HelveticaNeue-Bold", size: 20.0)
     
-    label.adjustsFontForContentSizeCategory = true
     
     
-    label.font = label.font.withSize(20)
     label.textColor = UIColor.white
-    label.numberOfLines = 0
+    label.numberOfLines = 2
+    
+    
+   
+    label.adjustsFontSizeToFitWidth=true;
+      label.minimumScaleFactor=0.5;
+    
+    
+
+
     
     label.frame = CGRect(x: 190, y: 120, width: scrollView.frame.width, height: 20)
     scrollView.addSubview(label)
