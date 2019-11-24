@@ -197,7 +197,9 @@ class GameInfoViewController: UIViewController {
     var sendTeam = ""
     @objc func tappedTeam(sender:AnyObject) {
         var sender = sender
+        
         sendTeam = sender.name
+        
         performSegue(withIdentifier: "Team", sender: self)
     }
     
