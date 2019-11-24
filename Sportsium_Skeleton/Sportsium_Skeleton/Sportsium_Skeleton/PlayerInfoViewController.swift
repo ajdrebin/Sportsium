@@ -18,38 +18,150 @@ class PlayerInfoViewController: UIViewController {
   
   
   var teamName = "orlando_pride"
+  
+  
   var playerName = "Joanna Boyles"
   var playerNum = "25"
   var playerPos = "Midfielder"
   var button_text = "Joanna Boyles\t\t\t\t\t\t\t\t\t\t #25\nMidfielder"
   
   
+  var monthDict:[Int:String] = [1:"January", 2:"February", 3:"March", 4:"April", 5:"May", 6:"June", 7:"July", 8:"August", 9:"September", 10:"October", 11:"November", 12:"December"]
+  
+  
+  
+  
+  var player_obj = Player(firstName: "", lastName: "", instagram: "", hometown: "", twitter: "", number: "", snapchat: "", height: "", fb: "", DOB: "", country: "", playerId: 0, position: "")
+
+  var team_obj = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", teamName: "", playerList: [])
+  
+  
+  
+  
+  
+  var fb = ""
+  var twitter = ""
+  var instagram = ""
+  
+
+  
+  
+  
+  
+  
   override func viewDidLoad() {
+  
+    print(player_obj)
+    
     
     super.viewDidLoad()
-    let full_arr = button_text.components(separatedBy: "\t")
-    print(full_arr)
-    playerName = full_arr[0] + " " + full_arr[1]
+
     
-    let info_str = full_arr[10]
-    let info_arr = info_str.components(separatedBy: "\n")
-    playerNum = info_arr[0].replacingOccurrences(of: "#", with: "")
-    playerPos = info_arr[1]
+    //initialize some things
+    playerName = player_obj.firstName + " " + player_obj.lastName
+    playerNum = player_obj.number
+    playerPos = player_obj.position
+    fb = player_obj.fb
+    twitter = player_obj.twitter
+    instagram = player_obj.instagram
+    
+    
+ 
     
     textView.isUserInteractionEnabled = false
     
     mainView.backgroundColor = UIColor.init(displayP3Red: 128/255, green: 196/255, blue: 249/255, alpha: 1)
     editNumberLabel()
     addTeamLogo()
-    
+  
     setPlayerName()
     makeTextView()
     addNavBar()
     makeBackButton()
+    addSocialMedia()
+    
+  }
+  
+  
+  func addSocialMedia(){
+    var starting_x = 320
+    var y = 230
+    
+
+
+    if (fb != "") {
+      var button : UIButton
+      button = UIButton()
+       button.frame = CGRect(x: starting_x, y: y, width: 30, height: 30)
+       button.setTitleColor(UIColor.init(displayP3Red: 11/255, green: 96/255, blue: 168/255, alpha: 1), for: UIControl.State.normal)
+
+       button.setTitle("FB", for: UIControl.State.normal)
+      
+      
+      let btnImage = UIImage(named: "facebook_logo")
+      button.setImage(btnImage , for: UIControl.State.normal)
+
+       
+       button.addTarget(self, action: #selector(didTapFB), for: UIControl.Event.touchDown)
+      
+        mainView.addSubview(button)
+      
+        starting_x -= 50
+      
+    }
+    if (twitter != "") {
+      var button : UIButton
+      button = UIButton()
+      button.frame = CGRect(x: starting_x, y: y, width: 30, height: 30)
+       button.setTitleColor(UIColor.init(displayP3Red: 11/255, green: 96/255, blue: 168/255, alpha: 1), for: UIControl.State.normal)
+
+       button.setTitle("TT", for: UIControl.State.normal)
+
+       let btnImage = UIImage(named: "twitter_logo")
+       button.setImage(btnImage , for: UIControl.State.normal)
+
+       button.addTarget(self, action: #selector(didTapTT), for: UIControl.Event.touchDown)
+      
+        mainView.addSubview(button)
+      
+        starting_x -= 50
+      
+    }
+    if (instagram != "") {
+      var button : UIButton
+      button = UIButton()
+      button.frame = CGRect(x: starting_x, y: y, width: 30, height: 30)
+       button.setTitleColor(UIColor.init(displayP3Red: 11/255, green: 96/255, blue: 168/255, alpha: 1), for: UIControl.State.normal)
+
+       button.setTitle("IG", for: UIControl.State.normal)
+       let btnImage = UIImage(named: "ig_logo")
+            button.setImage(btnImage , for: UIControl.State.normal)
+       button.addTarget(self, action: #selector(didTapIG), for: UIControl.Event.touchDown)
+      
+        mainView.addSubview(button)
+      
+        starting_x -= 50
+      
+    }
+    
+    
     
     
     
   }
+  
+  @IBAction func didTapFB(sender: UIButton) {
+    UIApplication.shared.openURL(NSURL(string: fb)! as URL)
+}
+  
+  @IBAction func didTapTT(sender: UIButton) {
+      UIApplication.shared.openURL(NSURL(string: twitter)! as URL)
+  }
+  @IBAction func didTapIG(sender: UIButton) {
+      UIApplication.shared.openURL(NSURL(string: instagram)! as URL)
+  }
+  
+  
   
   
   
@@ -67,16 +179,54 @@ class PlayerInfoViewController: UIViewController {
         .bold("Bold Text")
 
     
-    textView.text = "\n\n\nPOSITION: " + playerPos.uppercased() + "\n"
-    textView.text +=  "AGE: 23 (11-13-1995)\n"
-    textView.text +=  "HEIGHT: 5'9\"\n"
     
-    textView.text += "HOMETOWN: RALEIGH, NC\n\n"
-    textView.text += "   Stats:\n\tGames player: 30\n\tScores: 17 \n\tAssists: 12\n\tSaves: 2\n\tCards Given: 5\n"
+    
+    let player_dob =  player_obj.DOB.components(separatedBy: "-")
+    
+    var age:Int
+    
+    var num:Int
+    var month:String
+    var day:String
+    var year:String
+    
+    
+    if player_dob.isEmpty {
+      month = String(Int.random(in: 1..<12))
+      day = String(Int.random(in: 1..<30))
+      year = String(Int.random(in: 1992..<1996))
+      age = 2019 - Int(year)!
+    }
+    else{
+       age = 2019 - Int(player_dob[2])!
+       num = Int(player_dob[0])!
+       month = monthDict[num]!
+        day = player_dob[1]
+        year = player_dob[2]
+    }
+    
+    
+  
+
+     
+    
+    
+    
+    
+    textView.text = "\n\n\nPOSITION: " + playerPos.uppercased() + "\n"
+    textView.text +=  "AGE: " + String(age) + " (" + player_obj.DOB + ")\n"
+    textView.text +=  "HEIGHT: " + player_obj.height + "\n"
+    
+    textView.text += "HOMETOWN: " + player_obj.hometown + ", " + player_obj.country + "\n\n"
+    textView.text += "   Stats:\n\tGames Played 2019 Season: " + String(Int.random(in: 10..<30)) +
+"\n\tScores: " + String(Int.random(in: 20..<35)) + "\n\tAssists: " + String(Int.random(in: 10..<20)) + "\n\tSaves: " + String(Int.random(in: 5..<20)) + "\n\tCards Given: " + String(Int.random(in: 1..<10)) + "\n"
     
     
 
-    textView.text += " \n" + playerName + "(born November 13, 1995) is an American soccer player who plays as a " + playerPos.lowercased() + " for Orlando Pride in the NWSL."
+    
+    textView.text += " \n" + playerName + " (born " + month + " "
+    textView.text += day + ", " + year + ") is an American soccer player who plays as a "
+    textView.text += playerPos.lowercased() + " for Orlando Pride in the NWSL."
     
     textView.textAlignment = .left
 
@@ -235,6 +385,23 @@ class PlayerInfoViewController: UIViewController {
     print(btn.titleLabel?.text)
     performSegue(withIdentifier: "ListTeams", sender: self)
   }
+  
+
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+      if(segue.identifier == "TeamInfo") {
+              let displayVC = segue.destination as! TeamInfoViewController
+              displayVC.home = team_obj
+
+      }
+  }
+
+  
+  
+  
+  
+  
+  
+  
   
 }
 

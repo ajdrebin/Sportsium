@@ -8,92 +8,104 @@
 
 import UIKit
 
+struct Teams: Codable {
+     let orlandoPride: TeamInfo
+     let skyBlue: TeamInfo
+     let houstonDash: TeamInfo
+     let washingtonSpirit: TeamInfo
+     let northCarolinaCourage: TeamInfo
+     let reign: TeamInfo
+     let portlandThorns: TeamInfo
+     let chicagoRedStars: TeamInfo
+     let utahRoyals: TeamInfo
+     
+     enum CodingKeys: String, CodingKey {
+        case orlandoPride = "orlando_pride"
+        case skyBlue = "sky_blue"
+        case houstonDash = "houston_dash"
+        case washingtonSpirit = "washington_spirit"
+        case northCarolinaCourage = "north_carolina_courage"
+        case reign
+        case portlandThorns = "portland_thorns"
+        case chicagoRedStars = "chicago_red_stars"
+        case utahRoyals = "utah_royals"
+    }
+}
+
+ struct TeamInfo: Codable {
+     let cityLocation: String
+     let league: String
+     let dateFounded: String
+     let instagram: String
+     let currentWins: String
+     let twitter: String
+     let snapchat: String
+     let currentTies: String
+     let currentLosses: String
+     let fb: String
+     let headCoach: String
+     let stadium: String
+     let teamName: String
+     let playerList: [Player]
+
+     enum CodingKeys: String, CodingKey {
+         case cityLocation = "city_location"
+         case league
+         case dateFounded = "date_founded"
+         case instagram
+         case currentWins = "current_wins"
+         case twitter, snapchat
+         case currentTies = "current_ties"
+         case currentLosses = "current_losses"
+         case fb
+         case headCoach = "head_coach"
+         case stadium
+         case teamName = "team_name"
+         case playerList = "player_list"
+     }
+ }
+
+ struct Player: Codable {
+     let firstName: String
+     let lastName: String
+     let instagram: String
+     let hometown: String
+     let twitter: String
+     let number: String
+     let snapchat: String
+     let height: String
+     let fb: String
+     let DOB: String
+     let country: String
+     let playerId: Int
+     let position: String
+
+     enum CodingKeys: String, CodingKey {
+         case firstName = "first_name"
+         case lastName = "last_name"
+         case instagram, hometown, twitter, number, snapchat, height, fb
+         case DOB = "date_of_birth"
+         case country
+         case playerId = "player_id"
+         case position
+     }
+ }
+
+
+// GLOBAL VARIABLES
+var teamsDict = [String: TeamInfo]()
+
+var initiate = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", teamName: "", playerList: [])
+var teams = Teams(orlandoPride: initiate, skyBlue: initiate, houstonDash: initiate, washingtonSpirit: initiate, northCarolinaCourage: initiate, reign: initiate, portlandThorns: initiate, chicagoRedStars: initiate, utahRoyals: initiate)
+var league = ""
+
+var home = ""
+var away = ""
+
 class HomeViewController: UIViewController {
     var chosenLeague = ""
     
     @IBOutlet weak var home1: UILabel!
-    
-    struct Teams: Codable {
-        let orlandoPride: TeamInfo
-        let skyBlue: TeamInfo
-        let houstonDash: TeamInfo
-        let washingtonSpirit: TeamInfo
-        let northCarolinaCourage: TeamInfo
-        let reign: TeamInfo
-        let portlandThorns: TeamInfo
-        let chicagoRedStars: TeamInfo
-        let utahRoyals: TeamInfo
-
-        enum CodingKeys: String, CodingKey {
-           case orlandoPride = "orlando_pride"
-           case skyBlue = "sky_blue"
-           case houstonDash = "houston_dash"
-           case washingtonSpirit = "washington_spirit"
-           case northCarolinaCourage = "north_carolina_courage"
-           case reign
-           case portlandThorns = "portland_thorns"
-           case chicagoRedStars = "chicago_red_stars"
-           case utahRoyals = "utah_royals"
-       }
-   }
-    
-    struct TeamInfo: Codable {
-        let cityLocation: String
-        let league: String
-        let dateFounded: String
-        let instagram: String
-        let currentWins: String
-        let twitter: String
-        let snapchat: String
-        let currentTies: String
-        let currentLosses: String
-        let fb: String
-        let headCoach: String
-        let stadium: String
-        let playerList: [Player]
-
-        enum CodingKeys: String, CodingKey {
-            case cityLocation = "city_location"
-            case league
-            case dateFounded = "date_founded"
-            case instagram
-            case currentWins = "current_wins"
-            case twitter, snapchat
-            case currentTies = "current_ties"
-            case currentLosses = "current_losses"
-            case fb
-            case headCoach = "head_coach"
-            case stadium
-            case playerList = "player_list"
-        }
-    }
-
-    struct Player: Codable {
-        let firstName: String
-        let lastName: String
-        let instagram: String
-        let hometown: String
-        let twitter: String
-        let number: String
-        let snapchat: String
-        let height: String
-        let fb: String
-        let DOB: String
-        let country: String
-        let playerId: Int
-        let position: String
-
-        enum CodingKeys: String, CodingKey {
-            case firstName = "first_name"
-            case lastName = "last_name"
-            case instagram, hometown, twitter, number, snapchat, height, fb
-            case DOB = "date_of_birth"
-            case country
-            case playerId = "player_id"
-            case position
-        }
-    }
-    
     @IBOutlet weak var homeLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var stadiumLabel: UILabel!
@@ -103,19 +115,6 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var game1: UIButton!
     @IBOutlet weak var game2: UIButton!
     @IBOutlet weak var game3: UIButton!
-    
-    // Initializing Team Info to Send
-    var home = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", playerList: [])
-    var away = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", playerList: [])
-    var orlandoInfo = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", playerList: [])
-    var skyBlueInfo = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", playerList: [])
-    var houstonInfo = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", playerList: [])
-    var washingtonInfo = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", playerList: [])
-    var northCarolinaInfo = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", playerList: [])
-    var reignInfo = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", playerList: [])
-    var portlandInfo = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", playerList: [])
-    var chicagoInfo = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", playerList: [])
-    var utahInfo = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", playerList: [])
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -130,7 +129,7 @@ class HomeViewController: UIViewController {
         game3.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
 
         // 1
-        let urlString = "http://159.89.234.82/sports_check/?league=" + chosenLeague
+        let urlString = "http://159.89.139.18/sports_check/?league=" + chosenLeague
         guard let url = URL(string: urlString) else { return }
 
         // 2
@@ -143,22 +142,25 @@ class HomeViewController: UIViewController {
             do {
                 // 3
                 //Decode data
-                let teams = try JSONDecoder().decode(Teams.self, from: data)
+                teams = try JSONDecoder().decode(Teams.self, from: data)
                 
                 // Teams
-                self.orlandoInfo = teams.orlandoPride
-                self.skyBlueInfo = teams.skyBlue
-                self.houstonInfo = teams.houstonDash
-                self.washingtonInfo = teams.washingtonSpirit
-                self.northCarolinaInfo = teams.northCarolinaCourage
-                self.reignInfo = teams.reign
-                self.portlandInfo = teams.portlandThorns
-                self.chicagoInfo = teams.chicagoRedStars
-                self.utahInfo = teams.utahRoyals
+                teamsDict["orlando_pride"] = teams.orlandoPride
+                teamsDict["sky_blue"] = teams.skyBlue
+                teamsDict["houston_dash"] = teams.houstonDash
+                teamsDict["washington_spirit"] = teams.washingtonSpirit
+                teamsDict["north_carolina_courage"] = teams.northCarolinaCourage
+                teamsDict["reign"] = teams.reign
+                teamsDict["portland_thorns"] = teams.portlandThorns
+                teamsDict["chicago_red_stars"] = teams.chicagoRedStars
+                teamsDict["utah_royals"] = teams.utahRoyals
                 
-                // For Chia & Gustavo - USAGE FOR PLAYERS
-//                let playerKeys = teamInfo.players.keys // player numbers: "23", "3"
-//                let players = teamInfo.players.values  // all player objects
+                // Set default home and away
+                home = "orlando_pride"
+                away = "chicago_red_stars"
+                
+                // Set league
+                league = self.chosenLeague
                 
                 // 4
                 //Get back to the main queue
@@ -176,44 +178,28 @@ class HomeViewController: UIViewController {
     
        if btn.tag == 1 {
         // Set Team Info to Pass
-        home = chicagoInfo
-        away = orlandoInfo
+        home = "orlando_pride"
+        away = "chicago_red_stars"
        }
        else if btn.tag == 2 {
         // Set Team Info to Pass
-        home = reignInfo
-        away = portlandInfo
+        home = "reign"
+        away = "portland_thorns"
        }
        else{
         // Set Team Info to Pass
-        home = utahInfo
-        away = northCarolinaInfo
+        home = "utah_royals"
+        away = "north_carolina_courage"
        }
         performSegue(withIdentifier: "Game", sender: self)
-        performSegue(withIdentifier: "ListTeams", sender: self)
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if(segue.identifier == "Game"){
-//                let displayVC = segue.destination as! GameInfoViewController
-//                displayVC.home = home
-//                displayVC.away = away
-//        }
-//    }
-//
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if(segue.identifier == "ListTeams"){
-//                let displayVC = segue.destination as! ListTeamsViewController
-//                displayVC.orlandoInfo = orlandoInfo
-//                displayVC.skyBlueInfo = skyBlueInfo
-//                displayVC.houstonInfo = houstonInfo
-//                displayVC.washingtonInfo = washingtonInfo
-//                displayVC.northCarolinaInfo = northCarolinaInfo
-//                displayVC.reignInfo = reignInfo
-//                displayVC.portlandInfo = portlandInfo
-//                displayVC.chicagoInfo = chicagoInfo
-//                displayVC.utahInfo = utahInfo
-//        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "Game"){
+                let displayVC = segue.destination as! GameInfoViewController
+                displayVC.home = home
+                displayVC.away = away
+        }
+    }
 }
 
