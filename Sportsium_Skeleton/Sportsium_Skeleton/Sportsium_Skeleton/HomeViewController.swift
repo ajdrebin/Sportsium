@@ -173,6 +173,9 @@ class HomeViewController: UIViewController {
             guard let data = data else { return }
             do {
                 // 3
+                // Set league
+                league = self.chosenLeague
+
                 //Decode data
                 if (league == "NWSL") {
                     NWSLteams = try JSONDecoder().decode(NWSL.self, from: data)
@@ -208,8 +211,6 @@ class HomeViewController: UIViewController {
                 home = "orlando_pride"
                 away = "chicago_red_stars"
                 
-                // Set league
-                league = self.chosenLeague
                 
                 // 4
                 //Get back to the main queue
