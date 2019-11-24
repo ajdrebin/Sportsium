@@ -45,6 +45,7 @@ struct Teams: Codable {
      let fb: String
      let headCoach: String
      let stadium: String
+     let teamName: String
      let playerList: [Player]
 
      enum CodingKeys: String, CodingKey {
@@ -59,6 +60,7 @@ struct Teams: Codable {
          case fb
          case headCoach = "head_coach"
          case stadium
+         case teamName = "team_name"
          case playerList = "player_list"
      }
  }
@@ -89,12 +91,20 @@ struct Teams: Codable {
      }
  }
 
+
+// GLOBAL VARIABLES
+var teamsDict = [String: TeamInfo]()
+
+var initiate = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", teamName: "", playerList: [])
+var teams = Teams(orlandoPride: initiate, skyBlue: initiate, houstonDash: initiate, washingtonSpirit: initiate, northCarolinaCourage: initiate, reign: initiate, portlandThorns: initiate, chicagoRedStars: initiate, utahRoyals: initiate)
+
+var home = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", teamName: "", playerList: [])
+var away = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", teamName: "", playerList: [])
+
 class HomeViewController: UIViewController {
     var chosenLeague = ""
     
     @IBOutlet weak var home1: UILabel!
-    
-
     @IBOutlet weak var homeLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var stadiumLabel: UILabel!
@@ -106,17 +116,17 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var game3: UIButton!
     
     // Initializing Team Info to Send
-    var home = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", playerList: [])
-    var away = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", playerList: [])
-    var orlandoInfo = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", playerList: [])
-    var skyBlueInfo = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", playerList: [])
-    var houstonInfo = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", playerList: [])
-    var washingtonInfo = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", playerList: [])
-    var northCarolinaInfo = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", playerList: [])
-    var reignInfo = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", playerList: [])
-    var portlandInfo = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", playerList: [])
-    var chicagoInfo = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", playerList: [])
-    var utahInfo = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", playerList: [])
+    var home = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", teamName: "", playerList: [])
+    var away = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", teamName: "", playerList: [])
+    var orlandoInfo = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", teamName: "", playerList: [])
+    var skyBlueInfo = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", teamName: "", playerList: [])
+    var houstonInfo = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", teamName: "", playerList: [])
+    var washingtonInfo = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", teamName: "", playerList: [])
+    var northCarolinaInfo = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", teamName: "", playerList: [])
+    var reignInfo = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", teamName: "", playerList: [])
+    var portlandInfo = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", teamName: "", playerList: [])
+    var chicagoInfo = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", teamName: "", playerList: [])
+    var utahInfo = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", teamName: "", playerList: [])
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -144,11 +154,18 @@ class HomeViewController: UIViewController {
             do {
                 // 3
                 //Decode data
-                let teams = try JSONDecoder().decode(Teams.self, from: data)
-//                Constants = teams
-//                print(Constants)
-//
+                teams = try JSONDecoder().decode(Teams.self, from: data)
+                
                 // Teams
+                teamsDict["orlando_pride"] = teams.orlandoPride
+                teamsDict["sky_blue"] = teams.skyBlue
+                teamsDict["houston_dash"] = teams.houstonDash
+                teamsDict["washington_spirit"] = teams.washingtonSpirit
+                teamsDict["north_carolina_courage"] = teams.northCarolinaCourage
+                teamsDict["reign"] = teams.reign
+                teamsDict["portland_thorns"] = teams.portlandThorns
+                teamsDict["chicago_red_stars"] = teams.chicagoRedStars
+                teamsDict["utah_royals"] = teams.utahRoyals
                 self.orlandoInfo = teams.orlandoPride
                 self.skyBlueInfo = teams.skyBlue
                 self.houstonInfo = teams.houstonDash
@@ -158,6 +175,10 @@ class HomeViewController: UIViewController {
                 self.portlandInfo = teams.portlandThorns
                 self.chicagoInfo = teams.chicagoRedStars
                 self.utahInfo = teams.utahRoyals
+                
+                // Set default home and away
+                self.home = self.orlandoInfo
+                self.away = self.chicagoInfo
                 
                 // 4
                 //Get back to the main queue
@@ -175,8 +196,8 @@ class HomeViewController: UIViewController {
     
        if btn.tag == 1 {
         // Set Team Info to Pass
-        self.home = chicagoInfo
-        self.away = orlandoInfo
+        self.home = orlandoInfo
+        self.away = chicagoInfo
        }
        else if btn.tag == 2 {
         // Set Team Info to Pass
@@ -198,36 +219,5 @@ class HomeViewController: UIViewController {
                 displayVC.away = self.away
         }
     }
-
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if(segue.identifier == "ListTeams"){
-//                let displayVC = segue.destination as! ListTeamsViewController
-//                displayVC.orlandoInfo = orlandoInfo
-//                displayVC.skyBlueInfo = skyBlueInfo
-//                displayVC.houstonInfo = houstonInfo
-//                displayVC.washingtonInfo = washingtonInfo
-//                displayVC.northCarolinaInfo = northCarolinaInfo
-//                displayVC.reignInfo = reignInfo
-//                displayVC.portlandInfo = portlandInfo
-//                displayVC.chicagoInfo = chicagoInfo
-//                displayVC.utahInfo = utahInfo
-//        }
-//    }
-//
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if(segue.identifier == "Camera"){
-//                let displayVC = segue.destination as! CameraViewController
-//                displayVC.orlandoInfo = orlandoInfo
-//                displayVC.skyBlueInfo = skyBlueInfo
-//                displayVC.houstonInfo = houstonInfo
-//                displayVC.washingtonInfo = washingtonInfo
-//                displayVC.northCarolinaInfo = northCarolinaInfo
-//                displayVC.reignInfo = reignInfo
-//                displayVC.portlandInfo = portlandInfo
-//                displayVC.chicagoInfo = chicagoInfo
-//                displayVC.utahInfo = utahInfo
-//        }
-//    }
-    
 }
 

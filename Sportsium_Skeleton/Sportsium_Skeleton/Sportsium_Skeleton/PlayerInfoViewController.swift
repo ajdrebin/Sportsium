@@ -33,7 +33,7 @@ class PlayerInfoViewController: UIViewController {
   
   var player_obj = Player(firstName: "", lastName: "", instagram: "", hometown: "", twitter: "", number: "", snapchat: "", height: "", fb: "", DOB: "", country: "", playerId: 0, position: "")
 
-  var team_obj = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", playerList: [])
+  var team_obj = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", teamName: "", playerList: [])
   
   
   

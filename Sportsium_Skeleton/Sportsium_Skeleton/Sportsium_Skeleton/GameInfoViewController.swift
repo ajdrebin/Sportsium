@@ -22,7 +22,6 @@ class GameInfoViewController: UIViewController {
         // Do any additional setup after loading the view.
         homePlayers = home!.playerList  // all player objects
         awayPlayers = away!.playerList
-        print(home)
         makeButtons()
     }
     
