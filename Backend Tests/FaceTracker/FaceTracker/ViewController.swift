@@ -24,10 +24,10 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     
 //    var teamColorCodes:[(team: String, homeColor: (red: Int, green: Int, blue: Int), awayColor: (red: Int, green: Int, blue: Int))] = [(team: "Orlando", homeColor: (red: 96, green: 70, blue: 161), awayColor: (red: 26, green: 82, blue: 228)), (team: "Chicago", homeColor: (red: 96, green: 70, blue: 161), awayColor: (red: 26, green: 82, blue: 228))]
     
-    var teamColorCodes: [String: (homeColor: (red: Int, green: Int, blue: Int), awayColor: (red: Int, green: Int, blue: Int))] = [:]
+    var teamColorCodes: [String: (homeColor: (red: Double, green: Double, blue: Double), awayColor: (red: Double, green: Double, blue: Double))] = [:]
     
-    let homeTeam = "Orlando"
-    let awayTeam = "Chicago"
+    let homeTeam = "orlando_pride"
+    let awayTeam = "chicago_red_stars"
     
     
 //    let homeColor = teamcol
@@ -69,10 +69,13 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     }
     
     func populateColors() {
-        self.teamColorCodes["Orlando"] = (homeColor: (red: 96, green: 70, blue: 161), awayColor: (red: 26, green: 82, blue: 228))
-        self.teamColorCodes["Chicago"] = (homeColor: (red: 96, green: 70, blue: 161), awayColor: (red: 26, green: 82, blue: 228))
-        self.teamColorCodes["North Carolina"] = (homeColor: (red: 96, green: 70, blue: 161), awayColor: (red: 26, green: 82, blue: 228))
-        self.teamColorCodes["Utah"] = (homeColor: (red: 96, green: 70, blue: 161), awayColor: (red: 26, green: 82, blue: 228))
+        self.teamColorCodes["orlando_pride"] = (homeColor: (red: 77, green: 52, blue: 136), awayColor: (red: 208, green: 202, blue: 219))
+        self.teamColorCodes["chicago_red_stars"] = (homeColor: (red: 112, green: 134, blue: 173), awayColor: (red: 213, green: 216, blue: 211))
+        self.teamColorCodes["reign"] = (homeColor: (red: 17, green: 26, blue: 47), awayColor: (red: 1, green: 1, blue: 1))
+        self.teamColorCodes["portland_thorns"] = (homeColor: (red: 0, green: 0, blue: 0), awayColor: (red: 190, green: 201, blue: 230))
+        self.teamColorCodes["utah_royals"] = (homeColor: (red: 211, green: 142, blue: 9), awayColor: (red: 1, green: 1, blue: 1))
+        self.teamColorCodes["north_carolina_courage"] = (homeColor: (red: 1, green: 1, blue: 1), awayColor: (233, 222, 245))
+        
     }
     
     override func viewDidLayoutSubviews() {
@@ -167,6 +170,11 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
             if(photocount < 20){
 //                UIImageWriteToSavedPhotosAlbum(uiImageCrop, nil, nil, nil)
             
+            }
+            
+            //skip first 10 photos
+            if(photocount < 10){
+                return humanBoundingBoxShape
             }
            
             let cropPixelBuffer = uiToPixelBuffer(from: uiImageCrop)
@@ -279,6 +287,9 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
 //        let awayTeam = (red: 26, green: 82, blue: 228)
         let homeColor = self.teamColorCodes[self.homeTeam]?.homeColor
         let awayColor = self.teamColorCodes[self.awayTeam]?.awayColor
+//        print("home color: ", homeColor)
+//        print("away color: ", awayColor)
+//        let tolerance = 55.0
         let tolerance = 30
         var homeCount = 0
         var awayCount = 0
@@ -290,33 +301,50 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
             for xCo in 0 ..< Int(image.size.width) {
                 let pixelColor = getPixelColor(image: image, pos: CGPoint(x: xCo, y: yCo))
                 let pixelComps = getColorComponents(color: pixelColor)
+//                let red = Double(pixelComps.red * 255)
+//                let green = Double(pixelComps.green * 255)
+//                let blue = Double(pixelComps.blue * 255)
                 let red = Int(round(pixelComps.red * 255))
                 let green = Int(round(pixelComps.green * 255))
                 let blue = Int(round(pixelComps.blue * 255))
                 
-                if(abs(red - homeColor!.red) <= tolerance &&
-                    abs(green - homeColor!.green) <= tolerance &&
-                   abs(blue - homeColor!.blue) <= tolerance){
-        
+//                var homeDist = pow(abs(red - homeColor!.red),Double(2)) + pow(abs(green - homeColor!.green),Double(2)) + pow(abs(blue - homeColor!.blue),Double(2))
+//                var awayDist = pow(abs(red - awayColor!.red),Double(2)) + pow(abs(green - awayColor!.green),Double(2)) + pow(abs(blue - awayColor!.blue),Double(2))
+//
+//                homeDist = Double(homeDist).squareRoot()
+//                awayDist = Double(awayDist).squareRoot()
+//
+////                print(homeDist, " ", awayDist)
+//                if(homeDist < tolerance){
+//                    homeCount = homeCount + 1
+//                }
+//                if(awayDist < tolerance){
+//                    awayCount = awayCount + 1
+//                }
+                
+                 if(abs(red - Int(homeColor!.red)) <= tolerance &&
+                    abs(green - Int(homeColor!.green)) <= tolerance &&
+                   abs(blue - Int(homeColor!.blue)) <= tolerance){
                     homeCount = homeCount + 1
                 }
-                if(abs(red - awayColor!.red) <= tolerance &&
-                   abs(green - awayColor!.green) <= tolerance &&
-                   abs(blue - awayColor!.blue) <= tolerance){
-//                    print("red: ", red, " green: ", green, "blue: ", blue)
+                if(abs(red - Int(awayColor!.red)) <= tolerance &&
+                   abs(green - Int(awayColor!.green)) <= tolerance &&
+                   abs(blue - Int(awayColor!.blue)) <= tolerance){
                     awayCount = awayCount + 1
                 }
                 
-                if(homeCount >= 1200){
-                    print("home count: ", homeCount)
-                    print("away count: ", awayCount)
-                    return "home"
-                }
-                if(awayCount >= 1200){
-                    print("home count: ", homeCount)
-                    print("away count: ", awayCount)
-                    return "away"
-                }
+                
+                
+//                if(homeCount >= 1200){
+//                    print("home count: ", homeCount)
+//                    print("away count: ", awayCount)
+//                    return "home"
+//                }
+//                if(awayCount >= 1200){
+//                    print("home count: ", homeCount)
+//                    print("away count: ", awayCount)
+//                    return "away"
+//                }
             }
             
         }
@@ -409,6 +437,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         }
         guard let results = request?.results, results.count > 0 else {
 //            print("Error: no text was found")
+            self.detectedNumber = "-1"
             return
     }
 

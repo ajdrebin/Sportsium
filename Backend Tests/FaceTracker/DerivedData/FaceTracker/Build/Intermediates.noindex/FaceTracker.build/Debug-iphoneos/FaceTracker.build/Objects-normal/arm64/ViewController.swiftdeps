@@ -67,9 +67,10 @@ depends-top-level:
 - !private "CVPixelBufferUnlockBaseAddress"
 - "CastingPrecedence"
 - !private "DispatchQueue"
+- "Double"
 - "Error"
 - "FloatLiteralType"
-- "Int"
+- !private "Int"
 - "IntegerLiteralType"
 - !private "NSNumber"
 - !private "NSString"
@@ -1524,8 +1525,9 @@ depends-member:
 - !private ["So8NSObjectC", "CVPixelBufferUnlockBaseAddress"]
 - !private ["So8NSObjectC", "DiscoverySession"]
 - !private ["So8NSObjectC", "DispatchQueue"]
+- ["So8NSObjectC", "Double"]
 - ["So8NSObjectC", "Error"]
-- ["So8NSObjectC", "Int"]
+- !private ["So8NSObjectC", "Int"]
 - !private ["So8NSObjectC", "NSNumber"]
 - !private ["So8NSObjectC", "NSString"]
 - ["So8NSObjectC", "StopButton"]
@@ -2345,8 +2347,9 @@ depends-member:
 - !private ["So11UIResponderC", "CVPixelBufferLockFlags"]
 - !private ["So11UIResponderC", "CVPixelBufferUnlockBaseAddress"]
 - !private ["So11UIResponderC", "DispatchQueue"]
+- ["So11UIResponderC", "Double"]
 - ["So11UIResponderC", "Error"]
-- ["So11UIResponderC", "Int"]
+- !private ["So11UIResponderC", "Int"]
 - !private ["So11UIResponderC", "NSNumber"]
 - !private ["So11UIResponderC", "NSString"]
 - ["So11UIResponderC", "StopButton"]
@@ -2851,8 +2854,9 @@ depends-member:
 - !private ["So16UIViewControllerC", "CVPixelBufferLockFlags"]
 - !private ["So16UIViewControllerC", "CVPixelBufferUnlockBaseAddress"]
 - !private ["So16UIViewControllerC", "DispatchQueue"]
+- ["So16UIViewControllerC", "Double"]
 - ["So16UIViewControllerC", "Error"]
-- ["So16UIViewControllerC", "Int"]
+- !private ["So16UIViewControllerC", "Int"]
 - !private ["So16UIViewControllerC", "NSNumber"]
 - !private ["So16UIViewControllerC", "NSString"]
 - ["So16UIViewControllerC", "StopButton"]
@@ -3000,8 +3004,9 @@ depends-member:
 - !private ["11FaceTracker14ViewControllerC", "CVPixelBufferLockFlags"]
 - !private ["11FaceTracker14ViewControllerC", "CVPixelBufferUnlockBaseAddress"]
 - !private ["11FaceTracker14ViewControllerC", "DispatchQueue"]
+- ["11FaceTracker14ViewControllerC", "Double"]
 - ["11FaceTracker14ViewControllerC", "Error"]
-- ["11FaceTracker14ViewControllerC", "Int"]
+- !private ["11FaceTracker14ViewControllerC", "Int"]
 - !private ["11FaceTracker14ViewControllerC", "NSNumber"]
 - !private ["11FaceTracker14ViewControllerC", "NSString"]
 - ["11FaceTracker14ViewControllerC", "StopButton"]
@@ -5186,4 +5191,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.1.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.1.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "20695897e1e93962fb3247061e48302f"
+interface-hash: "1fa44faffd5701357e8cb8762f9f97c1"
