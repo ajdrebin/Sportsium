@@ -394,6 +394,9 @@ class PlayerInfoViewController: UIViewController {
       if(segue.identifier == "TeamInfo") {
               let displayVC = segue.destination as! TeamInfoViewController
               displayVC.home = team_obj
+        displayVC.home_team_name = home_team_name
+         displayVC.away_team_name = away_team_name
+        
 
       }
   }

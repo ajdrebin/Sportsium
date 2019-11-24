@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nf0-Oj-Ieb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nf0-Oj-Ieb">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -82,10 +82,10 @@
             </objects>
             <point key="canvasLocation" x="793" y="-128"/>
         </scene>
-        <!--ViewController-->
+        <!--HomeViewController-->
         <scene sceneID="YG4-S8-5aE">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="ViewController" id="K9J-Sa-H1b" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Home" referencedIdentifier="HomeViewController" id="K9J-Sa-H1b" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="0IS-15-OAI"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wPu-st-yQO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
