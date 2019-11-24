@@ -8,7 +8,36 @@
 
 import UIKit
 
-struct Teams: Codable {
+struct WNBA: Codable {
+     let atlantaDream: TeamInfo
+     let chicagoSky: TeamInfo
+     let conneticutSun: TeamInfo
+     let indianaFever: TeamInfo
+     let newYorkLiberty: TeamInfo
+     let washingtonMystics: TeamInfo
+     let dallasWings: TeamInfo
+     let lasVegasAces: TeamInfo
+     let losAngelesSparks: TeamInfo
+     let minnesotaLynx: TeamInfo
+     let phoenixMercury: TeamInfo
+     let seattleStorm: TeamInfo
+
+     enum CodingKeys: String, CodingKey {
+        case atlantaDream = "atlanta_dream"
+        case chicagoSky = "chicago_sky"
+        case conneticutSun = "conneticut_sun"
+        case indianaFever = "indiana_fever"
+        case newYorkLiberty = "new_york_liberty"
+        case washingtonMystics = "washington_mystics"
+        case dallasWings = "dallas_wings"
+        case lasVegasAces = "las_vegas_aces"
+        case losAngelesSparks = "los_angeles_sparks"
+        case minnesotaLynx = "minnesota_lynx"
+        case phoenixMercury = "phoenix_mercury"
+        case seattleStorm = "seattle_storm"
+    }
+}
+struct NWSL: Codable {
      let orlandoPride: TeamInfo
      let skyBlue: TeamInfo
      let houstonDash: TeamInfo
@@ -96,7 +125,10 @@ struct Teams: Codable {
 var teamsDict = [String: TeamInfo]()
 
 var initiate = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", teamName: "", playerList: [])
-var teams = Teams(orlandoPride: initiate, skyBlue: initiate, houstonDash: initiate, washingtonSpirit: initiate, northCarolinaCourage: initiate, reign: initiate, portlandThorns: initiate, chicagoRedStars: initiate, utahRoyals: initiate)
+
+var NWSLteams = NWSL(orlandoPride: initiate, skyBlue: initiate, houstonDash: initiate, washingtonSpirit: initiate, northCarolinaCourage: initiate, reign: initiate, portlandThorns: initiate, chicagoRedStars: initiate, utahRoyals: initiate)
+var WNBAteams = WNBA(atlantaDream: initiate, chicagoSky: initiate, conneticutSun: initiate, indianaFever: initiate, newYorkLiberty: initiate, washingtonMystics: initiate, dallasWings: initiate, lasVegasAces: initiate, losAngelesSparks: initiate, minnesotaLynx: initiate, phoenixMercury: initiate, seattleStorm: initiate)
+    
 var league = ""
 
 var home = ""
@@ -142,18 +174,35 @@ class HomeViewController: UIViewController {
             do {
                 // 3
                 //Decode data
-                teams = try JSONDecoder().decode(Teams.self, from: data)
-                
-                // Teams
-                teamsDict["orlando_pride"] = teams.orlandoPride
-                teamsDict["sky_blue"] = teams.skyBlue
-                teamsDict["houston_dash"] = teams.houstonDash
-                teamsDict["washington_spirit"] = teams.washingtonSpirit
-                teamsDict["north_carolina_courage"] = teams.northCarolinaCourage
-                teamsDict["reign"] = teams.reign
-                teamsDict["portland_thorns"] = teams.portlandThorns
-                teamsDict["chicago_red_stars"] = teams.chicagoRedStars
-                teamsDict["utah_royals"] = teams.utahRoyals
+                if (league == "NWSL") {
+                    NWSLteams = try JSONDecoder().decode(NWSL.self, from: data)
+
+                    teamsDict["orlando_pride"] = NWSLteams.orlandoPride
+                    teamsDict["sky_blue"] = NWSLteams.skyBlue
+                    teamsDict["houston_dash"] = NWSLteams.houstonDash
+                    teamsDict["washington_spirit"] = NWSLteams.washingtonSpirit
+                    teamsDict["north_carolina_courage"] = NWSLteams.northCarolinaCourage
+                    teamsDict["reign"] = NWSLteams.reign
+                    teamsDict["portland_thorns"] = NWSLteams.portlandThorns
+                    teamsDict["chicago_red_stars"] = NWSLteams.chicagoRedStars
+                    teamsDict["utah_royals"] = NWSLteams.utahRoyals
+                }
+                else {
+                    WNBAteams = try JSONDecoder().decode(WNBA.self, from: data)
+
+                    teamsDict["atlanta_dream"] = WNBAteams.atlantaDream
+                    teamsDict["chicago_sky"] = WNBAteams.chicagoSky
+                    teamsDict["conneticut_sun"] = WNBAteams.conneticutSun
+                    teamsDict["indiana_fever"] = WNBAteams.indianaFever
+                    teamsDict["new_york_liberty"] = WNBAteams.newYorkLiberty
+                    teamsDict["washington_mystics"] = WNBAteams.washingtonMystics
+                    teamsDict["dallas_wings"] = WNBAteams.dallasWings
+                    teamsDict["las_vegas_aces"] = WNBAteams.lasVegasAces
+                    teamsDict["los_angeles_sparks"] = WNBAteams.losAngelesSparks
+                    teamsDict["minnesota_lynx"] = WNBAteams.minnesotaLynx
+                    teamsDict["phoenix_mercury"] = WNBAteams.phoenixMercury
+                    teamsDict["seattle_storm"] = WNBAteams.seattleStorm
+                }
                 
                 // Set default home and away
                 home = "orlando_pride"
