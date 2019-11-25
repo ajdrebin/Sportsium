@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--PlayerInfoViewController-->
+        <scene sceneID="ZCY-mY-kjN">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PlayerInfo" referencedIdentifier="PlayerInfoViewController" id="051-ck-2IX" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="LXp-jz-nDz"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wbv-1P-qAC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="631" y="-114"/>
+        </scene>
         <!--Identify View Controller-->
         <scene sceneID="Y9k-aS-qVX">
             <objects>
@@ -95,6 +105,7 @@
                     <connections>
                         <outlet property="helpLabel" destination="vlB-RZ-CTr" id="muB-kQ-8Qz"/>
                         <outlet property="numberLabel" destination="5dB-NW-GdW" id="Ia5-RX-Djw"/>
+                        <segue destination="051-ck-2IX" kind="show" identifier="PlayerInfo" id="nX3-VK-eOB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lpC-ml-Hfv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -109,7 +120,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-8.8000000000000007" y="26.600985221674879"/>
+            <point key="canvasLocation" x="-57" y="27"/>
         </scene>
         <!--HomeViewController-->
         <scene sceneID="VMK-gp-gMe">

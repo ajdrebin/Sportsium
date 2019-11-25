@@ -13,6 +13,19 @@ import Foundation
 import Accelerate
 import CoreImage
 
+class PlayerButton: UIButton {
+    var player: Player
+    
+    init(player: Player) {
+        self.player = player
+        super.init(frame: .zero)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
 class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
     
     
@@ -105,11 +118,13 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
             var team = ""
             
             let currPlayer = self.detectedPlayersArr[i]
+            var idPlayer = homeRoster[0]
             self.currentScrollArr.append(currPlayer)
             print(i, currPlayer)
             if (currPlayer.team == homeTeam) {
                 for player in homeRoster {
                     if currPlayer.number == player.number {
+                        idPlayer = player
                         name = player.firstName + " " + player.lastName
                         number = player.number
                         team = currPlayer.team
@@ -120,6 +135,7 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
 //                print("Roster", awayRoster)
                 for player in awayRoster {
                     if currPlayer.number == player.number {
+                        idPlayer = player
                         name = player.firstName + " " + player.lastName
                         number = player.number
                         team = currPlayer.team
@@ -131,12 +147,15 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
             if (name == "" || number == "" || team == "") {
                 continue
             }
-            let button = UIButton()
+            
+            print("PLAYER", idPlayer)
+            let button = PlayerButton( player: idPlayer )
             button.tag = i
+            print("CHECK", button.player)
             let color = self.teamColorCodes[team]?.homeColor
             button.backgroundColor = UIColor(red: CGFloat(color!.red)/255, green: CGFloat(color!.green)/255, blue: CGFloat(color!.blue)/255, alpha: 1)
             button.setTitle("\(number) \(name)", for: .normal)
-            //button.addTarget(self, action: #selector(btnTouch), for: UIControlEvents.touchUpInside)
+            button.addTarget(self, action: #selector(btnTouch), for: UIControl.Event.touchUpInside)
 
             button.frame = CGRect(x: xOffset, y: CGFloat(buttonPadding), width: 200, height: 70)
 
@@ -146,6 +165,19 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
 
         scView.contentSize = CGSize(width: xOffset, height: scView.frame.height)
     }
+    
+    @IBAction func btnTouch(_ sender: PlayerButton) {
+        print("IN SEGUE", sender.player)
+        performSegue(withIdentifier: "PlayerInfo", sender: sender.player)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "PlayerInfo") {
+            let displayVC = segue.destination as! PlayerInfoViewController
+            displayVC.player_obj = sender as! Player
+        }
+    }
+     
     
     func populateColors() {
         if (self.league == "NWSL"){
