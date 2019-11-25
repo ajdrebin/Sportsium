@@ -149,6 +149,22 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var game3: UIButton!
     var didLoad = false
     
+    @IBOutlet weak var game1home: UIImageView!
+    @IBOutlet weak var game1away: UIImageView!
+    @IBOutlet weak var game1stadium: UILabel!
+    @IBOutlet weak var game1location: UILabel!
+    
+    @IBOutlet weak var game2home: UIImageView!
+    @IBOutlet weak var game2away: UIImageView!
+    @IBOutlet weak var game2stadium: UILabel!
+    @IBOutlet weak var game2location: UILabel!
+    
+    @IBOutlet weak var game3home: UIImageView!
+    @IBOutlet weak var game3away: UIImageView!
+    @IBOutlet weak var game3stadium: UILabel!
+    @IBOutlet weak var game3location: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -176,7 +192,7 @@ class HomeViewController: UIViewController {
                 // 3
                 // Set league
                 league = self.chosenLeague
-
+                
                 //Decode data
                 if (league == "NWSL") {
                     NWSLteams = try JSONDecoder().decode(NWSL.self, from: data)
@@ -216,9 +232,27 @@ class HomeViewController: UIViewController {
                 
                 // 4
                 //Get back to the main queue
-//                DispatchQueue.main.async {
-//                    self.homeLabel.text = String(JSONData.orlando_pride)
-//                }
+
+                if (league == "WNBA") {
+                    DispatchQueue.main.async {
+                        self.game1home.image = UIImage(named:"atlanta_dream")
+                        self.game1away.image = UIImage(named:"chicago_sky")
+                        self.game1stadium.text = "Gateway Center Arena"
+                        self.game1location.text = "College Park, Georgia"
+                        
+                        self.game2home.image = UIImage(named:"los_angeles_sparks")
+                        self.game2away.image = UIImage(named:"las_vegas_aces")
+                        self.game2stadium.text = "Staples Center"
+                        self.game2location.text = "LA, California"
+                        
+                        self.game3home.image = UIImage(named:"seattle_storm")
+                        self.game3away.image = UIImage(named:"phoenix_mercury")
+                        self.game3stadium.text = "ShoWare Center"
+                        self.game3location.text = "Kent, Washington"
+
+                    }
+                }
+
             } catch let jsonError {
                 print(jsonError)
             }
