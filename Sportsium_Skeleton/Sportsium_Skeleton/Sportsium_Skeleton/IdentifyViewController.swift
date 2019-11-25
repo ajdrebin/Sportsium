@@ -27,8 +27,9 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
     var teamColorCodes: [String: (homeColor: (red: Double, green: Double, blue: Double), awayColor: (red: Double, green: Double, blue: Double))] = [:]
     
     let homeTeam = "orlando_pride"
-    let awayTeam = "chicago_red_stars"
+    let awayTeam = "portland_thorns"
     let league = "NWSL"
+
     
 //    let homeColor = teamcol
     
@@ -66,7 +67,7 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
         self.addCameraInput()
         self.showCameraFeed()
         self.getCameraFrames()
-        self.makeButtons()
+//        self.makeButtons()
     }
     
     func makeButtons(){
@@ -79,14 +80,47 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
         scView = UIScrollView(frame: CGRect(x: 0, y: 600, width: view.bounds.width, height: 115))
         self.view.addSubview(scView)
 
-        scView.backgroundColor = UIColor.blue
+        scView.backgroundColor = UIColor.lightGray
         scView.translatesAutoresizingMaskIntoConstraints = false
+        
+        let homeRoster = (teamsDict[homeTeam]?.playerList)!
+        let awayRoster = (teamsDict[awayTeam]?.playerList)!
+        
+        
 
-        for i in 0 ... self.detectedPlayersArr.count {
+        for i in 0 ... self.detectedPlayersArr.count - 1 {
+            var name = ""
+            var number = ""
+            var team = ""
+            
+            let currPlayer = self.detectedPlayersArr[i]
+            print(i, currPlayer)
+            if (currPlayer.team == homeTeam) {
+                for player in homeRoster {
+                    if currPlayer.number == player.number {
+                        name = player.firstName + " " + player.lastName
+                        number = player.number
+                        team = currPlayer.team
+                    }
+                }
+            }
+            else if (currPlayer.team == awayTeam) {
+                print("Roster", awayRoster)
+                for player in awayRoster {
+                    if currPlayer.number == player.number {
+                        name = player.firstName + " " + player.lastName
+                        number = player.number
+                        team = currPlayer.team
+                    }
+                }
+            }
+            
+            print("TEST", name,  number, team)
             let button = UIButton()
             button.tag = i
-            button.backgroundColor = UIColor.darkGray
-            button.setTitle("\(i) hello", for: .normal)
+            let color = self.teamColorCodes[team]?.homeColor
+            button.backgroundColor = UIColor(red: CGFloat(color!.red)/255, green: CGFloat(color!.green)/255, blue: CGFloat(color!.blue)/255, alpha: 1)
+            button.setTitle("\(number) \(name)", for: .normal)
             //button.addTarget(self, action: #selector(btnTouch), for: UIControlEvents.touchUpInside)
 
             button.frame = CGRect(x: xOffset, y: CGFloat(buttonPadding), width: 200, height: 70)
@@ -103,7 +137,7 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
             self.teamColorCodes["orlando_pride"] = (homeColor: (red: 77, green: 52, blue: 136), awayColor: (red: 208, green: 202, blue: 219))
             self.teamColorCodes["chicago_red_stars"] = (homeColor: (red: 112, green: 134, blue: 173), awayColor: (red: 213, green: 216, blue: 211))
             self.teamColorCodes["reign"] = (homeColor: (red: 17, green: 26, blue: 47), awayColor: (red: 1, green: 1, blue: 1))
-            self.teamColorCodes["portland_thorns"] = (homeColor: (red: 0, green: 0, blue: 0), awayColor: (red: 190, green: 201, blue: 230))
+            self.teamColorCodes["portland_thorns"] = (homeColor: (red: 214, green: 28, blue: 39), awayColor: (red: 190, green: 201, blue: 230))
             self.teamColorCodes["utah_royals"] = (homeColor: (red: 211, green: 142, blue: 9), awayColor: (red: 1, green: 1, blue: 1))
             self.teamColorCodes["north_carolina_courage"] = (homeColor: (red: 1, green: 1, blue: 1), awayColor: (233, 222, 245))
 
@@ -191,14 +225,14 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
         
         let humansBoundingBoxes: [CAShapeLayer] = observedhumans.map({ (observedhuman: VNDetectedObjectObservation) -> CAShapeLayer in
             let humanBoundingBoxOnScreen = self.previewLayer.layerRectConverted(fromMetadataOutputRect: observedhuman.boundingBox)
-            print("observed width: ", observedhuman.boundingBox.width)
-            print("observed height: ", observedhuman.boundingBox.height)
-            print("observed x: ", observedhuman.boundingBox.origin.x)
-            print("observed y: ", observedhuman.boundingBox.origin.y)
-            print("human width: ", humanBoundingBoxOnScreen.width)
-            print("human height: ", humanBoundingBoxOnScreen.height)
-            print("human x: ", humanBoundingBoxOnScreen.origin.x)
-            print("human y: ", humanBoundingBoxOnScreen.origin.y)
+//            print("observed width: ", observedhuman.boundingBox.width)
+//            print("observed height: ", observedhuman.boundingBox.height)
+//            print("observed x: ", observedhuman.boundingBox.origin.x)
+//            print("observed y: ", observedhuman.boundingBox.origin.y)
+//            print("human width: ", humanBoundingBoxOnScreen.width)
+//            print("human height: ", humanBoundingBoxOnScreen.height)
+//            print("human x: ", humanBoundingBoxOnScreen.origin.x)
+//            print("human y: ", humanBoundingBoxOnScreen.origin.y)
             let humanBoundingBoxPath = CGPath(rect: humanBoundingBoxOnScreen, transform: nil)
             let humanBoundingBoxShape = CAShapeLayer()
             humanBoundingBoxShape.path = humanBoundingBoxPath
@@ -209,7 +243,7 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
             let context = CIContext()
             let cgimage = context.createCGImage(ciImage, from: ciImage.extent)
             
-            print(cgimage?.width, " " , cgimage?.height)
+//            print(cgimage?.width, " " , cgimage?.height)
             let uiImage =  UIImage(cgImage: cgimage!)
             if(photocount < 10){
                 UIImageWriteToSavedPhotosAlbum(uiImage, nil, nil, nil)
@@ -240,6 +274,7 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
                 if(team != "no team found" && !contains(a: self.detectedPlayersArr, v: tup)){
                     self.detectedPlayersArr.append(tup)
                     print(self.detectedPlayersArr)
+                    self.makeButtons()
                 }
                 
                 self.detectedNumber = "-1"
@@ -270,29 +305,29 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
         if(self.is_stopped){
             return detectable
         }
-        print("detectable width: ", detectable.width)
-        print("detectable height: ", detectable.height)
+//        print("detectable width: ", detectable.width)
+//        print("detectable height: ", detectable.height)
         
         let humanBoundingBoxOnScreen = self.previewLayer.layerRectConverted(fromMetadataOutputRect: object.boundingBox)
         
-        let imageViewScale = max(humanBoundingBoxOnScreen.width / CGFloat(detectable.width) , humanBoundingBoxOnScreen.height / CGFloat(detectable.height))
-        print("image view scale: ", imageViewScale)
+//        let imageViewScale = max(humanBoundingBoxOnScreen.width / CGFloat(detectable.width) , humanBoundingBoxOnScreen.height / CGFloat(detectable.height))
+//        print("image view scale: ", imageViewScale)
         
-//        let width = humanBoundingBoxOnScreen.width * 3
-//        let height = humanBoundingBoxOnScreen.height * 2.5
-//        let x = humanBoundingBoxOnScreen.origin.x * 3
-//        let y = humanBoundingBoxOnScreen.origin.y * 2.5
-        let width = CGFloat(detectable.width) / humanBoundingBoxOnScreen.width * object.boundingBox.width
-        let height = CGFloat(detectable.height) / humanBoundingBoxOnScreen.height * object.boundingBox.height
-        let x = CGFloat(detectable.width) / humanBoundingBoxOnScreen.origin.x * object.boundingBox.origin.x
-        let y = CGFloat(detectable.height) / humanBoundingBoxOnScreen.origin.y * object.boundingBox.origin.y
+        let width = humanBoundingBoxOnScreen.width * 3
+        let height = humanBoundingBoxOnScreen.height * 2.5
+        let x = humanBoundingBoxOnScreen.origin.x * 3
+        let y = humanBoundingBoxOnScreen.origin.y * 2.5
+//        let width = CGFloat(detectable.width) / humanBoundingBoxOnScreen.width * object.boundingBox.width
+//        let height = CGFloat(detectable.height) / humanBoundingBoxOnScreen.height * object.boundingBox.height
+//        let x = CGFloat(detectable.width) / humanBoundingBoxOnScreen.origin.x * object.boundingBox.origin.x
+//        let y = CGFloat(detectable.height) / humanBoundingBoxOnScreen.origin.y * object.boundingBox.origin.y
         
         
         
-        print("crop width: ", width)
-        print("crop height: ", height)
-        print("crop x: ", x)
-        print("crop y: ", y)
+//        print("crop width: ", width)
+//        print("crop height: ", height)
+//        print("crop x: ", x)
+//        print("crop y: ", y)
         
         
 //        let width = object.boundingBox.width * CGFloat(detectable.width)
