@@ -211,11 +211,11 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
         }
         if (league == "NWSL"){
             self.teamColorCodes["orlando_pride"] = (homeColor: (red: 113, green: 78, blue: 178), awayColor: (red: 1, green: 1, blue: 1))
-            self.teamColorCodes["chicago_red_stars"] = (homeColor: (red: 215, green: 240, blue: 255), awayColor: (red: 220, green: 243, blue: 255))
+            self.teamColorCodes["chicago_red_stars"] = (homeColor: (red: 215, green: 240, blue: 255), awayColor: (red: 255, green: 246, blue: 49))
             self.teamColorCodes["reign"] = (homeColor: (red: 17, green: 26, blue: 47), awayColor: (red: 1, green: 1, blue: 1))
             self.teamColorCodes["portland_thorns"] = (homeColor: (red: 230, green: 60, blue: 41), awayColor: (red: 255, green: 255, blue: 255))
             self.teamColorCodes["utah_royals"] = (homeColor: (red: 211, green: 142, blue: 9), awayColor: (red: 1, green: 1, blue: 1))
-            self.teamColorCodes["north_carolina_courage"] = (homeColor: (red: 1, green: 1, blue: 1), awayColor: (233, 222, 245))
+            self.teamColorCodes["north_carolina_courage"] = (homeColor: (red: 1, green: 1, blue: 1), awayColor: (255, 255, 255))
 
         }
         else if (league == "WNBA"){
@@ -318,13 +318,15 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
             let ciImage = CIImage(cvPixelBuffer: image)
             let context = CIContext()
             let cgimage = context.createCGImage(ciImage, from: ciImage.extent)
-            
+            if(cgimage == nil){ return humanBoundingBoxShape}
 //            print(cgimage?.width, " " , cgimage?.height)
 //            let uiImage =  UIImage(cgImage: cgimage!)
             if(photocount < 10){
 //                UIImageWriteToSavedPhotosAlbum(uiImage, nil, nil, nil)
             }
             let cgimageCropped = cropImage(detectable: cgimage!, object: observedhuman)
+            
+            if(cgimageCropped == nil){ return humanBoundingBoxShape}
             let uiImageCrop =  UIImage(cgImage: cgimageCropped!)
             photocount += 1
             if(photocount < 10){
@@ -528,6 +530,7 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
             if(self.is_stopped){
                 return "stopping, no team found"
             }
+            
             let shrunk = self.resizeImage(image: image, targetSize: CGSize(width: 200.0, height: 200.0))
             UIImageWriteToSavedPhotosAlbum(shrunk, nil, nil, nil)
 
@@ -536,7 +539,7 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
             }
             let homeColor = self.teamColorCodes[home]?.homeColor
             let awayColor = self.teamColorCodes[away]?.awayColor
-            
+            print("checking, home:", homeColor, " away:", awayColor)
             
             let homeHSV = rgbToHue(r: CGFloat(homeColor!.red/255), g: CGFloat(homeColor!.green/255), b: CGFloat(homeColor!.blue/255))
 //            print("home rgb: ", homeColor!, "hsv: ", homeHSV)
@@ -555,7 +558,7 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
     //        print("away hue diff: ", hueDiffAway)
 
 
-    //        let tolerance = 30
+            let tolerance = 30
             var homeCount = 0
             var awayCount = 0
             
@@ -566,21 +569,21 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
                 for xCo in 0 ..< Int(shrunk.size.width) {
                     let pixelColor = getPixelColor(image: shrunk, pos: CGPoint(x: xCo, y: yCo))
                     let pixelComps = getColorComponents(color: pixelColor)
-                    let pixelHSV = rgbToHue(r: pixelComps.red, g: pixelComps.green, b: pixelComps.blue)
-    //                print("pixel rgb: ", pixelComps, " hsv: ", pixelHSV)
-                    let pixHue = pixelHSV.h * 360
-                    let hueTolerance = CGFloat(30.0)
-                    let hueDiffHome = min(abs(homeHue-pixHue), 360-abs(homeHue-pixHue))
-                    let hueDiffAway = min(abs(awayHue-pixHue), 360-abs(awayHue-pixHue))
-    //                print("home hue diff: ", hueDiffHome)
-    //                print("away hue diff: ", hueDiffAway)
-                    
-                    if(abs(hueDiffHome - pixHue) <= hueTolerance){
-                        homeCount = homeCount + 1
-                    }
-                    if(abs(hueDiffAway - pixHue) <= hueTolerance){
-                        awayCount = awayCount + 1
-                    }
+//                    let pixelHSV = rgbToHue(r: pixelComps.red, g: pixelComps.green, b: pixelComps.blue)
+//    //                print("pixel rgb: ", pixelComps, " hsv: ", pixelHSV)
+//                    let pixHue = pixelHSV.h * 360
+//                    let hueTolerance = CGFloat(10.0)
+//                    let hueDiffHome = min(abs(homeHue-pixHue), 360-abs(homeHue-pixHue))
+//                    let hueDiffAway = min(abs(awayHue-pixHue), 360-abs(awayHue-pixHue))
+//    //                print("home hue diff: ", hueDiffHome)
+//    //                print("away hue diff: ", hueDiffAway)
+//
+//                    if(abs(hueDiffHome - pixHue) <= hueTolerance){
+//                        homeCount = homeCount + 1
+//                    }
+//                    if(abs(hueDiffAway - pixHue) <= hueTolerance){
+//                        awayCount = awayCount + 1
+//                    }
 
                     
                     
@@ -591,28 +594,28 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
     //                let blue = Double(pixelComps.blue * 255)
                     
                     
-    //                let red = Int(round(pixelComps.red * 255))
-    //                let green = Int(round(pixelComps.green * 255))
-    //                let blue = Int(round(pixelComps.blue * 255))
-    //
-    //
-    //
-    //                 if(abs(red - Int(homeColor!.red)) <= tolerance &&
-    //                    abs(green - Int(homeColor!.green)) <= tolerance &&
-    //                   abs(blue - Int(homeColor!.blue)) <= tolerance){
-    //                    homeCount = homeCount + 1
-    //                }
-    //                if(abs(red - Int(awayColor!.red)) <= tolerance &&
-    //                   abs(green - Int(awayColor!.green)) <= tolerance &&
-    //                   abs(blue - Int(awayColor!.blue)) <= tolerance){
-    //                    awayCount = awayCount + 1
-    //                }
+                    let red = Int(round(pixelComps.red * 255))
+                    let green = Int(round(pixelComps.green * 255))
+                    let blue = Int(round(pixelComps.blue * 255))
+    
+    
+    
+                     if(abs(red - Int(homeColor!.red)) <= tolerance &&
+                        abs(green - Int(homeColor!.green)) <= tolerance &&
+                       abs(blue - Int(homeColor!.blue)) <= tolerance){
+                        homeCount = homeCount + 1
+                    }
+                    if(abs(red - Int(awayColor!.red)) <= tolerance &&
+                       abs(green - Int(awayColor!.green)) <= tolerance &&
+                       abs(blue - Int(awayColor!.blue)) <= tolerance){
+                        awayCount = awayCount + 1
+                    }
                     
                 }
                 
             }
-//            print("home count: ", homeCount)
-//            print("away count: ", awayCount)
+            print("home count: ", homeCount)
+            print("away count: ", awayCount)
             if(homeCount >= awayCount){
                 return "home"
             }
