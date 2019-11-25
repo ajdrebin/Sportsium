@@ -406,86 +406,158 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
         return (red, green, blue, alpha)
     }
     
-    func findColor(image: UIImage) -> String{
-        if(self.is_stopped){
-            return "stopping, no team found"
-        }
-//        let homeTeam = (red: 96, green: 70, blue: 161)
-//        let awayTeam = (red: 26, green: 82, blue: 228)
-        let homeColor = self.teamColorCodes[self.homeTeam]?.homeColor
-        let awayColor = self.teamColorCodes[self.awayTeam]?.awayColor
-//        print("home color: ", homeColor)
-//        print("away color: ", awayColor)
-//        let tolerance = 55.0
-        let tolerance = 30
-        var homeCount = 0
-        var awayCount = 0
-        
-//        print("height: ", Int(image.size.height))
-//        print("width: ", Int(image.size.width))
-        
-        for yCo in (0 ..< Int(image.size.height)).reversed() {
-            for xCo in 0 ..< Int(image.size.width) {
-                let pixelColor = getPixelColor(image: image, pos: CGPoint(x: xCo, y: yCo))
-                let pixelComps = getColorComponents(color: pixelColor)
-//                let red = Double(pixelComps.red * 255)
-//                let green = Double(pixelComps.green * 255)
-//                let blue = Double(pixelComps.blue * 255)
-                let red = Int(round(pixelComps.red * 255))
-                let green = Int(round(pixelComps.green * 255))
-                let blue = Int(round(pixelComps.blue * 255))
-                
-//                var homeDist = pow(abs(red - homeColor!.red),Double(2)) + pow(abs(green - homeColor!.green),Double(2)) + pow(abs(blue - homeColor!.blue),Double(2))
-//                var awayDist = pow(abs(red - awayColor!.red),Double(2)) + pow(abs(green - awayColor!.green),Double(2)) + pow(abs(blue - awayColor!.blue),Double(2))
-//
-//                homeDist = Double(homeDist).squareRoot()
-//                awayDist = Double(awayDist).squareRoot()
-//
-////                print(homeDist, " ", awayDist)
-//                if(homeDist < tolerance){
-//                    homeCount = homeCount + 1
-//                }
-//                if(awayDist < tolerance){
-//                    awayCount = awayCount + 1
-//                }
-                
-                 if(abs(red - Int(homeColor!.red)) <= tolerance &&
-                    abs(green - Int(homeColor!.green)) <= tolerance &&
-                   abs(blue - Int(homeColor!.blue)) <= tolerance){
-                    homeCount = homeCount + 1
+    func resizeImage(image: UIImage, targetSize: CGSize) -> UIImage {
+                let size = image.size
+
+                let widthRatio  = targetSize.width  / size.width
+                let heightRatio = targetSize.height / size.height
+
+                // Figure out what our orientation is, and use that to form the rectangle
+                var newSize: CGSize
+                if(widthRatio > heightRatio) {
+                    newSize = CGSize(width: size.width * heightRatio, height: size.height * heightRatio)
+                } else {
+                    newSize = CGSize(width: size.width * widthRatio,  height: size.height * widthRatio)
                 }
-                if(abs(red - Int(awayColor!.red)) <= tolerance &&
-                   abs(green - Int(awayColor!.green)) <= tolerance &&
-                   abs(blue - Int(awayColor!.blue)) <= tolerance){
-                    awayCount = awayCount + 1
-                }
-                
-                
-                
-//                if(homeCount >= 1200){
-//                    print("home count: ", homeCount)
-//                    print("away count: ", awayCount)
-//                    return "home"
-//                }
-//                if(awayCount >= 1200){
-//                    print("home count: ", homeCount)
-//                    print("away count: ", awayCount)
-//                    return "away"
-//                }
+
+                // This is the rect that we've calculated out and this is what is actually used below
+                let rect = CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height)
+
+                // Actually do the resizing to the rect using the ImageContext stuff
+                UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
+                image.draw(in: rect)
+                let newImage = UIGraphicsGetImageFromCurrentImageContext()
+                UIGraphicsEndImageContext()
+
+                return newImage!
             }
             
-        }
-        print("home count: ", homeCount)
-        print("away count: ", awayCount)
-        if(homeCount >= awayCount && homeCount >= 500){
-            return "home"
-        }
-        if(awayCount >= homeCount && awayCount >= 500){
-            return "away"
-        }
-        return "no team found"
+        //    let r:CGFloat = 251/255
+        //    let g:CGFloat = 94/255
+        //    let b:CGFloat = 50/255
+            func rgbToHue(r:CGFloat,g:CGFloat,b:CGFloat) -> (h:CGFloat, s:CGFloat, b:CGFloat) {
+                let minV:CGFloat = CGFloat(min(r, g, b))
+                let maxV:CGFloat = CGFloat(max(r, g, b))
+                let delta:CGFloat = maxV - minV
+                var hue:CGFloat = 0
+                if delta != 0 {
+                    if r == maxV {
+                       hue = (g - b) / delta
+                    }
+                    else if g == maxV {
+                       hue = 2 + (b - r) / delta
+                    }
+                    else {
+                       hue = 4 + (r - g) / delta
+                    }
+                    hue *= 60
+                    if hue < 0 {
+                       hue += 360
+                    }
+                }
+                let saturation = maxV == 0 ? 0 : (delta / maxV)
+                let brightness = maxV
+                return (h:hue/360, s:saturation, b:brightness)
+            }
+        //    let hueColor = rgbToHue(r: r, g: g, b: b)
+        //    let finalColor = SKColor(hue: hueColor.h, saturation: hueColor.s, brightness: hueColor.b, alpha: 1)
+
         
-    }
+        func findColor(image: UIImage) -> String{
+            if(self.is_stopped){
+                return "stopping, no team found"
+            }
+            let shrunk = self.resizeImage(image: image, targetSize: CGSize(width: 200.0, height: 200.0))
+            UIImageWriteToSavedPhotosAlbum(shrunk, nil, nil, nil)
+
+            let homeColor = self.teamColorCodes[self.homeTeam]?.homeColor
+            let awayColor = self.teamColorCodes[self.awayTeam]?.awayColor
+            
+            let homeHSV = rgbToHue(r: CGFloat(homeColor!.red/255), g: CGFloat(homeColor!.green/255), b: CGFloat(homeColor!.blue/255))
+            print("home rgb: ", homeColor!, "hsv: ", homeHSV)
+            
+            let awayHSV = rgbToHue(r: CGFloat(awayColor!.red/255), g: CGFloat(awayColor!.green/255), b: CGFloat(awayColor!.blue/255))
+            print("away rgb: ", awayColor!, "hsv: ", awayHSV)
+            
+            
+            let homeHue = homeHSV.h * 360
+            let awayHue = awayHSV.h * 360
+    //        let pixHue = CGFloat(240)
+            
+    //        let hueDiffHome = min(abs(homeHue-pixHue), 360-abs(homeHue-pixHue))
+    //        let hueDiffAway = min(abs(awayHue-pixHue), 360-abs(awayHue-pixHue))
+    //        print("home hue diff: ", hueDiffHome)
+    //        print("away hue diff: ", hueDiffAway)
+
+
+    //        let tolerance = 30
+            var homeCount = 0
+            var awayCount = 0
+            
+            print("height: ", Int(shrunk.size.height))
+            print("width: ", Int(shrunk.size.width))
+            
+            for yCo in (0 ..< Int(shrunk.size.height)).reversed() {
+                for xCo in 0 ..< Int(shrunk.size.width) {
+                    let pixelColor = getPixelColor(image: shrunk, pos: CGPoint(x: xCo, y: yCo))
+                    let pixelComps = getColorComponents(color: pixelColor)
+                    let pixelHSV = rgbToHue(r: pixelComps.red, g: pixelComps.green, b: pixelComps.blue)
+    //                print("pixel rgb: ", pixelComps, " hsv: ", pixelHSV)
+                    let pixHue = pixelHSV.h * 360
+                    let hueTolerance = CGFloat(30.0)
+                    let hueDiffHome = min(abs(homeHue-pixHue), 360-abs(homeHue-pixHue))
+                    let hueDiffAway = min(abs(awayHue-pixHue), 360-abs(awayHue-pixHue))
+    //                print("home hue diff: ", hueDiffHome)
+    //                print("away hue diff: ", hueDiffAway)
+                    
+                    if(abs(hueDiffHome - pixHue) <= hueTolerance){
+                        homeCount = homeCount + 1
+                    }
+                    if(abs(hueDiffAway - pixHue) <= hueTolerance){
+                        awayCount = awayCount + 1
+                    }
+
+                    
+                    
+                    
+                    
+    //                let red = Double(pixelComps.red * 255)
+    //                let green = Double(pixelComps.green * 255)
+    //                let blue = Double(pixelComps.blue * 255)
+                    
+                    
+    //                let red = Int(round(pixelComps.red * 255))
+    //                let green = Int(round(pixelComps.green * 255))
+    //                let blue = Int(round(pixelComps.blue * 255))
+    //
+    //
+    //
+    //                 if(abs(red - Int(homeColor!.red)) <= tolerance &&
+    //                    abs(green - Int(homeColor!.green)) <= tolerance &&
+    //                   abs(blue - Int(homeColor!.blue)) <= tolerance){
+    //                    homeCount = homeCount + 1
+    //                }
+    //                if(abs(red - Int(awayColor!.red)) <= tolerance &&
+    //                   abs(green - Int(awayColor!.green)) <= tolerance &&
+    //                   abs(blue - Int(awayColor!.blue)) <= tolerance){
+    //                    awayCount = awayCount + 1
+    //                }
+                    
+                }
+                
+            }
+            print("home count: ", homeCount)
+            print("away count: ", awayCount)
+            if(homeCount >= awayCount){
+                return "home"
+            }
+            if(awayCount >= homeCount){
+                return "away"
+            }
+            return "no team found"
+            
+        }
+
     
     func getPixelColor(image: UIImage, pos: CGPoint) -> UIColor {
         let pixelData = image.cgImage!.dataProvider!.data
