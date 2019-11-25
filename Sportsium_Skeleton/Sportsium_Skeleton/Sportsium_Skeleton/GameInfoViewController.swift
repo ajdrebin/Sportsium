@@ -36,24 +36,6 @@ class GameInfoViewController: UIViewController {
         var teamLogo2ImageView:UIImageView = UIImageView()
         teamLogoImageView.tag = 1
         teamLogoImageView.tag = 2
-
-        // -----------------
-        // make change here once team name is passed
-        // -----------------
-        
-        var teser : UIButton
-        teser = UIButton()
-        
-        teser.frame = CGRect(x: 75, y: 125, width: 125, height: 125)
-         teser.setTitleColor(UIColor.init(displayP3Red: 11/255, green: 96/255, blue: 168/255, alpha: 1), for: UIControl.State.normal)
-
-//         teser.setTitle("IG", for: UIControl.State.normal)
-         let btnImage = UIImage(named:home!)!
-              teser.setImage(btnImage , for: UIControl.State.normal)
-//         button.addTarget(self, action: #selector(didTapIG), for: UIControl.Event.touchDown)
-        
-//          mainView.addSubview(teser)
-        
         
         var teamLogo1:UIImage = UIImage(named:home!)!
         var teamLogoTap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tappedTeam))
@@ -70,7 +52,6 @@ class GameInfoViewController: UIViewController {
         var teamLogo2:UIImage = UIImage(named:away!)!
         var teamLogo2Tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tappedTeam))
         teamLogo2Tap.name = away
-        //        teamLogoTap.delegate = self as? UIGestureRecognizerDelegate
         teamLogo2ImageView.addGestureRecognizer(teamLogo2Tap)
         teamLogo2ImageView.isUserInteractionEnabled = true
         
