@@ -87,7 +87,7 @@ class GameInfoViewController: UIViewController {
 
         //Allow for multi line text \n separated.
         button.titleLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping;
-        button.setTitle(playerInd.number + "\t\t" + playerInd.firstName + "\n" + playerInd.position, for: UIControl.State.normal)
+        button.setTitle(playerInd.number + "\t\t\t" + playerInd.firstName +  " " + playerInd.lastName + "\n\t\t\t" + playerInd.position, for: UIControl.State.normal)
 
 
         button.addTarget(self, action: #selector(pressBtn), for: UIControl.Event.touchDown)
@@ -136,7 +136,7 @@ class GameInfoViewController: UIViewController {
 
           //Allow for multi line text \n separated.
           button.titleLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping;
-            button.setTitle(playerInd.number + "\t\t" + playerInd.firstName + " " + playerInd.lastName + "\n" + playerInd.position, for: UIControl.State.normal)
+        button.setTitle(playerInd.number + "\t\t" + playerInd.firstName +  " " + playerInd.lastName + "\n\t\t\t" + playerInd.position, for: UIControl.State.normal)
 
 
           button.addTarget(self, action: #selector(pressBtn), for: UIControl.Event.touchDown)
