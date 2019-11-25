@@ -147,6 +147,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var game1: UIButton!
     @IBOutlet weak var game2: UIButton!
     @IBOutlet weak var game3: UIButton!
+    var didLoad = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -222,7 +223,9 @@ class HomeViewController: UIViewController {
                 print(jsonError)
             }
             // 5
+            self.didLoad = true
             }.resume()
+        
          }
      @objc func buttonAction(sender: UIButton!) {
        let btn: UIButton = sender
@@ -250,8 +253,10 @@ class HomeViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "Game"){
+            if(!self.didLoad){
+                return
+            }
             let displayVC = segue.destination as! GameInfoViewController
-            print("in homeview, home: ", home, " away: ", away)
             displayVC.home = home
             displayVC.away = away
         }

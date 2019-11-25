@@ -17,7 +17,7 @@ class GameInfoViewController: UIViewController {
     var awayPlayers:[Player] = []
     
     override func viewDidLoad() {
-        print(home!)
+//        print(home)
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         homePlayers = teamsDict[home!]!.playerList  // all player objects

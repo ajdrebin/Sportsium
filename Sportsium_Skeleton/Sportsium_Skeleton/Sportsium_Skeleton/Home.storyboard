@@ -42,6 +42,9 @@
                                 <rect key="frame" x="26" y="745" width="92" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="nEi-8p-sdI" appends="YES" id="ung-lk-LzG"/>
+                                </connections>
                             </imageView>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="explore" translatesAutoresizingMaskIntoConstraints="NO" id="IUo-IG-wVT">
                                 <rect key="frame" x="270" y="745" width="56" height="32"/>
@@ -261,6 +264,11 @@
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="Uw2-UW-bcF"/>
+                <tapGestureRecognizer id="nEi-8p-sdI">
+                    <connections>
+                        <segue destination="abH-33-2fY" kind="show" id="gpU-4z-SEy"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-970.39999999999998" y="-210.59113300492612"/>
         </scene>
@@ -303,6 +311,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s0f-t7-cE1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-410" y="-128"/>
+        </scene>
+        <!--ViewController-->
+        <scene sceneID="zfj-Jb-dI8">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="ViewController" id="abH-33-2fY" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Szl-YS-C9k"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aiY-7N-iyb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-314" y="-419"/>
         </scene>
     </scenes>
     <resources>

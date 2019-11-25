@@ -377,6 +377,8 @@ class TeamInfoViewController: UIViewController {
   
   if(segue.identifier == "GameInfo") {
     let displayVC = segue.destination as! GameInfoViewController
+    print("home team name: ", home_team_name)
+    print("away team name: ", away_team_name)
      displayVC.home = home_team_name
      displayVC.away = away_team_name
   }

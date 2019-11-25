@@ -192,6 +192,8 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
             let button = sender as! PlayerButton
             displayVC.player_obj = button.player
             displayVC.team_obj = button.team
+            displayVC.home_team_name = home
+            displayVC.away_team_name = away
         }
 //        if(segue.identifier == "Team") {
 //            let displayVC = segue.destination as! TeamInfoViewController
@@ -214,7 +216,8 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
             self.teamColorCodes["chicago_red_stars"] = (homeColor: (red: 215, green: 240, blue: 255), awayColor: (red: 255, green: 246, blue: 49))
             self.teamColorCodes["reign"] = (homeColor: (red: 17, green: 26, blue: 47), awayColor: (red: 1, green: 1, blue: 1))
             self.teamColorCodes["portland_thorns"] = (homeColor: (red: 230, green: 60, blue: 41), awayColor: (red: 255, green: 255, blue: 255))
-            self.teamColorCodes["utah_royals"] = (homeColor: (red: 211, green: 142, blue: 9), awayColor: (red: 1, green: 1, blue: 1))
+//            self.teamColorCodes["utah_royals"] = (homeColor: (red: 211, green: 142, blue: 9), awayColor: (red: 1, green: 1, blue: 1))
+            self.teamColorCodes["utah_royals"] = (homeColor: (red: 234, green: 158, blue: 8), awayColor: (red: 1, green: 1, blue: 1))
             self.teamColorCodes["north_carolina_courage"] = (homeColor: (red: 1, green: 1, blue: 1), awayColor: (255, 255, 255))
 
         }
