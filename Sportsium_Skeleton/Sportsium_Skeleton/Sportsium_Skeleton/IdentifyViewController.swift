@@ -68,32 +68,44 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
         self.showCameraFeed()
         self.getCameraFrames()
 //        self.makeButtons()
+        self.setUpScroll()
     }
     
-    func makeButtons(){
+    var scView:UIScrollView!
+    let buttonPadding:CGFloat = 10
+    var xOffset:CGFloat = 10
+    var currentScrollArr:[(team: String, number: String)] = []
+    
+    func setUpScroll() {
+        self.scView = UIScrollView(frame: CGRect(x: 0, y: 600, width: view.bounds.width, height: 115))
+        self.view.addSubview(self.scView)
+
+        self.scView.backgroundColor = UIColor.lightGray
+        self.scView.translatesAutoresizingMaskIntoConstraints = false
+    }
+    
+    func updateScroll(){
         if(self.detectedPlayersArr.count == 0){
             return
         }
-        var scView:UIScrollView!
-        let buttonPadding:CGFloat = 10
-        var xOffset:CGFloat = 10
-        scView = UIScrollView(frame: CGRect(x: 0, y: 600, width: view.bounds.width, height: 115))
-        self.view.addSubview(scView)
-
-        scView.backgroundColor = UIColor.lightGray
-        scView.translatesAutoresizingMaskIntoConstraints = false
         
         let homeRoster = (teamsDict[homeTeam]?.playerList)!
         let awayRoster = (teamsDict[awayTeam]?.playerList)!
         
-        
 
         for i in 0 ... self.detectedPlayersArr.count - 1 {
+            print("Current", self.currentScrollArr)
+            if(contains(a: self.currentScrollArr, v: self.detectedPlayersArr[i])){
+                print(self.detectedPlayersArr[i], " already in scroll")
+                continue
+            }
+            
             var name = ""
             var number = ""
             var team = ""
             
             let currPlayer = self.detectedPlayersArr[i]
+            self.currentScrollArr.append(currPlayer)
             print(i, currPlayer)
             if (currPlayer.team == homeTeam) {
                 for player in homeRoster {
@@ -105,7 +117,7 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
                 }
             }
             else if (currPlayer.team == awayTeam) {
-                print("Roster", awayRoster)
+//                print("Roster", awayRoster)
                 for player in awayRoster {
                     if currPlayer.number == player.number {
                         name = player.firstName + " " + player.lastName
@@ -116,6 +128,9 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
             }
             
             print("TEST", name,  number, team)
+            if (name == "" || number == "" || team == "") {
+                continue
+            }
             let button = UIButton()
             button.tag = i
             let color = self.teamColorCodes[team]?.homeColor
@@ -274,7 +289,7 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
                 if(team != "no team found" && !contains(a: self.detectedPlayersArr, v: tup)){
                     self.detectedPlayersArr.append(tup)
                     print(self.detectedPlayersArr)
-                    self.makeButtons()
+                    self.updateScroll()
                 }
                 
                 self.detectedNumber = "-1"
@@ -314,7 +329,7 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
 //        print("image view scale: ", imageViewScale)
         
         let width = humanBoundingBoxOnScreen.width * 3
-        let height = humanBoundingBoxOnScreen.height * 2.5
+        let height = humanBoundingBoxOnScreen.height * 2.5 + 300
         let x = humanBoundingBoxOnScreen.origin.x * 3
         let y = humanBoundingBoxOnScreen.origin.y * 2.5
 //        let width = CGFloat(detectable.width) / humanBoundingBoxOnScreen.width * object.boundingBox.width
