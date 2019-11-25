@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nf0-Oj-Ieb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nf0-Oj-Ieb">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -72,10 +72,10 @@
             </objects>
             <point key="canvasLocation" x="638" y="-354"/>
         </scene>
-        <!--CameraViewController-->
+        <!--IdentifyViewController-->
         <scene sceneID="HOI-Kl-2Hd">
             <objects>
-                <viewControllerPlaceholder storyboardName="Camera" referencedIdentifier="CameraViewController" id="J0A-Du-sU7" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Identify" referencedIdentifier="IdentifyViewController" id="J0A-Du-sU7" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="6mV-Zu-wkd"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nce-Wb-GBs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

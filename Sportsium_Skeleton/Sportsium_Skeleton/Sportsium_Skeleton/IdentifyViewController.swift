@@ -15,9 +15,11 @@ import CoreImage
 
 class PlayerButton: UIButton {
     var player: Player
+    var team: TeamInfo
     
-    init(player: Player) {
+    init(player: Player, team: TeamInfo) {
         self.player = player
+        self.team = team
         super.init(frame: .zero)
     }
     
@@ -39,9 +41,12 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
     
     var teamColorCodes: [String: (homeColor: (red: Double, green: Double, blue: Double), awayColor: (red: Double, green: Double, blue: Double))] = [:]
     
-    let homeTeam = "orlando_pride"
-    let awayTeam = "portland_thorns"
-    let league = "NWSL"
+//    let homeTeam = "orlando_pride"
+//    let awayTeam = "portland_thorns"
+//    let league = "NWSL"
+    
+//    let homeTeam = home
+//    let awayTeam = away
 
     
 //    let homeColor = teamcol
@@ -76,6 +81,7 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.bringSubviewToFront(self.helpLabel)
+//        print("calling populate colors")
         self.populateColors()
         self.addCameraInput()
         self.showCameraFeed()
@@ -102,14 +108,14 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
             return
         }
         
-        let homeRoster = (teamsDict[homeTeam]?.playerList)!
-        let awayRoster = (teamsDict[awayTeam]?.playerList)!
+        let homeRoster = (teamsDict[home]?.playerList)!
+        let awayRoster = (teamsDict[away]?.playerList)!
         
 
         for i in 0 ... self.detectedPlayersArr.count - 1 {
-            print("Current", self.currentScrollArr)
+//            print("Current", self.currentScrollArr)
             if(contains(a: self.currentScrollArr, v: self.detectedPlayersArr[i])){
-                print(self.detectedPlayersArr[i], " already in scroll")
+//                print(self.detectedPlayersArr[i], " already in scroll")
                 continue
             }
             
@@ -119,9 +125,10 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
             
             let currPlayer = self.detectedPlayersArr[i]
             var idPlayer = homeRoster[0]
+            var teamObj = teamsDict[home]
             self.currentScrollArr.append(currPlayer)
-            print(i, currPlayer)
-            if (currPlayer.team == homeTeam) {
+//            print(i, currPlayer)
+            if (currPlayer.team == home) {
                 for player in homeRoster {
                     if currPlayer.number == player.number {
                         idPlayer = player
@@ -131,7 +138,7 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
                     }
                 }
             }
-            else if (currPlayer.team == awayTeam) {
+            else if (currPlayer.team == away) {
 //                print("Roster", awayRoster)
                 for player in awayRoster {
                     if currPlayer.number == player.number {
@@ -139,21 +146,29 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
                         name = player.firstName + " " + player.lastName
                         number = player.number
                         team = currPlayer.team
+                        teamObj = teamsDict[away]
                     }
                 }
             }
             
-            print("TEST", name,  number, team)
+//            print("TEST", name,  number, team)
             if (name == "" || number == "" || team == "") {
                 continue
             }
             
-            print("PLAYER", idPlayer)
-            let button = PlayerButton( player: idPlayer )
+//            print("PLAYER", idPlayer)
+            let button = PlayerButton( player: idPlayer, team: teamObj! )
             button.tag = i
             print("CHECK", button.player)
-            let color = self.teamColorCodes[team]?.homeColor
-            button.backgroundColor = UIColor(red: CGFloat(color!.red)/255, green: CGFloat(color!.green)/255, blue: CGFloat(color!.blue)/255, alpha: 1)
+            
+            var color = (red: 0.0, green: 0.0, blue: 0.0)
+            if(team == home){ color = self.teamColorCodes[team]!.homeColor
+                button.setTitleColor(UIColor.white, for: .normal)
+            }
+            else{ color = self.teamColorCodes[team]!.awayColor
+                 button.setTitleColor(UIColor.black, for: .normal)
+            }
+            button.backgroundColor = UIColor(red: CGFloat(color.red)/255, green: CGFloat(color.green)/255, blue: CGFloat(color.blue)/255, alpha: 1)
             button.setTitle("\(number) \(name)", for: .normal)
             button.addTarget(self, action: #selector(btnTouch), for: UIControl.Event.touchUpInside)
 
@@ -167,29 +182,43 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
     }
     
     @IBAction func btnTouch(_ sender: PlayerButton) {
-        print("IN SEGUE", sender.player)
-        performSegue(withIdentifier: "PlayerInfo", sender: sender.player)
+//        print("IN SEGUE", sender.player)
+        performSegue(withIdentifier: "PlayerInfo", sender: sender)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "PlayerInfo") {
             let displayVC = segue.destination as! PlayerInfoViewController
-            displayVC.player_obj = sender as! Player
+            let button = sender as! PlayerButton
+            displayVC.player_obj = button.player
+            displayVC.team_obj = button.team
         }
+//        if(segue.identifier == "Team") {
+//            let displayVC = segue.destination as! TeamInfoViewController
+//            let button = sender as! PlayerButton
+//            print("checking button: ", button.team)
+//            displayVC.home = button.team
+//            displayVC.home_team_name = home
+//            displayVC.away_team_name = away
+//        }
     }
      
     
     func populateColors() {
-        if (self.league == "NWSL"){
-            self.teamColorCodes["orlando_pride"] = (homeColor: (red: 77, green: 52, blue: 136), awayColor: (red: 208, green: 202, blue: 219))
-            self.teamColorCodes["chicago_red_stars"] = (homeColor: (red: 112, green: 134, blue: 173), awayColor: (red: 213, green: 216, blue: 211))
+        if(league == ""){
+            print("League was null, setting now?")
+            league = "NWSL"
+        }
+        if (league == "NWSL"){
+            self.teamColorCodes["orlando_pride"] = (homeColor: (red: 113, green: 78, blue: 178), awayColor: (red: 1, green: 1, blue: 1))
+            self.teamColorCodes["chicago_red_stars"] = (homeColor: (red: 215, green: 240, blue: 255), awayColor: (red: 220, green: 243, blue: 255))
             self.teamColorCodes["reign"] = (homeColor: (red: 17, green: 26, blue: 47), awayColor: (red: 1, green: 1, blue: 1))
-            self.teamColorCodes["portland_thorns"] = (homeColor: (red: 214, green: 28, blue: 39), awayColor: (red: 190, green: 201, blue: 230))
+            self.teamColorCodes["portland_thorns"] = (homeColor: (red: 230, green: 60, blue: 41), awayColor: (red: 255, green: 255, blue: 255))
             self.teamColorCodes["utah_royals"] = (homeColor: (red: 211, green: 142, blue: 9), awayColor: (red: 1, green: 1, blue: 1))
             self.teamColorCodes["north_carolina_courage"] = (homeColor: (red: 1, green: 1, blue: 1), awayColor: (233, 222, 245))
 
         }
-        else if (self.league == "WNBA"){
+        else if (league == "WNBA"){
             self.teamColorCodes["chicago_sky"] = (homeColor: (red: 67, green: 115, blue: 157), awayColor: (red: 1, green: 1, blue: 1))
             self.teamColorCodes["atlanta_dream_team"] = (homeColor: (red: 1, green: 1, blue: 1), awayColor: (red: 32, green: 170, blue: 42))
             self.teamColorCodes["dallas_wings"] = (homeColor: (red: 140, green: 138, blue: 8), awayColor: (red: 1, green: 1, blue: 1))
@@ -291,15 +320,15 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
             let cgimage = context.createCGImage(ciImage, from: ciImage.extent)
             
 //            print(cgimage?.width, " " , cgimage?.height)
-            let uiImage =  UIImage(cgImage: cgimage!)
+//            let uiImage =  UIImage(cgImage: cgimage!)
             if(photocount < 10){
-                UIImageWriteToSavedPhotosAlbum(uiImage, nil, nil, nil)
+//                UIImageWriteToSavedPhotosAlbum(uiImage, nil, nil, nil)
             }
             let cgimageCropped = cropImage(detectable: cgimage!, object: observedhuman)
             let uiImageCrop =  UIImage(cgImage: cgimageCropped!)
             photocount += 1
             if(photocount < 10){
-                UIImageWriteToSavedPhotosAlbum(uiImageCrop, nil, nil, nil)
+//                UIImageWriteToSavedPhotosAlbum(uiImageCrop, nil, nil, nil)
             
             }
             
@@ -314,8 +343,8 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
             if(self.detectedNumber != "-1"){
                 let team = self.findColor(image: uiImageCrop)
                 var teamName = ""
-                if(team == "home") {teamName = homeTeam}
-                if(team == "away") {teamName = awayTeam}
+                if(team == "home") {teamName = home}
+                if(team == "away") {teamName = away}
                 let tup = (team: teamName, number: self.detectedNumber)
                 print("tup: ", tup)
                 if(team != "no team found" && !contains(a: self.detectedPlayersArr, v: tup)){
@@ -361,7 +390,7 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
 //        print("image view scale: ", imageViewScale)
         
         let width = humanBoundingBoxOnScreen.width * 3
-        let height = humanBoundingBoxOnScreen.height * 2.5 + 300
+        let height = humanBoundingBoxOnScreen.height * 2.5 + 200
         let x = humanBoundingBoxOnScreen.origin.x * 3
         let y = humanBoundingBoxOnScreen.origin.y * 2.5
 //        let width = CGFloat(detectable.width) / humanBoundingBoxOnScreen.width * object.boundingBox.width
@@ -502,14 +531,18 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
             let shrunk = self.resizeImage(image: image, targetSize: CGSize(width: 200.0, height: 200.0))
             UIImageWriteToSavedPhotosAlbum(shrunk, nil, nil, nil)
 
-            let homeColor = self.teamColorCodes[self.homeTeam]?.homeColor
-            let awayColor = self.teamColorCodes[self.awayTeam]?.awayColor
+            if(self.teamColorCodes.count == 0){
+                self.populateColors()
+            }
+            let homeColor = self.teamColorCodes[home]?.homeColor
+            let awayColor = self.teamColorCodes[away]?.awayColor
+            
             
             let homeHSV = rgbToHue(r: CGFloat(homeColor!.red/255), g: CGFloat(homeColor!.green/255), b: CGFloat(homeColor!.blue/255))
-            print("home rgb: ", homeColor!, "hsv: ", homeHSV)
+//            print("home rgb: ", homeColor!, "hsv: ", homeHSV)
             
             let awayHSV = rgbToHue(r: CGFloat(awayColor!.red/255), g: CGFloat(awayColor!.green/255), b: CGFloat(awayColor!.blue/255))
-            print("away rgb: ", awayColor!, "hsv: ", awayHSV)
+//            print("away rgb: ", awayColor!, "hsv: ", awayHSV)
             
             
             let homeHue = homeHSV.h * 360
@@ -526,8 +559,8 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
             var homeCount = 0
             var awayCount = 0
             
-            print("height: ", Int(shrunk.size.height))
-            print("width: ", Int(shrunk.size.width))
+//            print("height: ", Int(shrunk.size.height))
+//            print("width: ", Int(shrunk.size.width))
             
             for yCo in (0 ..< Int(shrunk.size.height)).reversed() {
                 for xCo in 0 ..< Int(shrunk.size.width) {
@@ -578,8 +611,8 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
                 }
                 
             }
-            print("home count: ", homeCount)
-            print("away count: ", awayCount)
+//            print("home count: ", homeCount)
+//            print("away count: ", awayCount)
             if(homeCount >= awayCount){
                 return "home"
             }

@@ -285,9 +285,25 @@ class PlayerInfoViewController: UIViewController {
     var imageName = teamName + ".png"
     
     teamLogo.image = UIImage(named: imageName)
+    // create tap gesture recognizer
+    let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.imageTapped(gesture:)))
+
+    // add it to the image view;
+    teamLogo.addGestureRecognizer(tapGesture)
+    // make sure imageView can be interacted with by user
+    teamLogo.isUserInteractionEnabled = true
     
   }
   
+    @objc func imageTapped(gesture: UIGestureRecognizer) {
+        // if the tapped view is a UIImageView then set it to imageview
+        if (gesture.view as? UIImageView) != nil {
+//            print("Image Tapped")
+            performSegue(withIdentifier: "TeamInfo", sender: self)
+            //Here you can initiate your new ViewController
+
+        }
+    }
   
   
   func addNavBar() {
@@ -303,7 +319,6 @@ class PlayerInfoViewController: UIViewController {
     let home_btn = UIButton()
     var imageName = "home.png"
     var image = UIImage(named: imageName)
-    
     home_btn.setImage(image, for: [])
     
     home_btn.frame = CGRect(x: 60, y: 750, width: 38, height: 30)
@@ -338,15 +353,30 @@ class PlayerInfoViewController: UIViewController {
     
     camera_btn.setImage(image, for: [])
     
-    camera_btn.frame = CGRect(x: 145, y: 710, width: 85, height: 85)
+    camera_btn.frame = CGRect(x: 89, y: 690, width: 197, height: 104)
     
     camera_btn.layer.zPosition = 1;
     
     camera_btn.addTarget(self, action: #selector(segueCamera), for: UIControl.Event.touchDown)
     
-    
-    
     mainView.addSubview(camera_btn)
+    
+    let app_btn = UIButton()
+    imageName = "aperture.png"
+    image = UIImage(named: imageName)
+    
+    app_btn.setImage(image, for: [])
+    
+    app_btn.frame = CGRect(x: 150, y: 707, width: 72, height: 71)
+    
+    app_btn.layer.zPosition = 1;
+    
+    app_btn.addTarget(self, action: #selector(segueCamera), for: UIControl.Event.touchDown)
+    
+    mainView.addSubview(app_btn)
+    
+    
+    
 
     mainView.addSubview(label)
     

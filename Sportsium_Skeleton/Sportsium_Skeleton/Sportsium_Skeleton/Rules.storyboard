@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OHQ-33-UZb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OHQ-33-UZb">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -94,16 +94,25 @@
                                 <rect key="frame" x="26" y="745" width="92" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="zuA-zz-NLR" appends="YES" id="b41-gJ-5G3"/>
+                                </connections>
                             </imageView>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="explore" translatesAutoresizingMaskIntoConstraints="NO" id="Jpa-t1-mlY">
                                 <rect key="frame" x="270" y="745" width="56" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="hOs-FT-DQa" appends="YES" id="HQ8-ex-hcQ"/>
+                                </connections>
                             </imageView>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="circle" translatesAutoresizingMaskIntoConstraints="NO" id="Jrc-QL-eD6">
                                 <rect key="frame" x="89" y="690" width="197" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="w4F-YI-e59" appends="YES" id="kli-LD-PMd"/>
+                                </connections>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="aperture" translatesAutoresizingMaskIntoConstraints="NO" id="E2C-bo-jjm">
                                 <rect key="frame" x="97" y="707" width="180" height="71"/>
@@ -148,6 +157,21 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8vi-L0-PSv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="w4F-YI-e59">
+                    <connections>
+                        <segue destination="QSZ-Ik-uAY" kind="show" id="4Yv-Iq-gmU"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="zuA-zz-NLR">
+                    <connections>
+                        <segue destination="NVN-Ok-dQk" kind="show" id="YhH-nC-ptY"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="hOs-FT-DQa">
+                    <connections>
+                        <segue destination="Z6C-0q-knq" kind="show" id="Fsj-ae-7bk"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1016.8" y="56.896551724137936"/>
         </scene>
@@ -161,10 +185,10 @@
             </objects>
             <point key="canvasLocation" x="1630" y="-58"/>
         </scene>
-        <!--CameraViewController-->
+        <!--IdentifyViewController-->
         <scene sceneID="SZO-HQ-50x">
             <objects>
-                <viewControllerPlaceholder storyboardName="Camera" referencedIdentifier="CameraViewController" id="QSZ-Ik-uAY" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Identify" referencedIdentifier="IdentifyViewController" id="QSZ-Ik-uAY" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="IvC-5J-o1U"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tYp-HD-nCa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

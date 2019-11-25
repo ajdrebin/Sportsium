@@ -54,7 +54,7 @@ struct NWSL: Codable {
         case houstonDash = "houston_dash"
         case washingtonSpirit = "washington_spirit"
         case northCarolinaCourage = "north_carolina_courage"
-        case reign
+        case reign = "reign"
         case portlandThorns = "portland_thorns"
         case chicagoRedStars = "chicago_red_stars"
         case utahRoyals = "utah_royals"
@@ -210,6 +210,7 @@ class HomeViewController: UIViewController {
                 // Set default home and away
                 home = "orlando_pride"
                 away = "chicago_red_stars"
+                league = "NWSL"
                 
                 
                 // 4
@@ -230,25 +231,29 @@ class HomeViewController: UIViewController {
         // Set Team Info to Pass
         home = "orlando_pride"
         away = "chicago_red_stars"
+        league = "NWSL"
        }
        else if btn.tag == 2 {
         // Set Team Info to Pass
         home = "reign"
         away = "portland_thorns"
+        league = "NWSL"
        }
        else{
         // Set Team Info to Pass
         home = "utah_royals"
         away = "north_carolina_courage"
+        league = "NWSL"
        }
         performSegue(withIdentifier: "Game", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "Game"){
-                let displayVC = segue.destination as! GameInfoViewController
-                displayVC.home = home
-                displayVC.away = away
+            let displayVC = segue.destination as! GameInfoViewController
+            print("in homeview, home: ", home, " away: ", away)
+            displayVC.home = home
+            displayVC.away = away
         }
     }
 }

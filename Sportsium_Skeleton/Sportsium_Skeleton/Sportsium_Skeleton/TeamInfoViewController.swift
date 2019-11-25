@@ -151,15 +151,27 @@ class TeamInfoViewController: UIViewController {
     
     camera_btn.setImage(image, for: [])
     
-    camera_btn.frame = CGRect(x: 145, y: 710, width: 85, height: 85)
+    camera_btn.frame = CGRect(x: 89, y: 690, width: 197, height: 104)
     
     camera_btn.layer.zPosition = 1;
     
     camera_btn.addTarget(self, action: #selector(segueCamera), for: UIControl.Event.touchDown)
     
-    
-    
     mainView.addSubview(camera_btn)
+    
+    let app_btn = UIButton()
+    imageName = "aperture.png"
+    image = UIImage(named: imageName)
+   
+    app_btn.setImage(image, for: [])
+   
+    app_btn.frame = CGRect(x: 150, y: 707, width: 73, height: 71)
+   
+    app_btn.layer.zPosition = 1;
+   
+    app_btn.addTarget(self, action: #selector(segueCamera), for: UIControl.Event.touchDown)
+   
+   mainView.addSubview(app_btn)
 
     mainView.addSubview(label)
     
