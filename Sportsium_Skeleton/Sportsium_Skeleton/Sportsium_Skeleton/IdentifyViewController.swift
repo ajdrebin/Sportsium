@@ -66,6 +66,36 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
         self.addCameraInput()
         self.showCameraFeed()
         self.getCameraFrames()
+        self.makeButtons()
+    }
+    
+    func makeButtons(){
+        if(self.detectedPlayersArr.count == 0){
+            return
+        }
+        var scView:UIScrollView!
+        let buttonPadding:CGFloat = 10
+        var xOffset:CGFloat = 10
+        scView = UIScrollView(frame: CGRect(x: 0, y: 600, width: view.bounds.width, height: 115))
+        self.view.addSubview(scView)
+
+        scView.backgroundColor = UIColor.blue
+        scView.translatesAutoresizingMaskIntoConstraints = false
+
+        for i in 0 ... self.detectedPlayersArr.count {
+            let button = UIButton()
+            button.tag = i
+            button.backgroundColor = UIColor.darkGray
+            button.setTitle("\(i) hello", for: .normal)
+            //button.addTarget(self, action: #selector(btnTouch), for: UIControlEvents.touchUpInside)
+
+            button.frame = CGRect(x: xOffset, y: CGFloat(buttonPadding), width: 200, height: 70)
+
+            xOffset = xOffset + CGFloat(buttonPadding) + button.frame.size.width
+            scView.addSubview(button)
+        }
+
+        scView.contentSize = CGSize(width: xOffset, height: scView.frame.height)
     }
     
     func populateColors() {
@@ -161,7 +191,14 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
         
         let humansBoundingBoxes: [CAShapeLayer] = observedhumans.map({ (observedhuman: VNDetectedObjectObservation) -> CAShapeLayer in
             let humanBoundingBoxOnScreen = self.previewLayer.layerRectConverted(fromMetadataOutputRect: observedhuman.boundingBox)
-
+            print("observed width: ", observedhuman.boundingBox.width)
+            print("observed height: ", observedhuman.boundingBox.height)
+            print("observed x: ", observedhuman.boundingBox.origin.x)
+            print("observed y: ", observedhuman.boundingBox.origin.y)
+            print("human width: ", humanBoundingBoxOnScreen.width)
+            print("human height: ", humanBoundingBoxOnScreen.height)
+            print("human x: ", humanBoundingBoxOnScreen.origin.x)
+            print("human y: ", humanBoundingBoxOnScreen.origin.y)
             let humanBoundingBoxPath = CGPath(rect: humanBoundingBoxOnScreen, transform: nil)
             let humanBoundingBoxShape = CAShapeLayer()
             humanBoundingBoxShape.path = humanBoundingBoxPath
@@ -171,15 +208,17 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
             let ciImage = CIImage(cvPixelBuffer: image)
             let context = CIContext()
             let cgimage = context.createCGImage(ciImage, from: ciImage.extent)
-//            let uiImage =  UIImage(cgImage: cgimage!)
-            if(photocount < 20){
-//                UIImageWriteToSavedPhotosAlbum(uiImage, nil, nil, nil)
+            
+            print(cgimage?.width, " " , cgimage?.height)
+            let uiImage =  UIImage(cgImage: cgimage!)
+            if(photocount < 10){
+                UIImageWriteToSavedPhotosAlbum(uiImage, nil, nil, nil)
             }
             let cgimageCropped = cropImage(detectable: cgimage!, object: observedhuman)
             let uiImageCrop =  UIImage(cgImage: cgimageCropped!)
             photocount += 1
-            if(photocount < 20){
-//                UIImageWriteToSavedPhotosAlbum(uiImageCrop, nil, nil, nil)
+            if(photocount < 10){
+                UIImageWriteToSavedPhotosAlbum(uiImageCrop, nil, nil, nil)
             
             }
             
@@ -231,13 +270,40 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
         if(self.is_stopped){
             return detectable
         }
-        let width = object.boundingBox.width * CGFloat(detectable.width)
-        let height = object.boundingBox.height * CGFloat(detectable.height)
-        let x = object.boundingBox.origin.x * CGFloat(detectable.width)
-        let y = (1 - object.boundingBox.origin.y) * CGFloat(detectable.height) - height
-        let croppingRect = CGRect(x: x , y: y, width: width, height: height + (100))
-
-//        let croppingRect = CGRect(x: x, y: y, width: width, height: height)
+        print("detectable width: ", detectable.width)
+        print("detectable height: ", detectable.height)
+        
+        let humanBoundingBoxOnScreen = self.previewLayer.layerRectConverted(fromMetadataOutputRect: object.boundingBox)
+        
+        let imageViewScale = max(humanBoundingBoxOnScreen.width / CGFloat(detectable.width) , humanBoundingBoxOnScreen.height / CGFloat(detectable.height))
+        print("image view scale: ", imageViewScale)
+        
+//        let width = humanBoundingBoxOnScreen.width * 3
+//        let height = humanBoundingBoxOnScreen.height * 2.5
+//        let x = humanBoundingBoxOnScreen.origin.x * 3
+//        let y = humanBoundingBoxOnScreen.origin.y * 2.5
+        let width = CGFloat(detectable.width) / humanBoundingBoxOnScreen.width * object.boundingBox.width
+        let height = CGFloat(detectable.height) / humanBoundingBoxOnScreen.height * object.boundingBox.height
+        let x = CGFloat(detectable.width) / humanBoundingBoxOnScreen.origin.x * object.boundingBox.origin.x
+        let y = CGFloat(detectable.height) / humanBoundingBoxOnScreen.origin.y * object.boundingBox.origin.y
+        
+        
+        
+        print("crop width: ", width)
+        print("crop height: ", height)
+        print("crop x: ", x)
+        print("crop y: ", y)
+        
+        
+//        let width = object.boundingBox.width * CGFloat(detectable.width)
+//        let height = object.boundingBox.height * CGFloat(detectable.height)
+//        let x = object.boundingBox.origin.x * CGFloat(detectable.width)
+////        let y = object.boundingBox.origin.y * CGFloat(detectable.height)
+//        let y = (1 - object.boundingBox.origin.y) * CGFloat(detectable.height) - height
+////        let croppingRect = CGRect(x: x , y: y, width: width, height: height + (100))
+//
+        let croppingRect = CGRect(x: x, y: y, width: width, height: height)
+//        let image = detectable.cropping(to: croppingRect)
         let image = detectable.cropping(to: croppingRect)
         return image
     }
