@@ -219,13 +219,21 @@ class GameInfoViewController: UIViewController {
             }
             displayVC.home_team_name = home
             displayVC.away_team_name = away
+          displayVC.prev_page = "GameInfo"
         }
         if(segue.identifier == "Team"){
                 let displayVC = segue.destination as! TeamInfoViewController
-            displayVC.home = teamsDict[sendTeam]!
+            displayVC.team_obj = teamsDict[sendTeam]!
             displayVC.home_team_name = home
             displayVC.away_team_name = away
+          displayVC.prev_page = "GameInfo"
         }
+      
+      if (segue.identifier == "Home") {
+        let displayVC = segue.destination as! HomeViewController
+        displayVC.chosenLeague = league
+        
+      }
     }
     
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

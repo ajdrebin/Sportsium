@@ -16,6 +16,7 @@ class ListTeamsViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         print(teamsDict.keys)
+      print(league)
         makeButtons()
         }
     
@@ -102,8 +103,10 @@ class ListTeamsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "Team"){
             let displayVC = segue.destination as! TeamInfoViewController
-            displayVC.home = teamsDict[keysList[last_pressed]]!
+            displayVC.team_obj = teamsDict[keysList[last_pressed]]!
             displayVC.away_team_name = away
+            displayVC.prev_page = "ListTeams"
+          
         }
     }
         

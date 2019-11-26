@@ -41,6 +41,8 @@ class ViewController: UIViewController {
         if(segue.identifier == "Home"){
                 let displayVC = segue.destination as! HomeViewController
                 displayVC.chosenLeague = league
+              print("In viewcontroller")
+              print(league)
         }
     }
 

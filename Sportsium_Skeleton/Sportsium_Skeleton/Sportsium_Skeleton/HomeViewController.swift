@@ -178,6 +178,13 @@ class HomeViewController: UIViewController {
         game3.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
 
         // 1
+         if(league == ""){
+            league = self.chosenLeague
+        }
+      
+      
+        print(league)
+        print("in home")
         let urlString = "http://159.89.139.18/sports_check/?league=" + chosenLeague
         guard let url = URL(string: urlString) else { return }
 
@@ -190,8 +197,6 @@ class HomeViewController: UIViewController {
             guard let data = data else { return }
             do {
                 // 3
-                // Set league
-                league = self.chosenLeague
                 
                 //Decode data
                 if (league == "NWSL") {
@@ -225,9 +230,9 @@ class HomeViewController: UIViewController {
                 }
                 
                 // Set default home and away
-                home = "orlando_pride"
-                away = "chicago_red_stars"
-                league = "NWSL"
+                // home = "orlando_pride"
+                // away = "chicago_red_stars"
+                // league = "NWSL"
                 
                 
                 // 4
@@ -262,25 +267,49 @@ class HomeViewController: UIViewController {
          }
      @objc func buttonAction(sender: UIButton!) {
        let btn: UIButton = sender
-    
-       if btn.tag == 1 {
-        // Set Team Info to Pass
-        home = "orlando_pride"
-        away = "chicago_red_stars"
-        league = "NWSL"
-       }
-       else if btn.tag == 2 {
-        // Set Team Info to Pass
-        home = "reign"
-        away = "portland_thorns"
-        league = "NWSL"
-       }
-       else{
-        // Set Team Info to Pass
-        home = "utah_royals"
-        away = "north_carolina_courage"
-        league = "NWSL"
-       }
+        if league == "NWSL" {
+           if btn.tag == 1 {
+            // Set Team Info to Pass
+            home = "orlando_pride"
+            away = "chicago_red_stars"
+            league = "NWSL"
+           }
+           else if btn.tag == 2 {
+            // Set Team Info to Pass
+            home = "reign"
+            away = "portland_thorns"
+            league = "NWSL"
+           }
+           else{
+            // Set Team Info to Pass
+            home = "utah_royals"
+            away = "north_carolina_courage"
+            league = "NWSL"
+           }
+        }
+        else {
+          if btn.tag == 1 {
+           // Set Team Info to Pass
+           home = "atlanta_dream"
+           away = "chicago_sky"
+           league = "WNBA"
+          }
+          else if btn.tag == 2 {
+           // Set Team Info to Pass
+           home = "los_angeles_sparks"
+           away = "las_vegas_aces"
+           league = "WNBA"
+          }
+          else{
+           // Set Team Info to Pass
+           home = "seattle_storm"
+           away = "phoenix_mercury"
+           league = "WNBA"
+          }
+          
+          
+          
+      }
         performSegue(withIdentifier: "Game", sender: self)
     }
     

@@ -28,6 +28,7 @@ class PlayerInfoViewController: UIViewController {
   var playerPos = "Midfielder"
   var button_text = "Joanna Boyles\t\t\t\t\t\t\t\t\t\t #25\nMidfielder"
   
+  var prev_page:String!
   
   var monthDict:[Int:String] = [1:"January", 2:"February", 3:"March", 4:"April", 5:"May", 6:"June", 7:"July", 8:"August", 9:"September", 10:"October", 11:"November", 12:"December"]
   
@@ -201,13 +202,14 @@ class PlayerInfoViewController: UIViewController {
     var day:String
     var year:String
     
-    
-    if player_dob.isEmpty {
-      month = String(Int.random(in: 1..<12))
+    //If birthday array does not have month-day-year
+    if player_dob.count != 3 {
+      month = monthDict[Int.random(in: 1..<12)]!
       day = String(Int.random(in: 1..<30))
       year = String(Int.random(in: 1992..<1996))
       age = 2019 - Int(year)!
     }
+      
     else{
        age = 2019 - Int(player_dob[2])!
        num = Int(player_dob[0])!
@@ -225,7 +227,7 @@ class PlayerInfoViewController: UIViewController {
     
     
     textView.text = "\n\n\nPOSITION: " + playerPos.uppercased() + "\n"
-    textView.text +=  "AGE: " + String(age) + " (" + player_obj.DOB + ")\n"
+    textView.text +=  "AGE: " + String(age) + " (" + month + "-" + day + "-" + year + ")\n"
     textView.text +=  "HEIGHT: " + player_obj.height + "\n"
     
     textView.text += "HOMETOWN: " + player_obj.hometown + ", " + player_obj.country + "\n\n"
@@ -394,7 +396,7 @@ class PlayerInfoViewController: UIViewController {
     button.backgroundColor = UIColor.init(displayP3Red: 221/255, green: 240/255, blue: 1, alpha: 0)
     button.setTitle("< Back", for: UIControl.State.normal)
     
-    button.addTarget(self, action: #selector(segueTeamInfo), for: UIControl.Event.touchDown)
+    button.addTarget(self, action: #selector(segueBackButton), for: UIControl.Event.touchDown)
     
     
     
@@ -406,7 +408,7 @@ class PlayerInfoViewController: UIViewController {
   @objc func segueCamera(sender: UIButton!) {
      let btn: UIButton = sender
      print(btn.titleLabel?.text)
-     performSegue(withIdentifier: "Camera", sender: self)
+     performSegue(withIdentifier: "Identify", sender: self)
    }
   
   @objc func segueHome(sender: UIButton!) {
@@ -415,9 +417,11 @@ class PlayerInfoViewController: UIViewController {
       performSegue(withIdentifier: "Home", sender: self)
     }
   
-  @objc func segueTeamInfo(sender: UIButton!) {
+  @objc func segueBackButton(sender: UIButton!) {
     let btn: UIButton = sender
     print(btn.titleLabel?.text)
+
+    
     performSegue(withIdentifier: "TeamInfo", sender: self)
   }
   
@@ -431,13 +435,19 @@ class PlayerInfoViewController: UIViewController {
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
       if(segue.identifier == "TeamInfo") {
               let displayVC = segue.destination as! TeamInfoViewController
-              displayVC.home = team_obj
+              displayVC.team_obj = team_obj
         displayVC.home_team_name = home_team_name
          displayVC.away_team_name = away_team_name
+        displayVC.prev_page = prev_page
 
         
 
       }
+    if (segue.identifier == "Home") {
+      let displayVC = segue.destination as! HomeViewController
+      displayVC.chosenLeague = league
+      
+    }
   }
 
   

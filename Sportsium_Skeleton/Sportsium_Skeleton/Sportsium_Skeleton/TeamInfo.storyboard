@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nf0-Oj-Ieb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nf0-Oj-Ieb">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -52,15 +52,25 @@
                         <outlet property="mainView" destination="wZF-Fx-o98" id="CEA-QR-55T"/>
                         <outlet property="scrollView" destination="mup-nn-Ifs" id="yNp-uU-v2n"/>
                         <segue destination="sgr-TX-uQV" kind="show" identifier="PlayerInfo" id="GKG-dz-c4d"/>
-                        <segue destination="J0A-Du-sU7" kind="show" identifier="Camera" id="Xas-ho-7DD"/>
                         <segue destination="K9J-Sa-H1b" kind="show" identifier="Home" id="c6J-k9-Y5k"/>
                         <segue destination="iOU-yg-gOS" kind="show" identifier="GameInfo" id="V0b-pR-rqe"/>
                         <segue destination="FSW-4e-xx2" kind="show" identifier="ListTeams" id="cii-A9-tDb"/>
+                        <segue destination="fbA-Ng-IdR" kind="show" identifier="Camera" id="jji-Jd-Qkd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8wt-An-FmA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="73.913043478260875" y="19.419642857142858"/>
+        </scene>
+        <!--IdentifyViewController-->
+        <scene sceneID="S9t-SO-Auo">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Identify" referencedIdentifier="IdentifyViewController" id="fbA-Ng-IdR" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="bBc-6Z-5OM"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f3l-n0-O66" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="783" y="-502"/>
         </scene>
         <!--PlayerInfoViewController-->
         <scene sceneID="Uvf-SP-4Rk">
@@ -71,16 +81,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yx0-wm-Hii" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="638" y="-354"/>
-        </scene>
-        <!--IdentifyViewController-->
-        <scene sceneID="HOI-Kl-2Hd">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Identify" referencedIdentifier="IdentifyViewController" id="J0A-Du-sU7" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="6mV-Zu-wkd"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Nce-Wb-GBs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="793" y="-128"/>
         </scene>
         <!--HomeViewController-->
         <scene sceneID="YG4-S8-5aE">

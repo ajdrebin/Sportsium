@@ -28,8 +28,15 @@ class TeamInfoViewController: UIViewController {
   var away_team_name:String!
   
   
+  
+  //add this change to prepare in ListTeams and GameInfo segues to this TeamInfo
+  var prev_page:String!     //GameInfo or ListTeams    - for use with back button
+  
+  
 
-  var home = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", teamName: "", playerList: [])
+  
+  // Change this in GameInfo
+  var team_obj = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", teamName: "", playerList: [])
   
   
   
@@ -45,11 +52,14 @@ class TeamInfoViewController: UIViewController {
   var display_teamName = "orlando pride"
 
   override func viewDidLoad() {
-    print(home)
+    
+    //Didn't realize we had these as globals
+    home_team_name = home
+    away_team_name = away
     
     
     
-    teamName = home.teamName
+    teamName = team_obj.teamName
     
     
     //Removed the underscore
@@ -61,7 +71,7 @@ class TeamInfoViewController: UIViewController {
 
     
     
-    players = home.playerList
+    players = team_obj.playerList
     
     for p in players {
       var name = p.firstName + " " +  p.lastName
@@ -83,6 +93,8 @@ class TeamInfoViewController: UIViewController {
     makeBackButton()
     addNavBar()
     
+    //addMiscData()
+    
     
   }
   
@@ -97,7 +109,7 @@ class TeamInfoViewController: UIViewController {
     button.backgroundColor = UIColor.init(displayP3Red: 221/255, green: 240/255, blue: 1, alpha: 0)
     button.setTitle("< Back", for: UIControl.State.normal)
     
-    button.addTarget(self, action: #selector(segueGameInfo), for: UIControl.Event.touchDown)
+    button.addTarget(self, action: #selector(segueBackButton), for: UIControl.Event.touchDown)
     
     
     
@@ -140,7 +152,7 @@ class TeamInfoViewController: UIViewController {
     
     explore_btn.layer.zPosition = 1;
     
-    home_btn.addTarget(self, action: #selector(segueListTeams), for: UIControl.Event.touchDown)
+    explore_btn.addTarget(self, action: #selector(segueListTeams), for: UIControl.Event.touchDown)
     
     mainView.addSubview(explore_btn)
     
@@ -158,20 +170,31 @@ class TeamInfoViewController: UIViewController {
     camera_btn.addTarget(self, action: #selector(segueCamera), for: UIControl.Event.touchDown)
     
     mainView.addSubview(camera_btn)
-    
+
     let app_btn = UIButton()
     imageName = "aperture.png"
     image = UIImage(named: imageName)
-   
+
     app_btn.setImage(image, for: [])
-   
+
     app_btn.frame = CGRect(x: 150, y: 707, width: 73, height: 71)
-   
+
     app_btn.layer.zPosition = 1;
-   
+
     app_btn.addTarget(self, action: #selector(segueCamera), for: UIControl.Event.touchDown)
-   
-   mainView.addSubview(app_btn)
+
+    mainView.addSubview(app_btn)
+    
+//
+//    var imageName_1 = "aperture.png"
+//
+//       var image_1 = UIImage(named: imageName_1)
+//       var imageView = UIImageView(image: image_1!)
+//
+//
+//       imageView.frame = CGRect(x: 150, y: 707, width: 73, height: 71)
+//    imageView.layer.zPosition = 1
+//       mainView.addSubview(imageView)
 
     mainView.addSubview(label)
     
@@ -187,17 +210,24 @@ class TeamInfoViewController: UIViewController {
   
   
   
-  // NEED TO CHANGE THIS.
   @objc func segueHome(sender: UIButton!) {
       let btn: UIButton = sender
       print(btn.titleLabel?.text)
       performSegue(withIdentifier: "Home", sender: self)
     }
   
-  @objc func segueGameInfo(sender: UIButton!) {
+  @objc func segueBackButton(sender: UIButton!) {
     let btn: UIButton = sender
     print(btn.titleLabel?.text)
-    performSegue(withIdentifier: "GameInfo", sender: self)
+    
+    
+    if prev_page == "GameInfo" {
+      performSegue(withIdentifier: "GameInfo", sender: self)
+    }
+    else if prev_page == "ListTeams" {
+       performSegue(withIdentifier: "ListTeams", sender: self)
+      
+    }
   }
   
   @objc func segueListTeams(sender: UIButton!) {
@@ -210,7 +240,14 @@ class TeamInfoViewController: UIViewController {
   
   
   func addBackgroundImage() {
-    var imageName = "teaminfo_background.jpeg"
+    var imageName:String!
+    print(league)
+    if league == "NWSL" {
+      imageName = "nwsl_teaminfo_background.jpeg"
+    }
+    else {
+     imageName = "wnba_teaminfo_background.jpeg"
+    }
 
     var image = UIImage(named: imageName)
     var imageView = UIImageView(image: image!)
@@ -319,7 +356,6 @@ class TeamInfoViewController: UIViewController {
     
     
    
-    label.adjustsFontSizeToFitWidth=true;
       label.minimumScaleFactor=0.5;
     
     
@@ -343,7 +379,9 @@ class TeamInfoViewController: UIViewController {
      if(segue.identifier == "PlayerInfo") {
              let displayVC = segue.destination as! PlayerInfoViewController
              displayVC.button_text = last_pressed
-            displayVC.team_obj = home
+            displayVC.team_obj = team_obj
+      displayVC.prev_page = prev_page
+      
       
       
       displayVC.home_team_name = home_team_name
@@ -375,12 +413,15 @@ class TeamInfoViewController: UIViewController {
       
      }
   
-  if(segue.identifier == "GameInfo") {
-    let displayVC = segue.destination as! GameInfoViewController
-    print("home team name: ", home_team_name)
-    print("away team name: ", away_team_name)
-     displayVC.home = home_team_name
-     displayVC.away = away_team_name
+      if(segue.identifier == "GameInfo") {
+        let displayVC = segue.destination as! GameInfoViewController
+         displayVC.home = home_team_name
+         displayVC.away = away_team_name
+      }
+  if (segue.identifier == "Home") {
+    let displayVC = segue.destination as! HomeViewController
+    displayVC.chosenLeague = league
+    
   }
   
   
