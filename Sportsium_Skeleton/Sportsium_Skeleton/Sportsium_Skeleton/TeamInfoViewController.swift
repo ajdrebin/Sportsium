@@ -150,7 +150,7 @@ class TeamInfoViewController: UIViewController {
     
   func addSocialMedia(){
       var starting_x = 30
-      var y = 300
+      var y = 260
       
   
     if (league == "WNBA") {
@@ -187,7 +187,7 @@ class TeamInfoViewController: UIViewController {
          
          button.addTarget(self, action: #selector(didTapFB), for: UIControl.Event.touchDown)
         
-          mainView.addSubview(button)
+          scrollView.addSubview(button)
         
           starting_x += 50
         
@@ -205,7 +205,7 @@ class TeamInfoViewController: UIViewController {
 
          button.addTarget(self, action: #selector(didTapTT), for: UIControl.Event.touchDown)
         
-          mainView.addSubview(button)
+          scrollView.addSubview(button)
         
           starting_x += 50
         
@@ -221,7 +221,7 @@ class TeamInfoViewController: UIViewController {
               button.setImage(btnImage , for: UIControl.State.normal)
          button.addTarget(self, action: #selector(didTapIG), for: UIControl.Event.touchDown)
         
-          mainView.addSubview(button)
+          scrollView.addSubview(button)
         
           starting_x += 50
         
