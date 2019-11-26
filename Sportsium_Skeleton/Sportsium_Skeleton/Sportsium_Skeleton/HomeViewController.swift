@@ -11,7 +11,7 @@ import UIKit
 struct WNBA: Codable {
      let atlantaDream: TeamInfo
      let chicagoSky: TeamInfo
-     let conneticutSun: TeamInfo
+     let connecticutSun: TeamInfo
      let indianaFever: TeamInfo
      let newYorkLiberty: TeamInfo
      let washingtonMystics: TeamInfo
@@ -25,7 +25,7 @@ struct WNBA: Codable {
      enum CodingKeys: String, CodingKey {
         case atlantaDream = "atlanta_dream"
         case chicagoSky = "chicago_sky"
-        case conneticutSun = "conneticut_sun"
+        case connecticutSun = "connecticut_sun"
         case indianaFever = "indiana_fever"
         case newYorkLiberty = "new_york_liberty"
         case washingtonMystics = "washington_mystics"
@@ -127,7 +127,7 @@ var teamsDict = [String: TeamInfo]()
 var initiate = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", teamName: "", playerList: [])
 
 var NWSLteams = NWSL(orlandoPride: initiate, skyBlue: initiate, houstonDash: initiate, washingtonSpirit: initiate, northCarolinaCourage: initiate, reign: initiate, portlandThorns: initiate, chicagoRedStars: initiate, utahRoyals: initiate)
-var WNBAteams = WNBA(atlantaDream: initiate, chicagoSky: initiate, conneticutSun: initiate, indianaFever: initiate, newYorkLiberty: initiate, washingtonMystics: initiate, dallasWings: initiate, lasVegasAces: initiate, losAngelesSparks: initiate, minnesotaLynx: initiate, phoenixMercury: initiate, seattleStorm: initiate)
+var WNBAteams = WNBA(atlantaDream: initiate, chicagoSky: initiate, connecticutSun: initiate, indianaFever: initiate, newYorkLiberty: initiate, washingtonMystics: initiate, dallasWings: initiate, lasVegasAces: initiate, losAngelesSparks: initiate, minnesotaLynx: initiate, phoenixMercury: initiate, seattleStorm: initiate)
     
 var league = ""
 
@@ -212,7 +212,7 @@ class HomeViewController: UIViewController {
 
                     teamsDict["atlanta_dream"] = WNBAteams.atlantaDream
                     teamsDict["chicago_sky"] = WNBAteams.chicagoSky
-                    teamsDict["conneticut_sun"] = WNBAteams.conneticutSun
+                    teamsDict["connecticut_sun"] = WNBAteams.connecticutSun
                     teamsDict["indiana_fever"] = WNBAteams.indianaFever
                     teamsDict["new_york_liberty"] = WNBAteams.newYorkLiberty
                     teamsDict["washington_mystics"] = WNBAteams.washingtonMystics
@@ -249,7 +249,6 @@ class HomeViewController: UIViewController {
                         self.game3away.image = UIImage(named:"phoenix_mercury")
                         self.game3stadium.text = "ShoWare Center"
                         self.game3location.text = "Kent, Washington"
-
                     }
                 }
 
