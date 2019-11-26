@@ -269,3 +269,349 @@ def populate():
 
                 # !!! including for now due to robot issues
                 # break
+
+
+def populate1():
+    # Create list of teams - 12 teams 
+    
+    team_dream = Team_Info_Table.objects.create(
+            team_name="atlanta_dream",
+            date_founded="2008",
+            city_location="Atlanta, GA",
+            stadium="State Farm Arena",
+            head_coach="Nicki Collen",
+            league="WNBA",
+            current_wins=8,
+            current_ties=0,
+            current_losses=26,
+            fb="",
+            twitter="",
+            instagram="",
+            snapchat=""
+            )
+    team_dream.save()
+    print("Team Dream saved")
+
+    team_sky = Team_Info_Table.objects.create(
+            team_name="chicago_sky",
+            date_founded="2006",
+            city_location="Chicago, IL",
+            stadium="Wintrust Arena",
+            head_coach="James Wade",
+            league="WNBA",
+            current_wins=20,
+            current_ties=0,
+            current_losses=14,
+            fb="",
+            twitter="",
+            instagram="",
+            snapchat=""
+            )
+    team_sky.save()
+    print("Team Sky saved")
+
+    team_sun = Team_Info_Table.objects.create(
+            team_name="connecticut_sun",
+            date_founded="2003",
+            city_location="	Uncasville, CT",
+            stadium="Mohegan Sun Arena",
+            head_coach="Curt Miller",
+            league="WNBA",
+            current_wins=23,
+            current_ties=0,
+            current_losses=11,
+            fb="",
+            twitter="",
+            instagram="",
+            snapchat=""
+            )
+    team_sun.save()
+    print("Team Sun saved")
+
+    team_fever = Team_Info_Table.objects.create(
+            team_name="indiana_fever",
+            date_founded="2000",
+            city_location="Indianapolis, IN",
+            stadium="Bankers Life Fieldhouse",
+            head_coach="(Vacant)",
+            league="WNBA",
+            current_wins=13,
+            current_ties=0,
+            current_losses=21,
+            fb="",
+            twitter="",
+            instagram="",
+            snapchat=""
+            )
+    team_fever.save()
+    print("Team Fever saved")
+
+    team_liberty = Team_Info_Table.objects.create(
+            team_name="new_york_liberty",
+            date_founded="1997",
+            city_location="New York, NY",
+            stadium="Westchester County Center",
+            head_coach="Katie Smith",
+            league="WNBA",
+            current_wins=10,
+            current_ties=0,
+            current_losses=24,
+            fb="",
+            twitter="",
+            instagram="",
+            snapchat=""
+            )
+    team_liberty.save()
+    print("Team Liberty saved")
+
+    team_mystics = Team_Info_Table.objects.create(
+            team_name="washington_mystics",
+            date_founded="1998",
+            city_location="Washington, D.C.",
+            stadium="Entertainment & Sports Arena",
+            head_coach="Mike Thibault",
+            league="WNBA",
+            current_wins=26,
+            current_ties=0,
+            current_losses=8,
+            fb="",
+            twitter="",
+            instagram="",
+            snapchat=""
+            )
+    team_mystics.save()
+    print("Team Mystics saved")
+
+    team_wings = Team_Info_Table.objects.create(
+            team_name="dallas_wings",
+            date_founded="1998",
+            city_location="Arlington, TX",
+            stadium="College Park Center",
+            head_coach="Brian Agler",
+            league="WNBA",
+            current_wins=10,
+            current_ties=0,
+            current_losses=24,
+            fb="",
+            twitter="",
+            instagram="",
+            snapchat=""
+            )
+    team_wings.save()
+    print("Team Wings saved")
+
+    team_aces = Team_Info_Table.objects.create(
+            team_name="las_vegas_aces",
+            date_founded="1997",
+            city_location="Paradise, NV",
+            stadium="Mandalay Bay Events Center",
+            head_coach="Bill Laimbeer",
+            league="WNBA",
+            current_wins=21,
+            current_ties=0,
+            current_losses=13,
+            fb="",
+            twitter="",
+            instagram="",
+            snapchat=""
+            )
+    team_aces.save()
+    print("Team Aces saved")
+
+    team_sparks = Team_Info_Table.objects.create(
+            team_name="los_angeles_sparks",
+            date_founded="1997",
+            city_location="Los Angeles, CA",
+            stadium="STAPLES Center",
+            head_coach="Derek Fisher",
+            league="WNBA",
+            current_wins=21,
+            current_ties=0,
+            current_losses=13,
+            fb="",
+            twitter="",
+            instagram="",
+            snapchat=""
+            )
+    team_sparks.save()
+    print("Team Sparks saved")
+
+    team_lynx = Team_Info_Table.objects.create(
+            team_name="minnesota_lynx",
+            date_founded="1999",
+            city_location="Minneapolis, MN",
+            stadium="Target Center",
+            head_coach="Cheryl Reeve",
+            league="WNBA",
+            current_wins=18,
+            current_ties=0,
+            current_losses=16,
+            fb="",
+            twitter="",
+            instagram="",
+            snapchat=""
+            )
+    team_lynx.save()
+    print("Team Lynx saved")
+
+    team_mercury = Team_Info_Table.objects.create(
+            team_name="phoenix_mercury",
+            date_founded="1997",
+            city_location="Phoenix, AZ",
+            stadium="Talking Stick Resort Arena",
+            head_coach="Sandy Brondello",
+            league="WNBA",
+            current_wins=15,
+            current_ties=0,
+            current_losses=19,
+            fb="",
+            twitter="",
+            instagram="",
+            snapchat=""
+            )
+    team_mercury.save()
+    print("Team Mercury saved")
+
+    team_storm = Team_Info_Table.objects.create(
+            team_name="seattle_storm",
+            date_founded="2000",
+            city_location="Seattle, WA",
+            stadium="Alaska Airlines Arena",
+            head_coach="Dan Hughes",
+            league="WNBA",
+            current_wins=18,
+            current_ties=0,
+            current_losses=16,
+            fb="",
+            twitter="",
+            instagram="",
+            snapchat=""
+            )
+    team_storm.save()
+    print("Team Storm saved")
+
+    team_urls1 = []
+    
+    dream = ["atl", "atlanta-dream", team_dream]
+    sky = ["chi", "chicago-sky", team_sky]
+    sun = ["conn", "connecticut-sun", team_sun]
+    fever = ["ind", "indiana-fever", team_fever]
+    liberty = ["ny", "new-york-liberty", team_liberty]
+    mystics = ["wsh", "washington-mystics", team_mystics]
+    wings = ["dal", "dallas-wings", team_wings]
+    aces = ["lv", "las-vegas-wings", team_aces]
+    sparks = ["la", "los-angeles-sparks", team_sparks]
+    lynx = ["min", "minnesota-lynx", team_lynx]
+    mercury = ["phx", "phoenix-mercury", team_mercury]
+    storm = ["sea", "seattle-storm", team_storm]
+
+    team_urls1.append(dream)
+    team_urls1.append(sky)
+    team_urls1.append(sun)
+    team_urls1.append(fever)
+    team_urls1.append(liberty)
+    team_urls1.append(mystics)
+    team_urls1.append(wings)
+    team_urls1.append(aces)
+    team_urls1.append(sparks)
+    team_urls1.append(lynx)
+    team_urls1.append(mercury)
+    team_urls1.append(storm)
+    # team_urls1["dream"] = dream
+    # team_urls1["sky"] = sky
+    # team_urls1["sun"] = sun
+    # team_urls1["fever"] = fever
+    # team_urls1["liberty"] = liberty
+    # team_urls1["mystics"] = mystics
+    # team_urls1["wings"] = wings
+    # team_urls1["aces"] = aces
+    # team_urls1["sparks"] = sparks
+    # team_urls1["lynx"] = lynx
+    # team_urls1["mercury"] = mercury
+    # team_urls1["storm"] = storm
+
+
+    for team in team_urls1:
+        print("###############" + team[1])
+
+        html = requests.get("https://www.espn.com/wnba/team/roster/_/name/" + team[0] + "/" + team[1] + "/")
+        soup = BeautifulSoup(html.text, 'html.parser')
+
+        # Whole table with all players info 
+        table = soup.find("tbody", {"class":"Table__TBODY"})
+
+        # Each row of table - each player and their info 
+
+        rows = table.find_all("tr", {"class":"Table__TR Table__TR--sm Table__even"})
+
+        # Each row in rows and get each 'td' tag representing each piece of info
+        for row in rows: 
+            info = row.find_all("td")
+            entry0 = str(info[0])
+            entry1 = str(info[1])
+            entry2 = str(info[2])
+            entry3 = str(info[3])
+            # entry4 = str(info[4])
+            entry5 = str(info[5])
+
+            x = entry0.find('<', 61)
+            full_name = entry0[61:x]
+            first_name = full_name.split()[0]
+            last_name = full_name.split()[1]
+            y = entry0.find('>', 62)
+            if len(entry0) > 85:
+                number = entry0[y+1]
+            
+            x = entry1.find('<', 60)
+            position = entry1[60:x]
+
+            x = entry2.find('<', 60)
+            age = entry2[60:x]
+
+            x = entry3.find('<', 60)
+            height = entry3[60:x]
+            height = height.replace('''\'''', "")
+
+            x = entry5.find('<', 37)   
+            hometown = entry5[37:x]
+
+            player_obj = Player_Info_Table.objects.create(
+                first_name=first_name,
+                last_name=last_name,
+                number=number,
+                position=position,
+                hometown=hometown,
+                country="USA",
+                date_of_birth=age,
+                height=height,
+                fb="",
+                twitter="",
+                instagram="",
+                snapchat=""
+            )
+            player_obj.save()
+
+            team_player_obj = Team_Player_Table.objects.create(
+                team=team[2],
+                player=player_obj
+            )
+            team_player_obj.save()
+
+    # date_founded = {}
+    # date_founded["dream"] = ""
+
+    # for team in team_urls1:
+    #     print("###############" + team)
+
+    #     # parsing head coach
+        
+    #     # creating a BeautifulSoup object
+    #     # htmlContent = requests.get(https + team + "." + url_base + "/coaching-staff/")
+    #     # soup = BeautifulSoup(htmlContent.text, 'html.parser')
+
+    #     # final_head_coach = ""
+
+    #     # parsing player information 
+    #     player_html = requests.get("https://www.espn.com/wnba/team/roster/_/name/chi/chicago-sky")
+    #     player_soup = BeautifulSoup(player_html.text, 'html.parser')
+        
