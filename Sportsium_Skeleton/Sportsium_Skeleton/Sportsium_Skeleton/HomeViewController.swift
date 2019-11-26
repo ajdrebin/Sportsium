@@ -221,6 +221,7 @@ class HomeViewController: UIViewController {
             do {
                 // 3
                 //Decode data
+              print(league)
                 if (league == "NWSL") {
                     NWSLteams = try JSONDecoder().decode(NWSL.self, from: data)
 

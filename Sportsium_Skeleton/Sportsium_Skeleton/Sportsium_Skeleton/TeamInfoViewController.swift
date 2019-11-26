@@ -50,7 +50,53 @@ class TeamInfoViewController: UIViewController {
 
   var teamName = "orlando_pride"
   var display_teamName = "orlando pride"
+  
+//  case atlantaDream = "atlanta_dream"
+//    case chicagoSky = "chicago_sky"
+//    case connecticutSun = "connecticut_sun"
+//    case indianaFever = "indiana_fever"
+//    case newYorkLiberty = "new_york_liberty"
+//    case washingtonMystics = "washington_mystics"
+//    case dallasWings = "dallas_wings"
+//    case lasVegasAces = "las_vegas_aces"
+//    case losAngelesSparks = "los_angeles_sparks"
+//    case minnesotaLynx = "minnesota_lynx"
+//    case phoenixMercury = "phoenix_mercury"
+//    case seattleStorm = "seattle_storm"
+  
+  var wnba_social_media = ["atlanta_dream":["tt":"https://twitter.com/atlantadream", "ig":"https://www.instagram.com/atlantadream/", "fb":"https://www.facebook.com/atlantadream"],
 
+                           "chicago_sky":["tt":"https://twitter.com/wnbachicagosky", "ig":"https://www.instagram.com/chicagosky/", "fb":"https://www.facebook.com/chicagosky/"],
+
+                           "connecticut_sun":["tt":"https://twitter.com/ConnecticutSun", "ig":"https://www.instagram.com/connecticutsun/?hl=en", "fb":"https://www.facebook.com/connecticutsun/"],
+
+                           "indiana_fever":["tt":"https://twitter.com/IndianaFever", "ig":"https://www.instagram.com/indianafever", "fb":"https://www.facebook.com/indianafever/"],
+
+                           "new_york_liberty":["tt":"https://twitter.com/nyliberty", "ig":"", "fb":""],
+  
+                           "washington_mystics":["tt":"https://twitter.com/washmystics", "ig":"https://www.instagram.com/washmystics/", "fb":"https://www.facebook.com/WashingtonMystics/"],
+
+                           "dallas_wings":["tt":"https://twitter.com/dallaswings", "ig":"https://www.instagram.com/dallaswings/", "fb":"https://www.facebook.com/dallaswings/"],
+                           
+
+                           "las_vegas_aces":["tt":"https://twitter.com/LVAces", "ig":"https://www.instagram.com/lvaces/?hl=en", "fb":"https://www.facebook.com/LVACES/"],
+  
+                           "los_angeles_sparks":["tt":"https://twitter.com/LA_Sparks", "ig":"https://www.instagram.com/la_sparks/", "fb":"https://www.facebook.com/losangelessparks/"],
+                           
+                           
+                           "minnesota_lynx":["tt":"https://twitter.com/minnesotalynx", "ig":"https://www.instagram.com/minnesotalynx/", "fb":"https://www.facebook.com/minnesotalynx/"],
+                           "phoenix_mercury":["tt":"https://twitter.com/phoenixmercury", "ig":"https://www.instagram.com/phoenixmercury/", "fb":"https://www.facebook.com/phoenixmercury/"],
+                           "seattle_storm":["tt":"https://twitter.com/seattlestorm", "ig":"https://www.instagram.com/seattlestorm/", "fb":"https://www.facebook.com/seattlestorm/"]
+  ]
+
+  
+  
+  var fb = ""
+  var twitter = ""
+  var instagram = ""
+  
+  
+  
   override func viewDidLoad() {
     
     //Didn't realize we had these as globals
@@ -93,10 +139,113 @@ class TeamInfoViewController: UIViewController {
     makeBackButton()
     addNavBar()
     
-    //addMiscData()
+   
+      addSocialMedia()
+    
+    
     
     
   }
+  
+    
+  func addSocialMedia(){
+      var starting_x = 30
+      var y = 300
+      
+  
+    if (league == "WNBA") {
+      fb = wnba_social_media[teamName]!["fb"]!
+         twitter = wnba_social_media[teamName]!["tt"]!
+           instagram = wnba_social_media[teamName]!["ig"]!
+    }
+      
+      // Since only NWSL api has social media right now 
+    else {
+      fb = team_obj.fb
+      instagram = team_obj.instagram
+      twitter = team_obj.twitter
+    }
+   
+    
+    
+    
+    
+    
+
+      if (fb != "") {
+        var button : UIButton
+        button = UIButton()
+         button.frame = CGRect(x: starting_x, y: y, width: 30, height: 30)
+         button.setTitleColor(UIColor.init(displayP3Red: 11/255, green: 96/255, blue: 168/255, alpha: 1), for: UIControl.State.normal)
+
+         button.setTitle("FB", for: UIControl.State.normal)
+        
+        
+        let btnImage = UIImage(named: "facebook_logo")
+        button.setImage(btnImage , for: UIControl.State.normal)
+
+         
+         button.addTarget(self, action: #selector(didTapFB), for: UIControl.Event.touchDown)
+        
+          mainView.addSubview(button)
+        
+          starting_x += 50
+        
+      }
+      if (twitter != "") {
+        var button : UIButton
+        button = UIButton()
+        button.frame = CGRect(x: starting_x, y: y, width: 30, height: 30)
+         button.setTitleColor(UIColor.init(displayP3Red: 11/255, green: 96/255, blue: 168/255, alpha: 1), for: UIControl.State.normal)
+
+         button.setTitle("TT", for: UIControl.State.normal)
+
+         let btnImage = UIImage(named: "twitter_logo")
+         button.setImage(btnImage , for: UIControl.State.normal)
+
+         button.addTarget(self, action: #selector(didTapTT), for: UIControl.Event.touchDown)
+        
+          mainView.addSubview(button)
+        
+          starting_x += 50
+        
+      }
+      if (instagram != "") {
+        var button : UIButton
+        button = UIButton()
+        button.frame = CGRect(x: starting_x, y: y, width: 30, height: 30)
+         button.setTitleColor(UIColor.init(displayP3Red: 11/255, green: 96/255, blue: 168/255, alpha: 1), for: UIControl.State.normal)
+
+         button.setTitle("IG", for: UIControl.State.normal)
+         let btnImage = UIImage(named: "ig_logo")
+              button.setImage(btnImage , for: UIControl.State.normal)
+         button.addTarget(self, action: #selector(didTapIG), for: UIControl.Event.touchDown)
+        
+          mainView.addSubview(button)
+        
+          starting_x += 50
+        
+      }
+      
+      
+      
+      
+      
+    }
+    
+    @IBAction func didTapFB(sender: UIButton) {
+      UIApplication.shared.openURL(NSURL(string: fb)! as URL)
+  }
+    
+    @IBAction func didTapTT(sender: UIButton) {
+        UIApplication.shared.openURL(NSURL(string: twitter)! as URL)
+    }
+    @IBAction func didTapIG(sender: UIButton) {
+        UIApplication.shared.openURL(NSURL(string: instagram)! as URL)
+    }
+  
+  
+  
   
   func makeBackButton() {
     var button : UIButton
@@ -306,9 +455,9 @@ class TeamInfoViewController: UIViewController {
       
       //Allow for multi line text \n separated.
       button.titleLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping;
-      button.setTitle(name + "\t\t\t\t\t\t\t\t\t\t " + "#" + playerNum[i] + "\n" + playerPosition[i], for: UIControl.State.normal)
+      button.setTitle(name + "\t\t\t\t\t\t\t\t" + "#" + playerNum[i] + "\n" + playerPosition[i], for: UIControl.State.normal)
       
-
+      //button.contentEdgeInsets = UIEdgeInsets(top: 10,left: 5,bottom: 10,right: 5)
       
       button.addTarget(self, action: #selector(pressBtn), for: UIControl.Event.touchDown)
       button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
@@ -345,14 +494,10 @@ class TeamInfoViewController: UIViewController {
     let label = UILabel()
     label.text = display_teamName.uppercased()
     label.adjustsFontSizeToFitWidth=true;
-    
-    
-    //label.font = UIFont(name:"HelveticaNeue-Bold", size: 20.0)
-    
-    
+
     
     label.textColor = UIColor.white
-    label.numberOfLines = 2
+    label.numberOfLines = 1
     
     
    
@@ -362,8 +507,32 @@ class TeamInfoViewController: UIViewController {
 
 
     
-    label.frame = CGRect(x: 190, y: 120, width: scrollView.frame.width, height: 20)
+    label.frame = CGRect(x: 190, y: 120, width: 180, height: 20)
     scrollView.addSubview(label)
+    
+    
+    
+    //  var team_obj = TeamInfo(cityLocation: "", league: "", dateFounded: "", instagram: "", currentWins: "", twitter: "", snapchat: "", currentTies: "", currentLosses: "", fb: "", headCoach: "", stadium: "", teamName: "", playerList: [])
+    
+    let team_data = UILabel()
+
+ 
+    team_data.text = "Head Coach: " + team_obj.headCoach + "\n" + "Stadium: " + team_obj.stadium + "\nDate Founded: " + team_obj.dateFounded + "\nWins: " + team_obj.currentWins + "\nLosses: " + team_obj.currentLosses + "\nTies: " + team_obj.currentTies
+    
+    team_data.frame = CGRect(x: 190, y: 70, width: 180, height: 300)
+    
+     team_data.numberOfLines = 6
+    
+    team_data.textColor = UIColor.white
+    
+    
+    
+    team_data.adjustsFontSizeToFitWidth=true;
+    scrollView.addSubview(team_data)
+    
+    
+    
+    
   }
   
   
