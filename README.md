@@ -16,7 +16,6 @@ Get to know the faces of the National Women’s Soccer League using computer vis
 * **Sportsium:** UI development apps to work on front-end UI/UX *(not in use for MVP app)*
 * **Sportsium_Skeleton/Sportsium_Skeleton:** UI development apps to work on front-end UI/UX and backend Computer Vision algorithm- includes all storyboards and swift files **(*IN USE for MVP app*)**
 * * Our Computer Vision work is in the file Sportsium_Skeleton/Sportsium_Skeleton/Sportsium_Skeleton/IdentifyViewController.swift
-* * 
 * **Starter App:** Starter app assignment
 * **django_project:** copy of backend server for database
   * *nwsl_app:* API specific to NWSL version of app - includes population of database
