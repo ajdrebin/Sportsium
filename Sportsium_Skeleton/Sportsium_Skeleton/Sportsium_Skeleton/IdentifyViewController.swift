@@ -576,7 +576,7 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
             }
             
             let shrunk = self.resizeImage(image: image, targetSize: CGSize(width: 200.0, height: 200.0))
-            UIImageWriteToSavedPhotosAlbum(shrunk, nil, nil, nil)
+//            UIImageWriteToSavedPhotosAlbum(shrunk, nil, nil, nil)
 
             if(self.teamColorCodes.count == 0){
                 self.populateColors()
