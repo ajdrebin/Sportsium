@@ -241,8 +241,15 @@ class PlayerInfoViewController: UIViewController {
 
     
     textView.text += " \n" + playerName + " (born " + month + " "
-    textView.text += day + ", " + year + ") is an American soccer player who plays as a "
-    textView.text += playerPos.lowercased() + " for " + display_teamName + " in the NWSL."
+    if(league == "NWSL"){
+        textView.text += day + ", " + year + ") is an American soccer player who plays as a "
+        textView.text += playerPos.lowercased() + " for " + display_teamName + " in the NWSL."
+    }
+    if(league == "WNBA"){
+        textView.text += day + ", " + year + ") is an American basketball player who plays as a "
+        textView.text += playerPos.lowercased() + " for " + display_teamName + " in the WNBA."
+    }
+   
     
     textView.textAlignment = .left
 
