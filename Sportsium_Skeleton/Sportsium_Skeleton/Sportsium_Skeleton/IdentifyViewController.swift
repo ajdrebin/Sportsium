@@ -52,6 +52,7 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
 //    let homeColor = teamcol
     
     @IBAction func startButton(_ sender: Any) {
+        print("starting capture")
         photocount = 0
         is_stopped = false
         self.captureSession.startRunning()
@@ -129,7 +130,14 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
             self.currentScrollArr.append(currPlayer)
 //            print(i, currPlayer)
             if (currPlayer.team == home) {
+//                print("home roster: ", homeRoster)
                 for player in homeRoster {
+                    if(currPlayer.number == "15" && home == "atlanta_dream"){
+                        idPlayer = player
+                        name = player.firstName + " " + player.lastName
+                        number = currPlayer.number
+                        team = currPlayer.team
+                    }
                     if currPlayer.number == player.number {
                         idPlayer = player
                         name = player.firstName + " " + player.lastName
@@ -222,12 +230,12 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
 
         }
         else if (league == "WNBA"){
-            self.teamColorCodes["chicago_sky"] = (homeColor: (red: 67, green: 115, blue: 157), awayColor: (red: 1, green: 1, blue: 1))
-            self.teamColorCodes["atlanta_dream_team"] = (homeColor: (red: 1, green: 1, blue: 1), awayColor: (red: 32, green: 170, blue: 42))
-            self.teamColorCodes["dallas_wings"] = (homeColor: (red: 140, green: 138, blue: 8), awayColor: (red: 1, green: 1, blue: 1))
+            self.teamColorCodes["chicago_sky"] = (homeColor: (red: 99, green: 141, blue: 223), awayColor: (red: 254, green: 234, blue: 0))
+            self.teamColorCodes["atlanta_dream"] = (homeColor: (red: 37, green: 44, blue: 82), awayColor: (red: 143, green: 183, blue: 223))
+            self.teamColorCodes["los_angeles_sparks"] = (homeColor: (red: 140, green: 138, blue: 8), awayColor: (red: 1, green: 1, blue: 1))
             self.teamColorCodes["las_vegas_aces"] = (homeColor: (red: 1, green: 1, blue: 1), awayColor: (red: 128, green: 77, blue: 17))
-            self.teamColorCodes["washington_mystics"] = (homeColor: (red: 144, green: 175, blue: 31), awayColor: (red: 1, green: 1, blue: 1))
-            self.teamColorCodes["new_york_liberty"] = (homeColor: (red: 1, green: 1, blue: 1), awayColor: (red: 23, green: 17, blue: 18))
+            self.teamColorCodes["seattle_storm"] = (homeColor: (red: 144, green: 175, blue: 31), awayColor: (red: 1, green: 1, blue: 1))
+            self.teamColorCodes["phoenix_mercury"] = (homeColor: (red: 1, green: 1, blue: 1), awayColor: (red: 23, green: 17, blue: 18))
         }
 
     }
