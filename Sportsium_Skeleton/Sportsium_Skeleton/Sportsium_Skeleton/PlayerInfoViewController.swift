@@ -205,6 +205,7 @@ class PlayerInfoViewController: UIViewController {
     //If birthday array does not have month-day-year
     if player_dob.count != 3 {
       month = monthDict[Int.random(in: 1..<12)]!
+
       day = String(Int.random(in: 1..<30))
       year = String(Int.random(in: 1992..<1996))
       age = 2019 - Int(year)!
@@ -227,7 +228,9 @@ class PlayerInfoViewController: UIViewController {
     
     
     textView.text = "\n\n\nPOSITION: " + playerPos.uppercased() + "\n"
+
     textView.text +=  "AGE: " + String(age) + " (" + month + "-" + day + "-" + year + ")\n"
+
     textView.text +=  "HEIGHT: " + player_obj.height + "\n"
     
     textView.text += "HOMETOWN: " + player_obj.hometown + ", " + player_obj.country + "\n\n"

@@ -178,14 +178,13 @@ class HomeViewController: UIViewController {
         game3.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
 
         // 1
-         if(league == ""){
+
+        // Set league
+        if(league == ""){
             league = self.chosenLeague
         }
-      
-      
-        print(league)
-        print("in home")
-        let urlString = "http://159.89.139.18/sports_check/?league=" + chosenLeague
+
+        let urlString = "http://159.89.139.18/sports_check/?league=" + league
         guard let url = URL(string: urlString) else { return }
 
         // 2
@@ -197,7 +196,6 @@ class HomeViewController: UIViewController {
             guard let data = data else { return }
             do {
                 // 3
-                
                 //Decode data
                 if (league == "NWSL") {
                     NWSLteams = try JSONDecoder().decode(NWSL.self, from: data)
@@ -229,10 +227,19 @@ class HomeViewController: UIViewController {
                     teamsDict["seattle_storm"] = WNBAteams.seattleStorm
                 }
                 
-                // Set default home and away
-                // home = "orlando_pride"
-                // away = "chicago_red_stars"
-                // league = "NWSL"
+
+                
+                if(league == "NWSL"){
+                    // Set default home and away
+                    home = "orlando_pride"
+                    away = "chicago_red_stars"
+                }
+                if(league == "WNBA"){
+                    // Set default home and away
+                    home = "atlanta_dream"
+                    away = "chicago_sky"
+                }
+
                 
                 
                 // 4
@@ -267,6 +274,7 @@ class HomeViewController: UIViewController {
          }
      @objc func buttonAction(sender: UIButton!) {
        let btn: UIButton = sender
+
         if league == "NWSL" {
            if btn.tag == 1 {
             // Set Team Info to Pass
@@ -306,10 +314,13 @@ class HomeViewController: UIViewController {
            away = "phoenix_mercury"
            league = "WNBA"
           }
-          
-          
-          
+
+
+
       }
+      
+
+
         performSegue(withIdentifier: "Game", sender: self)
     }
     

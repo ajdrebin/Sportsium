@@ -40,6 +40,7 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "Home"){
                 let displayVC = segue.destination as! HomeViewController
+            print("league: ", league)
                 displayVC.chosenLeague = league
               print("In viewcontroller")
               print(league)
