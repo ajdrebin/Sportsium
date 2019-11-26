@@ -8,16 +8,16 @@ Get to know the faces of the National Women’s Soccer League using computer vis
 
 
 ## TODO LIST 
-* Complete IOS development - CV part
-* Need to implement scrubber to populate the databases
-* IOS frontend development
+* Present MVP Demo
 
 
 ## File Structure
-* **Backend Tests:** test scripts and apps to play around with OpenCV and other frameworks for computer vision and machine learning
+* **Backend Tests:** Test scripts and ios apps to play around with OpenCV and other frameworks for computer vision and machine learning
 * **Sportsium:** UI development apps to work on front-end UI/UX *(not in use for skeletal app)*
-* **Sportsium_Skeleton/Sportsium_Skeleton:** UI development apps to work on front-end UI/UX - includes all storyboards and swift files **(*IN USE for skeletal app*)**
-* **Starter App:** starter app assignment
+* **Sportsium_Skeleton/Sportsium_Skeleton:** UI development apps to work on front-end UI/UX and backend Computer Vision algorithm- includes all storyboards and swift files **(*IN USE for MVP app*)**
+* * Our Computer Vision work is in the file Sportsium_Skeleton/Sportsium_Skeleton/Sportsium_Skeleton/IdentifyViewController.swift
+* * 
+* **Starter App:** Starter app assignment
 * **django_project:** copy of backend server for database
   * *nwsl_app:* API specific to NWSL version of app - includes population of database
   * *django_project:* configuration of backend server
@@ -28,42 +28,48 @@ Get to know the faces of the National Women’s Soccer League using computer vis
     .
     ├── Backend Tests
     │   ├── CV Test
-    │   ├── ML Test
+    │   ├── FaceTracker
+    |   |── Overlay_test
     │   ├── opencv-swift-examples-master
+    |   |──RGB_Colors.txt
     │   ├── README.md
-    ├── Sportsium 
-    │   ├── DerivedData
-    │   ├── Sportsium.xcodeproj
-    │   ├── Sportsium
-    │   ├── SportsiumTests
-    │   ├── SportsiumUITests
-    │   ├── CheckIn.storyboard
-    ├── Sportsium_Skeleton/Sportsium_Skeleton
-    │   ├── DerviedData
-    │   ├── Sportsium_Skeleton.xcodeproj
-    │   ├── Sportsium_Skeleton
-    │   │   ├── Assets.xcassets
-    │   │   ├── Base.proj
-    │   │   ├── opencv2.framework
-    │   │   ├── AppDelegate.swift
-    │   │   ├── Camera.storyboard
-    │   │   ├── CameraViewController.swift
-    │   │   ├── CheckIn.storyboard
-    │   │   ├── CheckIn.swift
-    │   │   ├── CVVideoCameraWrapper.h
-    │   │   ├── CVVideoCameraWrapper.mm
-    │   │   ├── GameInfo.storyboard
-    │   │   ├── GameInfoViewController.swift
-    │   │   ├── info.plist
-    │   │   ├── ListTeams.storyboard
-    │   │   ├── ListTeamsViewController.swift
-    │   │   ├── PlayerInfo.storyboard
-    │   │   ├── PlayerInfoViewController.swift
-    │   │   ├── SceneDelegate.swift
-    │   │   ├── Sportsium_Skeleton-Bridging-Header.h
-    │   │   ├── TeamInfo.storyboard
-    │   │   ├── TeamInfoViewController.swift
-    │   │   ├── ViewController.swift
+    ├── Sportsium_Skeleton
+    |   |── Sportsium_Skeleton
+    |   │   ├── DerviedData
+    |   │   ├── Sportsium_Skeleton.xcodeproj
+    |   │   ├── Sportsium_Skeleton
+    |   │   │   ├── Assets.xcassets
+    |   │   │   ├── Base.lproj
+    |   │   │   ├── opencv2.framework
+    │   │   │   ├── AppDelegate.swift
+    │   │   │   ├── Camera.storyboard
+    │   │   │   ├── CameraViewController.swift
+    │   │   │   ├── CheckIn.storyboard
+    │   │   │   ├── CheckIn.swift
+    │   │   │   ├── CVVideoCameraWrapper.h
+    │   │   │   ├── CVVideoCameraWrapper.mm
+    │   │   │   ├── GameInfo.storyboard
+    │   │   │   ├── GameInfoViewController.swift
+    │   │   │   ├── Home.storyboard
+    │   │   │   ├── HomeViewController.swift
+    │   │   │   ├── Identify.storyboard
+    │   │   │   ├── IdentifyViewController.swift
+    │   │   │   ├── Info.plist
+    │   │   │   ├── ListTeams.storyboard
+    │   │   │   ├── ListTeamsViewController.swift
+    │   │   │   ├── Player.swift
+    │   │   │   ├── PlayerInfo.storyboard
+    │   │   │   ├── PlayerInfoViewController.swift
+    │   │   │   ├── Rules.storyboard
+    │   │   │   ├── RulesViewController.swift
+    │   │   │   ├── SceneDelegate.swift
+    │   │   │   ├── soccer.png
+    │   │   │   ├── Sportsium_Skeleton-Bridging-Header.h
+    │   │   │   ├── Team.swift
+    │   │   │   ├── TeamInfo.storyboard
+    │   │   │   ├── TeamInfo.swift
+    │   │   │   ├── TeamInfoViewController.swift
+    │   │   │   ├── ViewController.swift
     ├── Starter App
     │   ├── ios-project-sample-f17-master
     │   ├── mysite
@@ -79,6 +85,7 @@ Get to know the faces of the National Women’s Soccer League using computer vis
     │   │   ├── migrations
     │   │   ├── __init__.py
     │   │   ├── admin.py
+    │   │   ├── adv_populate.py
     │   │   ├── apps.py
     │   │   ├── models.py
     │   │   ├── populate.py
@@ -112,7 +119,7 @@ Then you are prompted with a password. Note: The password will not be visible
 and you are in!
 
 ### Development
-All of these actions are to take place in the django_project folder since we will be using mange.py as our CLI.
+The following actions should take place in the django_project folder since we will be using mange.py as our CLI.
 ```
 ├── django_project
     ├── django_project (folder)
@@ -146,8 +153,8 @@ python manage.py shell
 This will trigger an interactive python shell. Type in the following to be able to call 
 
 ```
->>> from nwsl_app.populate import delete_all, populate
->>> (call delete_all() or populate())
+>>> from nwsl_app.populate import delete_all, populate, populate1
+>>> (call delete_all() or populate() or populate1() depending on need)
 ```
 
 ## Getting Started with our IOS application
