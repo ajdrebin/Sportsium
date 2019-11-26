@@ -58,7 +58,6 @@ class ListTeamsViewController: UIViewController {
             button.titleLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping;
                 button.setTitle("\t" + teamsDict[teamName]!.teamName, for: UIControl.State.normal)
                 
-                
                 var teamLogo:UIImage = UIImage(named:teamName)!
                 button.setImage(teamLogo, for: UIControl.State.normal)
 

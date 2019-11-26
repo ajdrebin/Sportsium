@@ -178,7 +178,12 @@ class HomeViewController: UIViewController {
         game3.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
 
         // 1
-        let urlString = "http://159.89.139.18/sports_check/?league=" + chosenLeague
+        // Set league
+        if(league == ""){
+            league = self.chosenLeague
+        }
+
+        let urlString = "http://159.89.139.18/sports_check/?league=" + league
         guard let url = URL(string: urlString) else { return }
 
         // 2
@@ -190,9 +195,6 @@ class HomeViewController: UIViewController {
             guard let data = data else { return }
             do {
                 // 3
-                // Set league
-                league = self.chosenLeague
-                
                 //Decode data
                 if (league == "NWSL") {
                     NWSLteams = try JSONDecoder().decode(NWSL.self, from: data)
@@ -224,10 +226,17 @@ class HomeViewController: UIViewController {
                     teamsDict["seattle_storm"] = WNBAteams.seattleStorm
                 }
                 
-                // Set default home and away
-                home = "orlando_pride"
-                away = "chicago_red_stars"
-                league = "NWSL"
+                
+                if(league == "NWSL"){
+                    // Set default home and away
+                    home = "orlando_pride"
+                    away = "chicago_red_stars"
+                }
+                if(league == "WNBA"){
+                    // Set default home and away
+                    home = "atlanta_dream"
+                    away = "chicago_sky"
+                }
                 
                 
                 // 4
@@ -265,21 +274,37 @@ class HomeViewController: UIViewController {
     
        if btn.tag == 1 {
         // Set Team Info to Pass
-        home = "orlando_pride"
-        away = "chicago_red_stars"
-        league = "NWSL"
+        if (league == "NWSL"){
+            home = "orlando_pride"
+            away = "chicago_red_stars"
+        }
+        if (league == "WNBA"){
+            home = "atlanta_dream"
+            away = "chicago_sky"
+        }
+        
        }
        else if btn.tag == 2 {
         // Set Team Info to Pass
-        home = "reign"
-        away = "portland_thorns"
-        league = "NWSL"
+        if (league == "NWSL"){
+            home = "reign"
+            away = "portland_thorns"
+        }
+        if (league == "WNBA"){
+            home = "los_angeles_sparks"
+            away = "las_vegas_aces"
+        }
        }
        else{
         // Set Team Info to Pass
-        home = "utah_royals"
-        away = "north_carolina_courage"
-        league = "NWSL"
+        if (league == "NWSL"){
+            home = "utah_royals"
+            away = "north_carolina_courage"
+        }
+        if (league == "WNBA"){
+            home = "seattle_storm"
+            away = "phoenix_mercury"
+        }
        }
         performSegue(withIdentifier: "Game", sender: self)
     }

@@ -201,8 +201,8 @@ class PlayerInfoViewController: UIViewController {
     var day:String
     var year:String
     
-    
-    if player_dob.isEmpty {
+
+    if (player_dob.count != 3) {
       month = String(Int.random(in: 1..<12))
       day = String(Int.random(in: 1..<30))
       year = String(Int.random(in: 1992..<1996))
@@ -225,7 +225,12 @@ class PlayerInfoViewController: UIViewController {
     
     
     textView.text = "\n\n\nPOSITION: " + playerPos.uppercased() + "\n"
-    textView.text +=  "AGE: " + String(age) + " (" + player_obj.DOB + ")\n"
+    if(player_dob.count == 1){
+        textView.text +=  "AGE: " + String(player_obj.DOB) + "\n"
+    }
+    else{
+        textView.text +=  "AGE: " + String(age) + " (" + player_obj.DOB + ")\n"
+    }
     textView.text +=  "HEIGHT: " + player_obj.height + "\n"
     
     textView.text += "HOMETOWN: " + player_obj.hometown + ", " + player_obj.country + "\n\n"
