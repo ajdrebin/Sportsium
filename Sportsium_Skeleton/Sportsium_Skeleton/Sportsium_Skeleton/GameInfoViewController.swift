@@ -32,6 +32,25 @@ class GameInfoViewController: UIViewController {
       var x :CGFloat = 0
       var y :CGFloat = 250.0
         
+        var teamOneLabel:UILabel = UILabel()
+        teamOneLabel.tag = 1
+        var teamTwoLabel:UILabel = UILabel()
+        teamTwoLabel.tag = 2
+        teamOneLabel.frame = CGRect(x: 75, y: 50, width: 75, height: 75)
+        teamOneLabel.text = home
+        teamTwoLabel.text = away
+        teamTwoLabel.frame = CGRect(x: 250, y: 50, width: 75, height: 75)
+        teamTwoLabel.adjustsFontSizeToFitWidth = true
+        teamOneLabel.adjustsFontSizeToFitWidth = true
+        mainView.addSubview(teamOneLabel)
+        mainView.addSubview(teamTwoLabel)
+        
+        var startingLabel:UILabel = UILabel()
+        startingLabel.frame = CGRect(x: 175, y: 200, width: 75, height: 75)
+        startingLabel.text = "Starting Roster"
+        startingLabel.adjustsFontSizeToFitWidth = true;
+        mainView.addSubview(startingLabel)
+        
         var teamLogoImageView:UIImageView = UIImageView()
         var teamLogo2ImageView:UIImageView = UIImageView()
         teamLogoImageView.tag = 1
@@ -39,6 +58,7 @@ class GameInfoViewController: UIViewController {
         
         var teamLogo1:UIImage = UIImage(named:home!)!
         var teamLogoTap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tappedTeam))
+        teamOneLabel.addGestureRecognizer(teamLogoTap)
         teamLogoTap.name = home
 //        teamLogoTap.delegate = self as? UIGestureRecognizerDelegate
         teamLogoImageView.addGestureRecognizer(teamLogoTap)
@@ -52,6 +72,7 @@ class GameInfoViewController: UIViewController {
         var teamLogo2:UIImage = UIImage(named:away!)!
         var teamLogo2Tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tappedTeam))
         teamLogo2Tap.name = away
+        teamTwoLabel.addGestureRecognizer(teamLogo2Tap)
         teamLogo2ImageView.addGestureRecognizer(teamLogo2Tap)
         teamLogo2ImageView.isUserInteractionEnabled = true
         
@@ -87,7 +108,7 @@ class GameInfoViewController: UIViewController {
 
         //Allow for multi line text \n separated.
         button.titleLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping;
-        button.setTitle(playerInd.number + "\t\t\t" + playerInd.firstName +  " " + playerInd.lastName + "\n\t\t\t" + playerInd.position, for: UIControl.State.normal)
+        button.setTitle(playerInd.firstName +  " " + playerInd.lastName + "\t\t\t" +  playerInd.number + "\n" + playerInd.position , for: UIControl.State.normal)
 
 
         button.addTarget(self, action: #selector(pressBtn), for: UIControl.Event.touchDown)
@@ -136,7 +157,7 @@ class GameInfoViewController: UIViewController {
 
           //Allow for multi line text \n separated.
           button.titleLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping;
-        button.setTitle(playerInd.number + "\t\t" + playerInd.firstName +  " " + playerInd.lastName + "\n\t\t\t" + playerInd.position, for: UIControl.State.normal)
+            button.setTitle(playerInd.firstName +  " " + playerInd.lastName + "\t\t\t" +  playerInd.number + "\n" + playerInd.position , for: UIControl.State.normal)
 
 
           button.addTarget(self, action: #selector(pressBtn), for: UIControl.Event.touchDown)
