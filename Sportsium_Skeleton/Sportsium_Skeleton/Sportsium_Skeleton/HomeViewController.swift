@@ -183,6 +183,30 @@ class HomeViewController: UIViewController {
         if(league == ""){
             league = self.chosenLeague
         }
+        else{
+            if(self.chosenLeague != ""){
+                league = self.chosenLeague
+            }
+        }
+        
+        if (league == "WNBA") {
+           DispatchQueue.main.async {
+               self.game1home.image = UIImage(named:"atlanta_dream")
+               self.game1away.image = UIImage(named:"chicago_sky")
+               self.game1stadium.text = "Gateway Center Arena"
+               self.game1location.text = "College Park, Georgia"
+               
+               self.game2home.image = UIImage(named:"los_angeles_sparks")
+               self.game2away.image = UIImage(named:"las_vegas_aces")
+               self.game2stadium.text = "Staples Center"
+               self.game2location.text = "LA, California"
+               
+               self.game3home.image = UIImage(named:"seattle_storm")
+               self.game3away.image = UIImage(named:"phoenix_mercury")
+               self.game3stadium.text = "ShoWare Center"
+               self.game3location.text = "Kent, Washington"
+           }
+       }
 
         let urlString = "http://159.89.139.18/sports_check/?league=" + league
         guard let url = URL(string: urlString) else { return }
@@ -245,24 +269,24 @@ class HomeViewController: UIViewController {
                 // 4
                 //Get back to the main queue
 
-                if (league == "WNBA") {
-                    DispatchQueue.main.async {
-                        self.game1home.image = UIImage(named:"atlanta_dream")
-                        self.game1away.image = UIImage(named:"chicago_sky")
-                        self.game1stadium.text = "Gateway Center Arena"
-                        self.game1location.text = "College Park, Georgia"
-                        
-                        self.game2home.image = UIImage(named:"los_angeles_sparks")
-                        self.game2away.image = UIImage(named:"las_vegas_aces")
-                        self.game2stadium.text = "Staples Center"
-                        self.game2location.text = "LA, California"
-                        
-                        self.game3home.image = UIImage(named:"seattle_storm")
-                        self.game3away.image = UIImage(named:"phoenix_mercury")
-                        self.game3stadium.text = "ShoWare Center"
-                        self.game3location.text = "Kent, Washington"
-                    }
-                }
+//                if (league == "WNBA") {
+//                    DispatchQueue.main.async {
+//                        self.game1home.image = UIImage(named:"atlanta_dream")
+//                        self.game1away.image = UIImage(named:"chicago_sky")
+//                        self.game1stadium.text = "Gateway Center Arena"
+//                        self.game1location.text = "College Park, Georgia"
+//
+//                        self.game2home.image = UIImage(named:"los_angeles_sparks")
+//                        self.game2away.image = UIImage(named:"las_vegas_aces")
+//                        self.game2stadium.text = "Staples Center"
+//                        self.game2location.text = "LA, California"
+//
+//                        self.game3home.image = UIImage(named:"seattle_storm")
+//                        self.game3away.image = UIImage(named:"phoenix_mercury")
+//                        self.game3stadium.text = "ShoWare Center"
+//                        self.game3location.text = "Kent, Washington"
+//                    }
+//                }
 
             } catch let jsonError {
                 print(jsonError)
