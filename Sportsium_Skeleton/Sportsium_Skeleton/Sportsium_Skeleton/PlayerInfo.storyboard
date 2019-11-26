@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zbu-NP-nmN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zbu-NP-nmN">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,7 +10,7 @@
         <!--PlayerInfo-->
         <scene sceneID="hME-Fe-1ab">
             <objects>
-                <viewController storyboardIdentifier="PlayerInfoViewController" title="PlayerInfo" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Zbu-NP-nmN" customClass="PlayerInfoViewController" customModule="Sportsium_Skeleton" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PlayerInfoViewController" title="PlayerInfo" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Zbu-NP-nmN" customClass="PlayerInfoViewController" customModule="Sportsium" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pvu-uA-z70">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,7 +57,7 @@
                         <outlet property="teamLogo" destination="Ciy-Aj-yQs" id="YJ4-sK-uka"/>
                         <outlet property="textView" destination="PkQ-BV-afp" id="z1s-ao-cKV"/>
                         <segue destination="uGj-4X-aV0" kind="show" identifier="Home" id="2CY-qu-xmy"/>
-                        <segue destination="QmB-dG-Fd0" kind="show" identifier="Camera" id="VOU-UT-dhc"/>
+                        <segue destination="QmB-dG-Fd0" kind="show" identifier="Identify" id="VOU-UT-dhc"/>
                         <segue destination="sr7-Sn-EqD" kind="show" identifier="TeamInfo" id="DCK-KY-x93"/>
                         <segue destination="Uxc-Wy-HmP" kind="show" identifier="ListTeams" id="KKx-ut-aY3"/>
                     </connections>
