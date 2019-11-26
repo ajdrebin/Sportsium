@@ -579,6 +579,12 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
             }
             let homeColor = self.teamColorCodes[home]?.homeColor
             let awayColor = self.teamColorCodes[away]?.awayColor
+            
+            if(homeColor == nil || awayColor == nil){
+                print("home: ", home)
+                print("away: ", away)
+                return "no team found"
+            }
 //            print("checking, home:", homeColor, " away:", awayColor)
 //
 //            let homeHSV = rgbToHue(r: CGFloat(homeColor!.red/255), g: CGFloat(homeColor!.green/255), b: CGFloat(homeColor!.blue/255))
