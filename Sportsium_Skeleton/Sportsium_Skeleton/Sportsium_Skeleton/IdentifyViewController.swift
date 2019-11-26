@@ -32,8 +32,13 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
     
     
     @IBOutlet weak var numberLabel: UILabel!
-//    @IBOutlet weak var speedSwitch: UISegmentedControl!
+    
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var helpLabel: UILabel!
+    @IBOutlet weak var curGameLabel: UILabel!
+    @IBOutlet weak var curHomeLabel: UILabel!
+    @IBOutlet weak var curAwayLabel: UILabel!
+    @IBOutlet weak var gameHelpLabel: UILabel!
     
     var detectedPlayersArr:[(team: String, number: String)] = []
     
@@ -57,7 +62,7 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
         is_stopped = false
         self.captureSession.startRunning()
         self.showCameraFeed()
-        self.helpLabel.text = ""
+        self.clearHelpLabels()
         self.detectedPlayersArr.removeAll()
     }
     
@@ -68,10 +73,37 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
         
         self.clearDrawings()
         self.clearDrawings()
-        self.numberLabel.text = "#"
-        self.helpLabel.text = "Identify a Player! Press the start button and hold your phone up to the field to get information on a player."
+        self.resetHelpLabels()
         self.previewLayer.removeFromSuperlayer()
         
+    }
+    
+    func resetHelpLabels(){
+         self.numberLabel.text = "#"
+         self.helpLabel.text = "Press the start button and hold your phone up to the field to get information on a player. (Note, detection can be finnicky! If you run into trouble, try another player)"
+         self.titleLabel.text = "Identify a Player!"
+         self.curGameLabel.text = "Current Game:"
+         self.curHomeLabel.text = home
+         self.curAwayLabel.text = away
+         let homeColor = self.teamColorCodes[home]?.homeColor
+         self.curHomeLabel.backgroundColor = UIColor(red: CGFloat(homeColor!.red / 255), green: CGFloat(homeColor!.green / 255), blue: CGFloat(homeColor!.blue/255) , alpha: 1.0)
+         
+         let awayColor = self.teamColorCodes[away]?.awayColor
+         self.curAwayLabel.backgroundColor = UIColor(red: CGFloat(awayColor!.red / 255), green: CGFloat(awayColor!.green / 255), blue: CGFloat(awayColor!.blue/255) , alpha: 1.0)
+         self.curAwayLabel.textColor = UIColor.black
+        
+         self.gameHelpLabel.text = "Not the game you're looking for? Select a new one from the upcoming games page!"
+    }
+    
+    func clearHelpLabels(){
+        self.titleLabel.text = ""
+        self.helpLabel.text = ""
+        self.curGameLabel.text = ""
+        self.curHomeLabel.text = ""
+        self.curHomeLabel.backgroundColor = nil
+        self.curAwayLabel.backgroundColor = nil
+        self.curAwayLabel.text = ""
+        self.gameHelpLabel.text = ""
     }
     
     private let captureSession = AVCaptureSession()
@@ -97,6 +129,7 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
     var currentScrollArr:[(team: String, number: String)] = []
     
     func setUpScroll() {
+        self.resetHelpLabels()
         self.scView = UIScrollView(frame: CGRect(x: 0, y: 600, width: view.bounds.width, height: 115))
         self.view.addSubview(self.scView)
 
@@ -543,7 +576,7 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
             }
             
             let shrunk = self.resizeImage(image: image, targetSize: CGSize(width: 200.0, height: 200.0))
-            UIImageWriteToSavedPhotosAlbum(shrunk, nil, nil, nil)
+//            UIImageWriteToSavedPhotosAlbum(shrunk, nil, nil, nil)
 
             if(self.teamColorCodes.count == 0){
                 self.populateColors()
