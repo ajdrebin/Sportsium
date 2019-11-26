@@ -180,17 +180,19 @@ class HomeViewController: UIViewController {
         // 1
         
 //        print("league before: ", league)
+//        print("chosen before: ", self.chosenLeague)
         // Set league
         if(league == ""){
             league = self.chosenLeague
         }
         else{
-            if(league != self.chosenLeague){
+            if(league != self.chosenLeague && self.chosenLeague != ""){
                 league = self.chosenLeague
                 teamsDict.removeAll()
             }
         }
 //        print("league after: ", league)
+//        print("chosen after: ", self.chosenLeague)
         
         if (league == "WNBA") {
            DispatchQueue.main.async {

@@ -166,12 +166,6 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
             if (currPlayer.team == home) {
 //                print("home roster: ", homeRoster)
                 for player in homeRoster {
-                    if(currPlayer.number == "15" && home == "atlanta_dream"){
-                        idPlayer = player
-                        name = player.firstName + " " + player.lastName
-                        number = currPlayer.number
-                        team = currPlayer.team
-                    }
                     if currPlayer.number == player.number {
                         idPlayer = player
                         name = player.firstName + " " + player.lastName
@@ -249,10 +243,11 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
      
     
     func populateColors() {
-        if(league == ""){
-            print("League was null, setting now?")
-            league = "NWSL"
-        }
+//        if(league == ""){
+//            print("League was null, setting now?")
+//            league = "NWSL"
+//        }
+        print("populating colors, league: ", league)
         if (league == "NWSL"){
             self.teamColorCodes["orlando_pride"] = (homeColor: (red: 113, green: 78, blue: 178), awayColor: (red: 1, green: 1, blue: 1))
             self.teamColorCodes["chicago_red_stars"] = (homeColor: (red: 215, green: 240, blue: 255), awayColor: (red: 255, green: 246, blue: 49))
