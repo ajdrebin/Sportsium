@@ -79,7 +79,7 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
     }
     
     func resetHelpLabels(){
-         self.numberLabel.text = "#"
+         self.numberLabel.text = ""
          self.helpLabel.text = "Press the start button and hold your phone up to the field to get information on a player. (Note, detection can be finnicky! If you run into trouble, try another player)"
          self.titleLabel.text = "Identify a Player!"
          self.curGameLabel.text = "Current Game:"
@@ -96,6 +96,7 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
     }
     
     func clearHelpLabels(){
+        self.numberLabel.text = "#"
         self.titleLabel.text = ""
         self.helpLabel.text = ""
         self.curGameLabel.text = ""
@@ -267,7 +268,7 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
             self.teamColorCodes["atlanta_dream"] = (homeColor: (red: 37, green: 44, blue: 82), awayColor: (red: 143, green: 183, blue: 223))
             self.teamColorCodes["los_angeles_sparks"] = (homeColor: (red: 140, green: 138, blue: 8), awayColor: (red: 1, green: 1, blue: 1))
             self.teamColorCodes["las_vegas_aces"] = (homeColor: (red: 1, green: 1, blue: 1), awayColor: (red: 128, green: 77, blue: 17))
-            self.teamColorCodes["seattle_storm"] = (homeColor: (red: 144, green: 175, blue: 31), awayColor: (red: 1, green: 1, blue: 1))
+            self.teamColorCodes["seattle_storm"] = (homeColor: (red: 244, green: 239, blue: 119), awayColor: (red: 1, green: 1, blue: 1))
             self.teamColorCodes["phoenix_mercury"] = (homeColor: (red: 1, green: 1, blue: 1), awayColor: (red: 23, green: 17, blue: 18))
         }
 
@@ -583,17 +584,17 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
             }
             let homeColor = self.teamColorCodes[home]?.homeColor
             let awayColor = self.teamColorCodes[away]?.awayColor
-            print("checking, home:", homeColor, " away:", awayColor)
-            
-            let homeHSV = rgbToHue(r: CGFloat(homeColor!.red/255), g: CGFloat(homeColor!.green/255), b: CGFloat(homeColor!.blue/255))
-//            print("home rgb: ", homeColor!, "hsv: ", homeHSV)
-            
-            let awayHSV = rgbToHue(r: CGFloat(awayColor!.red/255), g: CGFloat(awayColor!.green/255), b: CGFloat(awayColor!.blue/255))
-//            print("away rgb: ", awayColor!, "hsv: ", awayHSV)
-            
-            
-            let homeHue = homeHSV.h * 360
-            let awayHue = awayHSV.h * 360
+//            print("checking, home:", homeColor, " away:", awayColor)
+//
+//            let homeHSV = rgbToHue(r: CGFloat(homeColor!.red/255), g: CGFloat(homeColor!.green/255), b: CGFloat(homeColor!.blue/255))
+////            print("home rgb: ", homeColor!, "hsv: ", homeHSV)
+//
+//            let awayHSV = rgbToHue(r: CGFloat(awayColor!.red/255), g: CGFloat(awayColor!.green/255), b: CGFloat(awayColor!.blue/255))
+////            print("away rgb: ", awayColor!, "hsv: ", awayHSV)
+//
+//
+//            let homeHue = homeHSV.h * 360
+//            let awayHue = awayHSV.h * 360
     //        let pixHue = CGFloat(240)
             
     //        let hueDiffHome = min(abs(homeHue-pixHue), 360-abs(homeHue-pixHue))
