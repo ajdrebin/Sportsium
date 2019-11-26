@@ -139,7 +139,10 @@ class TeamInfoViewController: UIViewController {
     makeBackButton()
     addNavBar()
     
-    addSocialMedia()
+   
+      addSocialMedia()
+    
+    
     
     
   }
@@ -150,9 +153,19 @@ class TeamInfoViewController: UIViewController {
       var y = 300
       
   
-    fb = wnba_social_media[teamName]!["fb"]!
-    twitter = wnba_social_media[teamName]!["tt"]!
-      instagram = wnba_social_media[teamName]!["ig"]!
+    if (league == "WNBA") {
+      fb = wnba_social_media[teamName]!["fb"]!
+         twitter = wnba_social_media[teamName]!["tt"]!
+           instagram = wnba_social_media[teamName]!["ig"]!
+    }
+      
+      // Since only NWSL api has social media right now 
+    else {
+      fb = team_obj.fb
+      instagram = team_obj.instagram
+      twitter = team_obj.twitter
+    }
+   
     
     
     
