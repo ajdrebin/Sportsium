@@ -17,7 +17,7 @@ class GameInfoViewController: UIViewController {
     var awayPlayers:[Player] = []
     
     override func viewDidLoad() {
-//        print(home)
+        //        print(home)
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         homePlayers = teamsDict[home!]!.playerList  // all player objects
@@ -26,29 +26,29 @@ class GameInfoViewController: UIViewController {
     }
     
     func makeButtons() {
-//      var buttons = [UIButton]()
-      var button : UIButton
-
-      var x :CGFloat = 0
-      var y :CGFloat = 250.0
+        //      var buttons = [UIButton]()
+        var button : UIButton
+        
+        var x :CGFloat = 0
+        var y :CGFloat = 250.0
         
         var teamOneLabel:UILabel = UILabel()
         teamOneLabel.tag = 1
         var teamTwoLabel:UILabel = UILabel()
         teamTwoLabel.tag = 2
-        teamOneLabel.frame = CGRect(x: 75, y: 50, width: 75, height: 75)
+        teamOneLabel.frame = CGRect(x: 60, y: 50, width: 75, height: 75)
         teamOneLabel.text = home
         teamTwoLabel.text = away
-        teamTwoLabel.frame = CGRect(x: 250, y: 50, width: 75, height: 75)
+        teamTwoLabel.frame = CGRect(x: 235, y: 50, width: 75, height: 75)
         teamTwoLabel.adjustsFontSizeToFitWidth = true
         teamOneLabel.adjustsFontSizeToFitWidth = true
         mainView.addSubview(teamOneLabel)
         mainView.addSubview(teamTwoLabel)
         
         var startingLabel:UILabel = UILabel()
-        startingLabel.frame = CGRect(x: 175, y: 200, width: 75, height: 75)
+        startingLabel.frame = CGRect(x: 160, y: 190, width: 150, height: 75)
         startingLabel.text = "Starting Roster"
-        startingLabel.adjustsFontSizeToFitWidth = true;
+        startingLabel.font = .systemFont(ofSize: 12)
         mainView.addSubview(startingLabel)
         
         var teamLogoImageView:UIImageView = UIImageView()
@@ -60,11 +60,11 @@ class GameInfoViewController: UIViewController {
         var teamLogoTap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tappedTeam))
         teamOneLabel.addGestureRecognizer(teamLogoTap)
         teamLogoTap.name = home
-//        teamLogoTap.delegate = self as? UIGestureRecognizerDelegate
+        //        teamLogoTap.delegate = self as? UIGestureRecognizerDelegate
         teamLogoImageView.addGestureRecognizer(teamLogoTap)
         teamLogoImageView.isUserInteractionEnabled = true
         
-        teamLogoImageView.frame = CGRect(x: 75, y: 125, width: 75, height: 75)
+        teamLogoImageView.frame = CGRect(x: 60, y: 125, width: 75, height: 75)
         teamLogoImageView.contentMode = UIView.ContentMode.scaleAspectFit;
         teamLogoImageView.image = teamLogo1
         mainView.addSubview(teamLogoImageView)
@@ -76,124 +76,134 @@ class GameInfoViewController: UIViewController {
         teamLogo2ImageView.addGestureRecognizer(teamLogo2Tap)
         teamLogo2ImageView.isUserInteractionEnabled = true
         
-        teamLogo2ImageView.frame = CGRect(x: 250, y: 125, width: 75, height: 75)
+        teamLogo2ImageView.frame = CGRect(x: 235, y: 125, width: 75, height: 75)
         teamLogo2ImageView.contentMode = UIView.ContentMode.scaleAspectFit;
         teamLogo2ImageView.image = teamLogo2
         mainView.addSubview(teamLogo2ImageView)
-
-      for (i, playerInd) in homePlayers.enumerated() {
-        if i > 10 {
-            break
+        
+        y = 250
+        for (i, playerInd) in homePlayers.enumerated() {
+            if i > 10 && league == "NWSL" {
+                break
+            }
+            
+            if i > 4 && league == "WNBA" {
+                break
+            }
+            
+            var playerLabel:UILabel = UILabel()
+            playerLabel.frame = CGRect(x: 0, y: y, width: UIScreen.main.bounds.width/2, height: 40)
+            var playerLabelTap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapPlayer))
+            playerLabelTap.name = String(i)
+            playerLabel.addGestureRecognizer(playerLabelTap)
+            playerLabel.isUserInteractionEnabled = true
+            if i % 2 == 0 {
+                playerLabel.backgroundColor = UIColor.white
+            }
+            else{
+                playerLabel.backgroundColor = UIColor.init(displayP3Red: 221/255, green: 240/255, blue: 1, alpha: 1)
+            }
+            mainView.addSubview(playerLabel)
+            var playerNumber:UILabel = UILabel()
+            playerNumber.text = playerInd.number;
+            playerNumber.frame = CGRect(x: 25, y: y, width: 40, height: 40)
+            playerNumber.adjustsFontSizeToFitWidth = true
+            playerNumber.textColor = UIColor.init(displayP3Red: 11/255, green: 96/255, blue: 168/255, alpha: 1)
+            mainView.addSubview(playerNumber)
+            var playerName:UILabel = UILabel()
+            playerName.text = playerInd.firstName + " " + playerInd.lastName
+            playerName.adjustsFontSizeToFitWidth = true
+            playerName.font = .systemFont(ofSize: 10.5)
+            playerName.frame = CGRect(x: 65, y: y, width: 100, height: 20)
+            playerName.textColor = UIColor.init(displayP3Red: 11/255, green: 96/255, blue: 168/255, alpha: 1)
+            mainView.addSubview(playerName)
+            var playerPosition:UILabel = UILabel()
+            playerPosition.textColor = UIColor.init(displayP3Red: 11/255, green: 96/255, blue: 168/255, alpha: 1)
+            playerPosition.text = playerInd.position
+            playerPosition.adjustsFontSizeToFitWidth = true
+            playerPosition.frame = CGRect(x: 65, y: y + 20, width: 100, height: 20)
+            playerPosition.font = .systemFont(ofSize: 11)
+            mainView.addSubview(playerPosition)
+            
+            y = y + 40
         }
-        print(playerInd.firstName)
-        button = UIButton()
-        button.tag = i
-        // x, y, width, height
-        
-
-
-        let screenSize = UIScreen.main.bounds
-        let screenWidth = screenSize.width
-
-
-        button.frame = CGRect(x: x, y: y, width: screenWidth/2, height: 40.0)
-        if i % 2 == 0 {
-          button.backgroundColor = UIColor.white
-        }
-        else{
-          button.backgroundColor = UIColor.init(displayP3Red: 221/255, green: 240/255, blue: 1, alpha: 1)
-        }
-
-        button.setTitleColor(UIColor.init(displayP3Red: 11/255, green: 96/255, blue: 168/255, alpha: 1), for: UIControl.State.normal)
-
-        //Allow for multi line text \n separated.
-        button.titleLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping;
-        button.setTitle(playerInd.firstName +  " " + playerInd.lastName + "\t\t\t" +  playerInd.number + "\n" + playerInd.position , for: UIControl.State.normal)
-
-
-        button.addTarget(self, action: #selector(pressBtn), for: UIControl.Event.touchDown)
-        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        button.addTarget(self, action: #selector(releaseBtn), for: .touchUpInside)
-        button.addTarget(self, action: #selector(releaseBtn), for: .touchUpOutside)
-
-        button.tag = i
-        
-        //x = x * 2.0
-        y = y + 40
-        
-        button.titleLabel?.font = .systemFont(ofSize: 11)
-        
-        mainView.addSubview(button)
-
-      }
         
         y = 250
         
         
         
         for (i, playerInd) in awayPlayers.enumerated() {
-          if i > 10 {
-              break
-          }
-          print(playerInd.firstName)
-          button = UIButton()
-          // x, y, width, height
-          
-
-
-          let screenSize = UIScreen.main.bounds
-          let screenWidth = screenSize.width
-
-
-          button.frame = CGRect(x: screenWidth/2, y: y, width: screenWidth/2, height: 40.0)
-          if i % 2 == 0 {
-            button.backgroundColor = UIColor.white
-          }
-          else{
-            button.backgroundColor = UIColor.init(displayP3Red: 221/255, green: 240/255, blue: 1, alpha: 1)
-          }
-
-          button.setTitleColor(UIColor.init(displayP3Red: 11/255, green: 96/255, blue: 168/255, alpha: 1), for: UIControl.State.normal)
-
-          //Allow for multi line text \n separated.
-          button.titleLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping;
-            button.setTitle(playerInd.firstName +  " " + playerInd.lastName + "\t\t\t" +  playerInd.number + "\n" + playerInd.position , for: UIControl.State.normal)
-
-
-          button.addTarget(self, action: #selector(pressBtn), for: UIControl.Event.touchDown)
-          button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-          button.addTarget(self, action: #selector(releaseBtn), for: .touchUpInside)
-          button.addTarget(self, action: #selector(releaseBtn), for: .touchUpOutside)
-
-          button.tag = i + 11
-          
-          //x = x * 2.0
-          y = y + 40
-          
-          button.titleLabel?.font = .systemFont(ofSize: 11)
-          
-          mainView.addSubview(button)
-
+                        if i > 10 && league == "NWSL" {
+                break
+            }
+            
+            if i > 4 && league == "WNBA" {
+                break
+            }
+            
+            var playerLabel:UILabel = UILabel()
+            playerLabel.frame = CGRect(x: UIScreen.main.bounds.width/2, y: y, width: UIScreen.main.bounds.width/2, height: 40)
+            var playerLabelTap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapPlayer))
+            playerLabelTap.name = String(i)
+            playerLabel.addGestureRecognizer(playerLabelTap)
+            playerLabel.isUserInteractionEnabled = true
+            if i % 2 == 0 {
+                playerLabel.backgroundColor = UIColor.white
+            }
+            else{
+                playerLabel.backgroundColor = UIColor.init(displayP3Red: 221/255, green: 240/255, blue: 1, alpha: 1)
+            }
+            mainView.addSubview(playerLabel)
+            var playerNumber:UILabel = UILabel()
+            playerNumber.text = playerInd.number;
+            playerNumber.frame = CGRect(x: UIScreen.main.bounds.width/2 + 25, y: y, width: 40, height: 40)
+            playerNumber.adjustsFontSizeToFitWidth = true
+            playerNumber.textColor = UIColor.init(displayP3Red: 11/255, green: 96/255, blue: 168/255, alpha: 1)
+            mainView.addSubview(playerNumber)
+            var playerName:UILabel = UILabel()
+            playerName.text = playerInd.firstName + " " + playerInd.lastName
+            playerName.adjustsFontSizeToFitWidth = true
+            playerName.font = .systemFont(ofSize: 10.5)
+            playerName.frame = CGRect(x: UIScreen.main.bounds.width/2 + 65, y: y, width: 100, height: 20)
+            playerName.textColor = UIColor.init(displayP3Red: 11/255, green: 96/255, blue: 168/255, alpha: 1)
+            mainView.addSubview(playerName)
+            var playerPosition:UILabel = UILabel()
+            playerPosition.textColor = UIColor.init(displayP3Red: 11/255, green: 96/255, blue: 168/255, alpha: 1)
+            playerPosition.text = playerInd.position
+            playerPosition.adjustsFontSizeToFitWidth = true
+            playerPosition.frame = CGRect(x: UIScreen.main.bounds.width/2 + 65, y: y + 20, width: 100, height: 20)
+            playerPosition.font = .systemFont(ofSize: 11)
+            mainView.addSubview(playerPosition)
+            
+            y = y + 40
+            
         }
         
     }
     
     @objc func pressBtn(sender: UIButton!) {
-      let btn: UIButton = sender
-      btn.setTitleColor(UIColor.lightGray, for: UIControl.State.normal)
+        let btn: UIButton = sender
+        btn.setTitleColor(UIColor.lightGray, for: UIControl.State.normal)
     }
     
     @objc func releaseBtn(sender: UIButton!) {
-      let btn: UIButton = sender
-      btn.setTitleColor(UIColor.init(displayP3Red: 11/255, green: 96/255, blue: 168/255, alpha: 1), for: UIControl.State.normal)
+        let btn: UIButton = sender
+        btn.setTitleColor(UIColor.init(displayP3Red: 11/255, green: 96/255, blue: 168/255, alpha: 1), for: UIControl.State.normal)
     }
     
     var last_pressed = 0
     @objc func buttonAction(sender: UIButton!) {
-      let btn: UIButton = sender
-//      print(btn.titleLabel?.text)
-      last_pressed = btn.tag
-      performSegue(withIdentifier: "PlayerInfo", sender: self)
+        let btn: UIButton = sender
+        //      print(btn.titleLabel?.text)
+        last_pressed = btn.tag
+        performSegue(withIdentifier: "PlayerInfo", sender: self)
+    }
+    
+    @objc func tapPlayer(sender:AnyObject) {
+        var sender = sender
+        //      print(btn.titleLabel?.text)
+        last_pressed = Int(sender.name)!
+        performSegue(withIdentifier: "PlayerInfo", sender: self)
     }
     
     var sendTeam = ""
@@ -207,7 +217,7 @@ class GameInfoViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "PlayerInfo"){
-                let displayVC = segue.destination as! PlayerInfoViewController
+            let displayVC = segue.destination as! PlayerInfoViewController
             
             if last_pressed > 10 {
                 displayVC.player_obj = awayPlayers[last_pressed - 11]
@@ -219,7 +229,6 @@ class GameInfoViewController: UIViewController {
             }
             displayVC.home_team_name = home
             displayVC.away_team_name = away
-          displayVC.prev_page = "GameInfo"
         }
         if(segue.identifier == "Team"){
                 let displayVC = segue.destination as! TeamInfoViewController
@@ -236,12 +245,12 @@ class GameInfoViewController: UIViewController {
       }
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if(segue.identifier == "PlayerInfo"){
-//                let displayVC = segue.destination as! PlayerInfoViewController
-//                displayVC.button_text = last_pressed
-//        }
-//    }
+    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    //        if(segue.identifier == "PlayerInfo"){
+    //                let displayVC = segue.destination as! PlayerInfoViewController
+    //                displayVC.button_text = last_pressed
+    //        }
+    //    }
     
     // might need to change
     

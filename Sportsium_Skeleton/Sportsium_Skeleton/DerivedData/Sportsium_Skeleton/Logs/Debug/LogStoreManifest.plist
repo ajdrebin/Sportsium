@@ -6,7 +6,7 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>2049BED0-7A72-458F-9E29-CC00AB3770D2</key>
+		<key>15189488-04BE-4B15-8318-E57E8DB1CA89</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -15,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>2049BED0-7A72-458F-9E29-CC00AB3770D2.xcactivitylog</string>
+			<string>15189488-04BE-4B15-8318-E57E8DB1CA89.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -32,15 +32,15 @@
 			<key>signature</key>
 			<string>Debug Sportsium_Skeleton</string>
 			<key>timeStartedRecording</key>
-			<real>596322895.03583395</real>
+			<real>596651774.924528</real>
 			<key>timeStoppedRecording</key>
-			<real>596322959.80656099</real>
+			<real>596652569.35424805</real>
 			<key>title</key>
 			<string>Debug Sportsium_Skeleton</string>
 			<key>uniqueIdentifier</key>
-			<string>2049BED0-7A72-458F-9E29-CC00AB3770D2</string>
+			<string>15189488-04BE-4B15-8318-E57E8DB1CA89</string>
 		</dict>
-		<key>65E34070-A034-46C6-91EE-BCA5B2C957B9</key>
+		<key>18212A51-81CB-4415-8F47-D9E20B989046</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -49,7 +49,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>65E34070-A034-46C6-91EE-BCA5B2C957B9.xcactivitylog</string>
+			<string>18212A51-81CB-4415-8F47-D9E20B989046.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -66,15 +66,15 @@
 			<key>signature</key>
 			<string>Debug Sportsium_Skeleton</string>
 			<key>timeStartedRecording</key>
-			<real>596321710.31694806</real>
+			<real>596649276.39263999</real>
 			<key>timeStoppedRecording</key>
-			<real>596321726.98409796</real>
+			<real>596649348.30550694</real>
 			<key>title</key>
 			<string>Debug Sportsium_Skeleton</string>
 			<key>uniqueIdentifier</key>
-			<string>65E34070-A034-46C6-91EE-BCA5B2C957B9</string>
+			<string>18212A51-81CB-4415-8F47-D9E20B989046</string>
 		</dict>
-		<key>6F1513A2-2F7E-410A-A14E-93DBE2B92FDD</key>
+		<key>1AAD3C68-8687-4774-910B-FA76C5CF2F51</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -83,7 +83,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>6F1513A2-2F7E-410A-A14E-93DBE2B92FDD.xcactivitylog</string>
+			<string>1AAD3C68-8687-4774-910B-FA76C5CF2F51.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -100,15 +100,15 @@
 			<key>signature</key>
 			<string>Debug Sportsium_Skeleton</string>
 			<key>timeStartedRecording</key>
-			<real>596322383.14372694</real>
+			<real>596648106.42413104</real>
 			<key>timeStoppedRecording</key>
-			<real>596322389.95133698</real>
+			<real>596648147.89304101</real>
 			<key>title</key>
 			<string>Debug Sportsium_Skeleton</string>
 			<key>uniqueIdentifier</key>
-			<string>6F1513A2-2F7E-410A-A14E-93DBE2B92FDD</string>
+			<string>1AAD3C68-8687-4774-910B-FA76C5CF2F51</string>
 		</dict>
-		<key>AB4BE107-88C7-4EFC-8133-FD1B043C95D4</key>
+		<key>1B6928D6-01A0-4ED7-910D-6553FC5B6853</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -117,7 +117,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>AB4BE107-88C7-4EFC-8133-FD1B043C95D4.xcactivitylog</string>
+			<string>1B6928D6-01A0-4ED7-910D-6553FC5B6853.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -134,15 +134,15 @@
 			<key>signature</key>
 			<string>Debug Sportsium_Skeleton</string>
 			<key>timeStartedRecording</key>
-			<real>596322000.53726602</real>
+			<real>596649373.17817998</real>
 			<key>timeStoppedRecording</key>
-			<real>596322076.62689602</real>
+			<real>596649415.27225006</real>
 			<key>title</key>
 			<string>Debug Sportsium_Skeleton</string>
 			<key>uniqueIdentifier</key>
-			<string>AB4BE107-88C7-4EFC-8133-FD1B043C95D4</string>
+			<string>1B6928D6-01A0-4ED7-910D-6553FC5B6853</string>
 		</dict>
-		<key>C700EA3A-4A55-404C-9EA8-CDA9F76992C4</key>
+		<key>1BB5B5A8-891D-4D19-8DBF-637EDB7979D4</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -151,7 +151,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>C700EA3A-4A55-404C-9EA8-CDA9F76992C4.xcactivitylog</string>
+			<string>1BB5B5A8-891D-4D19-8DBF-637EDB7979D4.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -168,15 +168,15 @@
 			<key>signature</key>
 			<string>Debug Sportsium_Skeleton</string>
 			<key>timeStartedRecording</key>
-			<real>596322366.83191299</real>
+			<real>596649419.18993902</real>
 			<key>timeStoppedRecording</key>
-			<real>596322381.45316398</real>
+			<real>596651771.28408504</real>
 			<key>title</key>
 			<string>Debug Sportsium_Skeleton</string>
 			<key>uniqueIdentifier</key>
-			<string>C700EA3A-4A55-404C-9EA8-CDA9F76992C4</string>
+			<string>1BB5B5A8-891D-4D19-8DBF-637EDB7979D4</string>
 		</dict>
-		<key>CF074B3B-ACC2-4F7E-8917-61DF8FAF00EA</key>
+		<key>206908C3-508C-4A8E-BD5D-B48D871790AB</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -185,7 +185,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>CF074B3B-ACC2-4F7E-8917-61DF8FAF00EA.xcactivitylog</string>
+			<string>206908C3-508C-4A8E-BD5D-B48D871790AB.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -202,15 +202,15 @@
 			<key>signature</key>
 			<string>Debug Sportsium_Skeleton</string>
 			<key>timeStartedRecording</key>
-			<real>596322462.07595003</real>
+			<real>596653714.94089794</real>
 			<key>timeStoppedRecording</key>
-			<real>596322703.55638003</real>
+			<real>596653730.323089</real>
 			<key>title</key>
 			<string>Debug Sportsium_Skeleton</string>
 			<key>uniqueIdentifier</key>
-			<string>CF074B3B-ACC2-4F7E-8917-61DF8FAF00EA</string>
+			<string>206908C3-508C-4A8E-BD5D-B48D871790AB</string>
 		</dict>
-		<key>D4FDC4ED-A935-4637-8AED-74008EFC9FBC</key>
+		<key>20CCE12F-AF65-4FC4-88E8-9F0AD6E796DA</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -219,7 +219,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>D4FDC4ED-A935-4637-8AED-74008EFC9FBC.xcactivitylog</string>
+			<string>20CCE12F-AF65-4FC4-88E8-9F0AD6E796DA.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -236,15 +236,15 @@
 			<key>signature</key>
 			<string>Debug Sportsium_Skeleton</string>
 			<key>timeStartedRecording</key>
-			<real>596322395.81306601</real>
+			<real>596653661.72444201</real>
 			<key>timeStoppedRecording</key>
-			<real>596322436.98996699</real>
+			<real>596653670.08317494</real>
 			<key>title</key>
 			<string>Debug Sportsium_Skeleton</string>
 			<key>uniqueIdentifier</key>
-			<string>D4FDC4ED-A935-4637-8AED-74008EFC9FBC</string>
+			<string>20CCE12F-AF65-4FC4-88E8-9F0AD6E796DA</string>
 		</dict>
-		<key>F0D783F9-30BC-4C02-BAEF-96E53D4EC1C3</key>
+		<key>343755D6-DEE6-45EE-B80F-F0C2B55B7AF3</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -253,7 +253,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>F0D783F9-30BC-4C02-BAEF-96E53D4EC1C3.xcactivitylog</string>
+			<string>343755D6-DEE6-45EE-B80F-F0C2B55B7AF3.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -270,15 +270,15 @@
 			<key>signature</key>
 			<string>Debug Sportsium_Skeleton</string>
 			<key>timeStartedRecording</key>
-			<real>596322879.92345095</real>
+			<real>596653670.37050998</real>
 			<key>timeStoppedRecording</key>
-			<real>596322890.30041897</real>
+			<real>596653678.55656695</real>
 			<key>title</key>
 			<string>Debug Sportsium_Skeleton</string>
 			<key>uniqueIdentifier</key>
-			<string>F0D783F9-30BC-4C02-BAEF-96E53D4EC1C3</string>
+			<string>343755D6-DEE6-45EE-B80F-F0C2B55B7AF3</string>
 		</dict>
-		<key>F5325B34-90EB-4B24-9FD8-6486912EC95C</key>
+		<key>442BC352-566E-494E-90E7-D98974F82854</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -287,7 +287,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>F5325B34-90EB-4B24-9FD8-6486912EC95C.xcactivitylog</string>
+			<string>442BC352-566E-494E-90E7-D98974F82854.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -304,13 +304,727 @@
 			<key>signature</key>
 			<string>Debug Sportsium_Skeleton</string>
 			<key>timeStartedRecording</key>
-			<real>596323842.404338</real>
+			<real>596653008.25694597</real>
 			<key>timeStoppedRecording</key>
-			<real>596323881.14885402</real>
+			<real>596653077.87891304</real>
 			<key>title</key>
 			<string>Debug Sportsium_Skeleton</string>
 			<key>uniqueIdentifier</key>
-			<string>F5325B34-90EB-4B24-9FD8-6486912EC95C</string>
+			<string>442BC352-566E-494E-90E7-D98974F82854</string>
+		</dict>
+		<key>5058D4FB-12BE-466F-A317-7B88BBBC6C58</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>5058D4FB-12BE-466F-A317-7B88BBBC6C58.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Sportsium_Skeleton project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Sportsium_Skeleton</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug Sportsium_Skeleton</string>
+			<key>timeStartedRecording</key>
+			<real>596655271.62905002</real>
+			<key>timeStoppedRecording</key>
+			<real>596655302.78213894</real>
+			<key>title</key>
+			<string>Debug Sportsium_Skeleton</string>
+			<key>uniqueIdentifier</key>
+			<string>5058D4FB-12BE-466F-A317-7B88BBBC6C58</string>
+		</dict>
+		<key>5796D3B5-D7FA-4162-AA7E-73635999C72C</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>5796D3B5-D7FA-4162-AA7E-73635999C72C.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Sportsium_Skeleton project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Sportsium_Skeleton</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug Sportsium_Skeleton</string>
+			<key>timeStartedRecording</key>
+			<real>596437141.45540702</real>
+			<key>timeStoppedRecording</key>
+			<real>596437341.91887999</real>
+			<key>title</key>
+			<string>Debug Sportsium_Skeleton</string>
+			<key>uniqueIdentifier</key>
+			<string>5796D3B5-D7FA-4162-AA7E-73635999C72C</string>
+		</dict>
+		<key>5D16F4CC-601B-4EFD-8ABD-9C846109D5D3</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>5D16F4CC-601B-4EFD-8ABD-9C846109D5D3.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Sportsium_Skeleton project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Sportsium_Skeleton</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug Sportsium_Skeleton</string>
+			<key>timeStartedRecording</key>
+			<real>596649268.89695001</real>
+			<key>timeStoppedRecording</key>
+			<real>596649276.09415996</real>
+			<key>title</key>
+			<string>Debug Sportsium_Skeleton</string>
+			<key>uniqueIdentifier</key>
+			<string>5D16F4CC-601B-4EFD-8ABD-9C846109D5D3</string>
+		</dict>
+		<key>6C40DEF2-D28C-4709-A729-015B521A98D5</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>6C40DEF2-D28C-4709-A729-015B521A98D5.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Sportsium_Skeleton project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Sportsium_Skeleton</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug Sportsium_Skeleton</string>
+			<key>timeStartedRecording</key>
+			<real>596653678.84008503</real>
+			<key>timeStoppedRecording</key>
+			<real>596653710.99989605</real>
+			<key>title</key>
+			<string>Debug Sportsium_Skeleton</string>
+			<key>uniqueIdentifier</key>
+			<string>6C40DEF2-D28C-4709-A729-015B521A98D5</string>
+		</dict>
+		<key>73975009-1797-4D33-A3E5-580233AEDA7A</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>73975009-1797-4D33-A3E5-580233AEDA7A.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Sportsium_Skeleton project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Sportsium_Skeleton</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug Sportsium_Skeleton</string>
+			<key>timeStartedRecording</key>
+			<real>596648384.614959</real>
+			<key>timeStoppedRecording</key>
+			<real>596648677.30051506</real>
+			<key>title</key>
+			<string>Debug Sportsium_Skeleton</string>
+			<key>uniqueIdentifier</key>
+			<string>73975009-1797-4D33-A3E5-580233AEDA7A</string>
+		</dict>
+		<key>78995CC6-4387-44D7-92F2-90388FCB42EA</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>78995CC6-4387-44D7-92F2-90388FCB42EA.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Sportsium_Skeleton project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Sportsium_Skeleton</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug Sportsium_Skeleton</string>
+			<key>timeStartedRecording</key>
+			<real>596653207.81997597</real>
+			<key>timeStoppedRecording</key>
+			<real>596653230.92726398</real>
+			<key>title</key>
+			<string>Debug Sportsium_Skeleton</string>
+			<key>uniqueIdentifier</key>
+			<string>78995CC6-4387-44D7-92F2-90388FCB42EA</string>
+		</dict>
+		<key>828E4143-9E9B-40E6-B6EB-C2AEFE926BA5</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>828E4143-9E9B-40E6-B6EB-C2AEFE926BA5.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Sportsium_Skeleton project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Sportsium_Skeleton</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug Sportsium_Skeleton</string>
+			<key>timeStartedRecording</key>
+			<real>596653930.94604599</real>
+			<key>timeStoppedRecording</key>
+			<real>596653936.665838</real>
+			<key>title</key>
+			<string>Debug Sportsium_Skeleton</string>
+			<key>uniqueIdentifier</key>
+			<string>828E4143-9E9B-40E6-B6EB-C2AEFE926BA5</string>
+		</dict>
+		<key>8BCE1862-C805-4164-B8E6-6488DDD303BC</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>8BCE1862-C805-4164-B8E6-6488DDD303BC.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Sportsium_Skeleton project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Sportsium_Skeleton</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug Sportsium_Skeleton</string>
+			<key>timeStartedRecording</key>
+			<real>596649352.08010697</real>
+			<key>timeStoppedRecording</key>
+			<real>596649369.52844501</real>
+			<key>title</key>
+			<string>Debug Sportsium_Skeleton</string>
+			<key>uniqueIdentifier</key>
+			<string>8BCE1862-C805-4164-B8E6-6488DDD303BC</string>
+		</dict>
+		<key>91424562-598F-468C-ABDA-7C480924C45C</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>91424562-598F-468C-ABDA-7C480924C45C.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Sportsium_Skeleton project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Sportsium_Skeleton</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug Sportsium_Skeleton</string>
+			<key>timeStartedRecording</key>
+			<real>596653081.21160698</real>
+			<key>timeStoppedRecording</key>
+			<real>596653191.41299403</real>
+			<key>title</key>
+			<string>Debug Sportsium_Skeleton</string>
+			<key>uniqueIdentifier</key>
+			<string>91424562-598F-468C-ABDA-7C480924C45C</string>
+		</dict>
+		<key>93E9F000-526D-4E7D-AAC6-7867E6E3564C</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>93E9F000-526D-4E7D-AAC6-7867E6E3564C.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Sportsium_Skeleton project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Sportsium_Skeleton</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug Sportsium_Skeleton</string>
+			<key>timeStartedRecording</key>
+			<real>596648345.71121395</real>
+			<key>timeStoppedRecording</key>
+			<real>596648380.03088295</real>
+			<key>title</key>
+			<string>Debug Sportsium_Skeleton</string>
+			<key>uniqueIdentifier</key>
+			<string>93E9F000-526D-4E7D-AAC6-7867E6E3564C</string>
+		</dict>
+		<key>9F0AAC17-F53A-4445-ADC6-966D00997F3F</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>9F0AAC17-F53A-4445-ADC6-966D00997F3F.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Sportsium_Skeleton project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Sportsium_Skeleton</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug Sportsium_Skeleton</string>
+			<key>timeStartedRecording</key>
+			<real>596654446.98491204</real>
+			<key>timeStoppedRecording</key>
+			<real>596655211.90882301</real>
+			<key>title</key>
+			<string>Debug Sportsium_Skeleton</string>
+			<key>uniqueIdentifier</key>
+			<string>9F0AAC17-F53A-4445-ADC6-966D00997F3F</string>
+		</dict>
+		<key>A8914F36-BD8E-4A32-B08B-BD6BBBCBD4D8</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>A8914F36-BD8E-4A32-B08B-BD6BBBCBD4D8.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Sportsium_Skeleton project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Sportsium_Skeleton</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug Sportsium_Skeleton</string>
+			<key>timeStartedRecording</key>
+			<real>596648049.34275901</real>
+			<key>timeStoppedRecording</key>
+			<real>596648088.20205998</real>
+			<key>title</key>
+			<string>Debug Sportsium_Skeleton</string>
+			<key>uniqueIdentifier</key>
+			<string>A8914F36-BD8E-4A32-B08B-BD6BBBCBD4D8</string>
+		</dict>
+		<key>AA209DC9-E564-4D1D-BA54-FDE4FEFADF38</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>AA209DC9-E564-4D1D-BA54-FDE4FEFADF38.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Sportsium_Skeleton project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Sportsium_Skeleton</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug Sportsium_Skeleton</string>
+			<key>timeStartedRecording</key>
+			<real>596649258.36376202</real>
+			<key>timeStoppedRecording</key>
+			<real>596649268.36519802</real>
+			<key>title</key>
+			<string>Debug Sportsium_Skeleton</string>
+			<key>uniqueIdentifier</key>
+			<string>AA209DC9-E564-4D1D-BA54-FDE4FEFADF38</string>
+		</dict>
+		<key>B58CEADF-3A45-4047-9A9F-DCAB5AEC69CC</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>B58CEADF-3A45-4047-9A9F-DCAB5AEC69CC.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Sportsium_Skeleton project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Sportsium_Skeleton</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug Sportsium_Skeleton</string>
+			<key>timeStartedRecording</key>
+			<real>596648153.85186005</real>
+			<key>timeStoppedRecording</key>
+			<real>596648168.64293694</real>
+			<key>title</key>
+			<string>Debug Sportsium_Skeleton</string>
+			<key>uniqueIdentifier</key>
+			<string>B58CEADF-3A45-4047-9A9F-DCAB5AEC69CC</string>
+		</dict>
+		<key>B6660D76-82E0-421A-B2A7-9E4278F113E1</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>B6660D76-82E0-421A-B2A7-9E4278F113E1.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Sportsium_Skeleton project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Sportsium_Skeleton</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug Sportsium_Skeleton</string>
+			<key>timeStartedRecording</key>
+			<real>596653734.23903799</real>
+			<key>timeStoppedRecording</key>
+			<real>596653755.94737804</real>
+			<key>title</key>
+			<string>Debug Sportsium_Skeleton</string>
+			<key>uniqueIdentifier</key>
+			<string>B6660D76-82E0-421A-B2A7-9E4278F113E1</string>
+		</dict>
+		<key>D14F310A-B602-445B-B7A0-3735B624B022</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>D14F310A-B602-445B-B7A0-3735B624B022.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Sportsium_Skeleton project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Sportsium_Skeleton</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug Sportsium_Skeleton</string>
+			<key>timeStartedRecording</key>
+			<real>596654382.63888502</real>
+			<key>timeStoppedRecording</key>
+			<real>596654407.259166</real>
+			<key>title</key>
+			<string>Debug Sportsium_Skeleton</string>
+			<key>uniqueIdentifier</key>
+			<string>D14F310A-B602-445B-B7A0-3735B624B022</string>
+		</dict>
+		<key>D8563CD0-F878-441A-B7DE-761B45553C32</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>D8563CD0-F878-441A-B7DE-761B45553C32.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Sportsium_Skeleton project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Sportsium_Skeleton</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug Sportsium_Skeleton</string>
+			<key>timeStartedRecording</key>
+			<real>596653524.43520296</real>
+			<key>timeStoppedRecording</key>
+			<real>596653599.56495702</real>
+			<key>title</key>
+			<string>Debug Sportsium_Skeleton</string>
+			<key>uniqueIdentifier</key>
+			<string>D8563CD0-F878-441A-B7DE-761B45553C32</string>
+		</dict>
+		<key>EB659024-A72A-4009-8781-DB014398CF9C</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>EB659024-A72A-4009-8781-DB014398CF9C.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Sportsium_Skeleton project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Sportsium_Skeleton</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug Sportsium_Skeleton</string>
+			<key>timeStartedRecording</key>
+			<real>596649128.48419797</real>
+			<key>timeStoppedRecording</key>
+			<real>596649254.41459894</real>
+			<key>title</key>
+			<string>Debug Sportsium_Skeleton</string>
+			<key>uniqueIdentifier</key>
+			<string>EB659024-A72A-4009-8781-DB014398CF9C</string>
+		</dict>
+		<key>EE0A6C08-D8B0-4BBD-B5CD-47DEF55C903B</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>EE0A6C08-D8B0-4BBD-B5CD-47DEF55C903B.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Sportsium_Skeleton project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Sportsium_Skeleton</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug Sportsium_Skeleton</string>
+			<key>timeStartedRecording</key>
+			<real>596648169.15421104</real>
+			<key>timeStoppedRecording</key>
+			<real>596648344.81649804</real>
+			<key>title</key>
+			<string>Debug Sportsium_Skeleton</string>
+			<key>uniqueIdentifier</key>
+			<string>EE0A6C08-D8B0-4BBD-B5CD-47DEF55C903B</string>
+		</dict>
+		<key>F6353684-14FF-4313-8136-319A04ED378C</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>F6353684-14FF-4313-8136-319A04ED378C.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Sportsium_Skeleton project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Sportsium_Skeleton</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug Sportsium_Skeleton</string>
+			<key>timeStartedRecording</key>
+			<real>596652573.57344496</real>
+			<key>timeStoppedRecording</key>
+			<real>596652990.47130299</real>
+			<key>title</key>
+			<string>Debug Sportsium_Skeleton</string>
+			<key>uniqueIdentifier</key>
+			<string>F6353684-14FF-4313-8136-319A04ED378C</string>
+		</dict>
+		<key>F8898F1C-0420-4E6A-B133-987F7C7ADA96</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>F8898F1C-0420-4E6A-B133-987F7C7ADA96.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Sportsium_Skeleton project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Sportsium_Skeleton</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug Sportsium_Skeleton</string>
+			<key>timeStartedRecording</key>
+			<real>596653603.05630803</real>
+			<key>timeStoppedRecording</key>
+			<real>596653656.96402597</real>
+			<key>title</key>
+			<string>Debug Sportsium_Skeleton</string>
+			<key>uniqueIdentifier</key>
+			<string>F8898F1C-0420-4E6A-B133-987F7C7ADA96</string>
 		</dict>
 	</dict>
 </dict>
