@@ -181,23 +181,9 @@ class GameInfoViewController: UIViewController {
         
     }
     
-    @objc func pressBtn(sender: UIButton!) {
-        let btn: UIButton = sender
-        btn.setTitleColor(UIColor.lightGray, for: UIControl.State.normal)
-    }
     
-    @objc func releaseBtn(sender: UIButton!) {
-        let btn: UIButton = sender
-        btn.setTitleColor(UIColor.init(displayP3Red: 11/255, green: 96/255, blue: 168/255, alpha: 1), for: UIControl.State.normal)
-    }
     
     var last_pressed = 0
-    @objc func buttonAction(sender: UIButton!) {
-        let btn: UIButton = sender
-        //      print(btn.titleLabel?.text)
-        last_pressed = btn.tag
-        performSegue(withIdentifier: "PlayerInfo", sender: self)
-    }
     
     @objc func tapPlayer(sender:AnyObject) {
         var sender = sender

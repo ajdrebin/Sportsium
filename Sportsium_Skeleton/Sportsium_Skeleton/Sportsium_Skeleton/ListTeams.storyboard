@@ -51,12 +51,19 @@
                                 <rect key="frame" x="97" y="707" width="180" height="71"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XzX-fn-t8u">
+                                <rect key="frame" x="0.0" y="90" width="375" height="609"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="hUA-dL-kaP"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="PLg-6P-zVg"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="0fF-WO-UVB"/>
                     </view>
                     <connections>
                         <outlet property="mainView" destination="r8h-sw-VCZ" id="MhF-Vp-Mka"/>
+                        <outlet property="scrollView" destination="XzX-fn-t8u" id="KcS-kl-hAv"/>
                         <segue destination="9Ug-pr-U3E" kind="show" identifier="Team" id="dY4-TD-0wj"/>
                     </connections>
                 </viewController>
