@@ -266,89 +266,110 @@ class TeamInfoViewController: UIViewController {
     
   }
   
-  func addNavBar() {
-    let label = UILabel()
-    label.font = UIFont(name:"HelveticaNeue-Bold", size: 20.0)
-    label.backgroundColor = UIColor.init(displayP3Red: 33/255, green: 133/255, blue: 247/255, alpha: 1)
-    
-    let screenSize = UIScreen.main.bounds
-    let screenWidth = screenSize.width
-    label.frame = CGRect(x: 0, y: 720, width: screenWidth, height: 100)
-    
-    
-    let home_btn = UIButton()
-    var imageName = "home.png"
-    var image = UIImage(named: imageName)
-    
-    home_btn.setImage(image, for: [])
-    
-    home_btn.frame = CGRect(x: 60, y: 750, width: 38, height: 30)
-    
-    home_btn.layer.zPosition = 1;
-    
-    home_btn.addTarget(self, action: #selector(segueHome), for: UIControl.Event.touchDown)
+    func addNavBar() {
+      let label = UILabel()
+      label.font = UIFont(name:"HelveticaNeue-Bold", size: 20.0)
+      label.backgroundColor = UIColor.init(displayP3Red: 33/255, green: 133/255, blue: 247/255, alpha: 1)
+      
+      let screenSize = UIScreen.main.bounds
+      let screenWidth = screenSize.width
+      label.frame = CGRect(x: 0, y: 720, width: screenWidth, height: 100)
+      
+      
+      let home_btn = UIButton()
+      var imageName = "home.png"
+      var image = UIImage(named: imageName)
+      home_btn.setImage(image, for: [])
+      
+      home_btn.frame = CGRect(x: 58, y: 741, width: 40, height: 36)
 
-    mainView.addSubview(home_btn)
-    
-    
-    let explore_btn = UIButton()
-    imageName = "explore.png"
-    image = UIImage(named: imageName)
-    
-    explore_btn.setImage(image, for: [])
-    
-    explore_btn.frame = CGRect(x: 275, y: 750, width: 38, height: 38)
-    
-    explore_btn.layer.zPosition = 1;
-    
-    explore_btn.addTarget(self, action: #selector(segueListTeams), for: UIControl.Event.touchDown)
-    
-    mainView.addSubview(explore_btn)
-    
+      
+      home_btn.layer.zPosition = 1;
+      
+      home_btn.addTarget(self, action: #selector(segueHome), for: UIControl.Event.touchDown)
 
-    let camera_btn = UIButton()
-    imageName = "circle.png"
-    image = UIImage(named: imageName)
-    
-    camera_btn.setImage(image, for: [])
-    
-    camera_btn.frame = CGRect(x: 89, y: 690, width: 197, height: 104)
-    
-    camera_btn.layer.zPosition = 1;
-    
-    camera_btn.addTarget(self, action: #selector(segueCamera), for: UIControl.Event.touchDown)
-    
-    mainView.addSubview(camera_btn)
+      mainView.addSubview(home_btn)
+      
+      
+      let explore_btn = UIButton()
+      imageName = "list.png"
+      image = UIImage(named: imageName)
+      
+      explore_btn.setImage(image, for: [])
+      
+      explore_btn.frame = CGRect(x: 280, y: 741, width: 33, height: 33)
+      
+      explore_btn.addTarget(self, action: #selector(segueListTeams), for: UIControl.Event.touchDown)
+      
+      explore_btn.layer.zPosition = 1;
+      
+      mainView.addSubview(explore_btn)
+      
+      
+      
+      
+      let camera_btn = UIButton()
+      imageName = "circle.png"
+      image = UIImage(named: imageName)
+      
+      camera_btn.setImage(image, for: [])
+      
+      camera_btn.frame = CGRect(x: 89, y: 690, width: 197, height: 104)
+      
+      camera_btn.layer.zPosition = 1;
+      
+      camera_btn.addTarget(self, action: #selector(segueCamera), for: UIControl.Event.touchDown)
+      
+      mainView.addSubview(camera_btn)
+      
+      let app_btn = UIButton()
+      imageName = "player_identification.png"
+      image = UIImage(named: imageName)
+      
+      app_btn.setImage(image, for: [])
+      
+      app_btn.frame = CGRect(x: 162, y: 720, width: 50, height: 50)
+      
+      app_btn.layer.zPosition = 1;
+      
+      app_btn.addTarget(self, action: #selector(segueCamera), for: UIControl.Event.touchDown)
+      
+      mainView.addSubview(app_btn)
+      
+      let home_label = UILabel()
+      home_label.text = "HOME"
+      home_label.frame = CGRect(x: 60, y: 780, width: 50, height: 12)
 
-    let app_btn = UIButton()
-    imageName = "aperture.png"
-    image = UIImage(named: imageName)
-
-    app_btn.setImage(image, for: [])
-
-    app_btn.frame = CGRect(x: 150, y: 707, width: 73, height: 71)
-
-    app_btn.layer.zPosition = 1;
-
-    app_btn.addTarget(self, action: #selector(segueCamera), for: UIControl.Event.touchDown)
-
-    mainView.addSubview(app_btn)
-    
-//
-//    var imageName_1 = "aperture.png"
-//
-//       var image_1 = UIImage(named: imageName_1)
-//       var imageView = UIImageView(image: image_1!)
-//
-//
-//       imageView.frame = CGRect(x: 150, y: 707, width: 73, height: 71)
-//    imageView.layer.zPosition = 1
-//       mainView.addSubview(imageView)
-
-    mainView.addSubview(label)
-    
-    
-  }
+        
+      home_label.textColor = UIColor.init(displayP3Red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
+      home_label.font = UIFont(name:"HelveticaNeue", size: 12)
+      home_label.layer.zPosition = 1;
+      
+      
+      let teams_label = UILabel()
+      teams_label.text = "TEAMS"
+      teams_label.font = UIFont(name:"HelveticaNeue", size: 12)
+      teams_label.textColor = UIColor.init(displayP3Red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
+      
+      teams_label.frame = CGRect(x: 278, y: 780, width: 80, height: 12)
+        
+      
+   
+  //
+  //
+  //    home_btn.frame = CGRect(x: 58, y: 743, width: 40, height: 36)
+  //    explore_btn.frame = CGRect(x: 280, y: 746, width: 33, height: 33)
+  //
+      teams_label.layer.zPosition = 1;
+     
+   
+      mainView.addSubview(home_label)
+       
+       mainView.addSubview(teams_label)
+      
+         mainView.addSubview(label)
+      
+    }
   
   
   @objc func segueCamera(sender: UIButton!) {

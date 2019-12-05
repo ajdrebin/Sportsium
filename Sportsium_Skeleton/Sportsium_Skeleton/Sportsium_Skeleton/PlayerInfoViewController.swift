@@ -333,7 +333,8 @@ class PlayerInfoViewController: UIViewController {
     var image = UIImage(named: imageName)
     home_btn.setImage(image, for: [])
     
-    home_btn.frame = CGRect(x: 60, y: 750, width: 38, height: 30)
+    home_btn.frame = CGRect(x: 58, y: 741, width: 40, height: 36)
+
     
     home_btn.layer.zPosition = 1;
     
@@ -343,12 +344,12 @@ class PlayerInfoViewController: UIViewController {
     
     
     let explore_btn = UIButton()
-    imageName = "explore.png"
+    imageName = "list.png"
     image = UIImage(named: imageName)
     
     explore_btn.setImage(image, for: [])
     
-    explore_btn.frame = CGRect(x: 275, y: 750, width: 38, height: 38)
+    explore_btn.frame = CGRect(x: 280, y: 741, width: 33, height: 33)
     
     explore_btn.addTarget(self, action: #selector(segueListTeams), for: UIControl.Event.touchDown)
     
@@ -374,12 +375,12 @@ class PlayerInfoViewController: UIViewController {
     mainView.addSubview(camera_btn)
     
     let app_btn = UIButton()
-    imageName = "aperture.png"
+    imageName = "player_identification.png"
     image = UIImage(named: imageName)
     
     app_btn.setImage(image, for: [])
     
-    app_btn.frame = CGRect(x: 150, y: 707, width: 72, height: 71)
+    app_btn.frame = CGRect(x: 162, y: 720, width: 50, height: 50)
     
     app_btn.layer.zPosition = 1;
     
@@ -387,11 +388,38 @@ class PlayerInfoViewController: UIViewController {
     
     mainView.addSubview(app_btn)
     
-    
-    
+    let home_label = UILabel()
+    home_label.text = "HOME"
+    home_label.frame = CGRect(x: 60, y: 780, width: 50, height: 12)
 
-    mainView.addSubview(label)
+      
+    home_label.textColor = UIColor.init(displayP3Red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
+    home_label.font = UIFont(name:"HelveticaNeue", size: 12)
+    home_label.layer.zPosition = 1;
     
+    
+    let teams_label = UILabel()
+    teams_label.text = "TEAMS"
+    teams_label.font = UIFont(name:"HelveticaNeue", size: 12)
+    teams_label.textColor = UIColor.init(displayP3Red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
+    
+    teams_label.frame = CGRect(x: 278, y: 780, width: 80, height: 12)
+      
+    
+ 
+//
+//
+//    home_btn.frame = CGRect(x: 58, y: 743, width: 40, height: 36)
+//    explore_btn.frame = CGRect(x: 280, y: 746, width: 33, height: 33)
+//
+    teams_label.layer.zPosition = 1;
+   
+ 
+    mainView.addSubview(home_label)
+     
+     mainView.addSubview(teams_label)
+    
+       mainView.addSubview(label)
     
   }
   
