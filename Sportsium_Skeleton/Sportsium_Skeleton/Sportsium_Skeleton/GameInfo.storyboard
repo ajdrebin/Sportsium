@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RNs-1H-ThH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RNs-1H-ThH">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ixd-VS-Vmk">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WVt-62-CXD">
                                 <rect key="frame" x="0.0" y="712" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -23,34 +23,46 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="home" translatesAutoresizingMaskIntoConstraints="NO" id="ktF-Nd-XYt">
-                                <rect key="frame" x="26" y="745" width="92" height="28"/>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="home" translatesAutoresizingMaskIntoConstraints="NO" id="sTU-qF-7L1">
+                                <rect key="frame" x="26" y="735" width="92" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="IyX-hJ-1qb" appends="YES" id="uTe-0J-CLL"/>
+                                    <outletCollection property="gestureRecognizers" destination="8lv-RW-nlE" appends="YES" id="edG-N1-0Gx"/>
                                 </connections>
                             </imageView>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="explore" translatesAutoresizingMaskIntoConstraints="NO" id="qHg-XU-zf1">
-                                <rect key="frame" x="270" y="745" width="56" height="32"/>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="list" translatesAutoresizingMaskIntoConstraints="NO" id="dIf-oc-eCN">
+                                <rect key="frame" x="270" y="734" width="56" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="ft4-KP-V55" appends="YES" id="JpV-42-8GU"/>
-                                </connections>
                             </imageView>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="circle" translatesAutoresizingMaskIntoConstraints="NO" id="2sf-SV-hkM">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="circle" translatesAutoresizingMaskIntoConstraints="NO" id="Yaf-0t-UCM">
                                 <rect key="frame" x="89" y="690" width="197" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="player_identification" translatesAutoresizingMaskIntoConstraints="NO" id="wan-RE-V89">
+                                <rect key="frame" x="141" y="717" width="92" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="ivd-t7-wZG" appends="YES" id="NCC-LE-Ew7"/>
+                                    <outletCollection property="gestureRecognizers" destination="TAW-Mi-ehl" appends="YES" id="A36-Um-D9w"/>
                                 </connections>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="aperture" translatesAutoresizingMaskIntoConstraints="NO" id="I8A-Z3-H4m">
-                                <rect key="frame" x="97" y="707" width="180" height="71"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HOME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S36-ax-kWg">
+                                <rect key="frame" x="54" y="774" width="36" height="15"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TEAMS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sei-vc-nTd">
+                                <rect key="frame" x="278" y="775" width="41" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <gestureRecognizers/>
@@ -62,22 +74,22 @@
                         <segue destination="DGM-gn-wg0" kind="show" identifier="Team" id="dEm-1x-fDJ"/>
                     </connections>
                 </viewController>
-                <tapGestureRecognizer id="ivd-t7-wZG">
-                    <connections>
-                        <segue destination="EAe-kd-65X" kind="show" id="dcf-tV-Wav"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="IyX-hJ-1qb">
-                    <connections>
-                        <segue destination="qMk-2p-WiO" kind="show" id="4bt-h9-c5h"/>
-                    </connections>
-                </tapGestureRecognizer>
                 <tapGestureRecognizer id="ft4-KP-V55">
                     <connections>
                         <segue destination="IOU-fP-Rfa" kind="show" id="g0p-CY-Df9"/>
                     </connections>
                 </tapGestureRecognizer>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Wo-Ny-hFK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="8lv-RW-nlE">
+                    <connections>
+                        <segue destination="qMk-2p-WiO" kind="show" id="6iC-Lr-HsT"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="TAW-Mi-ehl">
+                    <connections>
+                        <segue destination="EAe-kd-65X" kind="show" id="fJk-In-h8d"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="509.60000000000002" y="-113.79310344827587"/>
         </scene>
@@ -109,17 +121,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bKW-CE-1KI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1107" y="-159"/>
-        </scene>
-        <!--ViewController-->
-        <scene sceneID="0g0-Da-X31">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="ViewController" id="EAq-tb-HBx" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="1Xa-69-XLs"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HnE-48-K35" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1125" y="-103"/>
+            <point key="canvasLocation" x="1321" y="-124"/>
         </scene>
         <!--ListTeamsViewController-->
         <scene sceneID="Jbo-H2-MOX">
@@ -129,7 +131,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="giN-yt-wLL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1160" y="-19"/>
+            <point key="canvasLocation" x="1294" y="-11"/>
         </scene>
         <!--IdentifyViewController-->
         <scene sceneID="9z6-uA-o5Y">
@@ -139,13 +141,13 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vTp-Bu-isS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1137" y="-68"/>
+            <point key="canvasLocation" x="1295" y="-57"/>
         </scene>
     </scenes>
     <resources>
-        <image name="aperture" width="170.66667175292969" height="170.66667175292969"/>
         <image name="circle" width="104" height="104"/>
-        <image name="explore" width="111" height="111"/>
         <image name="home" width="138.66667175292969" height="118"/>
+        <image name="list" width="170.66667175292969" height="170.66667175292969"/>
+        <image name="player_identification" width="170.66667175292969" height="170.66667175292969"/>
     </resources>
 </document>

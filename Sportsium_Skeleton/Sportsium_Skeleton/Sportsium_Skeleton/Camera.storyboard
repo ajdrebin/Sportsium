@@ -62,7 +62,7 @@
                                     <action selector="HelpButton:" destination="MWN-Bc-eaf" eventType="touchUpInside" id="Bi2-kP-MKf"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q34-hf-fsS">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JZ4-9E-Lz4">
                                 <rect key="frame" x="0.0" y="712" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -70,35 +70,46 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="home" translatesAutoresizingMaskIntoConstraints="NO" id="MoH-Tt-ejK">
-                                <rect key="frame" x="26" y="745" width="92" height="28"/>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="home" translatesAutoresizingMaskIntoConstraints="NO" id="1al-7Q-Jrw">
+                                <rect key="frame" x="26" y="735" width="92" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Odq-74-Ig4" appends="YES" id="bil-zC-g1E"/>
-                                    <outletCollection property="gestureRecognizers" destination="bug-cE-xXF" appends="YES" id="HAL-Uw-vmf"/>
+                                    <outletCollection property="gestureRecognizers" destination="I6m-j7-jme" appends="YES" id="9qo-vd-xFY"/>
                                 </connections>
                             </imageView>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="circle" translatesAutoresizingMaskIntoConstraints="NO" id="k9P-6h-PtT">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="list" translatesAutoresizingMaskIntoConstraints="NO" id="Esr-zz-dTP">
+                                <rect key="frame" x="270" y="734" width="56" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="tb2-T1-MNh" appends="YES" id="lt5-5K-XGZ"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="circle" translatesAutoresizingMaskIntoConstraints="NO" id="NuF-n0-ljV">
                                 <rect key="frame" x="89" y="690" width="197" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="kIg-35-kiN" appends="YES" id="Dnh-qq-Qyn"/>
-                                </connections>
                             </imageView>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="explore" translatesAutoresizingMaskIntoConstraints="NO" id="GMe-BW-fvK">
-                                <rect key="frame" x="270" y="745" width="56" height="32"/>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="player_identification" translatesAutoresizingMaskIntoConstraints="NO" id="DkV-MY-zdg">
+                                <rect key="frame" x="141" y="717" width="92" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Tha-2B-DfW" appends="YES" id="KFA-yt-CF5"/>
-                                </connections>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="aperture" translatesAutoresizingMaskIntoConstraints="NO" id="JDI-zu-F0G">
-                                <rect key="frame" x="97" y="706" width="180" height="71"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HOME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAN-PI-r5W">
+                                <rect key="frame" x="54" y="774" width="36" height="15"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TEAMS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ElP-72-5rK">
+                                <rect key="frame" x="278" y="775" width="41" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -150,20 +161,14 @@
                     <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <viewLayoutGuide key="safeArea" id="Fba-dD-0B3"/>
                 </view>
-                <tapGestureRecognizer id="kIg-35-kiN"/>
-                <tapGestureRecognizer id="Odq-74-Ig4">
+                <tapGestureRecognizer id="I6m-j7-jme">
                     <connections>
-                        <segue destination="2ae-Vd-FKq" kind="show" id="1yi-2b-oaE"/>
+                        <segue destination="dqq-0T-sH0" kind="show" id="PIQ-jG-xRb"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="Tha-2B-DfW">
+                <tapGestureRecognizer id="tb2-T1-MNh">
                     <connections>
-                        <segue destination="Ewq-EB-Jd3" kind="show" id="QVz-YD-maR"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="bug-cE-xXF">
-                    <connections>
-                        <segue destination="dqq-0T-sH0" kind="show" id="OC2-Rd-C66"/>
+                        <segue destination="Ewq-EB-Jd3" kind="show" id="npM-yg-Qh6"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -201,9 +206,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="aperture" width="170.66667175292969" height="170.66667175292969"/>
         <image name="circle" width="104" height="104"/>
-        <image name="explore" width="111" height="111"/>
         <image name="home" width="138.66667175292969" height="118"/>
+        <image name="list" width="170.66667175292969" height="170.66667175292969"/>
+        <image name="player_identification" width="170.66667175292969" height="170.66667175292969"/>
     </resources>
 </document>

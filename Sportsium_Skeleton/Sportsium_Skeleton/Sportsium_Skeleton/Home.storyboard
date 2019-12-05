@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Dv5-Zf-RPS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Dv5-Zf-RPS">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,7 +10,7 @@
         <!--Home View Controller-->
         <scene sceneID="ks5-fP-e2R">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" id="Dv5-Zf-RPS" customClass="HomeViewController" customModule="Sportsium" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="Dv5-Zf-RPS" customClass="HomeViewController" customModule="Sportsium_Skeleton" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rUb-h9-OXu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,15 +39,15 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="home" translatesAutoresizingMaskIntoConstraints="NO" id="WIG-aI-vzI">
-                                <rect key="frame" x="26" y="745" width="92" height="28"/>
+                                <rect key="frame" x="26" y="735" width="92" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="nEi-8p-sdI" appends="YES" id="ung-lk-LzG"/>
+                                    <outletCollection property="gestureRecognizers" destination="206-x9-A9s" appends="YES" id="9za-OD-ZcR"/>
                                 </connections>
                             </imageView>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="explore" translatesAutoresizingMaskIntoConstraints="NO" id="IUo-IG-wVT">
-                                <rect key="frame" x="270" y="745" width="56" height="32"/>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="list" translatesAutoresizingMaskIntoConstraints="NO" id="IUo-IG-wVT">
+                                <rect key="frame" x="270" y="734" width="56" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <connections>
@@ -58,14 +58,6 @@
                                 <rect key="frame" x="89" y="690" width="197" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="aperture" translatesAutoresizingMaskIntoConstraints="NO" id="kbW-40-Xl9">
-                                <rect key="frame" x="97" y="707" width="180" height="71"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="4gi-py-fht" appends="YES" id="T7h-13-bmV"/>
-                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Upcoming Games" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H69-Un-LBk">
                                 <rect key="frame" x="15" y="225" width="134" height="20"/>
@@ -240,6 +232,28 @@
                                 <rect key="frame" x="26" y="291" width="94" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LEAGUE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="263-dH-wHE">
+                                <rect key="frame" x="48" y="775" width="47" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TEAMS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlz-gb-2AQ">
+                                <rect key="frame" x="278" y="775" width="41" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="player_identification" translatesAutoresizingMaskIntoConstraints="NO" id="kbW-40-Xl9">
+                                <rect key="frame" x="141" y="717" width="92" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="4gi-py-fht" appends="YES" id="T7h-13-bmV"/>
+                                </connections>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.95677906274795532" green="0.95691639184951782" blue="0.95674902200698853" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="wOX-5k-4eB"/>
@@ -276,9 +290,9 @@
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="Uw2-UW-bcF"/>
-                <tapGestureRecognizer id="nEi-8p-sdI">
+                <tapGestureRecognizer id="206-x9-A9s">
                     <connections>
-                        <segue destination="abH-33-2fY" kind="show" id="gpU-4z-SEy"/>
+                        <segue destination="faO-Em-LBV" kind="show" id="q2f-Zy-oS4"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -302,7 +316,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Fc-Ph-RjY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-381" y="-265"/>
+            <point key="canvasLocation" x="-169" y="-272"/>
         </scene>
         <!--RulesViewController-->
         <scene sceneID="tFf-lC-W8b">
@@ -325,24 +339,24 @@
             <point key="canvasLocation" x="-410" y="-128"/>
         </scene>
         <!--ViewController-->
-        <scene sceneID="zfj-Jb-dI8">
+        <scene sceneID="9Ef-pl-7lk">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="ViewController" id="abH-33-2fY" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="Szl-YS-C9k"/>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="ViewController" id="faO-Em-LBV" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="h7J-hy-Uma"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aiY-7N-iyb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="brR-9j-XGo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-314" y="-419"/>
+            <point key="canvasLocation" x="-373" y="-60"/>
         </scene>
     </scenes>
     <resources>
-        <image name="aperture" width="170.66667175292969" height="170.66667175292969"/>
         <image name="chicago_red_stars" width="55" height="55"/>
         <image name="circle" width="104" height="104"/>
-        <image name="explore" width="111" height="111"/>
         <image name="home" width="138.66667175292969" height="118"/>
+        <image name="list" width="170.66667175292969" height="170.66667175292969"/>
         <image name="north_carolina_courage" width="55" height="55"/>
         <image name="orlando_pride" width="55" height="55"/>
+        <image name="player_identification" width="170.66667175292969" height="170.66667175292969"/>
         <image name="portland_thorns" width="55" height="55"/>
         <image name="reign" width="55" height="55"/>
         <image name="utah_royals" width="55" height="55"/>
