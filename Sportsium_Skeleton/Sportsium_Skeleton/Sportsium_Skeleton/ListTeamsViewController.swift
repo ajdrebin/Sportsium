@@ -34,7 +34,8 @@ class ListTeamsViewController: UIViewController {
         scrollView.contentSize = (CGSize(width:UIScreen.main.bounds.width, height: CGFloat(75 * (keysList.count + 1) )))
         
         for (i, teamName) in keysList.enumerated() {
-
+            
+            
             var button : UIButton
             
             var x :CGFloat = 0
@@ -43,12 +44,19 @@ class ListTeamsViewController: UIViewController {
             let screenWidth = screenSize.width
             
             var teamLabel:UILabel = UILabel()
-            teamLabel.frame = CGRect(x: 85, y: y, width: UIScreen.main.bounds.width, height: 75)
+            teamLabel.frame = CGRect(x: 0, y: y, width: UIScreen.main.bounds.width, height: 75)
             
             var teamLabelTap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapTeam))
             teamLabelTap.name = String(i)
             teamLabel.addGestureRecognizer(teamLabelTap)
             teamLabel.isUserInteractionEnabled = true
+            
+            if i % 2 == 0 {
+                teamLabel.backgroundColor = UIColor.white
+            }
+            else{
+                teamLabel.backgroundColor = UIColor.init(displayP3Red: 221/255, green: 240/255, blue: 1, alpha: 1)
+            }
             
             scrollView.addSubview(teamLabel)
             
