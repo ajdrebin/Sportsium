@@ -178,9 +178,6 @@ class HomeViewController: UIViewController {
         game3.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
 
         // 1
-        
-//        print("league before: ", league)
-//        print("chosen before: ", self.chosenLeague)
         // Set league
         if(league == ""){
             league = self.chosenLeague
@@ -191,8 +188,6 @@ class HomeViewController: UIViewController {
                 teamsDict.removeAll()
             }
         }
-//        print("league after: ", league)
-//        print("chosen after: ", self.chosenLeague)
         
         if (league == "WNBA") {
            DispatchQueue.main.async {
