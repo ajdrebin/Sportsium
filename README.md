@@ -10,7 +10,7 @@ Get to know the faces of the National Women’s Soccer League using computer vis
 
 ## File Structure
 * **Backend Tests:** Test scripts and ios apps to play around with OpenCV and other frameworks for computer vision and machine learning *(see Backend Tests/README.md for more details)*
-* **Sportsium_Skeleton/Sportsium_Skeleton:** UI development apps to work on front-end UI/UX and backend Computer Vision algorithm- includes all storyboards and swift files **(*IN USE for MVP app*)**
+* **Sportsium_Skeleton/Sportsium_Skeleton:** UI development apps to work on front-end UI/UX and backend Computer Vision algorithm- includes all storyboards and swift files **(*IN USE for MVP/Final app*)**
 * * Our Computer Vision work is in the file Sportsium_Skeleton/Sportsium_Skeleton/Sportsium_Skeleton/IdentifyViewController.swift
 * **Starter App:** Starter app assignment
 * **django_project:** copy of backend server for database
@@ -35,14 +35,9 @@ Get to know the faces of the National Women’s Soccer League using computer vis
     |   │   ├── Sportsium_Skeleton
     |   │   │   ├── Assets.xcassets
     |   │   │   ├── Base.lproj
-    |   │   │   ├── opencv2.framework
     │   │   │   ├── AppDelegate.swift
-    │   │   │   ├── Camera.storyboard
-    │   │   │   ├── CameraViewController.swift
     │   │   │   ├── CheckIn.storyboard
     │   │   │   ├── CheckIn.swift
-    │   │   │   ├── CVVideoCameraWrapper.h
-    │   │   │   ├── CVVideoCameraWrapper.mm
     │   │   │   ├── GameInfo.storyboard
     │   │   │   ├── GameInfoViewController.swift
     │   │   │   ├── Home.storyboard
@@ -52,6 +47,7 @@ Get to know the faces of the National Women’s Soccer League using computer vis
     │   │   │   ├── Info.plist
     │   │   │   ├── ListTeams.storyboard
     │   │   │   ├── ListTeamsViewController.swift
+    │   │   │   ├── nwsl.txt
     │   │   │   ├── Player.swift
     │   │   │   ├── PlayerInfo.storyboard
     │   │   │   ├── PlayerInfoViewController.swift
@@ -65,6 +61,7 @@ Get to know the faces of the National Women’s Soccer League using computer vis
     │   │   │   ├── TeamInfo.swift
     │   │   │   ├── TeamInfoViewController.swift
     │   │   │   ├── ViewController.swift
+    │   │   │   ├── wnba.txt
     ├── Starter App
     │   ├── ios-project-sample-f17-master
     │   ├── mysite
@@ -104,7 +101,7 @@ Get to know the faces of the National Women’s Soccer League using computer vis
 
 So type this in the terminal
 ```
-ssh root@159.89.139.18
+ssh root@[ipaddress]
 ```
 
 Then you are prompted with a password. Note: The password will not be visible
@@ -113,7 +110,7 @@ Then you are prompted with a password. Note: The password will not be visible
 ```
 and you are in!
 
-### Deployment 
+### Deployment on your own server
 The following is link is the DigitalOcean droplet that we used: 
 https://cloud.digitalocean.com/marketplace/5ba19751c472e4189b34e03e?i=2c9b94
 
@@ -128,7 +125,7 @@ GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO django;
 \q or Control+D to exit
 ```
 
-* If you run into password issues then it most likely means your password contains non-supported characters when copying and pasting. For this reason it is best to type the password into the terminal.
+* If you run into password issues then it most likely means your password contains non-supported characters when copying and pasting. For this reason it is best to type the password into the terminal. Also do not forget to include the semicolons. 
 
 Once this is completed, navigate to '/home/django'. Here you will see a folder named 'django_project'. Delete this folder and replace it with the 'django_project' folder that is provided in this git repo.
 
@@ -192,6 +189,7 @@ To populate the database, one must run Django's python shell and then import our
 ```
 python manage.py shell
 ```
+
 This will trigger an interactive python shell. Type in the following to be able to call 
 
 ```
@@ -203,7 +201,6 @@ This will trigger an interactive python shell. Type in the following to be able 
 ```
 
 ## Getting Started with our IOS application
-
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Installing
@@ -215,17 +212,21 @@ git clone https://github.com/ajdrebin/Sportsium.git
 ```
 
 ### Building
-
-Make sure your xcode version is at least version 11 or above 
+Make sure your xcode version is at least version 11 or above. Similarly your phone's iOS must be 13.1 or greater
 
 Navigate to the /Sportsium/Sportsium_Skeleton/Sportsium_Skeleton.xcodeproj and open it. 
 
 Once in the xcode environment, choose the simulated device to be an iPhone 11 Pro or an iPhone X. After this just click the play button to build and run. 
 
+In order to run our app on your own computer and device, you may need to change the signing and capabilities. Click on the Sportsium_Skeleton project in Xcode to access the project settings. Go to "Signing & Capabilities" tab, and change the Team to your own team. You may also need to update the bundle identifier to something unique in order to test it on your own device. 
+
+You may also run into a certificate issue when you try to run on your own device the first time. An error message will pop up asking to verify the signing certificate. Go to your device's settings, and in General a new section will pop up "Device Management". Click on that tab, and click "Verify". You should then be able to rerun the app via Xcode successfully. (Reminder, the app will remain on your device for approximately 3 days. If you have more than 3 demo apps on your device at one time, you will likely be unable to demo. Try deleting the other apps if you run into this issue). 
+
+Also do note that the Xcode simulator does not allow users to use the camera feature. This is why it is recommended to build the application on an iPhone for testing purposes. All other features can be tested with the Xcode simulator. 
 
 ## Deployment
 
-The ios app will be uploaded to ios store in December 2019. 
+The ios app will be uploaded to ios store in December 2019. We have submitted our application to Apple for review. 
 
 ## Built With
 * [Xcode](https://apps.apple.com/us/app/xcode/id497799835?mt=12) - IOS Development tool
