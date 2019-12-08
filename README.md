@@ -132,6 +132,7 @@ Once this is completed, navigate to '/home/django'. Here you will see a folder n
 
 ### Development
 The following actions should take place in the django_project folder since we will be using mange.py as our CLI.
+This is found at /home/django/django_project. 
 ```
 ├── django_project
     ├── django_project (folder)
