@@ -35,14 +35,9 @@ Get to know the faces of the National Women’s Soccer League using computer vis
     |   │   ├── Sportsium_Skeleton
     |   │   │   ├── Assets.xcassets
     |   │   │   ├── Base.lproj
-    |   │   │   ├── opencv2.framework
     │   │   │   ├── AppDelegate.swift
-    │   │   │   ├── Camera.storyboard
-    │   │   │   ├── CameraViewController.swift
     │   │   │   ├── CheckIn.storyboard
     │   │   │   ├── CheckIn.swift
-    │   │   │   ├── CVVideoCameraWrapper.h
-    │   │   │   ├── CVVideoCameraWrapper.mm
     │   │   │   ├── GameInfo.storyboard
     │   │   │   ├── GameInfoViewController.swift
     │   │   │   ├── Home.storyboard
@@ -52,6 +47,7 @@ Get to know the faces of the National Women’s Soccer League using computer vis
     │   │   │   ├── Info.plist
     │   │   │   ├── ListTeams.storyboard
     │   │   │   ├── ListTeamsViewController.swift
+    │   │   │   ├── nwsl.txt
     │   │   │   ├── Player.swift
     │   │   │   ├── PlayerInfo.storyboard
     │   │   │   ├── PlayerInfoViewController.swift
@@ -65,6 +61,7 @@ Get to know the faces of the National Women’s Soccer League using computer vis
     │   │   │   ├── TeamInfo.swift
     │   │   │   ├── TeamInfoViewController.swift
     │   │   │   ├── ViewController.swift
+    │   │   │   ├── wnba.txt
     ├── Starter App
     │   ├── ios-project-sample-f17-master
     │   ├── mysite
