@@ -131,10 +131,10 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
     
     func setUpScroll() {
         self.resetHelpLabels()
-        self.scView = UIScrollView(frame: CGRect(x: 0, y: 600, width: view.bounds.width, height: 115))
+        self.scView = UIScrollView(frame: CGRect(x: 0, y: 622, width: view.bounds.width, height: 90))
         self.view.addSubview(self.scView)
 
-        self.scView.backgroundColor = UIColor.lightGray
+        self.scView.backgroundColor = UIColor.lightGray.withAlphaComponent(0.6)
         self.scView.translatesAutoresizingMaskIntoConstraints = false
     }
     
@@ -196,6 +196,8 @@ class IdentifyViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
             let button = PlayerButton( player: idPlayer, team: teamObj! )
             button.tag = i
             print("CHECK", button.player)
+            button.layer.cornerRadius = 0.5 * button.bounds.size.width
+            button.clipsToBounds = true
             
             var color = (red: 0.0, green: 0.0, blue: 0.0)
             if(team == home){ color = self.teamColorCodes[team]!.homeColor
