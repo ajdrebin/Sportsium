@@ -7,9 +7,6 @@ Get to know the faces of the National Women’s Soccer League using computer vis
 * Alina (ajdrebin, adrebin) shows up as two contributors due to using two different accounts as a consequence of updating readmes online versus pushing code. Consider them the same person for all intents and purposes. (She will be using @adrebin to push code)
 
 
-## TODO LIST 
-* Present MVP Demo
-
 
 ## File Structure
 * **Backend Tests:** Test scripts and ios apps to play around with OpenCV and other frameworks for computer vision and machine learning
