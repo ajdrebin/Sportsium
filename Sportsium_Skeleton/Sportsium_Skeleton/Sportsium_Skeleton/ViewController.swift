@@ -145,7 +145,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var wnba_button: UIButton!
     @IBOutlet weak var nwsl_button: UIButton!
     
-    
+  @IBOutlet weak var wnba_text_button: UIButton!
+  @IBOutlet weak var nwsl_text_button: UIButton!
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -154,6 +156,17 @@ class ViewController: UIViewController {
         wnba_button.tag = 2
         nwsl_button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         wnba_button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+      
+        nwsl_text_button.tag = 1
+        wnba_text_button.tag = 2
+        nwsl_text_button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        wnba_text_button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+      
+      
+      
+      
+      
+      
     }
     
     @objc func buttonAction(sender: UIButton!) {
