@@ -9,7 +9,7 @@ Get to know the faces of the National Women’s Soccer League using computer vis
 
 
 ## File Structure
-* **Backend Tests:** Test scripts and ios apps to play around with OpenCV and other frameworks for computer vision and machine learning
+* **Backend Tests:** Test scripts and ios apps to play around with OpenCV and other frameworks for computer vision and machine learning *(see Backend Tests/README.md for more details)*
 * **Sportsium:** UI development apps to work on front-end UI/UX *(not in use for MVP app)*
 * **Sportsium_Skeleton/Sportsium_Skeleton:** UI development apps to work on front-end UI/UX and backend Computer Vision algorithm- includes all storyboards and swift files **(*IN USE for MVP app*)**
 * * Our Computer Vision work is in the file Sportsium_Skeleton/Sportsium_Skeleton/Sportsium_Skeleton/IdentifyViewController.swift
