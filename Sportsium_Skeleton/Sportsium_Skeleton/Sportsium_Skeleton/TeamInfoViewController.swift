@@ -476,14 +476,49 @@ class TeamInfoViewController: UIViewController {
       
       //Allow for multi line text \n separated.
       button.titleLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping;
-      button.setTitle(name + "\t\t\t\t\t\t\t\t" + "#" + playerNum[i] + "\n" + playerPosition[i], for: UIControl.State.normal)
+      
+      
+      //button.setTitle(name + "\t\t\t\t\t\t\t\t" + "#" + playerNum[i] + "\n" + playerPosition[i], for: UIControl.State.normal)
+      button.setTitle(name, for: UIControl.State.normal)
+
+      button.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.left;
+      
+      //padding
+      button.contentEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 30, right: 0)
+
+
+      
+      
+      
+      
+      let num_label = UILabel()
+      num_label.textColor = UIColor.init(displayP3Red: 11/255, green: 96/255, blue: 168/255, alpha: 1)
+      num_label.frame = CGRect(x: x + 325, y: y + 35, width: 200, height: 20)
+      
+      num_label.text = "#" + playerNum[i]
+      
+
+      
+      
+      let pos_label = UILabel()
+      pos_label.textColor = UIColor.init(displayP3Red: 11/255, green: 96/255, blue: 168/255, alpha: 1)
+      pos_label.frame = CGRect(x: x + 10, y: y + 50, width: 100, height: 20)
+      pos_label.text = playerPosition[i]
+      
+      pos_label.layer.zPosition = 1;
+      num_label.layer.zPosition = 1;
+      
+      scrollView.addSubview(num_label)
+      scrollView.addSubview(pos_label)
+      
+      
       
       //button.contentEdgeInsets = UIEdgeInsets(top: 10,left: 5,bottom: 10,right: 5)
       
-      button.addTarget(self, action: #selector(pressBtn), for: UIControl.Event.touchDown)
+      //button.addTarget(self, action: #selector(pressBtn), for: UIControl.Event.touchDown)
       button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-      button.addTarget(self, action: #selector(releaseBtn), for: .touchUpInside)
-      button.addTarget(self, action: #selector(releaseBtn), for: .touchUpOutside)
+      //button.addTarget(self, action: #selector(releaseBtn), for: .touchUpInside)
+     
 
       button.tag = i
       
@@ -577,25 +612,25 @@ class TeamInfoViewController: UIViewController {
       displayVC.home_team_name = home_team_name
        displayVC.away_team_name = away_team_name
       
-              let full_arr = last_pressed.components(separatedBy: "\t")
-              print(full_arr)
       
       
-              //This thing ends in a trailing white space lol
-              let playerName = full_arr[0] + " " + full_arr[1]
+      //@@@@ CHANGE THIS UP
+//              let full_arr = last_pressed.components(separatedBy: "\t")
+//              print(full_arr)
+//
+//
+//              //This thing ends in a trailing white space lol
+//              let playerName = full_arr[0] + " " + full_arr[1]
               
       
               // Find specific player for passing data to PlayerInfo
               for p in players {
                   
-                 var name = p.firstName + " " +  p.lastName + " "    //account for trailing whitespace
-                if (name  == playerName) {
+                 var name = p.firstName + " " +  p.lastName // + " "    //account for trailing whitespace
+                if (name  == last_pressed) {
                   displayVC.player_obj = p
                 }
               }
-      
-      
-      
       
       
       

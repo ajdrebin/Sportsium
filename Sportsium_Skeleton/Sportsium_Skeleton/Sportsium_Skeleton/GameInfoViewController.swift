@@ -20,7 +20,8 @@ class GameInfoViewController: UIViewController {
         //        print(home)
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        homePlayers = teamsDict[home!]!.playerList  // all player objects
+
+      homePlayers = teamsDict[home!]!.playerList  // all player objects
         awayPlayers = teamsDict[away!]!.playerList
         makeButtons()
     }
