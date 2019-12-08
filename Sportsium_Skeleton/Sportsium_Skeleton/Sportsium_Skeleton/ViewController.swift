@@ -131,7 +131,16 @@ struct Player: Codable {
 
 class ViewController: UIViewController {
     
-    var didLoad = false
+    var didLoad = false {
+        didSet {
+            if didLoad == true {
+                print("Hello World.")
+                DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: "Home", sender: self)
+                }
+            }
+        }
+    }
     
     @IBOutlet weak var wnba_button: UIButton!
     @IBOutlet weak var nwsl_button: UIButton!
@@ -222,7 +231,9 @@ class ViewController: UIViewController {
                 self.didLoad = true
             }.resume()
         }
-        performSegue(withIdentifier: "Home", sender: self)
+
+        print("HELLLO")
+//        performSegue(withIdentifier: "Home", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
