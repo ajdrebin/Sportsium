@@ -128,7 +128,13 @@ GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO django;
 \q or Control+D to exit
 ```
 
-Once this is completed, navigate to '/home/django'. Here you will see a folder named 'django_project'. Delete this folder and replace it with the 'django_project' folder that is provided in this git repo. 
+Once this is completed, navigate to '/home/django'. Here you will see a folder named 'django_project'. Delete this folder and replace it with the 'django_project' folder that is provided in this git repo.
+
+```
+rm -r django_project 
+```
+
+On a separate terminal, navigate to the Sportsium directory on this github repo. 
 
 We now need to install the BeautifulSoup4 and requests libraries for Python: 
 ```
