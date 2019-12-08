@@ -215,6 +215,7 @@ class GameInfoViewController: UIViewController {
             }
             displayVC.home_team_name = home
             displayVC.away_team_name = away
+            displayVC.prev_page = "GameInfo"
         }
         if(segue.identifier == "Team"){
                 let displayVC = segue.destination as! TeamInfoViewController
