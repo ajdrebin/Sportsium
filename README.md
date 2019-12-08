@@ -122,11 +122,13 @@ To do this, follow the following steps:
 ```
 sudo -u postgres psql (use PSQL as user postgres)
 \connect django (connect to the database) 
-ALTER USER django WITH PASSWORD '48b07bd6b3afee61be52cf5cf0c1b0e3'
+ALTER USER django WITH PASSWORD '48b07bd6b3afee61be52cf5cf0c1b0e3';
 \dt (list tables) 
 GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO django;
 \q or Control+D to exit
 ```
+
+* If you run into password issues then it most likely means your password contains non-supported characters when copying and pasting. For this reason it is best to type the password into the terminal.
 
 Once this is completed, navigate to '/home/django'. Here you will see a folder named 'django_project'. Delete this folder and replace it with the 'django_project' folder that is provided in this git repo.
 
@@ -134,12 +136,27 @@ Once this is completed, navigate to '/home/django'. Here you will see a folder n
 rm -r django_project 
 ```
 
-On a separate terminal, navigate to the Sportsium directory on this github repo. 
+On a separate terminal, navigate to the Sportsium directory on this github repo. We will now sftp into our server.
+This can be done with
+```
+sftp root@159.89.139.18
+```
+Then navigate to /home/django and call sftp's put command
+```
+cd /home/django
+put -r django_project
+```
 
 We now need to install the BeautifulSoup4 and requests libraries for Python: 
 ```
 pip install bs4 
 pip install requests 
+```
+From here, we need to populate the database. Please turn to the Populating the Database section after 
+running:
+```
+python manage.py makemigrations
+python manage.py migrate
 ```
 
 ### Development
