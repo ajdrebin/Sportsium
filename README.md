@@ -10,7 +10,6 @@ Get to know the faces of the National Women’s Soccer League using computer vis
 
 ## File Structure
 * **Backend Tests:** Test scripts and ios apps to play around with OpenCV and other frameworks for computer vision and machine learning *(see Backend Tests/README.md for more details)*
-* **Sportsium:** UI development apps to work on front-end UI/UX *(not in use for MVP app)*
 * **Sportsium_Skeleton/Sportsium_Skeleton:** UI development apps to work on front-end UI/UX and backend Computer Vision algorithm- includes all storyboards and swift files **(*IN USE for MVP app*)**
 * * Our Computer Vision work is in the file Sportsium_Skeleton/Sportsium_Skeleton/Sportsium_Skeleton/IdentifyViewController.swift
 * **Starter App:** Starter app assignment
@@ -101,7 +100,7 @@ Get to know the faces of the National Women’s Soccer League using computer vis
 * Droplet Name: django-sportsium
 * IP Address: 159.89.139.18
 * Username: root
-* Password: MasYNoSport0
+* Password: [Contact sportsium@umich.edu for password]
 
 So type this in the terminal
 ```
@@ -113,6 +112,23 @@ Then you are prompted with a password. Note: The password will not be visible
 [Enter password]
 ```
 and you are in!
+
+### Deployment 
+The following is link is the DigitalOcean droplet that we used: 
+https://cloud.digitalocean.com/marketplace/5ba19751c472e4189b34e03e?i=2c9b94
+
+Once logged into the DigitalOcean droplet, configure the postgres user 'django'.
+To do this, follow the following steps: 
+```
+sudo -u postgres psql (use PSQL as user postgres)
+\connect django (connect to the database) 
+ALTER USER django WITH PASSWORD '48b07bd6b3afee61be52cf5cf0c1b0e3'
+\dt (list tables) 
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO django;
+\q or Control+D to exit
+```
+
+Once this is completed, navigate to '/home/django'. Here you will see a folder named 'django_project'. Delete this folder and replace it with the 'django_project' folder that is provided in this git repo. 
 
 ### Development
 The following actions should take place in the django_project folder since we will be using mange.py as our CLI.
@@ -149,8 +165,11 @@ python manage.py shell
 This will trigger an interactive python shell. Type in the following to be able to call 
 
 ```
->>> from nwsl_app.populate import delete_all, populate, populate1
+>>> from nwsl_app.adv_populate import delete_all, populate, populate1
 >>> (call delete_all() or populate() or populate1() depending on need)
+# populate() is for NWSL data while populate1() is for WNBA data
+# populate and populate1 should each be called only once
+# Make sure to call delete_all() before trying to populate a second time
 ```
 
 ## Getting Started with our IOS application
@@ -175,8 +194,6 @@ Once in the xcode environment, choose the simulated device to be an iPhone 11 Pr
 
 
 ## Deployment
-
-The backend web server is fully functioning at 159.89.234.82. This was deployed with Digital Ocean. 
 
 The ios app will be uploaded to ios store in December 2019. 
 
