@@ -46,7 +46,7 @@ class GameInfoViewController: UIViewController {
         mainView.addSubview(teamTwoLabel)
         
         var startingLabel:UILabel = UILabel()
-        startingLabel.frame = CGRect(x: 160, y: 190, width: 150, height: 75)
+        startingLabel.frame = CGRect(x: 145, y: 190, width: 150, height: 75)
         startingLabel.text = "Starting Roster"
         startingLabel.font = .systemFont(ofSize: 12)
         mainView.addSubview(startingLabel)
@@ -144,7 +144,7 @@ class GameInfoViewController: UIViewController {
             var playerLabel:UILabel = UILabel()
             playerLabel.frame = CGRect(x: UIScreen.main.bounds.width/2, y: y, width: UIScreen.main.bounds.width/2, height: 40)
             var playerLabelTap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapPlayer))
-            playerLabelTap.name = String(i)
+            playerLabelTap.name = String(i + 11)
             playerLabel.addGestureRecognizer(playerLabelTap)
             playerLabel.isUserInteractionEnabled = true
             if i % 2 == 0 {

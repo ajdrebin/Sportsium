@@ -194,14 +194,14 @@ def populate():
                 player_first_name = ""
                 player_last_name = ""
                 player_name_and_social = player_soup.find("div", {"class": "jsx-3410377750 player-top-section__player-name-wrapper"})          
-                count = 0
+                is_firstname = True
                 for line in player_name_and_social.span:
-                    if count == 0:
-                        player_first_name = line
-                    if count == 4: 
-                        player_last_name = line
-                    count += 1
-
+                    if line != " ":
+                        if is_firstname:
+                            player_first_name = line
+                            is_firstname = False
+                        else:
+                            player_last_name = line
 
                 # player social media
                 player_fb = ""
@@ -559,8 +559,8 @@ def populate1():
             first_name = full_name.split()[0]
             last_name = full_name.split()[1]
             y = entry0.find('>', 62)
-            if len(entry0) > 85:
-                number = entry0[y+1]
+            z = entry0.find('<', y)
+            number = entry0[y+1:z]
             
             x = entry1.find('<', 60)
             position = entry1[60:x]
