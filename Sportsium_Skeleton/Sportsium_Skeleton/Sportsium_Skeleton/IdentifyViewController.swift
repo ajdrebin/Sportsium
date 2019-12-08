@@ -1,4 +1,9 @@
 //
+//  IdentifyViewController.swift
+//  Sportsium
+//
+//  Created by Alina Drebin on 11/10/19.
+//  Copyright © 2019 Alina Drebin. All rights reserved.
 //
 
 import UIKit
