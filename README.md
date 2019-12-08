@@ -130,6 +130,12 @@ GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO django;
 
 Once this is completed, navigate to '/home/django'. Here you will see a folder named 'django_project'. Delete this folder and replace it with the 'django_project' folder that is provided in this git repo. 
 
+We now need to install the BeautifulSoup4 and requests libraries for Python: 
+```
+pip install bs4 
+pip install requests 
+```
+
 ### Development
 The following actions should take place in the django_project folder since we will be using mange.py as our CLI.
 This is found at /home/django/django_project. 
