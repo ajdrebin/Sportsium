@@ -189,7 +189,7 @@ class ViewController: UIViewController {
                     // 3
                     //Decode data
                     NWSLteams = try JSONDecoder().decode(NWSL.self, from: data)
-                    
+
                     teamsDict["orlando_pride"] = NWSLteams.orlandoPride
                     teamsDict["sky_blue"] = NWSLteams.skyBlue
                     teamsDict["houston_dash"] = NWSLteams.houstonDash
@@ -202,6 +202,26 @@ class ViewController: UIViewController {
                     
                 } catch let jsonError {
                     print(jsonError)
+                    if let url = Bundle.main.url(forResource: "nwsl", withExtension: "txt") {
+                        if let data = NSData(contentsOf: url) {
+                            do {
+                                NWSLteams = try JSONDecoder().decode(NWSL.self, from: data as Data)
+                                teamsDict["orlando_pride"] = NWSLteams.orlandoPride
+                               teamsDict["sky_blue"] = NWSLteams.skyBlue
+                               teamsDict["houston_dash"] = NWSLteams.houstonDash
+                               teamsDict["washington_spirit"] = NWSLteams.washingtonSpirit
+                               teamsDict["north_carolina_courage"] = NWSLteams.northCarolinaCourage
+                               teamsDict["reign"] = NWSLteams.reign
+                               teamsDict["portland_thorns"] = NWSLteams.portlandThorns
+                               teamsDict["chicago_red_stars"] = NWSLteams.chicagoRedStars
+                               teamsDict["utah_royals"] = NWSLteams.utahRoyals
+                                self.didLoad = true
+                                print("success")
+                            } catch {
+                                print("Error!! Unable to parse  nwsl.txt")
+                            }
+                        }
+                    }
                 }
                 // 5
                 self.didLoad = true
@@ -239,6 +259,30 @@ class ViewController: UIViewController {
                     
                 } catch let jsonError {
                     print(jsonError)
+                    if let url = Bundle.main.url(forResource: "wnba", withExtension: "txt") {
+                        if let data = NSData(contentsOf: url) {
+                            do {
+                                WNBAteams = try JSONDecoder().decode(WNBA.self, from: data as Data)
+                                
+                                teamsDict["atlanta_dream"] = WNBAteams.atlantaDream
+                                teamsDict["chicago_sky"] = WNBAteams.chicagoSky
+                                teamsDict["connecticut_sun"] = WNBAteams.connecticutSun
+                                teamsDict["indiana_fever"] = WNBAteams.indianaFever
+                                teamsDict["new_york_liberty"] = WNBAteams.newYorkLiberty
+                                teamsDict["washington_mystics"] = WNBAteams.washingtonMystics
+                                teamsDict["dallas_wings"] = WNBAteams.dallasWings
+                                teamsDict["las_vegas_aces"] = WNBAteams.lasVegasAces
+                                teamsDict["los_angeles_sparks"] = WNBAteams.losAngelesSparks
+                                teamsDict["minnesota_lynx"] = WNBAteams.minnesotaLynx
+                                teamsDict["phoenix_mercury"] = WNBAteams.phoenixMercury
+                                teamsDict["seattle_storm"] = WNBAteams.seattleStorm
+                                self.didLoad = true
+                                print("success")
+                            } catch {
+                                print("Error!! Unable to parse  wnba.txt")
+                            }
+                        }
+                    }
                 }
                 // 5
                 self.didLoad = true
@@ -262,4 +306,24 @@ class ViewController: UIViewController {
         }
     }
     
+//    func loadJson(forFilename fileName: String) -> NWSL {
+////        let turl = Bundle.main.url(forResource: fileName, withExtension: "txt")
+////        print(turl)
+////        let tdata = NSData(contentsOf: turl!)
+////        print(tdata)
+//
+//        if let url = Bundle.main.url(forResource: fileName, withExtension: "txt") {
+//            if let data = NSData(contentsOf: url) {
+//                do {
+//                    NWSLteams = try JSONDecoder().decode(NWSL.self, from: data as Data)
+//                    return NWSLteams
+//                } catch {
+//                    print("Error!! Unable to parse  \(fileName).txt")
+//                }
+//            }
+//            print("Error!! Unable to load  \(fileName).txt")
+//        }
+//
+//        return NWSL
+//    }
 }

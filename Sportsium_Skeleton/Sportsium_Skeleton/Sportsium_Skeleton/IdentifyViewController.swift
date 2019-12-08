@@ -1,9 +1,4 @@
 //
-//  ViewController.swift
-//  humanTracker
-//
-//  Created by Anurag Ajwani on 08/05/2019.
-//  Copyright © 2019 Anurag Ajwani. All rights reserved.
 //
 
 import UIKit
