@@ -10,7 +10,7 @@ Get to know the faces of the National Women’s Soccer League using computer vis
 
 ## File Structure
 * **Backend Tests:** Test scripts and ios apps to play around with OpenCV and other frameworks for computer vision and machine learning *(see Backend Tests/README.md for more details)*
-* **Sportsium_Skeleton/Sportsium_Skeleton:** UI development apps to work on front-end UI/UX and backend Computer Vision algorithm- includes all storyboards and swift files **(*IN USE for MVP app*)**
+* **Sportsium_Skeleton/Sportsium_Skeleton:** UI development apps to work on front-end UI/UX and backend Computer Vision algorithm- includes all storyboards and swift files **(*IN USE for MVP/Final app*)**
 * * Our Computer Vision work is in the file Sportsium_Skeleton/Sportsium_Skeleton/Sportsium_Skeleton/IdentifyViewController.swift
 * **Starter App:** Starter app assignment
 * **django_project:** copy of backend server for database
@@ -222,7 +222,7 @@ In order to run our app on your own computer and device, you may need to change 
 
 You may also run into a certificate issue when you try to run on your own device the first time. An error message will pop up asking to verify the signing certificate. Go to your device's settings, and in General a new section will pop up "Device Management". Click on that tab, and click "Verify". You should then be able to rerun the app via Xcode successfully. (Reminder, the app will remain on your device for approximately 3 days. If you have more than 3 demo apps on your device at one time, you will likely be unable to demo. Try deleting the other apps if you run into this issue). 
 
-Also do note that the Xcode simulator does not allow users to use the camera feature. This is why it is recommended to build the application on an iPhone for testing purposes.
+Also do note that the Xcode simulator does not allow users to use the camera feature. This is why it is recommended to build the application on an iPhone for testing purposes. All other features can be tested with the Xcode simulator. 
 
 ## Deployment
 
